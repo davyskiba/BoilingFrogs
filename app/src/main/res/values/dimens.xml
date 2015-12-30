@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drawer_top_padding">56dp</dimen>
+    <dimen name="drawer_item_height">72dp</dimen>
+    <dimen name="drawer_separator_height">2dp</dimen>
+</resources>

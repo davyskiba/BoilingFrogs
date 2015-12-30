@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryPressed">#282828</color>
+    <color name="colorAccent">#00e2ff</color>
+    <color name="colorAccentPressed">#0096a9</color>
+    <color name="colorWindowBackground">#1e1e1e</color>
+
+    <color name="textColor">#ffffff</color>
+    <color name="textColorDetails">#9b9b9b</color>
+    <color name="textColorHeadline">#c8c8c8</color>
+
+    <color name="textColorDrawer">#c8c8c8</color>
+    <color name="pressedColorDrawer">#282828</color>
+    <color name="separatorColorDrawer">#282828</color>
+</resources>
