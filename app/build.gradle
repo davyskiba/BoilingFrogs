@@ -11,6 +11,9 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    dataBinding {
+        enabled = true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -26,4 +29,6 @@ dependencies {
     compile "com.android.support:appcompat-v7:${android_support_lib_version}"
     compile "com.android.support:design:${android_support_lib_version}"
     compile "com.android.support:support-v4:${android_support_lib_version}"
+
+    compile "com.jakewharton:butterknife:${butterknife_version}"
 }

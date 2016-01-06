@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">boilingfrogs</string>
+
+    <string name="navigation_drawer_open">Otwórz menu</string>
+    <string name="navigation_drawer_close">Zamknij menu</string>
+    <string name="drawer_item_agenda">Agenda</string>
+    <string name="drawer_item_speakers">Prelegenci</string>
 </resources>

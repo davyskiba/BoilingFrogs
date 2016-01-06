@@ -9,7 +9,8 @@
         android:theme="@style/BoilingFrogsTheme">
         <activity
             android:screenOrientation="portrait"
-            android:name=".ui.MainActivity">
+            android:theme="@style/BoilingFrogsTheme.NoActionBar"
+            android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
