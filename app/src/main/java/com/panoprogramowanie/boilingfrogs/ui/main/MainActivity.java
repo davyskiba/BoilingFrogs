@@ -1,5 +1,7 @@
 package com.panoprogramowanie.boilingfrogs.ui.main;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -7,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 
@@ -22,10 +23,6 @@ import butterknife.ButterKnife;
  * Created by Wojciech on 30.12.2015.
  */
 public class MainActivity extends AppCompatActivity {
-
-    @Bind(R.id.main_container)
-    FrameLayout mainContainter;
-
     @Bind(R.id.drawer_list)
     ListView drawerListView;
 
@@ -40,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        setupDrawerAndToolbar();
+
+        if(savedInstanceState==null)
+        {
+            replaceFragment(new ScheduleFragment(),false);
+        }
+    }
+
+    private void setupDrawerAndToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -49,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        drawerAdapter=new DrawerAdapter(this,NavigationDrawerListEntries.values());
+        drawerAdapter=new DrawerAdapter(this, NavigationDrawerListEntries.values());
         drawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -74,12 +80,25 @@ public class MainActivity extends AppCompatActivity {
         switch (item)
         {
             case SCHEDULE:
-                getFragmentManager().beginTransaction().replace(R.id.main_container, new ScheduleFragment()).commit();
+                replaceFragment(new ScheduleFragment(), false);
                 break;
             case SPEAKERS:
-                getFragmentManager().beginTransaction().replace(R.id.main_container,new SpeakersFragment()).commit();
+                replaceFragment(new SpeakersFragment(),false);
                 break;
         }
+    }
+
+    private void replaceFragment(Fragment fragment, boolean addToBackstack)
+    {
+        FragmentTransaction transaction=getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_container,fragment);
+
+        if(addToBackstack)
+        {
+            transaction.addToBackStack(null);
+        }
+
+        transaction.commit();
     }
 
     private void closeDrawers() {
