@@ -8,9 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
+import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -19,6 +22,9 @@ import butterknife.ButterKnife;
  * Created by Wojciech on 30.12.2015.
  */
 public class MainActivity extends AppCompatActivity {
+
+    @Bind(R.id.main_container)
+    FrameLayout mainContainter;
 
     @Bind(R.id.drawer_list)
     ListView drawerListView;
@@ -67,7 +73,12 @@ public class MainActivity extends AppCompatActivity {
     {
         switch (item)
         {
-
+            case SCHEDULE:
+                getFragmentManager().beginTransaction().replace(R.id.main_container, new ScheduleFragment()).commit();
+                break;
+            case SPEAKERS:
+                getFragmentManager().beginTransaction().replace(R.id.main_container,new SpeakersFragment()).commit();
+                break;
         }
     }
 
@@ -77,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     //region DrawerData
     public enum NavigationDrawerListEntries implements DrawerAdapter.NavigationDrawerListEntry {
-        AGENDA(R.string.drawer_item_agenda),
+        SCHEDULE(R.string.drawer_item_schedule),
         SPEAKERS(R.string.drawer_item_speakers);
 
         private int labedId;
