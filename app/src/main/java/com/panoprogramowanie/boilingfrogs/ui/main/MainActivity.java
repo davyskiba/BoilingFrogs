@@ -1,8 +1,10 @@
 package com.panoprogramowanie.boilingfrogs.ui.main;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +15,10 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.navigation.Navigator;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
+import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,7 +26,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 30.12.2015.
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Navigator {
     @Bind(R.id.drawer_list)
     ListView drawerListView;
 
@@ -39,9 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
         setupDrawerAndToolbar();
 
-        if(savedInstanceState==null)
-        {
-            replaceFragment(new ScheduleFragment(),false);
+        if (savedInstanceState == null) {
+            replaceFragment(new ScheduleFragment(), false);
         }
     }
 
@@ -55,13 +58,13 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        drawerAdapter=new DrawerAdapter(this, NavigationDrawerListEntries.values());
+        drawerAdapter = new DrawerAdapter(this, NavigationDrawerListEntries.values());
         drawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 closeDrawers();
                 setDrawerItemSelected(position);
-                drawerOptionSelected((NavigationDrawerListEntries)drawerAdapter.getItem(position));
+                drawerOptionSelected((NavigationDrawerListEntries) drawerAdapter.getItem(position));
             }
         });
 
@@ -70,32 +73,43 @@ public class MainActivity extends AppCompatActivity {
         drawerListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+            return;
+        }
+
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.popBackStack();
+        if (fragmentManager.getBackStackEntryCount() == 0) {
+            super.onBackPressed();
+        }
+    }
+
     public void setDrawerItemSelected(int position) {
         drawerListView.setItemChecked(position, true);
         drawerAdapter.setCurrentlySelected(position);
     }
 
-    private void drawerOptionSelected(NavigationDrawerListEntries item)
-    {
-        switch (item)
-        {
+    private void drawerOptionSelected(NavigationDrawerListEntries item) {
+        switch (item) {
             case SCHEDULE:
                 replaceFragment(new ScheduleFragment(), false);
                 break;
             case SPEAKERS:
-                replaceFragment(new SpeakersFragment(),false);
+                replaceFragment(new SpeakersFragment(), false);
                 break;
         }
     }
 
-    private void replaceFragment(Fragment fragment, boolean addToBackstack)
-    {
-        FragmentTransaction transaction=getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_container,fragment);
+    private void replaceFragment(Fragment fragment, boolean addToBackstack) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_container, fragment);
 
-        if(addToBackstack)
-        {
-            transaction.addToBackStack(null);
+        if (addToBackstack) {
+            transaction.addToBackStack("stack");
         }
 
         transaction.commit();
@@ -103,6 +117,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void closeDrawers() {
         drawer.closeDrawers();
+    }
+
+    @Override
+    public void navigateToSpeech() {
+        replaceFragment(new SpeechFragment(),true);
     }
 
     //region DrawerData

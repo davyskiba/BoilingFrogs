@@ -11,8 +11,10 @@ import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlots;
+import com.panoprogramowanie.boilingfrogs.navigation.Navigator;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by Wojciech on 07.01.2016.
@@ -41,6 +43,7 @@ public class ScheduleSlotFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View result=inflater.inflate(R.layout.fragment_schedule_slot,container,false);
+        ButterKnife.bind(this,result);
 
         SpeechSlots slot=(SpeechSlots)getArguments().getSerializable(SLOT_ARG_KEY);
 
@@ -49,7 +52,7 @@ public class ScheduleSlotFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ((Navigator)getActivity()).navigateToSpeech();
             }
         });
 
