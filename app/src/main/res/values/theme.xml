@@ -15,7 +15,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Mitms24Theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="BoilingFrogsTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <style name="Mitms24Theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+    <style name="BoilingFrogsTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
 </resources>
