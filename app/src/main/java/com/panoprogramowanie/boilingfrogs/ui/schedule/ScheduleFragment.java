@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlots;
+import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -18,7 +19,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 07.01.2016.
  */
-public class ScheduleFragment extends Fragment {
+public class ScheduleFragment extends BoilingFrogsFragment {
 
     @Bind(R.id.view_pager)
     ViewPager viewPager;
@@ -27,6 +28,16 @@ public class ScheduleFragment extends Fragment {
     TabLayout tabLayout;
 
     ScheduleFragmentPagerAdapter adapter;
+
+    @Override
+    public boolean isToolbarBackEnabled() {
+        return false;
+    }
+
+    @Override
+    public int getToolbarTitle() {
+        return R.string.drawer_item_schedule;
+    }
 
     @Nullable
     @Override
@@ -66,8 +77,7 @@ public class ScheduleFragment extends Fragment {
         return result;
     }
 
-    private void addTabs(TabLayout tabLayout, SpeechSlots[] slots, int selectedPosition)
-    {
+    private void addTabs(TabLayout tabLayout, SpeechSlots[] slots, int selectedPosition){
         for(int i=0;i<slots.length;i++)
         {
             TabLayout.Tab tab=tabLayout.newTab().setText(slots[i].getLabelId());

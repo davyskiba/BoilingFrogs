@@ -5,6 +5,7 @@
     <string name="navigation_drawer_close">Zamknij menu</string>
     <string name="drawer_item_schedule">Agenda</string>
     <string name="drawer_item_speakers">Prelegenci</string>
+    <string name="drawer_item_speech">Prelekcja</string>
 
     <!-- Speech slots -->
     <string name="speech_slots_first">10:00 - 11:00</string>

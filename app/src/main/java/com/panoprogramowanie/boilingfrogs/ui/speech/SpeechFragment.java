@@ -8,11 +8,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 
 /**
  * Created by Wojciech on 07.01.2016.
  */
-public class SpeechFragment extends Fragment {
+public class SpeechFragment extends BoilingFrogsFragment {
+
+    @Override
+    public boolean isToolbarBackEnabled() {
+        return true;
+    }
+
+    @Override
+    public int getToolbarTitle() {
+        return R.string.drawer_item_speech;
+    }
 
     @Nullable
     @Override

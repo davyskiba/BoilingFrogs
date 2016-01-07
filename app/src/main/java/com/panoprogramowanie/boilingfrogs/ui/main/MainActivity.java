@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         }
     }
 
-    private void replaceFragment(Fragment fragment, boolean addToBackstack) {
+    private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.main_container, fragment);
 
@@ -89,6 +89,13 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         }
 
         transaction.commit();
+
+        if(fragment.isToolbarBackEnabled())
+        {
+            animateToOpenDrawer();
+        }
+
+        getSupportActionBar().setTitle(fragment.getToolbarTitle());
     }
 
     private void closeDrawers() {
@@ -98,7 +105,6 @@ public class MainActivity extends AppCompatActivity implements Navigator {
     @Override
     public void navigateToSpeech() {
         replaceFragment(new SpeechFragment(), true);
-        animateToOpenDrawer();
     }
 
 
