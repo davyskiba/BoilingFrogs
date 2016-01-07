@@ -52,6 +52,58 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+            return;
+        }
+
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.popBackStack();
+
+        animateToCloseDrawer();
+
+        if (fragmentManager.getBackStackEntryCount() == 0) {
+            super.onBackPressed();
+        }
+    }
+
+    private void drawerOptionSelected(NavigationDrawerListEntries item) {
+        switch (item) {
+            case SCHEDULE:
+                replaceFragment(new ScheduleFragment(), false);
+                break;
+            case SPEAKERS:
+                replaceFragment(new SpeakersFragment(), false);
+                break;
+        }
+    }
+
+    private void replaceFragment(Fragment fragment, boolean addToBackstack) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_container, fragment);
+
+        if (addToBackstack) {
+            transaction.addToBackStack("stack");
+        }
+
+        transaction.commit();
+    }
+
+    private void closeDrawers() {
+        drawer.closeDrawers();
+    }
+
+    @Override
+    public void navigateToSpeech() {
+        replaceFragment(new SpeechFragment(), true);
+        animateToOpenDrawer();
+    }
+
+
+    //region Drawer&Toolbar
+
     private void setupDrawerAndToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -88,72 +140,23 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-            return;
-        }
-
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.popBackStack();
-
-        animateToCloseDrawer();
-
-        if (fragmentManager.getBackStackEntryCount() == 0) {
-            super.onBackPressed();
-        }
-    }
 
     public void setDrawerItemSelected(int position) {
         drawerListView.setItemChecked(position, true);
         drawerAdapter.setCurrentlySelected(position);
     }
 
-    private void drawerOptionSelected(NavigationDrawerListEntries item) {
-        switch (item) {
-            case SCHEDULE:
-                replaceFragment(new ScheduleFragment(), false);
-                break;
-            case SPEAKERS:
-                replaceFragment(new SpeakersFragment(), false);
-                break;
-        }
-    }
-
-    private void replaceFragment(Fragment fragment, boolean addToBackstack) {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_container, fragment);
-
-        if (addToBackstack) {
-            transaction.addToBackStack("stack");
-        }
-
-        transaction.commit();
-    }
-
-    private void closeDrawers() {
-        drawer.closeDrawers();
-    }
-
-    @Override
-    public void navigateToSpeech() {
-        replaceFragment(new SpeechFragment(), true);
-        animateToOpenDrawer();
-    }
-
     private void animateToCloseDrawer()
     {
-        animateDrawer(1,0);
+        animateDrawer(1, 0);
     }
 
     private void animateToOpenDrawer()
     {
-        animateDrawer(0,1);
+        animateDrawer(0, 1);
     }
 
-    private void animateDrawer(int start, int end)
-    {
+    private void animateDrawer(int start, int end){
         ValueAnimator anim = ValueAnimator.ofFloat(start, end);
         anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -163,10 +166,10 @@ public class MainActivity extends AppCompatActivity implements Navigator {
             }
         });
         anim.setInterpolator(new DecelerateInterpolator());
-// You can change this duration to more closely match that of the default animation.
         anim.setDuration(500);
         anim.start();
     }
+    //endregion
 
     //region DrawerData
     public enum NavigationDrawerListEntries implements DrawerAdapter.NavigationDrawerListEntry {
