@@ -19,6 +19,10 @@ public class SpeechSlot implements Parcelable{
         speeches=(Speech[])in.readParcelableArray(Speech.class.getClassLoader());
     }
 
+    public SpeechSlot(String header) {
+        this.header=header;
+    }
+
     public String getHeader() {
         return header;
     }
