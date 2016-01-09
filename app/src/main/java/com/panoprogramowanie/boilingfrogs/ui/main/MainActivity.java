@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
 import com.panoprogramowanie.boilingfrogs.R;
@@ -124,6 +125,17 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 return drawerOptionSelected(item);
+            }
+        });
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getFragmentManager().getBackStackEntryCount() == 0) {
+                    drawer.openDrawer(GravityCompat.START);
+                } else {
+                    onBackPressed();
+                }
             }
         });
     }
