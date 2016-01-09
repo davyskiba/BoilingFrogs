@@ -33,7 +33,6 @@ public class ModelJsonUtil {
 
         SpeechSlot speechSlot=new SpeechSlot();
         speechSlot.setHeader("10:00 - 11:00");
-        speechSlot.setPosition(1);
         speechSlot.setSpeeches(new Speech[]{speech1});
 
         schedule.setSpeechSlots(new SpeechSlot[]{speechSlot});

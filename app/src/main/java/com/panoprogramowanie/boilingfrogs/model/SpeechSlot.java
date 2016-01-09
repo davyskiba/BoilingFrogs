@@ -1,20 +1,22 @@
 package com.panoprogramowanie.boilingfrogs.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Wojciech on 09.01.2016.
  */
-public class SpeechSlot {
-    int position;
+public class SpeechSlot implements Parcelable{
     String header;
 
     Speech[] speeches;
 
-    public int getPosition() {
-        return position;
+    public SpeechSlot() {
     }
 
-    public void setPosition(int position) {
-        this.position = position;
+    public SpeechSlot(Parcel in) {
+        header=in.readString();
+        speeches=(Speech[])in.readParcelableArray(Speech.class.getClassLoader());
     }
 
     public String getHeader() {
@@ -32,4 +34,28 @@ public class SpeechSlot {
     public void setSpeeches(Speech[] speeches) {
         this.speeches = speeches;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(header);
+        dest.writeParcelableArray(speeches,flags);
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<SpeechSlot> CREATOR = new Parcelable.Creator<SpeechSlot>() {
+        @Override
+        public SpeechSlot createFromParcel(Parcel in) {
+            return new SpeechSlot(in);
+        }
+
+        @Override
+        public SpeechSlot[] newArray(int size) {
+            return new SpeechSlot[size];
+        }
+    };
 }
