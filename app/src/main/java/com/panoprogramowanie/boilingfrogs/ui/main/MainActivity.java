@@ -10,34 +10,29 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
-import com.google.gson.Gson;
 import com.panoprogramowanie.boilingfrogs.R;
-import com.panoprogramowanie.boilingfrogs.model.Schedule;
-import com.panoprogramowanie.boilingfrogs.model.Speaker;
-import com.panoprogramowanie.boilingfrogs.model.Speech;
-import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.navigation.Navigator;
+import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
+import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
+import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
+import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSupplierImpl;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechFragment;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
  * Created by Wojciech on 30.12.2015.
  */
-public class MainActivity extends AppCompatActivity implements Navigator {
+public class MainActivity extends AppCompatActivity implements NavigationSupplier, SuppliersProvider {
 
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
+
+    private ScheduleSupplier scheduleSupplier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         ButterKnife.bind(this);
 
         setupDrawerAndToolbar();
+
+        scheduleSupplier=new ScheduleSupplierImpl();
 
         if (savedInstanceState == null) {
             replaceFragment(new ScheduleFragment(), false);
@@ -70,18 +67,25 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         }
     }
 
-    private boolean drawerOptionSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_schedule:
-                replaceFragment(new ScheduleFragment(), false);
-                break;
-            case R.id.nav_speakers:
-                replaceFragment(new SpeakersFragment(), false);
-                break;
-            default:return false;
-        }
-        closeDrawers();
-        return true;
+    //region SupplierProvider
+
+    @Override
+    public NavigationSupplier provideNavigator() {
+        return this;
+    }
+
+    @Override
+    public ScheduleSupplier provideScheduleSupplier() {
+        return scheduleSupplier;
+    }
+
+    //ednregion
+
+    //region NavigationSupplier
+
+    @Override
+    public void navigateToSpeech() {
+        replaceFragment(new SpeechFragment(), true);
     }
 
     private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {
@@ -101,16 +105,7 @@ public class MainActivity extends AppCompatActivity implements Navigator {
 
         getSupportActionBar().setTitle(fragment.getToolbarTitle());
     }
-
-    private void closeDrawers() {
-        drawer.closeDrawers();
-    }
-
-    @Override
-    public void navigateToSpeech() {
-        replaceFragment(new SpeechFragment(), true);
-    }
-
+    //endregion
 
     //region Drawer&Toolbar
 
@@ -131,6 +126,20 @@ public class MainActivity extends AppCompatActivity implements Navigator {
                 return drawerOptionSelected(item);
             }
         });
+    }
+
+    private boolean drawerOptionSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_schedule:
+                replaceFragment(new ScheduleFragment(), false);
+                break;
+            case R.id.nav_speakers:
+                replaceFragment(new SpeakersFragment(), false);
+                break;
+            default:return false;
+        }
+        closeDrawers();
+        return true;
     }
 
     private void animateToCloseDrawer()
@@ -155,6 +164,10 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         anim.setInterpolator(new DecelerateInterpolator());
         anim.setDuration(500);
         anim.start();
+    }
+
+    private void closeDrawers() {
+        drawer.closeDrawers();
     }
     //endregion
 
