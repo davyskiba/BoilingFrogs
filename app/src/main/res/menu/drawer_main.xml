@@ -4,25 +4,29 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_schedule"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/drawer_schedule"
             android:title="@string/drawer_item_schedule"
             android:checked="true"/>
         <item
             android:id="@+id/nav_speakers"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/drawer_speakers"
             android:title="@string/drawer_item_speakers" />
+        <item
+            android:id="@+id/nav_my_schedule"
+            android:icon="@drawable/drawer_my_schedule"
+            android:title="@string/drawer_item_my_schedule" />
+        <item
+            android:id="@+id/nav_sponsors"
+            android:icon="@drawable/drawer_sponsors"
+            android:title="@string/drawer_item_sponsors" />
     </group>
 
-    <item android:title="Communicate">
+    <item>
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@mipmap/ic_launcher"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@mipmap/ic_launcher"
-                android:title="Send" />
+                android:id="@+id/nav_navigation"
+                android:icon="@drawable/drawer_navigation"
+                android:title="@string/drawer_item_navigation" />
         </menu>
     </item>
 </menu>

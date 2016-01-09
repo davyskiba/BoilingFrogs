@@ -6,6 +6,10 @@
     <string name="drawer_item_schedule">Agenda</string>
     <string name="drawer_item_speakers">Prelegenci</string>
     <string name="drawer_item_speech">Prelekcja</string>
+    <string name="drawer_item_my_schedule">Moja konferencja</string>
+    <string name="drawer_item_sponsors">Sponsorzy</string>
+    <string name="drawer_item_navigation">Dojazd</string>
+
 
     <!-- Speech slots -->
     <string name="speech_slots_first">10:00 - 11:00</string>
