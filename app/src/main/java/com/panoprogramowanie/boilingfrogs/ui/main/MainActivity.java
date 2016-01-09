@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -31,12 +32,9 @@ import butterknife.ButterKnife;
  * Created by Wojciech on 30.12.2015.
  */
 public class MainActivity extends AppCompatActivity implements Navigator {
-    @Bind(R.id.drawer_list)
-    ListView drawerListView;
 
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
-    private DrawerAdapter drawerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,15 +67,18 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         }
     }
 
-    private void drawerOptionSelected(NavigationDrawerListEntries item) {
-        switch (item) {
-            case SCHEDULE:
+    private boolean drawerOptionSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_schedule:
                 replaceFragment(new ScheduleFragment(), false);
                 break;
-            case SPEAKERS:
+            case R.id.nav_speakers:
                 replaceFragment(new SpeakersFragment(), false);
                 break;
+            default:return false;
         }
+        closeDrawers();
+        return true;
     }
 
     private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {
@@ -120,36 +121,13 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        drawerAdapter = new DrawerAdapter(this, NavigationDrawerListEntries.values());
-        drawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                closeDrawers();
-                setDrawerItemSelected(position);
-                drawerOptionSelected((NavigationDrawerListEntries) drawerAdapter.getItem(position));
+            public boolean onNavigationItemSelected(MenuItem item) {
+                return drawerOptionSelected(item);
             }
         });
-
-        drawerAdapter.setCurrentlySelected(0);
-        drawerListView.setAdapter(drawerAdapter);
-        drawerListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (getFragmentManager().getBackStackEntryCount() == 0) {
-                    drawer.openDrawer(GravityCompat.START);
-                } else {
-                    onBackPressed();
-                }
-            }
-        });
-    }
-
-
-    public void setDrawerItemSelected(int position) {
-        drawerListView.setItemChecked(position, true);
-        drawerAdapter.setCurrentlySelected(position);
     }
 
     private void animateToCloseDrawer()
@@ -174,25 +152,6 @@ public class MainActivity extends AppCompatActivity implements Navigator {
         anim.setInterpolator(new DecelerateInterpolator());
         anim.setDuration(500);
         anim.start();
-    }
-    //endregion
-
-    //region DrawerData
-    public enum NavigationDrawerListEntries implements DrawerAdapter.NavigationDrawerListEntry {
-        SCHEDULE(R.string.drawer_item_schedule),
-        SPEAKERS(R.string.drawer_item_speakers);
-
-        private int labedId;
-
-        NavigationDrawerListEntries(int labelId) {
-            this.labedId = labelId;
-        }
-
-        @Override
-        public int getLabelId() {
-            return labedId;
-        }
-
     }
     //endregion
 

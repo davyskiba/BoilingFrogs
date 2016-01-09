@@ -1,7 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.model;
 
 import com.panoprogramowanie.boilingfrogs.R;
-import com.panoprogramowanie.boilingfrogs.ui.main.DrawerAdapter;
 
 /**
  * Created by Wojciech on 07.01.2016.

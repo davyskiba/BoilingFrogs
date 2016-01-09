@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/drawer_item_schedule" />
+        <item
+            android:id="@+id/nav_speakers"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/drawer_item_speakers" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Send" />
+        </menu>
+    </item>
+</menu>
