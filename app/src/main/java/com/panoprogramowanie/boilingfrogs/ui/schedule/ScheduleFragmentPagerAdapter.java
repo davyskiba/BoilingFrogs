@@ -15,10 +15,10 @@ public class ScheduleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private SpeechSlot[] slots;
 
-    public ScheduleFragmentPagerAdapter(FragmentManager fm,SpeechSlot[] slots) {
+    public ScheduleFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
 
-        this.slots=slots;
+        this.slots=new SpeechSlot[0];
     }
 
     @Override
@@ -29,5 +29,10 @@ public class ScheduleFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return slots.length;
+    }
+
+    public void setData(SpeechSlot[] slots) {
+        this.slots=slots;
+        notifyDataSetChanged();
     }
 }
