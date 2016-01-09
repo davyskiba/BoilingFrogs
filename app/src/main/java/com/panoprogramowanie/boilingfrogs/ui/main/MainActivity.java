@@ -1,25 +1,28 @@
 package com.panoprogramowanie.boilingfrogs.ui.main;
 
 import android.animation.ValueAnimator;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.AdapterView;
-import android.widget.FrameLayout;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.model.Schedule;
+import com.panoprogramowanie.boilingfrogs.model.Speaker;
+import com.panoprogramowanie.boilingfrogs.model.Speech;
+import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.navigation.Navigator;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
