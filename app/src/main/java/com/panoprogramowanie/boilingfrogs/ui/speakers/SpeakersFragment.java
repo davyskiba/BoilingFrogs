@@ -16,11 +16,6 @@ import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 public class SpeakersFragment extends BoilingFrogsFragment {
 
     @Override
-    public boolean isToolbarBackEnabled() {
-        return false;
-    }
-
-    @Override
     public int getToolbarTitle() {
         return R.string.drawer_item_speakers;
     }

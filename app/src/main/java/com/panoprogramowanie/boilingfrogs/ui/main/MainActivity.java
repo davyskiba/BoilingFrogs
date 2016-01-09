@@ -43,6 +43,23 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
         ButterKnife.bind(this);
 
         setupDrawerAndToolbar();
+        getFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+            int previousBackStackCount=0;
+
+            @Override
+            public void onBackStackChanged() {
+                int currentBackStackCount=getFragmentManager().getBackStackEntryCount();
+                if(previousBackStackCount!=currentBackStackCount) {
+                    if (currentBackStackCount == 0) {
+                        animateToCloseDrawer();
+                    } else {
+                        animateToOpenDrawer();
+                    }
+                }
+
+                previousBackStackCount=currentBackStackCount;
+            }
+        });
 
         scheduleSupplier=new ScheduleSupplierImpl();
 
@@ -60,8 +77,6 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.popBackStack();
-
-        animateToCloseDrawer();
 
         if (fragmentManager.getBackStackEntryCount() == 0) {
             super.onBackPressed();
@@ -98,11 +113,6 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
         }
 
         transaction.commit();
-
-        if(fragment.isToolbarBackEnabled())
-        {
-            animateToOpenDrawer();
-        }
 
         getSupportActionBar().setTitle(fragment.getToolbarTitle());
     }

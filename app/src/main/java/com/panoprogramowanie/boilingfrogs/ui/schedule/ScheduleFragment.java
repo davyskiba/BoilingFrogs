@@ -30,11 +30,6 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     ScheduleFragmentPagerAdapter adapter;
 
     @Override
-    public boolean isToolbarBackEnabled() {
-        return false;
-    }
-
-    @Override
     public int getToolbarTitle() {
         return R.string.drawer_item_schedule;
     }
