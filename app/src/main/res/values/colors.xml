@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorPrimaryPressed">#282828</color>
-    <color name="colorAccent">#00e2ff</color>
-    <color name="colorAccentPressed">#0096a9</color>
-    <color name="colorWindowBackground">#1e1e1e</color>
+    <color name="colorPrimary">#CA3538</color>
+    <color name="colorPrimaryDark">#FFFB00</color>
+    <color name="colorPrimaryPressed">#FFFB00</color>
+    <color name="colorAccent">#FFFB00</color>
+    <color name="colorAccentPressed">#FFFB00</color>
+    <color name="colorWindowBackground">#252525</color>
+
+    <color name="black">#0D1D27</color>
+    <color name="dark_gray">#252525</color>
+    <color name="gray">#6D797A</color>
+    <color name="red">#CA3538</color>
+    <color name="white">#FBFBFB</color>
+
+    <color name="drawer_selected_background">#191919</color>
 
     <color name="textColor">#ffffff</color>
     <color name="textColorDetails">#9b9b9b</color>
     <color name="textColorHeadline">#c8c8c8</color>
-
-    <color name="textColorDrawer">#c8c8c8</color>
-    <color name="pressedColorDrawer">#282828</color>
-    <color name="separatorColorDrawer">#282828</color>
 </resources>
