@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
-import com.panoprogramowanie.boilingfrogs.model.SpeechSlots;
-import com.panoprogramowanie.boilingfrogs.navigation.Navigator;
+import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
+import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -23,9 +23,9 @@ public class ScheduleSlotFragment extends Fragment {
 
     private static String SLOT_ARG_KEY="slot_arg";
 
-    public static ScheduleSlotFragment createInstance(SpeechSlots slot){
+    public static ScheduleSlotFragment createInstance(SpeechSlot slot){
         Bundle args=new Bundle();
-        args.putSerializable(SLOT_ARG_KEY, slot);
+        args.putParcelable(SLOT_ARG_KEY, slot);
 
         ScheduleSlotFragment result=new ScheduleSlotFragment();
         result.setArguments(args);
@@ -42,17 +42,17 @@ public class ScheduleSlotFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.fragment_schedule_slot,container,false);
-        ButterKnife.bind(this,result);
+        View result=inflater.inflate(R.layout.fragment_schedule_slot, container, false);
+        ButterKnife.bind(this, result);
 
-        SpeechSlots slot=(SpeechSlots)getArguments().getSerializable(SLOT_ARG_KEY);
+        SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
 
-        textView.setText(slot.getLabelId());
+        textView.setText(slot.getHeader());
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((Navigator)getActivity()).navigateToSpeech();
+                ((NavigationSupplier)getActivity()).navigateToSpeech();
             }
         });
 

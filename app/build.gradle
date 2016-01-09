@@ -31,4 +31,5 @@ dependencies {
     compile "com.android.support:support-v13:${android_support_lib_version}"
 
     compile "com.jakewharton:butterknife:${butterknife_version}"
+    compile "org.immutables:gson:${gson_version}"
 }
