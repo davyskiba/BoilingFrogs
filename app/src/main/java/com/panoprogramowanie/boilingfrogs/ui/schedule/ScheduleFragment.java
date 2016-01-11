@@ -27,6 +27,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     @Bind(R.id.tab_layout)
     TabLayout tabLayout;
 
+    private int selectedItem;
     ScheduleFragmentPagerAdapter adapter;
 
     @Override
@@ -50,7 +51,9 @@ public class ScheduleFragment extends BoilingFrogsFragment {
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
+                selectedItem = tab.getPosition();
+                viewPager.setCurrentItem(selectedItem);
+
             }
 
             @Override
@@ -67,6 +70,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
         return result;
     }
 
+
     @Override
     public void onResume() {
         super.onResume();
@@ -78,10 +82,16 @@ public class ScheduleFragment extends BoilingFrogsFragment {
         SpeechSlot[] slots=((SuppliersProvider) getActivity()).provideScheduleSupplier().getAllSpeechSlots();
         adapter.setData(slots);
 
-        int selectedTabPosition=tabLayout.getSelectedTabPosition();
+        int selectedTabPosition=selectedItem;
 
         tabLayout.removeAllTabs();
         addTabs(tabLayout,slots,selectedTabPosition);
+
+        if(tabLayout.getTabCount()>selectedTabPosition && selectedTabPosition>0) {
+            tabLayout.getTabAt(selectedTabPosition).select();
+            viewPager.setCurrentItem(selectedTabPosition);
+            selectedItem=selectedTabPosition;
+        }
     }
 
     private void addTabs(TabLayout tabLayout, SpeechSlot[] slots, int selectedPosition){
