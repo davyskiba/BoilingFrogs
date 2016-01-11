@@ -1,5 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.suppliers;
 
+import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 
 /**
@@ -7,4 +8,5 @@ import com.panoprogramowanie.boilingfrogs.model.Speech;
  */
 public interface NavigationSupplier {
     void navigateToSpeech(Speech speech);
+    void navigateToSpeaker(Speaker speaker);
 }

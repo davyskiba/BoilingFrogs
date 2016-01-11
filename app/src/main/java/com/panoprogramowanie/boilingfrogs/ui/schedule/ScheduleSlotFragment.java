@@ -44,12 +44,17 @@ public class ScheduleSlotFragment extends ListFragment {
     @Override
     protected ArrayAdapter<ListItemModel> getAdapter() {
         SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
-        return new ListItemModelAdapter(getActivity(),slot.getSpeeches());
+        return new ListItemModelAdapter(getActivity(),R.layout.list_item_schedule,slot.getSpeeches());
     }
 
     @Override
     protected void onItemClicked(ListItemModel itemModel) {
         Speech clickedSpeech=(Speech)itemModel;
         ((SuppliersProvider) getActivity()).provideNavigator().navigateToSpeech(clickedSpeech);
+    }
+
+    @Override
+    public int getToolbarTitle() {
+        return R.string.drawer_item_schedule;
     }
 }

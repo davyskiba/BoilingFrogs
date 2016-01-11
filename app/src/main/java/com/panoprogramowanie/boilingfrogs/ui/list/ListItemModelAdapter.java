@@ -12,8 +12,12 @@ import com.panoprogramowanie.boilingfrogs.R;
  * Created by Wojciech on 11.01.2016.
  */
 public class ListItemModelAdapter extends ArrayAdapter<ListItemModel> {
-    public ListItemModelAdapter(Context context, ListItemModel[] objects) {
-        super(context, -1, objects);
+
+    private int listItemLayoutId;
+
+    public ListItemModelAdapter(Context context,int resId, ListItemModel[] objects) {
+        super(context, resId, objects);
+        listItemLayoutId=resId;
     }
 
     @Override
@@ -23,7 +27,7 @@ public class ListItemModelAdapter extends ArrayAdapter<ListItemModel> {
         ListItemModelView view;
         if(convertView==null)
         {
-            view=(ListItemModelView)inflater.inflate(R.layout.list_item_model,null);
+            view=(ListItemModelView)inflater.inflate(listItemLayoutId,null);
         }
         else {
             view=(ListItemModelView)convertView;

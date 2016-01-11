@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
+import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -20,7 +21,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 11.01.2016.
  */
-public abstract class ListFragment extends Fragment{
+public abstract class ListFragment extends BoilingFrogsFragment {
 
     @Bind(R.id.listView)
     ListView listView;

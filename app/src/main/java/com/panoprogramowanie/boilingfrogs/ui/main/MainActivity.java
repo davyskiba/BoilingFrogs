@@ -13,8 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Toast;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
@@ -104,6 +106,11 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
     @Override
     public void navigateToSpeech(Speech speech) {
         replaceFragment(SpeechFragment.createInstance(speech), true);
+    }
+
+    @Override
+    public void navigateToSpeaker(Speaker speaker) {
+        Toast.makeText(this,"navigating to "+speaker.getName(),Toast.LENGTH_LONG).show();
     }
 
     private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {
