@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
@@ -101,8 +102,8 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
     //region NavigationSupplier
 
     @Override
-    public void navigateToSpeech() {
-        replaceFragment(new SpeechFragment(), true);
+    public void navigateToSpeech(Speech speech) {
+        replaceFragment(SpeechFragment.createInstance(speech), true);
     }
 
     private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {

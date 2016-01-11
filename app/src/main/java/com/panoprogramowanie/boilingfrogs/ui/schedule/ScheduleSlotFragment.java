@@ -3,15 +3,23 @@ package com.panoprogramowanie.boilingfrogs.ui.schedule;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
+import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
+import com.panoprogramowanie.boilingfrogs.ui.view.SpeechListItem;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,11 +41,8 @@ public class ScheduleSlotFragment extends Fragment {
         return result;
     }
 
-    @Bind(R.id.button)
-    Button button;
-
-    @Bind(R.id.textView)
-    TextView textView;
+    @Bind(R.id.listView)
+    ListView listView;
 
     @Nullable
     @Override
@@ -47,15 +52,21 @@ public class ScheduleSlotFragment extends Fragment {
 
         SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
 
-        textView.setText(slot.getHeader());
+        listView.setAdapter(new SpeechListAdapter(getActivity(),slot.getSpeeches()));
 
-        button.setOnClickListener(new View.OnClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                ((NavigationSupplier)getActivity()).navigateToSpeech();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                SpeechListItem speechListItem=(SpeechListItem)view;
+                onSpeechClicked(speechListItem.getSpeech());
             }
         });
 
         return result;
+    }
+
+    private void onSpeechClicked(Speech speech)
+    {
+        ((SuppliersProvider)getActivity()).provideNavigator().navigateToSpeech(speech);
     }
 }
