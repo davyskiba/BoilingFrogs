@@ -3,23 +3,18 @@ package com.panoprogramowanie.boilingfrogs.ui.schedule;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
-import com.panoprogramowanie.boilingfrogs.ui.view.SpeechListItem;
+import com.panoprogramowanie.boilingfrogs.ui.view.ListItemModelAdapter;
+import com.panoprogramowanie.boilingfrogs.ui.view.ListItemModelView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -52,13 +47,13 @@ public class ScheduleSlotFragment extends Fragment {
 
         SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
 
-        listView.setAdapter(new SpeechListAdapter(getActivity(),slot.getSpeeches()));
+        listView.setAdapter(new ListItemModelAdapter(getActivity(),slot.getSpeeches()));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                SpeechListItem speechListItem=(SpeechListItem)view;
-                onSpeechClicked(speechListItem.getSpeech());
+                ListItemModelView speechListItem=(ListItemModelView)view;
+                onSpeechClicked((Speech) speechListItem.getModel());
             }
         });
 

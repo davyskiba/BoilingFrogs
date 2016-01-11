@@ -3,10 +3,12 @@ package com.panoprogramowanie.boilingfrogs.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.panoprogramowanie.boilingfrogs.ui.view.ListItemModel;
+
 /**
  * Created by Wojciech on 09.01.2016.
  */
-public class Speech implements Parcelable {
+public class Speech implements Parcelable, ListItemModel {
     String timeString;
 
     int speakerId;
@@ -78,6 +80,23 @@ public class Speech implements Parcelable {
         return speaker;
     }
 
+    //region ListItemModel
+
+    @Override
+    public String getSubtitle() {
+        return speaker!=null ? speaker.getName() : null;
+    }
+
+    @Override
+    public String getPhotoUrl() {
+        return speaker!=null ? speaker.photoUrl : null;
+    }
+
+
+    //endregion
+
+    //region Parcelable
+
     @Override
     public int describeContents() {
         return 0;
@@ -90,7 +109,7 @@ public class Speech implements Parcelable {
         dest.writeInt(path);
         dest.writeString(title);
         dest.writeString(description);
-        dest.writeParcelable(speaker,flags);
+        dest.writeParcelable(speaker, flags);
     }
 
     @SuppressWarnings("unused")
@@ -105,4 +124,6 @@ public class Speech implements Parcelable {
             return new Speech[size];
         }
     };
+
+    //endregion
 }
