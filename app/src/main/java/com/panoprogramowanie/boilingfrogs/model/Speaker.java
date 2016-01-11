@@ -11,6 +11,7 @@ public class Speaker implements Parcelable {
     String name;
     String 	occupation;
     String description;
+    String photoUrl;
 
     String twitter;
     String linkedIn;
@@ -49,6 +50,14 @@ public class Speaker implements Parcelable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
     }
 
     public String getTwitter() {

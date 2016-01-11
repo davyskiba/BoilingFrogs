@@ -44,12 +44,12 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
         setupDrawerAndToolbar();
         getFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
-            int previousBackStackCount=0;
+            int previousBackStackCount = 0;
 
             @Override
             public void onBackStackChanged() {
-                int currentBackStackCount=getFragmentManager().getBackStackEntryCount();
-                if(previousBackStackCount!=currentBackStackCount) {
+                int currentBackStackCount = getFragmentManager().getBackStackEntryCount();
+                if (previousBackStackCount != currentBackStackCount) {
                     if (currentBackStackCount == 0) {
                         animateToCloseDrawer();
                     } else {
@@ -57,11 +57,12 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
                     }
                 }
 
-                previousBackStackCount=currentBackStackCount;
+                previousBackStackCount = currentBackStackCount;
             }
         });
 
         scheduleSupplier=new ScheduleSupplierImpl();
+        scheduleSupplier.loadSchedule(this);
 
         if (savedInstanceState == null) {
             replaceFragment(new ScheduleFragment(), false);
