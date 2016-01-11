@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.panoprogramowanie.boilingfrogs.ui.view.SpeechListItem xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
-    android:id="@+id/text"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textColor="@color/black"
-    />
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/avatar_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/speaker_avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="4dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/avatar_wrapper"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/avatar_wrapper"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/avatar_wrapper"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/avatar_wrapper"
+        android:maxLines="1"
+        android:textColor="@color/gray" />
 </com.panoprogramowanie.boilingfrogs.ui.view.SpeechListItem>

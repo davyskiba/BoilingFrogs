@@ -31,5 +31,7 @@ dependencies {
     compile "com.android.support:support-v13:${android_support_lib_version}"
 
     compile "com.jakewharton:butterknife:${butterknife_version}"
+    compile "com.nostra13.universalimageloader:universal-image-loader:${universal_image_loader_version}"
+    compile "de.hdodenhof:circleimageview:${circle_imageview_version}"
     compile "org.immutables:gson:${gson_version}"
 }
