@@ -14,6 +14,7 @@ public class Speech implements Parcelable {
 
     String title;
     String description;
+    private Speaker speaker;
 
     public Speech()
     {
@@ -26,6 +27,7 @@ public class Speech implements Parcelable {
         path = in.readInt();
         title = in.readString();
         description = in.readString();
+        speaker=in.readParcelable(Speaker.class.getClassLoader());
     }
 
     public String getTimeString() {
@@ -68,6 +70,14 @@ public class Speech implements Parcelable {
         this.description = description;
     }
 
+    public void setSpeaker(Speaker speaker) {
+        this.speaker = speaker;
+    }
+
+    public Speaker getSpeaker() {
+        return speaker;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -80,6 +90,7 @@ public class Speech implements Parcelable {
         dest.writeInt(path);
         dest.writeString(title);
         dest.writeString(description);
+        dest.writeParcelable(speaker,flags);
     }
 
     @SuppressWarnings("unused")

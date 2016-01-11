@@ -5,6 +5,7 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.panoprogramowanie.boilingfrogs.model.Schedule;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
+import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.util.ModelJsonUtil;
@@ -34,15 +35,7 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
 
     @Override
     public Speaker getSpeakerById(int id) {
-        for(Speaker speaker : schedule.getSpeakers())
-        {
-            if(speaker.getId()==id)
-            {
-                return speaker;
-            }
-        }
-
-        return null;
+        return schedule.getSpeakers()[id-1];
     }
 
     @Override
@@ -55,6 +48,22 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
 
         Gson gson=new Gson();
         schedule=gson.fromJson(scheduleJson, Schedule.class);
+
+        fillSpeechSpeakers();
+    }
+
+    public void fillSpeechSpeakers() {
+        for(SpeechSlot slot:schedule.getSpeechSlots())
+        {
+            for(Speech speech:slot.getSpeeches())
+            {
+                int speakerId=speech.getSpeakerId();
+                if(speakerId>0)
+                {
+                    speech.setSpeaker(getSpeakerById(speakerId));
+                }
+            }
+        }
     }
 
     private String readAssetsFile(Context context, String fileName)
