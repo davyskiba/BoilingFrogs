@@ -1,4 +1,4 @@
-package com.panoprogramowanie.boilingfrogs.ui.view;
+package com.panoprogramowanie.boilingfrogs.ui.list;
 
 /**
  * Created by Wojciech on 11.01.2016.

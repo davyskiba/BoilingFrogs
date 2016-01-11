@@ -3,7 +3,7 @@ package com.panoprogramowanie.boilingfrogs.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.panoprogramowanie.boilingfrogs.ui.view.ListItemModel;
+import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel;
 
 /**
  * Created by Wojciech on 09.01.2016.

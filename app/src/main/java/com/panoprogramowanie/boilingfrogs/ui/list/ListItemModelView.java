@@ -1,4 +1,4 @@
-package com.panoprogramowanie.boilingfrogs.ui.view;
+package com.panoprogramowanie.boilingfrogs.ui.list;
 
 import android.content.Context;
 import android.util.AttributeSet;

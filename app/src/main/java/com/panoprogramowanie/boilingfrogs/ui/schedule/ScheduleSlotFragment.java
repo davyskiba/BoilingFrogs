@@ -7,14 +7,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
-import com.panoprogramowanie.boilingfrogs.ui.view.ListItemModelAdapter;
-import com.panoprogramowanie.boilingfrogs.ui.view.ListItemModelView;
+import com.panoprogramowanie.boilingfrogs.ui.list.ListFragment;
+import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel;
+import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelAdapter;
+import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelView;
+
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,7 +27,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 07.01.2016.
  */
-public class ScheduleSlotFragment extends Fragment {
+public class ScheduleSlotFragment extends ListFragment {
 
     private static String SLOT_ARG_KEY="slot_arg";
 
@@ -36,32 +41,15 @@ public class ScheduleSlotFragment extends Fragment {
         return result;
     }
 
-    @Bind(R.id.listView)
-    ListView listView;
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.fragment_schedule_slot, container, false);
-        ButterKnife.bind(this, result);
-
+    protected ArrayAdapter<ListItemModel> getAdapter() {
         SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
-
-        listView.setAdapter(new ListItemModelAdapter(getActivity(),slot.getSpeeches()));
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListItemModelView speechListItem=(ListItemModelView)view;
-                onSpeechClicked((Speech) speechListItem.getModel());
-            }
-        });
-
-        return result;
+        return new ListItemModelAdapter(getActivity(),slot.getSpeeches());
     }
 
-    private void onSpeechClicked(Speech speech)
-    {
-        ((SuppliersProvider)getActivity()).provideNavigator().navigateToSpeech(speech);
+    @Override
+    protected void onItemClicked(ListItemModel itemModel) {
+        Speech clickedSpeech=(Speech)itemModel;
+        ((SuppliersProvider) getActivity()).provideNavigator().navigateToSpeech(clickedSpeech);
     }
 }
