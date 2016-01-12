@@ -24,6 +24,7 @@ import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSuppl
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
+import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechActivity;
 import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechFragment;
 
 import butterknife.ButterKnife;
@@ -111,12 +112,12 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
     @Override
     public void navigateToSpeech(Speech speech) {
-        replaceFragment(SpeechFragment.createInstance(speech), true);
+        SpeechActivity.startForSpeech(speech, this);
     }
 
     @Override
     public void navigateToSpeaker(Speaker speaker) {
-        SpeakerActivity.startForSpeaker(speaker,this);
+        SpeakerActivity.startForSpeaker(speaker, this);
     }
 
     private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {
