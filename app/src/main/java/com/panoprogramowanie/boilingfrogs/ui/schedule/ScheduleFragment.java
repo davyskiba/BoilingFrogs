@@ -67,6 +67,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
 
             }
         });
+        refreshData();
 
         return result;
     }
@@ -75,7 +76,6 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     @Override
     public void onResume() {
         super.onResume();
-        refreshData();
     }
 
     private void refreshData()
