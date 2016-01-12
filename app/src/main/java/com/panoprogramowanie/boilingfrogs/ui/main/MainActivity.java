@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Toast;
 
+import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
@@ -23,6 +24,7 @@ import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSupplierImpl;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
+import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechFragment;
 
@@ -32,6 +34,8 @@ import butterknife.ButterKnife;
  * Created by Wojciech on 30.12.2015.
  */
 public class MainActivity extends AppCompatActivity implements NavigationSupplier, SuppliersProvider {
+
+    private static String FRAGMENT_TAG="fTag";
 
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
@@ -59,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
                         animateToOpenDrawer();
                     }
                 }
+
+                BoilingFrogsFragment currentFragment=(BoilingFrogsFragment) getFragmentManager().findFragmentByTag(FRAGMENT_TAG);
+                String currentFragmentTitle=currentFragment.getToolbarTitle(MainActivity.this);
+                getSupportActionBar().setTitle(currentFragmentTitle);
 
                 previousBackStackCount = currentBackStackCount;
             }
@@ -110,12 +118,12 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
     @Override
     public void navigateToSpeaker(Speaker speaker) {
-        Toast.makeText(this,"navigating to "+speaker.getName(),Toast.LENGTH_LONG).show();
+        replaceFragment(SpeakerFragment.createInstance(speaker),true);
     }
 
     private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_container, fragment);
+        transaction.replace(R.id.main_container, fragment,FRAGMENT_TAG);
 
         if (addToBackstack) {
             transaction.addToBackStack("stack");
