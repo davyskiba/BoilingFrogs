@@ -1,6 +1,7 @@
 package com.panoprogramowanie.boilingfrogs.ui.schedule;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -54,7 +55,7 @@ public class ScheduleSlotFragment extends ListFragment {
     }
 
     @Override
-    public int getToolbarTitle() {
-        return R.string.drawer_item_schedule;
+    public String getToolbarTitle(Context context) {
+        return context.getString(R.string.drawer_item_schedule);
     }
 }

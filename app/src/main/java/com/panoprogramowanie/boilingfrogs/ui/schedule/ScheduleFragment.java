@@ -1,5 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.ui.schedule;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -31,8 +32,8 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     ScheduleFragmentPagerAdapter adapter;
 
     @Override
-    public int getToolbarTitle() {
-        return R.string.drawer_item_schedule;
+    public String getToolbarTitle(Context context) {
+        return context.getString(R.string.drawer_item_schedule);
     }
 
     @Nullable

@@ -1,5 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.ui.speech;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -30,8 +31,9 @@ public class SpeechFragment extends BoilingFrogsFragment {
     }
 
     @Override
-    public int getToolbarTitle() {
-        return R.string.drawer_item_speech;
+    public String getToolbarTitle(Context context) {
+        Speech speech=getArguments().getParcelable(SPEECH_ARG_KEY);
+        return speech.getTitle();
     }
 
     @Nullable

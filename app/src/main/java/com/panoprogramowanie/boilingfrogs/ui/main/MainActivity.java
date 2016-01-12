@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
         transaction.commit();
 
-        getSupportActionBar().setTitle(fragment.getToolbarTitle());
+        getSupportActionBar().setTitle(fragment.getToolbarTitle(this));
     }
     //endregion
 
