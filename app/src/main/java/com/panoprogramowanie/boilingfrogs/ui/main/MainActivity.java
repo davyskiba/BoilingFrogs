@@ -13,9 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Toast;
 
-import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
@@ -24,7 +22,7 @@ import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSupplierImpl;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
-import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerFragment;
+import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechFragment;
 
@@ -118,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
     @Override
     public void navigateToSpeaker(Speaker speaker) {
-        replaceFragment(SpeakerFragment.createInstance(speaker),true);
+        SpeakerActivity.startForSpeaker(speaker,this);
     }
 
     private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {

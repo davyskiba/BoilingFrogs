@@ -18,4 +18,8 @@
     <style name="BoilingFrogsTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="BoilingFrogsTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+
+    <style name="BoilingFrogsTheme.CollapsingToolbar">
+        <item name="android:textSize">@dimen/expanded_title_size</item>
+    </style>
 </resources>

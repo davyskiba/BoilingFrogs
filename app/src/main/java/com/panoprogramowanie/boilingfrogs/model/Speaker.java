@@ -110,6 +110,7 @@ public class Speaker implements Parcelable,ListItemModel {
         twitter = in.readString();
         linkedIn = in.readString();
         facebook = in.readString();
+        photoUrl=in.readString();
     }
 
     @Override
@@ -126,6 +127,7 @@ public class Speaker implements Parcelable,ListItemModel {
         dest.writeString(twitter);
         dest.writeString(linkedIn);
         dest.writeString(facebook);
+        dest.writeString(photoUrl);
     }
 
     @SuppressWarnings("unused")

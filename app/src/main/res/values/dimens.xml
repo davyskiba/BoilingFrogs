@@ -3,4 +3,5 @@
     <dimen name="drawer_top_padding">56dp</dimen>
     <dimen name="drawer_item_height">72dp</dimen>
     <dimen name="drawer_separator_height">2dp</dimen>
+    <dimen name="expanded_title_size">20sp</dimen>
 </resources>
