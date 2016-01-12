@@ -8,7 +8,6 @@ import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
-import com.panoprogramowanie.boilingfrogs.util.ModelJsonUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;

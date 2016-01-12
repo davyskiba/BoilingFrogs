@@ -1,6 +1,5 @@
 package com.panoprogramowanie.boilingfrogs.ui.list;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -11,8 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.panoprogramowanie.boilingfrogs.R;
-import com.panoprogramowanie.boilingfrogs.model.Speech;
-import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 
 import butterknife.Bind;
@@ -29,7 +26,7 @@ public abstract class ListFragment extends BoilingFrogsFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.fragment_schedule_slot, container, false);
+        View result=inflater.inflate(R.layout.fragment_list, container, false);
         ButterKnife.bind(this, result);
 
         listView.setAdapter(getAdapter());
