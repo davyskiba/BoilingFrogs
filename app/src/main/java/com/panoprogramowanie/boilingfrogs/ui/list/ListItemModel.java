@@ -7,4 +7,5 @@ public interface ListItemModel {
     String getTitle();
     String getSubtitle();
     String getPhotoUrl();
+    boolean isClickable();
 }

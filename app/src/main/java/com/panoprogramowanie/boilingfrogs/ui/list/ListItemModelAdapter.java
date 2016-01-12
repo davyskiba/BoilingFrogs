@@ -21,6 +21,11 @@ public class ListItemModelAdapter extends ArrayAdapter<ListItemModel> {
     }
 
     @Override
+    public boolean isEnabled(int position) {
+        return getItem(position).isClickable();
+    }
+
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 

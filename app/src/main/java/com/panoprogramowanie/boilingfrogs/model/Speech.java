@@ -92,6 +92,10 @@ public class Speech implements Parcelable, ListItemModel {
         return speaker!=null ? speaker.photoUrl : null;
     }
 
+    @Override
+    public boolean isClickable() {
+        return description!=null;
+    }
 
     //endregion
 

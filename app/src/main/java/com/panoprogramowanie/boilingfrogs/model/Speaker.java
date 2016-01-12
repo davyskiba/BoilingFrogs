@@ -98,6 +98,11 @@ public class Speaker implements Parcelable,ListItemModel {
         return occupation;
     }
 
+    @Override
+    public boolean isClickable() {
+        return true;
+    }
+
     //endregion
 
     //region Parcelable
