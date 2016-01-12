@@ -45,6 +45,12 @@ public class SpeakerFragment extends BoilingFrogsFragment {
     @Bind(R.id.speaker_name)
     TextView speakerName;
 
+    @Bind(R.id.speaker_occupation)
+    TextView speakerOccupation;
+
+    @Bind(R.id.speaker_about)
+    TextView speakerAbout;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,7 +60,9 @@ public class SpeakerFragment extends BoilingFrogsFragment {
         Speaker speaker=getArguments().getParcelable(SPEAKER_ARG_KEY);
 
         AvatarLoaderUtil.loadAvatar(getActivity(),speaker.getPhotoUrl(),avatar,R.drawable.avatar_placeholder);
-        speakerName.setText(speaker.getName());
+        speakerName.setText(speaker.getName().toUpperCase());
+        speakerAbout.setText(speaker.getDescription().replace("\\n","\n"));
+        speakerOccupation.setText(speaker.getOccupation().toUpperCase());
 
         return result;
     }
