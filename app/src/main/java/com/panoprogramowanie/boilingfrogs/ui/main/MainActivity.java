@@ -27,7 +27,6 @@ import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechActivity;
-import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechFragment;
 
 import butterknife.ButterKnife;
 
