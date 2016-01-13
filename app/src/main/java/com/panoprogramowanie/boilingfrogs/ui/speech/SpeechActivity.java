@@ -80,7 +80,7 @@ public class SpeechActivity extends AppCompatActivity {
 
         Speaker speaker=speech.getSpeaker();
         speakerName.setText(speaker.getName());
-        speakerOccupation.setText(speaker.getOccupation().toUpperCase());
+        speakerOccupation.setText(speaker.getOccupation());
 
         speechTitle.setText(speech.getTitle());
         speechTime.setText(speech.getTimeString());
