@@ -83,6 +83,11 @@
                 android:textSize="14sp"
                 android:singleLine="false"
                 android:textColor="@color/black" />
+            <include
+                android:id="@+id/speaker_social"
+                layout="@layout/view_social"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
         </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>

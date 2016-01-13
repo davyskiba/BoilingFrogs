@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
+import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
 import butterknife.Bind;
@@ -60,6 +61,9 @@ public class SpeechActivity extends AppCompatActivity {
     @Bind(R.id.collapsing_toolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
 
+    @Bind(R.id.speaker_social)
+    SocialView socialView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,58 +82,11 @@ public class SpeechActivity extends AppCompatActivity {
         speechTitle.setText(speech.getTitle());
         speechDescription.setText(speech.getDescription().replace("\\n", "\n"));
 
+        socialView.setupForSpeaker(speech.getSpeaker());
+
         setupDrawerAndToolbar(speech.getTimeString());
 
         AvatarLoaderUtil.loadAvatar(this, speech.getSpeaker().getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        String socialUrl;
-
-        Speaker speaker=speech.getSpeaker();
-
-        socialUrl=speaker.getFacebook();
-        if(socialUrl!=null) {
-            menu.add(0, 0, 0, "Item").setIcon(R.drawable.facebook_icon).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-
-        socialUrl=speaker.getTwitter();
-        if(socialUrl!=null) {
-            menu.add(0, 1, 1, "Item").setIcon(R.drawable.twitter_icon).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-
-        socialUrl=speaker.getLinkedIn();
-        if(socialUrl!=null) {
-            menu.add(0, 2, 2, "Item").setIcon(R.drawable.linkedin_icon).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Speaker speaker=speech.getSpeaker();
-        switch (item.getItemId())
-        {
-            case MENU_ITEM_ID_FACEBOOK:
-                launchBrowser(speaker.getFacebook());
-                break;
-            case MENU_ITEM_ID_TWITTER:
-                launchBrowser(speaker.getTwitter());
-                break;
-            case MENU_ITEM_ID_LINKEDIN:
-                launchBrowser(speaker.getLinkedIn());
-                break;
-        }
-
-        return true;
-    }
-
-    private void launchBrowser(String url)
-    {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        startActivity(browserIntent);
     }
 
     private void setupDrawerAndToolbar(String title) {
