@@ -23,6 +23,7 @@ import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSupplierImpl;
+import com.panoprogramowanie.boilingfrogs.ui.my_schedule.MyScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
@@ -181,6 +182,9 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
                 break;
             case R.id.nav_speakers:
                 replaceFragment(new SpeakersFragment(), false);
+                break;
+            case R.id.nav_my_schedule:
+                replaceFragment(new MyScheduleFragment(), false);
                 break;
             case R.id.nav_navigation:
                 navigateToConference();
