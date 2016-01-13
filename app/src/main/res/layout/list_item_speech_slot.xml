@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="4dp"
-    android:paddingTop="4dp"
     android:paddingRight="8dp"
-    android:paddingLeft="8dp"
-    android:orientation="vertical">
+    android:paddingLeft="8dp">
 
     <ImageView
         android:layout_width="match_parent"
@@ -19,12 +15,12 @@
         />
     <TextView
         android:id="@+id/speech_slot_time"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
         android:layout_centerVertical="true"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:textStyle="normal"/>
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -40,12 +36,19 @@
 
     <TextView
         android:id="@+id/subtitle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginLeft="8dp"
         android:layout_toRightOf="@+id/speech_slot_time"
-        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/empty_view"
         android:maxLines="1"
-        android:textColor="@color/gray" />
-</com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelView>
+        android:textColor="@color/black" />
+
+    <View
+        android:id = "@+id/empty_view"
+        android:layout_height = "8dp"
+        android:layout_width = "match_parent"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/photo"
+        />
+    </RelativeLayout>
