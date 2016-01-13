@@ -46,14 +46,17 @@ public class SpeechActivity extends AppCompatActivity {
     @Bind(R.id.header)
     ImageView avatar;
 
-    @Bind(R.id.speech_title)
-    TextView speechTitle;
-
     @Bind(R.id.speaker_name)
     TextView speakerName;
 
     @Bind(R.id.speaker_occupation)
     TextView speakerOccupation;
+
+    @Bind(R.id.speech_title)
+    TextView speechTitle;
+
+    @Bind(R.id.speech_time)
+    TextView speechTime;
 
     @Bind(R.id.speech_description)
     TextView speechDescription;
@@ -80,22 +83,23 @@ public class SpeechActivity extends AppCompatActivity {
         speakerOccupation.setText(speaker.getOccupation().toUpperCase());
 
         speechTitle.setText(speech.getTitle());
-        speechDescription.setText(speech.getDescription().replace("\\n", "\n"));
+        speechTime.setText(speech.getTimeString());
+        speechDescription.setText(speech.getDescription().replace("\\n", "\n\n"));
 
         socialView.setupForSpeaker(speech.getSpeaker());
 
-        setupDrawerAndToolbar(speech.getTimeString());
+        setupDrawerAndToolbar();
 
         AvatarLoaderUtil.loadAvatar(this, speech.getSpeaker().getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
     }
 
-    private void setupDrawerAndToolbar(String title) {
+    private void setupDrawerAndToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.anim_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        collapsingToolbarLayout.setTitle(title);
+        getSupportActionBar().setTitle("");
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.BoilingFrogsTheme_CollapsingToolbar);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
