@@ -84,7 +84,7 @@ public class SpeechActivity extends AppCompatActivity {
 
         speechTitle.setText(speech.getTitle());
         speechTime.setText(speech.getTimeString());
-        speechDescription.setText(speech.getDescription().replace("\\n", "\n\n"));
+        speechDescription.setText(speech.getDescription().replace("\\n", "\n").replace("\n\n","\n").replace("\n","\n\n"));
 
         socialView.setupForSpeaker(speech.getSpeaker());
 
@@ -99,7 +99,8 @@ public class SpeechActivity extends AppCompatActivity {
 
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("");
+        actionBar.setTitle("");
+
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.BoilingFrogsTheme_CollapsingToolbar);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

@@ -52,6 +52,9 @@ public class SpeakerActivity extends AppCompatActivity {
     @Bind(R.id.header)
     ImageView avatar;
 
+    @Bind(R.id.speaker_name)
+    TextView speakerName;
+
     @Bind(R.id.speaker_occupation)
     TextView speakerOccupation;
 
@@ -76,21 +79,23 @@ public class SpeakerActivity extends AppCompatActivity {
 
         socialView.setupForSpeaker(speaker);
 
-        speakerOccupation.setText(speaker.getOccupation().toUpperCase());
-        speakerAbout.setText(speaker.getDescription().replace("\\n","\n"));
+        speakerName.setText(speaker.getName());
+        speakerOccupation.setText(speaker.getOccupation());
+        speakerAbout.setText(speaker.getDescription().replace("\\n", "\n").replace("\n\n","\n").replace("\n","\n\n"));
 
-        setupDrawerAndToolbar(speaker.getName());
+        setupDrawerAndToolbar();
 
         AvatarLoaderUtil.loadAvatar(this, speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
     }
 
-    private void setupDrawerAndToolbar(String title) {
+    private void setupDrawerAndToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.anim_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        collapsingToolbarLayout.setTitle(title);
+        actionBar.setTitle("");
+
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.BoilingFrogsTheme_CollapsingToolbar);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
