@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">boilingfrogs</string>
+    <string name="app_name">Boiling Frogs</string>
 
     <string name="navigation_drawer_open">Otwórz menu</string>
     <string name="navigation_drawer_close">Zamknij menu</string>

@@ -4,9 +4,9 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_schedule"
+            android:checked="true"
             android:icon="@drawable/drawer_schedule"
-            android:title="@string/drawer_item_schedule"
-            android:checked="true"/>
+            android:title="@string/drawer_item_schedule" />
         <item
             android:id="@+id/nav_speakers"
             android:icon="@drawable/drawer_speakers"
@@ -14,19 +14,16 @@
         <item
             android:id="@+id/nav_my_schedule"
             android:icon="@drawable/drawer_my_schedule"
-            android:title="@string/drawer_item_my_schedule" />
+            android:title="@string/drawer_item_my_schedule"
+            android:visible="false" />
         <item
             android:id="@+id/nav_sponsors"
             android:icon="@drawable/drawer_sponsors"
-            android:title="@string/drawer_item_sponsors" />
+            android:title="@string/drawer_item_sponsors"
+            android:visible="false" />
     </group>
-
-    <item>
-        <menu>
-            <item
-                android:id="@+id/nav_navigation"
-                android:icon="@drawable/drawer_navigation"
-                android:title="@string/drawer_item_navigation" />
-        </menu>
-    </item>
+    <item
+        android:id="@+id/nav_navigation"
+        android:icon="@drawable/drawer_navigation"
+        android:title="@string/drawer_item_navigation" />
 </menu>
