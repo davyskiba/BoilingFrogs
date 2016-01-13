@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.panoprogramowanie.boilingfrogs.ui.view.SocialView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:divider="@drawable/social_view_divider"
+    android:showDividers="middle"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/facebook"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_facebook"/>
+
+    <ImageView
+        android:id="@+id/twitter"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_twitter"/>
+
+    <ImageView
+        android:id="@+id/linkedin"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_linkedin"/>
+
+
+</com.panoprogramowanie.boilingfrogs.ui.view.SocialView>

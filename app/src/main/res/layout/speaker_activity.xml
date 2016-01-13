@@ -55,7 +55,7 @@
                 android:layout_marginTop="16dp"
                 android:singleLine="false"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/speaker_about"
@@ -63,9 +63,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:textSize="16sp"
                 android:singleLine="false"
                 android:textColor="@color/black" />
+            <include
+                android:id="@+id/speaker_social"
+                layout="@layout/view_social"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
         </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>

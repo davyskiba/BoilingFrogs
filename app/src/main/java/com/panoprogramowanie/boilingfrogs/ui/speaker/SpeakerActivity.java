@@ -23,6 +23,7 @@ import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
+import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
 import butterknife.Bind;
@@ -60,17 +61,8 @@ public class SpeakerActivity extends AppCompatActivity {
     @Bind(R.id.collapsing_toolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
 
-//    @Bind(R.id.speaker_name)
-//    TextView speakerName;
-
-
-
-//    @Bind(R.id.speaker_occupation)
-//    TextView speakerOccupation;
-//
-//    @Bind(R.id.speaker_about)
-//    TextView speakerAbout;
-
+    @Bind(R.id.speaker_social)
+    SocialView socialView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +74,7 @@ public class SpeakerActivity extends AppCompatActivity {
 
         speaker=getIntent().getParcelableExtra(SPEAKER_ARG_KEY);
 
+        socialView.setupForSpeaker(speaker);
 
         speakerOccupation.setText(speaker.getOccupation().toUpperCase());
         speakerAbout.setText(speaker.getDescription().replace("\\n","\n"));
@@ -89,52 +82,6 @@ public class SpeakerActivity extends AppCompatActivity {
         setupDrawerAndToolbar(speaker.getName());
 
         AvatarLoaderUtil.loadAvatar(this, speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        String socialUrl;
-
-        socialUrl=speaker.getFacebook();
-        if(socialUrl!=null) {
-            menu.add(0, 0, 0, "Item").setIcon(R.drawable.facebook_icon).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-
-        socialUrl=speaker.getTwitter();
-        if(socialUrl!=null) {
-            menu.add(0, 1, 1, "Item").setIcon(R.drawable.twitter_icon).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-
-        socialUrl=speaker.getLinkedIn();
-        if(socialUrl!=null) {
-            menu.add(0, 2, 2, "Item").setIcon(R.drawable.linkedin_icon).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
-            case MENU_ITEM_ID_FACEBOOK:
-                launchBrowser(speaker.getFacebook());
-                break;
-            case MENU_ITEM_ID_TWITTER:
-                launchBrowser(speaker.getTwitter());
-                break;
-            case MENU_ITEM_ID_LINKEDIN:
-                launchBrowser(speaker.getLinkedIn());
-                break;
-        }
-
-        return true;
-    }
-
-    private void launchBrowser(String url)
-    {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        startActivity(browserIntent);
     }
 
     private void setupDrawerAndToolbar(String title) {
