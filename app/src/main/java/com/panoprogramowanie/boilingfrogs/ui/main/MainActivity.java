@@ -3,6 +3,8 @@ package com.panoprogramowanie.boilingfrogs.ui.main;
 import android.animation.ValueAnimator;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -94,6 +96,13 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
         }
     }
 
+    private void navigateToConference()
+    {
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("google.navigation:q=plac+Konstytucji+3+Maja+3,+50-083+Wrocław"));
+        startActivity(intent);
+    }
+
     //region SupplierProvider
 
     @Override
@@ -173,6 +182,9 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
                 break;
             case R.id.nav_speakers:
                 replaceFragment(new SpeakersFragment(), false);
+                break;
+            case R.id.nav_navigation:
+                navigateToConference();
                 break;
             default:return false;
         }
