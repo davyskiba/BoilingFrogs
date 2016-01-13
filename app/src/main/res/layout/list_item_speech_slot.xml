@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/speech_slot_time"
+        android:alpha="0.3"
+        android:scaleType="centerCrop"
+        android:id="@+id/photo"
+        />
+    <TextView
+        android:id="@+id/speech_slot_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/speech_slot_time"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/speech_slot_time"
+        android:layout_marginBottom="24dp"
+        android:maxLines="1"
+        android:textColor="@color/gray" />
+</com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelView>
