@@ -27,17 +27,18 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @Override
     public int getItemViewType(int position) {
-        Speech[] itemSpeeches=speechSlots[position].getSpeeches();
+        SpeechSlot speechSlot=speechSlots[position];
+        Speech[] itemSpeeches=speechSlot.getSpeeches();
 
         if(itemSpeeches.length==1 && itemSpeeches[0].getSpeaker()==null)
         {
             return BREAK_SLOT_VIEW_TYPE;
         }
 
-        if(position>5)
-            return EMPTY_SLOT_VIEW_TYPE;
+        if(itemSpeeches.length==1 || speechSlot.getFavoriteSpeechPath()!=-1)
+            return NONEMPTY_SLOT_VIEW_TYPE;
 
-        return NONEMPTY_SLOT_VIEW_TYPE;
+        return EMPTY_SLOT_VIEW_TYPE;
     }
 
     @Override
