@@ -31,6 +31,9 @@
             android:theme="@style/BoilingFrogsTheme.NoActionBar"
             android:name=".ui.speech.SpeechActivity"/>
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1174184981d3fa342d4cb816e1b2b36435676bf6" />
     </application>
 
 </manifest>
