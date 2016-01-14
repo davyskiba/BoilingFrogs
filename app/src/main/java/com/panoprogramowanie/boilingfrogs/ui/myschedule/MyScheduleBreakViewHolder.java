@@ -1,13 +1,11 @@
 package com.panoprogramowanie.boilingfrogs.ui.myschedule;
 
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -31,7 +29,7 @@ public class MyScheduleBreakViewHolder extends MyScheduleSpeechSlotViewHolderBas
     }
 
     @Override
-    public void takeSpeechSlot(SpeechSlot speechSlot) {
+    public void takeSpeechSlot(SpeechSlot speechSlot, int position, MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
         this.speechSlot=speechSlot;
 
         speechSlotTime.setText(speechSlot.getHeader());

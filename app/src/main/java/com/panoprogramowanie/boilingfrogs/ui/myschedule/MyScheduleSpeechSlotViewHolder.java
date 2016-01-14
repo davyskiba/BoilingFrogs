@@ -1,7 +1,5 @@
 package com.panoprogramowanie.boilingfrogs.ui.myschedule;
 
-import android.media.Image;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,8 +8,6 @@ import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
-
-import org.w3c.dom.Text;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -41,15 +37,23 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
     }
 
     @Override
-    public void takeSpeechSlot(SpeechSlot speechSlot) {
+    public void takeSpeechSlot(SpeechSlot speechSlot, final int position, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
         this.speechSlot = speechSlot;
 
         speechSlotTime.setText(speechSlot.getHeader());
 
-        Speech firstSpeech = speechSlot.getSpeeches()[0];
+        Speech firstSpeech = speechSlot.getSpeechForPath(speechSlot.getFavoriteSpeechPath());
         AvatarLoaderUtil.loadAvatar(
                 this.itemView.getContext(), firstSpeech.getPhotoUrl(), photo, R.drawable.avatar_placeholder);
         title.setText(firstSpeech.getTitle());
         subtitle.setText(firstSpeech.getSubtitle());
+
+        if (firstSpeech.getDescription() != null)
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onSlotClickListener.onNonEmptySlotClicked(position);
+                }
+            });
     }
 }

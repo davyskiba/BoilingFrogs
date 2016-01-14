@@ -74,6 +74,9 @@ public class SpeechSlot implements Parcelable{
     };
 
     public Speech getSpeechForPath(int speechPath) {
+        if(speechPath<1){
+            return speeches[0];
+        }
         return speeches[speechPath-1];
     }
 }

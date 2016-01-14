@@ -9,4 +9,5 @@ import com.panoprogramowanie.boilingfrogs.model.Speech;
 public interface NavigationSupplier {
     void navigateToSpeech(int speechSlot, int speechPath);
     void navigateToSpeaker(Speaker speaker);
+    void navigateToSlotDetail(int speechSlot);
 }

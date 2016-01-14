@@ -60,6 +60,7 @@ public class ScheduleSlotFragment extends ListFragment {
 
     @Override
     public String getToolbarTitle(Context context) {
-        return context.getString(R.string.drawer_item_schedule);
+        SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
+        return slot.getHeader();
     }
 }

@@ -19,6 +19,8 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
     private static final int EMPTY_SLOT_VIEW_TYPE=1;
     private static final int NONEMPTY_SLOT_VIEW_TYPE=2;
 
+    private OnSlotClickListener onSlotClickListener;
+
     private SpeechSlot[] speechSlots;
 
     public MyScheduleRecyclerViewAdapter(SpeechSlot[] speechSlots) {
@@ -77,12 +79,25 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @Override
     public void onBindViewHolder(MyScheduleSpeechSlotViewHolderBase holder, int position) {
-        holder.takeSpeechSlot(speechSlots[position]);
+        holder.takeSpeechSlot(speechSlots[position],position,onSlotClickListener);
 
     }
 
     @Override
     public int getItemCount() {
         return speechSlots.length;
+    }
+
+    public void setOnSlotClickListener(OnSlotClickListener onSlotClickListener) {
+        this.onSlotClickListener = onSlotClickListener;
+    }
+
+    public SpeechSlot getItem(int slotPosition) {
+        return speechSlots[slotPosition];
+    }
+
+    public interface OnSlotClickListener{
+        void onEmptySlotClicked(int slotPosition);
+        void onNonEmptySlotClicked(int slotPosition);
     }
 }

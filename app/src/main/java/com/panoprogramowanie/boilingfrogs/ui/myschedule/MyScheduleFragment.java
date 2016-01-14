@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
@@ -20,7 +21,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 13.01.2016.
  */
-public class MyScheduleFragment extends BoilingFrogsFragment {
+public class MyScheduleFragment extends BoilingFrogsFragment implements MyScheduleRecyclerViewAdapter.OnSlotClickListener {
     @Override
     public String getToolbarTitle(Context context) {
         return context.getString(R.string.drawer_item_my_schedule);
@@ -29,19 +30,43 @@ public class MyScheduleFragment extends BoilingFrogsFragment {
     @Bind(R.id.recyclerView)
     RecyclerView recyclerView;
 
+    MyScheduleRecyclerViewAdapter adapter;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View result=inflater.inflate(R.layout.fragment_my_schedule, null);
-        ButterKnife.bind(this,result);
+        ButterKnife.bind(this, result);
 
         SpeechSlot[] slots=((SuppliersProvider)getActivity()).provideScheduleSupplier().getAllSpeechSlots();
 
         recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(new MyScheduleRecyclerViewAdapter(slots));
+
+        adapter=new MyScheduleRecyclerViewAdapter(slots);
+        adapter.setOnSlotClickListener(this);
+
+        recyclerView.setAdapter(adapter);
+
 
         return result;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onEmptySlotClicked(int slotPosition) {
+        ((SuppliersProvider)getActivity()).provideNavigator().navigateToSlotDetail(slotPosition);
+    }
+
+    @Override
+    public void onNonEmptySlotClicked(int slotPosition) {
+        SpeechSlot tappedSlot=adapter.getItem(slotPosition);
+        ((SuppliersProvider) getActivity()).provideNavigator().navigateToSpeech(slotPosition,tappedSlot.getFavoriteSpeechPath());
     }
 }
