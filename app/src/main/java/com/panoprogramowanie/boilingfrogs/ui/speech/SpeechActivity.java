@@ -19,6 +19,7 @@ import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
+import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
@@ -85,7 +86,7 @@ public class SpeechActivity extends AppCompatActivity {
         int speechSlotPosition=getIntent().getIntExtra(SPEECH_SLOT_ARG,0);
         int speechPath=getIntent().getIntExtra(SPEECH_PATH_ARG,0);
 
-        speechSlot=((BoilingFrogs)getApplicationContext()).getScheduleSupplier().getSpeechSlotForPosition(speechSlotPosition);
+        speechSlot=getScheduleSupplier().getSpeechSlotForPosition(speechSlotPosition);
         speech=speechSlot.getSpeechForPath(speechPath);
 
         Speaker speaker=speech.getSpeaker();
@@ -151,6 +152,13 @@ public class SpeechActivity extends AppCompatActivity {
             setSelectedFab();
             showSnackbar(R.string.speech_added_to_favorites);
         }
+
+        getScheduleSupplier().speechSlotsFavoritesUpdated(this);
+    }
+
+    private ScheduleSupplier getScheduleSupplier()
+    {
+        return ((BoilingFrogs)getApplicationContext()).getScheduleSupplier();
     }
 
     private void setSelectedFab()

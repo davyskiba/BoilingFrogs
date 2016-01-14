@@ -20,4 +20,6 @@ public interface ScheduleSupplier {
 
     SpeechSlot getSpeechSlotForPosition(int position);
     Speech getSpeechForSlotAndPath(int speechSlot, int speechPath);
+
+    void speechSlotsFavoritesUpdated(Context context);
 }
