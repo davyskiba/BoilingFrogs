@@ -38,6 +38,11 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
     }
 
     @Override
+    public Speech getSpeechForSlotAndPath(int speechSlot, int speechPath) {
+        return schedule.getSpeechSlots()[speechSlot].getSpeeches()[speechPath-1];
+    }
+
+    @Override
     public void loadSchedule(Context context) {
        loadScheduleFromAssets(context);
     }

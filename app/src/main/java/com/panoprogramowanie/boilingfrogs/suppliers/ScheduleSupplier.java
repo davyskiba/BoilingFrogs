@@ -3,6 +3,7 @@ package com.panoprogramowanie.boilingfrogs.suppliers;
 import android.content.Context;
 
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
+import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.MainActivity;
 
@@ -16,4 +17,6 @@ public interface ScheduleSupplier {
     Speaker getSpeakerById(int id);
 
     void loadSchedule(Context context);
+
+    Speech getSpeechForSlotAndPath(int speechSlot, int speechPath);
 }

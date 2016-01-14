@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
+import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
@@ -41,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
 
-    private ScheduleSupplier scheduleSupplier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,16 +65,13 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
                     }
                 }
 
-                BoilingFrogsFragment currentFragment=(BoilingFrogsFragment) getFragmentManager().findFragmentByTag(FRAGMENT_TAG);
-                String currentFragmentTitle=currentFragment.getToolbarTitle(MainActivity.this);
+                BoilingFrogsFragment currentFragment = (BoilingFrogsFragment) getFragmentManager().findFragmentByTag(FRAGMENT_TAG);
+                String currentFragmentTitle = currentFragment.getToolbarTitle(MainActivity.this);
                 getSupportActionBar().setTitle(currentFragmentTitle);
 
                 previousBackStackCount = currentBackStackCount;
             }
         });
-
-        scheduleSupplier=new ScheduleSupplierImpl();
-        scheduleSupplier.loadSchedule(this);
 
         if (savedInstanceState == null) {
             replaceFragment(new ScheduleFragment(), false);
@@ -112,16 +109,17 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
     @Override
     public ScheduleSupplier provideScheduleSupplier() {
-        return scheduleSupplier;
+        return ((BoilingFrogs)getApplicationContext()).getScheduleSupplier();
     }
 
     //ednregion
 
     //region NavigationSupplier
 
+
     @Override
-    public void navigateToSpeech(Speech speech) {
-        SpeechActivity.startForSpeech(speech, this);
+    public void navigateToSpeech(int speechSlot, int speechPath) {
+        SpeechActivity.startForSpeech(speechSlot,speechPath, this);
     }
 
     @Override

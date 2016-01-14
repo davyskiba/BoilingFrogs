@@ -30,11 +30,13 @@ import butterknife.ButterKnife;
  */
 public class ScheduleSlotFragment extends ListFragment {
 
+    private static String SLOT_POSITION_ARG_KEY="slot_position_arg";
     private static String SLOT_ARG_KEY="slot_arg";
 
-    public static ScheduleSlotFragment createInstance(SpeechSlot slot){
+    public static ScheduleSlotFragment createInstance(SpeechSlot slot, int slotPosition){
         Bundle args=new Bundle();
         args.putParcelable(SLOT_ARG_KEY, slot);
+        args.putInt(SLOT_POSITION_ARG_KEY,slotPosition);
 
         ScheduleSlotFragment result=new ScheduleSlotFragment();
         result.setArguments(args);
@@ -51,7 +53,9 @@ public class ScheduleSlotFragment extends ListFragment {
     @Override
     protected void onItemClicked(ListItemModel itemModel) {
         Speech clickedSpeech=(Speech)itemModel;
-        ((SuppliersProvider) getActivity()).provideNavigator().navigateToSpeech(clickedSpeech);
+        int slotPosition=getArguments().getInt(SLOT_POSITION_ARG_KEY);
+
+        ((SuppliersProvider) getActivity()).provideNavigator().navigateToSpeech(slotPosition,clickedSpeech.getPath());
     }
 
     @Override

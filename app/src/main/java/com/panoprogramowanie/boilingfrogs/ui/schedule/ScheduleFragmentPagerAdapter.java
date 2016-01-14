@@ -23,7 +23,7 @@ public class ScheduleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return ScheduleSlotFragment.createInstance(slots[position]);
+        return ScheduleSlotFragment.createInstance(slots[position],position);
     }
 
     @Override
