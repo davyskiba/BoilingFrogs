@@ -2,9 +2,12 @@ package com.panoprogramowanie.boilingfrogs.ui.speech;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +25,7 @@ import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Wojciech on 12.01.2016.
@@ -40,6 +44,7 @@ public class SpeechActivity extends AppCompatActivity {
         intent.putExtra(SPEAKER_ARG_KEY, speech);
         activity.startActivity(intent);
     }
+
 
     private Speech speech;
 
@@ -67,13 +72,19 @@ public class SpeechActivity extends AppCompatActivity {
     @Bind(R.id.speaker_social)
     SocialView socialView;
 
+    @Bind(R.id.fab)
+    FloatingActionButton floatingActionButton;
+
+    private boolean isSpeechFavorite;
+    private ColorStateList floatingButtonDefaultTint;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.speech_activity);
 
         ButterKnife.bind(this);
-
+        floatingButtonDefaultTint=floatingActionButton.getBackgroundTintList();
 
         speech=getIntent().getParcelableExtra(SPEAKER_ARG_KEY);
 
@@ -84,13 +95,21 @@ public class SpeechActivity extends AppCompatActivity {
 
         speechTitle.setText(speech.getTitle());
         speechTime.setText(speech.getTimeString());
-        speechDescription.setText(speech.getDescription().replace("\\n", "\n").replace("\n\n","\n").replace("\n","\n\n"));
+        speechDescription.setText(speech.getDescription().replace("\\n", "\n").replace("\n\n", "\n").replace("\n", "\n\n"));
 
         socialView.setupForSpeaker(speech.getSpeaker());
 
         setupDrawerAndToolbar();
 
         AvatarLoaderUtil.loadAvatar(this, speech.getSpeaker().getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
+
+        if(isSpeechFavorite)
+        {
+            setSelectedFab();
+        }
+        else {
+            setUnSelectedFab();
+        }
     }
 
     private void setupDrawerAndToolbar() {
@@ -110,5 +129,39 @@ public class SpeechActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @OnClick(R.id.fab)
+    public void onFabClick()
+    {
+        isSpeechFavorite=!isSpeechFavorite;
+
+        if(isSpeechFavorite)
+        {
+            setSelectedFab();
+            showSnackbar(R.string.speech_added_to_favorites);
+        }
+        else {
+            setUnSelectedFab();
+            showSnackbar(R.string.speech_removed_from_favorites);
+        }
+    }
+
+    private void setSelectedFab()
+    {
+        floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.star_full));
+        floatingActionButton.setBackgroundTintList(floatingButtonDefaultTint);
+    }
+
+    private void setUnSelectedFab()
+    {
+        floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.star_empty));
+        floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
+    }
+
+    private void showSnackbar(int textId)
+    {
+        Snackbar.make(findViewById(R.id.contentScroll), getString(textId), Snackbar.LENGTH_SHORT)
+                .show();
     }
 }
