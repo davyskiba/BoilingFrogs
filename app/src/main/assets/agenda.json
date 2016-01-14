@@ -141,25 +141,7 @@
          "twitter":"http://twitter.com/andrzejkrzywda"
       }
    ],
-   "speechSlots":[
-      {
-         "header":"8:00 - 9:00",
-         "speeches":[
-            {
-               "timeString":"8:00 - 9:00",
-               "title":"REJESTRACJA"
-            }
-         ]
-      },
-      {
-         "header":"9:00 - 9:10",
-         "speeches":[
-            {
-               "timeString":"9:00 - 9:10",
-               "title":"Przywitanie i informacje organizacyjne"
-            }
-         ]
-      },
+   "speechSlots":[    
       {
          "header":"9:10 - 9:40",
          "speeches":[
@@ -167,15 +149,6 @@
                "timeString":"9:10 - 9:40",
                "title":"Boiling Frogs - mój pogląd na wytwarzanie oprogramowania",
                "speakerId":16
-            }
-         ]
-      },
-      {
-         "header":"9:40 - 10:00",
-         "speeches":[
-            {
-               "timeString":"9:40 - 10:00",
-               "title":"PRZERWA KAWOWA"
             }
          ]
       },
@@ -206,15 +179,6 @@
          ]
       },
       {
-         "header":"11:00 - 11:15",
-         "speeches":[
-            {
-               "timeString":"11:00 - 11:15",
-               "title":"PRZERWA KAWOWA"
-            }
-         ]
-      },
-      {
          "header":"11:15 - 12:15",
          "speeches":[
             {
@@ -237,15 +201,6 @@
                "description":"Kilka miesięcy temu Robert opuścił komfortowy fotel programisty i wyruszył w podróż w kierunku nieznanego świata DevOps. Podróż pełną niespodziewanych odkryć.  Z pozycji programisty łatwo stracić z oczu wszystkie narzędzia, które pozwalają pracować twoim mikroserwisom bez żadnych problemów.\\n\\nW tej prezentacji Robert opowie jak zrozumiał, że narzędzia jak Docker są tylko małym kawałkiem układanki w architekturze mikroserwisów. Przedstawi sposób użycia narzędzi takich jak Terraform, Mesos, Marathon i jak praca z nimi otwiera oczy na poziom skomplikowania rozproszonej architektury.",
                "speakerId":10,
                "path":3
-            }
-         ]
-      },
-      {
-         "header":"12:15 - 13:15",
-         "speeches":[
-            {
-               "timeString":"12:15 - 13:15",
-               "title":"PRZERWA OBIADOWA"
             }
          ]
       },
@@ -276,15 +231,6 @@
          ]
       },
       {
-         "header":"14:15 - 14:30",
-         "speeches":[
-            {
-               "timeString":"14:15 - 14:30",
-               "title":"PRZERWA KAWOWA"
-            }
-         ]
-      },
-      {
          "header":"14:30 - 15:30",
          "speeches":[
             {
@@ -307,15 +253,6 @@
                "description":"Wydajność aplikacji internetowych to nie jest ‘feature’, który możemy dodać pod koniec projektu, gdy się nam o tym przypomni. Chcąc mieć wydajny system, temat wydajności musi nam towarzyszyć od początku istnienia projektu. Albo nawet wcześniej, od początku kształtowania się wymagań.\\nAle właściwie czemu owa wydajność jest ważna i ktoś miałby się nią przejmować? I czym właściwie jest ta ‘wydajność’? Czym ryzykujemy ignorując jej istnienie? A jeśli już jesteśmy w miarę przekonani o jej znaczeniu, jak zacząć ją uwzględniać? W trakcie sesji odpowiemy sobie na te pytania. Poznamy obecne wyzwania. Dokonamy przeglądu popularnych narzędzi. Ale najważniejszy przekaz tej sesji to zachęcenie do świadomego i zaangażowanego podejścia do tematu wydajności.",
                "speakerId":4,
                "path":3
-            }
-         ]
-      },
-      {
-         "header":"15:30 - 15:45",
-         "speeches":[
-            {
-               "timeString":"15:30 - 15:45",
-               "title":"PRZERWA KAWOWA"
             }
          ]
       },
@@ -346,15 +283,6 @@
          ]
       },
       {
-         "header":"16:45 - 17:00",
-         "speeches":[
-            {
-               "timeString":"16:45 - 17:00",
-               "title":"PRZERWA KAWOWA"
-            }
-         ]
-      },
-      {
          "header":"17:00 - 18:00",
          "speeches":[
             {
@@ -377,24 +305,6 @@
                "description":"Daje się słyszeć głosy, że refaktoryzacja to kluczowa umiejętność każdego programisty. Jeśli tak, to dlaczego w zaledwie 5% zespołach jest ona rzeczywiście praktykowana i jest nieodłączną częścią programowania? Odpowiedź jest prosta. Refaktoryzacja kodu, który ma już kilkuletnią historię jest niezwykle trudna, szczególnie, że musi to być wysiłek zespołowy. Naturalny Porządek Refaktoryzacji to pragmatyczny proces, dzięki któremu będziesz w stanie zidentyfikować w jakiej fazie jest dany fragment kodu oraz jaki powinien być następny krok refaktoryzacji.\\n\\nProstota tego podejścia sprawia, że łatwo je wprowadzić w zespole, bez względu na obecny poziom umiejętności jego członków.",
                "speakerId":5,
                "path":3
-            }
-         ]
-      },
-      {
-         "header":"18:00 - 18:10",
-         "speeches":[
-            {
-               "timeString":"18:00 - 18:10",
-               "title":"Zakończenie"
-            }
-         ]
-      },
-      {
-         "header":"19:00 - ?",
-         "speeches":[
-            {
-               "timeString":"19:00 - ?",
-               "title":"Afterparty odbędzie się w pubie Kontynuacja"
             }
          ]
       }
