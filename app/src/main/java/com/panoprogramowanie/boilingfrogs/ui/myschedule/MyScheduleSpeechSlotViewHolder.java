@@ -29,6 +29,9 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
     @Bind(R.id.subtitle)
     TextView subtitle;
 
+    @Bind(R.id.speech_slot_path)
+    TextView speechSlotPath;
+
     SpeechSlot speechSlot;
 
     public MyScheduleSpeechSlotViewHolder(View itemView) {
@@ -48,12 +51,14 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
         title.setText(firstSpeech.getTitle());
         subtitle.setText(firstSpeech.getSubtitle());
 
-        if (firstSpeech.getDescription() != null)
+        if (firstSpeech.getDescription() != null) {
+            speechSlotPath.setText(itemView.getContext().getString(R.string.my_schedule_path)+" "+firstSpeech.getPath());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     onSlotClickListener.onNonEmptySlotClicked(position);
                 }
             });
+        }
     }
 }

@@ -12,6 +12,8 @@
     <string name="toolbar_title_speech">Prelekcja</string>
     <string name="toolbar_title_speaker">Prelegent</string>
 
+    <string name="my_schedule_path">ŚCIEŻKA</string>
+
     <string name="speech_added_to_favorites">Prelekcja dodana do ulubionych</string>
     <string name="speech_removed_from_favorites">Prelekcja usunięta z ulubionych</string>
 

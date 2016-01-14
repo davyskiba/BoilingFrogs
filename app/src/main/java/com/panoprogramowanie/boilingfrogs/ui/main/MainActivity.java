@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
         });
 
         if (savedInstanceState == null) {
-            replaceFragment(new ScheduleFragment(), false);
+            replaceFragment(new MyScheduleFragment(), false);
         }
     }
 
