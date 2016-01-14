@@ -18,6 +18,7 @@ import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
+import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
@@ -40,9 +41,6 @@ public class SpeechActivity extends AppCompatActivity {
         intent.putExtra(SPEECH_PATH_ARG, speechPath);
         activity.startActivity(intent);
     }
-
-
-    private Speech speech;
 
     @Bind(R.id.header)
     ImageView avatar;
@@ -71,7 +69,9 @@ public class SpeechActivity extends AppCompatActivity {
     @Bind(R.id.fab)
     FloatingActionButton floatingActionButton;
 
-    private boolean isSpeechFavorite;
+    private SpeechSlot speechSlot;
+    private Speech speech;
+
     private ColorStateList floatingButtonDefaultTint;
 
     @Override
@@ -82,10 +82,11 @@ public class SpeechActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         floatingButtonDefaultTint=floatingActionButton.getBackgroundTintList();
 
-        int speechSlot=getIntent().getIntExtra(SPEECH_SLOT_ARG,0);
+        int speechSlotPosition=getIntent().getIntExtra(SPEECH_SLOT_ARG,0);
         int speechPath=getIntent().getIntExtra(SPEECH_PATH_ARG,0);
 
-        speech=((BoilingFrogs)getApplicationContext()).getScheduleSupplier().getSpeechForSlotAndPath(speechSlot,speechPath);
+        speechSlot=((BoilingFrogs)getApplicationContext()).getScheduleSupplier().getSpeechSlotForPosition(speechSlotPosition);
+        speech=speechSlot.getSpeechForPath(speechPath);
 
         Speaker speaker=speech.getSpeaker();
         speakerName.setText(speaker.getName());
@@ -101,13 +102,18 @@ public class SpeechActivity extends AppCompatActivity {
 
         AvatarLoaderUtil.loadAvatar(this, speech.getSpeaker().getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
 
-        if(isSpeechFavorite)
+        if(isFavorite())
         {
             setSelectedFab();
         }
         else {
             setUnSelectedFab();
         }
+    }
+
+    private boolean isFavorite()
+    {
+        return speechSlot.getFavoriteSpeechPath()==speech.getPath();
     }
 
     private void setupDrawerAndToolbar() {
@@ -132,16 +138,18 @@ public class SpeechActivity extends AppCompatActivity {
     @OnClick(R.id.fab)
     public void onFabClick()
     {
-        isSpeechFavorite=!isSpeechFavorite;
-
-        if(isSpeechFavorite)
+        if(isFavorite())
         {
-            setSelectedFab();
-            showSnackbar(R.string.speech_added_to_favorites);
-        }
-        else {
+            speechSlot.setFavoriteSpeechPath(-1);
+
             setUnSelectedFab();
             showSnackbar(R.string.speech_removed_from_favorites);
+        }
+        else {
+            speechSlot.setFavoriteSpeechPath(speech.getPath());
+
+            setSelectedFab();
+            showSnackbar(R.string.speech_added_to_favorites);
         }
     }
 

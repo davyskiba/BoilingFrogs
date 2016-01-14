@@ -18,5 +18,6 @@ public interface ScheduleSupplier {
 
     void loadSchedule(Context context);
 
+    SpeechSlot getSpeechSlotForPosition(int position);
     Speech getSpeechForSlotAndPath(int speechSlot, int speechPath);
 }

@@ -11,6 +11,8 @@ public class SpeechSlot implements Parcelable{
 
     Speech[] speeches;
 
+    int favoriteSpeechPath =-1;
+
     public SpeechSlot() {
     }
 
@@ -39,6 +41,14 @@ public class SpeechSlot implements Parcelable{
         this.speeches = speeches;
     }
 
+    public int getFavoriteSpeechPath() {
+        return favoriteSpeechPath;
+    }
+
+    public void setFavoriteSpeechPath(int favoriteSpeech) {
+        this.favoriteSpeechPath = favoriteSpeech;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -62,4 +72,8 @@ public class SpeechSlot implements Parcelable{
             return new SpeechSlot[size];
         }
     };
+
+    public Speech getSpeechForPath(int speechPath) {
+        return speeches[speechPath-1];
+    }
 }
