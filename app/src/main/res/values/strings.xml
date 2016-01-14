@@ -12,6 +12,7 @@
     <string name="toolbar_title_speech">Prelekcja</string>
     <string name="toolbar_title_speaker">Prelegent</string>
 
+    <string name="my_schedule_empty_slot_text">Wybierz prelekcję</string>
 
     <!-- Speech slots -->
     <string name="speech_slots_first">10:00 - 11:00</string>

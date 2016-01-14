@@ -13,6 +13,13 @@
     <color name="red">#CA3538</color>
     <color name="white">#FBFBFB</color>
 
+    <color name="my_schedule_speaker_overlay">#cc8b1517</color>
+    <color name="my_schedule_empty_slot_bg">#f7f7f7</color>
+    <color name="my_schedule_empty_slot_text">#686868</color>
+    <color name="my_schedule_empty_slot_time_text">#919191</color>
+    <color name="my_schedule_divider_color">#c7c7c7</color>
+
+
     <color name="transparent_gray">#226D797A</color>
 
     <color name="drawer_selected_background">#191919</color>

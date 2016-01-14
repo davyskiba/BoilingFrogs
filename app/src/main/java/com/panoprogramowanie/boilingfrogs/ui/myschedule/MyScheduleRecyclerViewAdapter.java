@@ -15,8 +15,9 @@ import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
  */
 public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MyScheduleSpeechSlotViewHolderBase> {
 
-    private static final int EMPTY_SLOT_VIEW_TYPE=0;
-    private static final int NONEMPTY_SLOT_VIEW_TYPE=1;
+    private static final int BREAK_SLOT_VIEW_TYPE =0;
+    private static final int EMPTY_SLOT_VIEW_TYPE=1;
+    private static final int NONEMPTY_SLOT_VIEW_TYPE=2;
 
     private SpeechSlot[] speechSlots;
 
@@ -30,8 +31,11 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
         if(itemSpeeches.length==1 && itemSpeeches[0].getSpeaker()==null)
         {
-            return EMPTY_SLOT_VIEW_TYPE;
+            return BREAK_SLOT_VIEW_TYPE;
         }
+
+        if(position>5)
+            return EMPTY_SLOT_VIEW_TYPE;
 
         return NONEMPTY_SLOT_VIEW_TYPE;
     }
@@ -40,20 +44,28 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
     public MyScheduleSpeechSlotViewHolderBase onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType)
         {
+            case BREAK_SLOT_VIEW_TYPE:
+                return getBreakSlotViewHolder(parent);
             case EMPTY_SLOT_VIEW_TYPE:
-                return getEmptySpeechSlotViewHolder(parent);
+                return getMyScheduleEmptySpeechSlotViewHolder(parent);
             default:
                 return getMyScheduleSpeechSlotViewHolder(parent);
         }
     }
 
     @NonNull
-    public MyScheduleEmpySpeechSlotViewHolder getEmptySpeechSlotViewHolder(ViewGroup parent) {
+    public MyScheduleBreakViewHolder getBreakSlotViewHolder(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_break_slot, null);
-        MyScheduleEmpySpeechSlotViewHolder viewHolder=new MyScheduleEmpySpeechSlotViewHolder(view);
+        MyScheduleBreakViewHolder viewHolder=new MyScheduleBreakViewHolder(view);
         return viewHolder;
     }
 
+    @NonNull
+    public MyScheduleEmptySpeechSlotViewHolder getMyScheduleEmptySpeechSlotViewHolder(ViewGroup parent) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_empty_speech_slot, null);
+        MyScheduleEmptySpeechSlotViewHolder viewHolder=new MyScheduleEmptySpeechSlotViewHolder(view);
+        return viewHolder;
+    }
 
     @NonNull
     public MyScheduleSpeechSlotViewHolder getMyScheduleSpeechSlotViewHolder(ViewGroup parent) {

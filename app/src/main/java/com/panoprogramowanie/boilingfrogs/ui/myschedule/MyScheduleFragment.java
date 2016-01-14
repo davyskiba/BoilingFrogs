@@ -32,10 +32,12 @@ public class MyScheduleFragment extends BoilingFrogsFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.fragment_my_schedule,null);
+        View result=inflater.inflate(R.layout.fragment_my_schedule, null);
         ButterKnife.bind(this,result);
 
         SpeechSlot[] slots=((SuppliersProvider)getActivity()).provideScheduleSupplier().getAllSpeechSlots();
+
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(new MyScheduleRecyclerViewAdapter(slots));
