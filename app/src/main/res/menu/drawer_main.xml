@@ -25,4 +25,8 @@
         android:id="@+id/nav_navigation"
         android:icon="@drawable/drawer_navigation"
         android:title="@string/drawer_item_navigation" />
+    <item
+        android:id="@+id/nav_twitter"
+        android:icon="@drawable/twitter_icon"
+        android:title="@string/drawer_item_twitter" />
 </menu>

@@ -94,10 +94,19 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
         }
     }
 
+    private void navigateToTwitterFeed()
+    {
+        navigateToUrl("https://twitter.com/hashtag/boilingfrogs16");
+    }
+
     private void navigateToConference()
     {
+        navigateToUrl("google.navigation:q=plac+Konstytucji+3+Maja+3,+50-083+Wrocław");
+    }
+
+    private void navigateToUrl(String url){
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                Uri.parse("google.navigation:q=plac+Konstytucji+3+Maja+3,+50-083+Wrocław"));
+                Uri.parse(url));
         startActivity(intent);
     }
 
@@ -193,6 +202,9 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
                 break;
             case R.id.nav_navigation:
                 navigateToConference();
+                break;
+            case R.id.nav_twitter:
+                navigateToTwitterFeed();
                 break;
             default:return false;
         }
