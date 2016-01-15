@@ -2,7 +2,6 @@ package com.panoprogramowanie.boilingfrogs.ui.view;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -65,7 +64,7 @@ public class SocialView extends LinearLayout {
         }
 
 
-        if(speaker.getLinkedIn()!=null)
+        if(speaker.getLinkedin()!=null)
         {
             linkedin.setVisibility(VISIBLE);
         }
@@ -86,7 +85,7 @@ public class SocialView extends LinearLayout {
     @OnClick(R.id.linkedin)
     public void linkedinClicked()
     {
-        launchBrowser(speaker.getLinkedIn());
+        launchBrowser(speaker.getLinkedin());
     }
 
 

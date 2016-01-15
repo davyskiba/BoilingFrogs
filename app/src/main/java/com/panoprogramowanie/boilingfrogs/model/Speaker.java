@@ -16,7 +16,7 @@ public class Speaker implements Parcelable,ListItemModel {
     String photoUrl;
 
     String twitter;
-    String linkedIn;
+    String linkedin;
     String facebook;
 
     public Speaker() {
@@ -70,12 +70,12 @@ public class Speaker implements Parcelable,ListItemModel {
         this.twitter = twitter;
     }
 
-    public String getLinkedIn() {
-        return linkedIn;
+    public String getLinkedin() {
+        return linkedin;
     }
 
-    public void setLinkedIn(String linkedIn) {
-        this.linkedIn = linkedIn;
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
     }
 
     public String getFacebook() {
@@ -113,7 +113,7 @@ public class Speaker implements Parcelable,ListItemModel {
         occupation = in.readString();
         description = in.readString();
         twitter = in.readString();
-        linkedIn = in.readString();
+        linkedin = in.readString();
         facebook = in.readString();
         photoUrl=in.readString();
     }
@@ -130,7 +130,7 @@ public class Speaker implements Parcelable,ListItemModel {
         dest.writeString(occupation);
         dest.writeString(description);
         dest.writeString(twitter);
-        dest.writeString(linkedIn);
+        dest.writeString(linkedin);
         dest.writeString(facebook);
         dest.writeString(photoUrl);
     }
