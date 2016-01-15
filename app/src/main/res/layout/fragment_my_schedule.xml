@@ -8,6 +8,7 @@
         android:layout_height="match_parent"
         android:footerDividersEnabled="false"
         android:clipToPadding="false"
+        android:overScrollMode="never"
         android:scrollbarStyle="outsideInset"
         android:overScrollFooter="@android:color/transparent"
         android:scrollbars="none"
