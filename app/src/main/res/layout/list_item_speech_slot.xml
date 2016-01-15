@@ -53,6 +53,9 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_alignTop="@+id/photo"
+            android:layout_alignLeft="@+id/photo"
+            android:layout_alignRight="@+id/photo"
             android:layout_alignBottom="@+id/photo"
             android:background="@drawable/my_schedule_speaker_overlay" />
 
