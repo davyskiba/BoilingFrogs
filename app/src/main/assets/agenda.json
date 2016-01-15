@@ -46,7 +46,7 @@
          "description":"Jeden z założycieli Pragmatic Coders, Trener, Coach, Konsultant zajmujący się wdrażaniem praktyk jakościowych, oraz Agile w firmach z branży IT. Po pracy – autor bloga i dwóch książek: “Mity i problemy w Agile” oraz “Agile Transformacje” .\\nPrzez ostatnich kilka lat Wiktor zajmował się współpracą z około 50 firmami z branży IT – szkoląc, konsultując i transformując pojedyncze zespoły oraz całe organizacje w kierunku Agile i Lean Software Development.\\nNa swoim koncie oprócz udanych projektów coachingowo-szkoleniowych mających na celu “uzwinnianie” organizacji, ma również kilka udanych wdrożeń Continuous Delivery i innych praktyk i procesów jakościowych. Zamiłowanie do jakości, Software Craftsmenship, oraz Agile pomaga mu na codzień tworzyć kreatywną przestrzeń do życia i pracy w Pragmatic Coders.\\nWiktor udziela się także w różnego typu inicjatywach takich jak na przykład Agile Lean Europe i ALE Kraków, a takżę był również pomysłodawcą i organizatorem spotkań z cyklu BYOP (Bring Yourn Own Problem).\\nPragmatic Coders obecnie pochłania większość jego czasu co nie przeszkadza w równoległej pracy nad kilkoma startupami (większość w fazie walidacji hipotez i zdobywania funduszy).",
          "id":6,
          "name":"Wiktor Żołnowski",
-         "occupation":"CEO &amp; Co-founder at Pragmatic Coders",
+         "occupation":"CEO & Co-founder at Pragmatic Coders",
          "twitter":"http://twitter.com/streser",
          "linkedin":"https://www.linkedin.com/profile/view?id=AAkAAAI39j0B-OaybEpD-jqAuyiTM4LQ-lzIgwY&amp;authType=NAME_SEARCH&amp;authToken=awCK&amp;locale=en_US&amp;trk=tyah&amp;trkInfo=clickedVerticalmynetworkclickedEntityId37221949authTypeNAME_SEARCHidx1-1-1tarId1452327609315tasonowski"
       },
@@ -103,7 +103,7 @@
          "description":"Programowanie jest dla niego zarówno sposobem na życie jak i hobby. Skoncentrowany na odchudzaniu systemów korporacyjnych, żywo zainteresowany nowymi technologiami oraz ciągłym podnoszeniem efektywności dostarczania oprogramowania. Pasjonują go lekkie aplikacji, w którym stosunek kodu do dostarczanej funkcjonalności jest jak najmniejszy. Współzałożyciel startupu DevSKiller.com.",
          "id":13,
          "name":"Kuba Kubryński",
-         "occupation":"CEO &amp; Co-founder at DevSKiller",
+         "occupation":"CEO & Co-founder at DevSKiller",
          "twitter":"http://twitter.com/jkubrynski"
       },
       {
@@ -111,7 +111,7 @@
          "description":"Doświadczony architekt specjalizujący się w tworzeniu wysokiej jakości oprogramowania. Będący pod wrażeniem metodyk Agile i ruchu Software Craftsmanship wierzy w wartość czytelnego, testowalnego i łatwego w utrzymaniu kodu. Dąży do tworzenia dobrego oprogramowania, które spełnia oczekiwania klienta i jednocześnie, z którego zespół realizujący może być dumny.\\n\\nDodatkowo poprzez prezentacje, szkolenia, zajęcia ze studentami i mentoring w firmach pokazuje jak można tworzyć oprogramowanie oparte na testach (z TDD, programowaniem w parach, czystym kodem, wzorcami projektowymi, itp.) oraz utrzymywać w firmie środowisko deweloperskie ukierunkowane na jakość (z serwerem CI, Sonarem, automatycznym wdrażaniem, itp.).\\n\\nOprócz tego tworzy i angażuje się w projekty open source, jest miłośnikiem Linuksa oraz prowadzi blog",
          "id":14,
          "name":"Marcin Zajączkowski",
-         "occupation":"Software Craftsman &amp; Solution Architect",
+         "occupation":"Software Craftsman & Solution Architect",
          "twitter":"http://twitter.com/solidsoftblog"
       },
       {
