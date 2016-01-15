@@ -6,23 +6,40 @@ import android.os.Parcelable;
 /**
  * Created by Wojciech on 09.01.2016.
  */
-public class SpeechSlot implements Parcelable{
+public class SpeechSlot implements Parcelable {
     String header;
 
     Speech[] speeches;
 
-    int favoriteSpeechPath =-1;
+    int favoriteSpeechPath = -1;
 
     public SpeechSlot() {
     }
 
     public SpeechSlot(Parcel in) {
-        header=in.readString();
-        speeches=(Speech[])in.readParcelableArray(Speech.class.getClassLoader());
+        header = in.readString();
+
+        speeches = readSpeechesArray(in.readParcelableArray(Speech.class.getClassLoader()));
+    }
+
+    private Speech[] readSpeechesArray(Parcelable[] parcelableArray) {
+        if (parcelableArray instanceof Speech[]) {
+            return (Speech[]) parcelableArray;
+        }
+
+        int index = 0;
+        Speech[] speeches = new Speech[parcelableArray.length];
+        for (Parcelable parcelable : parcelableArray) {
+            if (parcelable instanceof Speech) {
+                speeches[index] = (Speech) parcelable;
+                index++;
+            }
+        }
+        return speeches;
     }
 
     public SpeechSlot(String header) {
-        this.header=header;
+        this.header = header;
     }
 
     public String getHeader() {
@@ -57,7 +74,7 @@ public class SpeechSlot implements Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(header);
-        dest.writeParcelableArray(speeches,flags);
+        dest.writeParcelableArray(speeches, flags);
     }
 
     @SuppressWarnings("unused")
@@ -74,9 +91,9 @@ public class SpeechSlot implements Parcelable{
     };
 
     public Speech getSpeechForPath(int speechPath) {
-        if(speechPath<1){
+        if (speechPath < 1) {
             return speeches[0];
         }
-        return speeches[speechPath-1];
+        return speeches[speechPath - 1];
     }
 }
