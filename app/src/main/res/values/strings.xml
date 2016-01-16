@@ -10,6 +10,7 @@
     <string name="drawer_item_sponsors">Sponsorzy</string>
     <string name="drawer_item_navigation">Dojazd</string>
     <string name="drawer_item_twitter">Twitter feed</string>
+    <string name="drawer_item_survey">Ankieta</string>
 
     <string name="toolbar_title_speech">Prelekcja</string>
     <string name="toolbar_title_speaker">Prelegent</string>

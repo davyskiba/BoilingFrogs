@@ -104,6 +104,11 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
         navigateToUrl("google.navigation:q=plac+Konstytucji+3+Maja+3,+50-083+Wrocław");
     }
 
+    private void navigateToSurvey()
+    {
+        navigateToUrl("http://boilingfrogs.pl/ankieta");
+    }
+
     private void navigateToUrl(String url){
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                 Uri.parse(url));
@@ -205,6 +210,9 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
                 break;
             case R.id.nav_twitter:
                 navigateToTwitterFeed();
+                break;
+            case R.id.nav_survey:
+                navigateToSurvey();
                 break;
             default:return false;
         }

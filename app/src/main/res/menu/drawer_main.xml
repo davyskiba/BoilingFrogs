@@ -29,4 +29,8 @@
         android:id="@+id/nav_twitter"
         android:icon="@drawable/twitter_icon"
         android:title="@string/drawer_item_twitter" />
+    <item
+        android:id="@+id/nav_survey"
+        android:icon="@drawable/drawer_survey"
+        android:title="@string/drawer_item_survey" />
 </menu>
