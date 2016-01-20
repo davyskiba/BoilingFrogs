@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
+import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
@@ -32,13 +34,11 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 12.01.2016.
  */
-public class SpeakerActivity extends AppCompatActivity {
+public class SpeakerActivity extends AppCompatActivity implements MvpView{
+
+    //region Navigation
 
     private final static String SPEAKER_ARG_KEY ="speaker_arg";
-
-    private final static int MENU_ITEM_ID_FACEBOOK =0;
-    private final static int MENU_ITEM_ID_TWITTER=1;
-    private final static int MENU_ITEM_ID_LINKEDIN=2;
 
     public static void startForSpeaker(Speaker speaker, Activity activity)
     {
@@ -47,7 +47,12 @@ public class SpeakerActivity extends AppCompatActivity {
         activity.startActivity(intent);
     }
 
-    private Speaker speaker;
+    //endregion
+
+    //region Views
+
+    @Bind(R.id.contentScroll)
+    NestedScrollView contentScroll;
 
     @Bind(R.id.header)
     ImageView avatar;
@@ -67,6 +72,10 @@ public class SpeakerActivity extends AppCompatActivity {
     @Bind(R.id.speaker_social)
     SocialView socialView;
 
+    //endregion
+
+    SpeakerPresenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,17 +83,22 @@ public class SpeakerActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        Speaker speaker=getIntent().getParcelableExtra(SPEAKER_ARG_KEY);
 
-        speaker=getIntent().getParcelableExtra(SPEAKER_ARG_KEY);
+        presenter=new SpeakerPresenter();
+        presenter.takeView(this);
+        presenter.setSpeaker(speaker);
 
-        socialView.setupForSpeaker(speaker);
-
-        speakerName.setText(speaker.getName());
-        speakerOccupation.setText(speaker.getOccupation());
-        speakerAbout.setText(speaker.getDescription().replace("\\n", "\n").replace("\n\n","\n").replace("\n","\n\n"));
 
         setupDrawerAndToolbar();
+    }
 
+    public void displaySpeakerData(Speaker speaker){
+        speakerName.setText(speaker.getName());
+        speakerOccupation.setText(speaker.getOccupation());
+        speakerAbout.setText(speaker.getDescription().replace("\\n", "\n").replace("\n\n","\n").replace("\n", "\n\n"));
+
+        socialView.setupForSpeaker(speaker);
         AvatarLoaderUtil.loadAvatar(this, speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
     }
 
@@ -104,6 +118,19 @@ public class SpeakerActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
     }
+
+    //region MvpView
+
+    @Override
+    public Context getContext() {
+        return this;
+    }
+
+    @Override
+    public View getContainerView() {
+        return contentScroll;
+    }
+
+    //endregion
 }
