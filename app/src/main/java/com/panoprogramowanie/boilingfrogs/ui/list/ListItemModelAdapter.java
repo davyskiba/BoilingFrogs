@@ -5,19 +5,43 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 
 import com.panoprogramowanie.boilingfrogs.R;
 
 /**
  * Created by Wojciech on 11.01.2016.
  */
-public class ListItemModelAdapter extends ArrayAdapter<ListItemModel> {
+public class ListItemModelAdapter extends BaseAdapter {
 
+    private Context context;
     private int listItemLayoutId;
 
+    private ListItemModel[] items;
+
+    public ListItemModelAdapter(Context context,int resId) {
+        this(context,resId,new ListItemModel[0]);
+    }
+
     public ListItemModelAdapter(Context context,int resId, ListItemModel[] objects) {
-        super(context, resId, objects);
         listItemLayoutId=resId;
+        items=objects;
+        this.context=context;
+    }
+
+    @Override
+    public int getCount() {
+        return items.length;
+    }
+
+    @Override
+    public ListItemModel getItem(int position) {
+        return items[position];
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
     }
 
     @Override
@@ -27,7 +51,7 @@ public class ListItemModelAdapter extends ArrayAdapter<ListItemModel> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         ListItemModelView view;
         if(convertView==null)
@@ -42,6 +66,4 @@ public class ListItemModelAdapter extends ArrayAdapter<ListItemModel> {
 
         return view;
     }
-
-
 }

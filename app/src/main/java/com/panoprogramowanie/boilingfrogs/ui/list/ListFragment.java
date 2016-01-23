@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import com.panoprogramowanie.boilingfrogs.R;
@@ -42,7 +42,7 @@ public abstract class ListFragment extends BoilingFrogsFragment {
         return result;
     }
 
-    protected abstract ArrayAdapter<ListItemModel> getAdapter();
+    protected abstract BaseAdapter getAdapter();
 
     protected abstract void onItemClicked(ListItemModel itemModel);
 

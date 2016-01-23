@@ -1,15 +1,8 @@
 package com.panoprogramowanie.boilingfrogs.ui.schedule;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.BaseAdapter;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
@@ -18,12 +11,6 @@ import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListFragment;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelAdapter;
-import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelView;
-
-import java.util.List;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Created by Wojciech on 07.01.2016.
@@ -45,7 +32,7 @@ public class ScheduleSlotFragment extends ListFragment {
     }
 
     @Override
-    protected ArrayAdapter<ListItemModel> getAdapter() {
+    protected BaseAdapter getAdapter() {
         SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
         return new ListItemModelAdapter(getActivity(),R.layout.list_item_schedule,slot.getSpeeches());
     }
