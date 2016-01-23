@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 
 import com.panoprogramowanie.boilingfrogs.R;
 
+import java.util.List;
+
 /**
  * Created by Wojciech on 11.01.2016.
  */
@@ -65,5 +67,11 @@ public class ListItemModelAdapter extends BaseAdapter {
         view.takeModel(getItem(position));
 
         return view;
+    }
+
+    public void setItems(ListItemModel[] newItems)
+    {
+        items=newItems;
+        notifyDataSetChanged();
     }
 }

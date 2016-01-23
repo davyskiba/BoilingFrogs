@@ -32,9 +32,16 @@ public class ScheduleSlotFragment extends ListFragment {
     }
 
     @Override
-    protected BaseAdapter getAdapter() {
+    protected int getListItemLayoutId() {
+        return R.layout.list_item_schedule;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
         SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
-        return new ListItemModelAdapter(getActivity(),R.layout.list_item_schedule,slot.getSpeeches());
+        setItems(slot.getSpeeches());
     }
 
     @Override
