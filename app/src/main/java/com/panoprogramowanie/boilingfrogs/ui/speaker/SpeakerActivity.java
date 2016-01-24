@@ -13,11 +13,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
+
+import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -65,6 +68,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView{
 
     //endregion
 
+    @Inject
     SpeakerPresenter presenter;
 
     @Override
@@ -76,7 +80,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView{
 
         Speaker speaker=getIntent().getParcelableExtra(SPEAKER_ARG_KEY);
 
-        presenter=new SpeakerPresenter();
+        BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
         presenter.setSpeaker(speaker);
 

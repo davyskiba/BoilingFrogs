@@ -25,6 +25,7 @@ public class MainModule {
         return new ScheduleSupplierImpl();
     }
 
+    @Singleton
     @Provides
     NavigationSupplier provideNavigationSupplier(ScheduleSupplier scheduleSupplier)
     {

@@ -2,7 +2,6 @@ package com.panoprogramowanie.boilingfrogs.ui.main;
 
 import android.animation.ValueAnimator;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,18 +16,8 @@ import android.view.animation.DecelerateInterpolator;
 
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
-import com.panoprogramowanie.boilingfrogs.model.Schedule;
-import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
-import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
-import com.panoprogramowanie.boilingfrogs.suppliers.implementation.NavigationSupplierImpl;
-import com.panoprogramowanie.boilingfrogs.ui.myschedule.MyScheduleFragment;
-import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
-import com.panoprogramowanie.boilingfrogs.ui.speechslot.SpeechSlotFragment;
-import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
-import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersListFragment;
-import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechActivity;
 
 import javax.inject.Inject;
 
@@ -37,7 +26,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 30.12.2015.
  */
-public class MainActivity extends BoilingFrogsFragmentActivity implements SuppliersProvider {
+public class MainActivity extends BoilingFrogsFragmentActivity {
 
 
     private DrawerLayout drawer;
@@ -45,8 +34,6 @@ public class MainActivity extends BoilingFrogsFragmentActivity implements Suppli
 
     @Inject
     NavigationSupplier navigationSupplier;
-    @Inject
-    ScheduleSupplier scheduleSupplier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,20 +99,6 @@ public class MainActivity extends BoilingFrogsFragmentActivity implements Suppli
                 Uri.parse(url));
         startActivity(intent);
     }
-
-    //region SupplierProvider
-
-    @Override
-    public NavigationSupplier provideNavigator() {
-        return navigationSupplier;
-    }
-
-    @Override
-    public ScheduleSupplier provideScheduleSupplier() {
-        return scheduleSupplier;
-    }
-
-    //ednregion
 
     //region Drawer&Toolbar
 

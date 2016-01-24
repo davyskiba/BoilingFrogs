@@ -26,6 +26,8 @@ import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -85,7 +87,8 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
 
     private ColorStateList floatingButtonDefaultTint;
 
-    private SpeechPresenter presenter;
+    @Inject
+    SpeechPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +101,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
         int speechSlotPosition=getIntent().getIntExtra(SPEECH_SLOT_ARG,0);
         int speechPath=getIntent().getIntExtra(SPEECH_PATH_ARG, 0);
 
-        presenter=new SpeechPresenter(getScheduleSupplier(), new NotificationSupplierImpl());
+        BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
         presenter.setSpeech(speechSlotPosition, speechPath);
     }
@@ -163,11 +166,6 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
     public void onFavoriteClick()
     {
         presenter.favoriteClicked();
-    }
-
-    private ScheduleSupplier getScheduleSupplier(){
-        return null;
-//        return ((BoilingFrogs)getApplicationContext()).getScheduleSupplier();
     }
 
     //region MvpView
