@@ -1,9 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.ui.main;
 
 import android.animation.ValueAnimator;
-import android.app.FragmentManager;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,7 +14,7 @@ import android.view.animation.DecelerateInterpolator;
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
-import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
+import com.panoprogramowanie.boilingfrogs.util.BrowserLaunchingUtil;
 
 import javax.inject.Inject;
 
@@ -27,8 +24,6 @@ import butterknife.ButterKnife;
  * Created by Wojciech on 30.12.2015.
  */
 public class MainActivity extends BoilingFrogsFragmentActivity {
-
-
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
 
@@ -77,27 +72,6 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
         }
     }
 
-    private void navigateToTwitterFeed()
-    {
-        navigateToUrl("https://twitter.com/hashtag/boilingfrogs16");
-    }
-
-    private void navigateToConference()
-    {
-        navigateToUrl("google.navigation:q=plac+Konstytucji+3+Maja+3,+50-083+Wrocław");
-    }
-
-    private void navigateToSurvey()
-    {
-        navigateToUrl("http://boilingfrogs.pl/ankieta");
-    }
-
-    private void navigateToUrl(String url){
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                Uri.parse(url));
-        startActivity(intent);
-    }
-
     //region Drawer&Toolbar
 
     private void setupDrawerAndToolbar() {
@@ -142,18 +116,33 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
                 navigationSupplier.navigateToMySchedule();
                 break;
             case R.id.nav_navigation:
-                navigateToConference();
+                browseToConferenceNavigation();
                 break;
             case R.id.nav_twitter:
-                navigateToTwitterFeed();
+                browseToTwitterFeed();
                 break;
             case R.id.nav_survey:
-                navigateToSurvey();
+                browseToSurvey();
                 break;
             default:return false;
         }
         closeDrawers();
         return true;
+    }
+
+    private void browseToTwitterFeed()
+    {
+        BrowserLaunchingUtil.launchBrowser(this, R.string.twitter_feed_url);
+    }
+
+    private void browseToConferenceNavigation()
+    {
+        BrowserLaunchingUtil.launchBrowser(this, R.string.navigation_url);
+    }
+
+    private void browseToSurvey()
+    {
+        BrowserLaunchingUtil.launchBrowser(this, R.string.survey_url);
     }
 
     public void animateToCloseDrawer()
