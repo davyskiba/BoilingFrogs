@@ -2,6 +2,10 @@ package com.panoprogramowanie.boilingfrogs.ui.speakers;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
@@ -22,7 +26,14 @@ public class SpeakersListFragment extends ListFragment{
 
         SuppliersProvider provider=((SuppliersProvider) getActivity());
         presenter=new SpeakersListPresenter(provider.provideScheduleSupplier(),provider.provideNavigator());
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View result=super.onCreateView(inflater, container, savedInstanceState);
         presenter.takeView(this);
+        return result;
     }
 
     @Override
