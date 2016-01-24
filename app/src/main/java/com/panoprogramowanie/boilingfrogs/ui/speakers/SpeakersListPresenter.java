@@ -18,10 +18,7 @@ public class SpeakersListPresenter extends Presenter<SpeakersListFragment> {
         this.navigationSupplier = navigationSupplier;
     }
 
-    @Override
     public void onResume() {
-        super.onResume();
-
         Speaker[] speakers=scheduleSupplier.getAllSpeakers();
         getView().setItems(speakers);
     }

@@ -24,7 +24,7 @@ import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.MyScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
-import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleSlotFragment;
+import com.panoprogramowanie.boilingfrogs.ui.speechslot.SpeechSlotFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersListFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechActivity;
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
     @Override
     public void navigateToSlotDetail(int speechSlot) {
-        ScheduleSlotFragment fragment=ScheduleSlotFragment.createInstance(provideScheduleSupplier().getSpeechSlotForPosition(speechSlot),speechSlot);
+        SpeechSlotFragment fragment= SpeechSlotFragment.createInstance(provideScheduleSupplier().getSpeechSlotForPosition(speechSlot), speechSlot);
         replaceFragment(fragment,true);
     }
 

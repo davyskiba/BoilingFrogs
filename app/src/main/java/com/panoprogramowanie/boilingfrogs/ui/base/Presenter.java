@@ -25,8 +25,4 @@ public class Presenter<T extends MvpView> {
     protected Context getContext() {
         return getView().getContext();
     }
-
-    public void onResume() {
-
-    }
 }

@@ -6,6 +6,7 @@ import android.app.FragmentManager;
 import android.support.v13.app.FragmentPagerAdapter;
 
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
+import com.panoprogramowanie.boilingfrogs.ui.speechslot.SpeechSlotFragment;
 
 /**
  * Created by Wojciech on 07.01.2016.
@@ -23,7 +24,7 @@ public class ScheduleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return ScheduleSlotFragment.createInstance(slots[position],position);
+        return SpeechSlotFragment.createInstance(slots[position], position);
     }
 
     @Override
