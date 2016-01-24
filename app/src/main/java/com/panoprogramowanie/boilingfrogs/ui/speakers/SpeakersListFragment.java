@@ -2,30 +2,31 @@ package com.panoprogramowanie.boilingfrogs.ui.speakers;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
-import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
-import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListFragment;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel;
+
+import javax.inject.Inject;
 
 /**
  * Created by Wojciech on 07.01.2016.
  */
 public class SpeakersListFragment extends ListFragment{
-    private SpeakersListPresenter presenter;
+
+    @Inject
+    SpeakersListPresenter presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SuppliersProvider provider=((SuppliersProvider) getActivity());
-        presenter=new SpeakersListPresenter(provider.provideScheduleSupplier(),provider.provideNavigator());
+        BoilingFrogs.getMainComponent(getActivity()).inject(this);
     }
 
 
@@ -54,7 +55,7 @@ public class SpeakersListFragment extends ListFragment{
     }
 
     @Override
-    public String getToolbarTitle(Context context) {
+    public String getActionBarTitle(Context context) {
         return context.getString(R.string.drawer_item_speakers);
     }
 }

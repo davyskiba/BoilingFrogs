@@ -1,27 +1,32 @@
 package com.panoprogramowanie.boilingfrogs;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.crashlytics.android.Crashlytics;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.panoprogramowanie.boilingfrogs.dagger.DaggerMainComponent;
+import com.panoprogramowanie.boilingfrogs.dagger.MainComponent;
+import com.panoprogramowanie.boilingfrogs.dagger.MainModule;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSupplierImpl;
+
 import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by Wojciech on 30.12.2015.
  */
-public class BoilingFrogs extends Application{
+public class BoilingFrogs extends Application {
 
-    private ScheduleSupplier scheduleSupplier;
+    private MainComponent mainComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        if(!BuildConfig.DEBUG) {
+        if (!BuildConfig.DEBUG) {
             Fabric.with(this, new Crashlytics());
         }
 
@@ -34,12 +39,14 @@ public class BoilingFrogs extends Application{
         // Initialize ImageLoader with configuration.
         ImageLoader.getInstance().init(config.build());
 
-        scheduleSupplier=new ScheduleSupplierImpl();
-        scheduleSupplier.loadSchedule(this);
+        initializeMainComponent();
     }
 
-    public ScheduleSupplier getScheduleSupplier()
-    {
-        return scheduleSupplier;
+    private void initializeMainComponent() {
+        mainComponent = DaggerMainComponent.builder().mainModule(new MainModule()).build();
+    }
+
+    public static MainComponent getMainComponent(Context context){
+        return ((BoilingFrogs)context.getApplicationContext()).mainComponent;
     }
 }

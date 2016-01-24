@@ -2,17 +2,18 @@ package com.panoprogramowanie.boilingfrogs.ui.speechslot;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListFragment;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel;
+
+import javax.inject.Inject;
 
 /**
  * Created by Wojciech on 07.01.2016.
@@ -33,14 +34,14 @@ public class SpeechSlotFragment extends ListFragment {
         return result;
     }
 
+    @Inject
     SpeechSlotPresenter presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SuppliersProvider suppliersProvider=((SuppliersProvider) getActivity());
-        presenter=new SpeechSlotPresenter(suppliersProvider.provideNavigator());
+        BoilingFrogs.getMainComponent(getActivity()).inject(this);
     }
 
     @Override
@@ -73,7 +74,7 @@ public class SpeechSlotFragment extends ListFragment {
     }
 
     @Override
-    public String getToolbarTitle(Context context) {
+    public String getActionBarTitle(Context context) {
         SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
         return slot.getHeader();
     }

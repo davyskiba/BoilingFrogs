@@ -2,19 +2,20 @@ package com.panoprogramowanie.boilingfrogs.ui.myschedule;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.DividerItemDecoration;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
+
+import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -24,7 +25,7 @@ import butterknife.ButterKnife;
  */
 public class MyScheduleFragment extends BoilingFrogsFragment implements MyScheduleRecyclerViewAdapter.OnSlotClickListener {
     @Override
-    public String getToolbarTitle(Context context) {
+    public String getActionBarTitle(Context context) {
         return context.getString(R.string.drawer_item_my_schedule);
     }
 
@@ -32,14 +33,15 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     RecyclerView recyclerView;
 
     private MyScheduleRecyclerViewAdapter adapter;
-    private MySchedulePresenter presenter;
+
+    @Inject
+    MySchedulePresenter presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SuppliersProvider provider=((SuppliersProvider)getActivity());
-        presenter=new MySchedulePresenter(provider.provideScheduleSupplier(),provider.provideNavigator());
+        BoilingFrogs.getMainComponent(getActivity()).inject(this);
     }
 
     @Override
@@ -83,6 +85,6 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     @Override
     public void onNonEmptySlotClicked(int slotPosition) {
         SpeechSlot tappedSlot=adapter.getItem(slotPosition);
-        presenter.onNonEmptySlotClicked(slotPosition,tappedSlot);
+        presenter.onNonEmptySlotClicked(slotPosition, tappedSlot);
     }
 }

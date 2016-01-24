@@ -9,6 +9,8 @@ import com.panoprogramowanie.boilingfrogs.suppliers.NotificationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.ui.base.Presenter;
 
+import javax.inject.Inject;
+
 /**
  * Created by Wojciech on 20.01.2016.
  */
@@ -23,6 +25,7 @@ public class SpeechPresenter extends Presenter<SpeechActivity>{
     private int speechSlotPosition;
     private int speechPath;
 
+    @Inject
     public SpeechPresenter(ScheduleSupplier scheduleSupplier, NotificationSupplier notificationSupplier) {
         this.scheduleSupplier = scheduleSupplier;
         this.notificationSupplier = notificationSupplier;

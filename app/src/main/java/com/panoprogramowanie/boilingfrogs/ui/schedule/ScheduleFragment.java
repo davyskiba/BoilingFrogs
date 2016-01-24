@@ -2,17 +2,18 @@ package com.panoprogramowanie.boilingfrogs.ui.schedule;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
+
+import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,13 +29,14 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     @Bind(R.id.tab_layout)
     TabLayout tabLayout;
 
-    private SchedulePresenter presenter;
+    @Inject
+    SchedulePresenter presenter;
 
     private int selectedItem;
     ScheduleFragmentPagerAdapter adapter;
 
     @Override
-    public String getToolbarTitle(Context context) {
+    public String getActionBarTitle(Context context) {
         return context.getString(R.string.drawer_item_schedule);
     }
 
@@ -42,8 +44,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SuppliersProvider provider=((SuppliersProvider) getActivity());
-        presenter=new SchedulePresenter(provider.provideScheduleSupplier());
+        BoilingFrogs.getMainComponent(getActivity()).inject(this);
     }
 
     @Override

@@ -31,7 +31,7 @@ public abstract class BoilingFrogsFragment extends Fragment implements MvpView {
         return containterView;
     }
 
-    public abstract String getToolbarTitle(Context context);
+    public abstract String getActionBarTitle(Context context);
 
 
 }
