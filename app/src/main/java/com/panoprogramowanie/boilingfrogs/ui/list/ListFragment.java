@@ -24,9 +24,8 @@ public abstract class ListFragment extends BoilingFrogsFragment {
 
     private ListItemModelAdapter adapter;
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View result=inflater.inflate(R.layout.fragment_list, container, false);
         ButterKnife.bind(this, result);
 

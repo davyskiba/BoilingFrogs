@@ -28,10 +28,10 @@ public class SpeakersListFragment extends ListFragment{
         presenter=new SpeakersListPresenter(provider.provideScheduleSupplier(),provider.provideNavigator());
     }
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=super.onCreateView(inflater, container, savedInstanceState);
+    protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View result=super.onCreateFragmentView(inflater, container, savedInstanceState);
         presenter.takeView(this);
         return result;
     }

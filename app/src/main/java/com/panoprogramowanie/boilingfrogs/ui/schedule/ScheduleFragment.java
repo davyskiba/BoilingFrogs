@@ -46,11 +46,8 @@ public class ScheduleFragment extends BoilingFrogsFragment {
         presenter=new SchedulePresenter(provider.provideScheduleSupplier());
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
-
+    protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View result=inflater.inflate(R.layout.fragment_schedule, container, false);
         ButterKnife.bind(this, result);
 

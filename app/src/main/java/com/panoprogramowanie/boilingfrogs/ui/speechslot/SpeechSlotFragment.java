@@ -25,7 +25,7 @@ public class SpeechSlotFragment extends ListFragment {
     public static SpeechSlotFragment createInstance(SpeechSlot slot, int slotPosition){
         Bundle args=new Bundle();
         args.putParcelable(SLOT_ARG_KEY, slot);
-        args.putInt(SLOT_POSITION_ARG_KEY,slotPosition);
+        args.putInt(SLOT_POSITION_ARG_KEY, slotPosition);
 
         SpeechSlotFragment result=new SpeechSlotFragment();
         result.setArguments(args);
@@ -43,10 +43,9 @@ public class SpeechSlotFragment extends ListFragment {
         presenter=new SpeechSlotPresenter(suppliersProvider.provideNavigator());
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=super.onCreateView(inflater, container, savedInstanceState);
+    protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    View result=super.onCreateFragmentView(inflater, container, savedInstanceState);
         presenter.takeView(this);
         return result;
     }
