@@ -54,7 +54,7 @@ public class SpeakersListFragment extends ListFragment{
     }
 
     @Override
-    public String getToolbarTitle(Context context) {
+    public String getActionBarTitle(Context context) {
         return context.getString(R.string.drawer_item_speakers);
     }
 }

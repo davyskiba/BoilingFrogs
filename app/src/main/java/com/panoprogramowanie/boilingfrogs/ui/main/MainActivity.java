@@ -10,7 +10,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +21,7 @@ import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
+import com.panoprogramowanie.boilingfrogs.suppliers.implementation.NavigationSupplierImpl;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.MyScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speechslot.SpeechSlotFragment;
@@ -34,13 +34,13 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 30.12.2015.
  */
-public class MainActivity extends AppCompatActivity implements NavigationSupplier, SuppliersProvider {
+public class MainActivity extends BoilingFrogsFragmentActivity implements SuppliersProvider {
 
-    private static String FRAGMENT_TAG="fTag";
 
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
 
+    NavigationSupplier navigationSupplier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,32 +49,26 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
         ButterKnife.bind(this);
 
+        navigationSupplier=new NavigationSupplierImpl(provideScheduleSupplier());
+
         setupDrawerAndToolbar();
-        getFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
-            int previousBackStackCount = 0;
+    }
 
-            @Override
-            public void onBackStackChanged() {
-                int currentBackStackCount = getFragmentManager().getBackStackEntryCount();
-                if (previousBackStackCount != currentBackStackCount) {
-                    if (currentBackStackCount == 0) {
-                        animateToCloseDrawer();
-                    } else {
-                        animateToOpenDrawer();
-                    }
-                }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        navigationSupplier.registerFragmentActivity(this);
 
-                BoilingFrogsFragment currentFragment = (BoilingFrogsFragment) getFragmentManager().findFragmentByTag(FRAGMENT_TAG);
-                String currentFragmentTitle = currentFragment.getToolbarTitle(MainActivity.this);
-                getSupportActionBar().setTitle(currentFragmentTitle);
-
-                previousBackStackCount = currentBackStackCount;
-            }
-        });
-
-        if (savedInstanceState == null) {
-            replaceFragment(new ScheduleFragment(), false);
+        if(navigationSupplier.isContainterEmpty())
+        {
+            navigationSupplier.navigateToSchedule();
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        navigationSupplier.unregisterFragmentActivity(this);
     }
 
     @Override
@@ -117,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
 
     @Override
     public NavigationSupplier provideNavigator() {
-        return this;
+        return navigationSupplier;
     }
 
     @Override
@@ -126,39 +120,6 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
     }
 
     //ednregion
-
-    //region NavigationSupplier
-
-
-    @Override
-    public void navigateToSpeech(int speechSlot, int speechPath) {
-        SpeechActivity.startForSpeech(speechSlot,speechPath, this);
-    }
-
-    @Override
-    public void navigateToSpeaker(Speaker speaker) {
-        SpeakerActivity.startForSpeaker(speaker, this);
-    }
-
-    @Override
-    public void navigateToSlotDetail(int speechSlot) {
-        SpeechSlotFragment fragment= SpeechSlotFragment.createInstance(provideScheduleSupplier().getSpeechSlotForPosition(speechSlot), speechSlot);
-        replaceFragment(fragment,true);
-    }
-
-    private void replaceFragment(BoilingFrogsFragment fragment, boolean addToBackstack) {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_container, fragment,FRAGMENT_TAG);
-
-        if (addToBackstack) {
-            transaction.addToBackStack("stack");
-        }
-
-        transaction.commit();
-
-        getSupportActionBar().setTitle(fragment.getToolbarTitle(this));
-    }
-    //endregion
 
     //region Drawer&Toolbar
 
@@ -195,13 +156,13 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
     private boolean drawerOptionSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_schedule:
-                replaceFragment(new ScheduleFragment(), false);
+                navigationSupplier.navigateToSchedule();
                 break;
             case R.id.nav_speakers:
-                replaceFragment(new SpeakersListFragment(), false);
+                navigationSupplier.navigateToSpeakersList();
                 break;
             case R.id.nav_my_schedule:
-                replaceFragment(new MyScheduleFragment(), false);
+                navigationSupplier.navigateToMySchedule();
                 break;
             case R.id.nav_navigation:
                 navigateToConference();
@@ -218,12 +179,12 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
         return true;
     }
 
-    private void animateToCloseDrawer()
+    public void animateToCloseDrawer()
     {
         animateDrawer(1, 0);
     }
 
-    private void animateToOpenDrawer()
+    public void animateToOpenDrawer()
     {
         animateDrawer(0, 1);
     }

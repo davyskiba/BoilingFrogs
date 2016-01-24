@@ -34,7 +34,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     ScheduleFragmentPagerAdapter adapter;
 
     @Override
-    public String getToolbarTitle(Context context) {
+    public String getActionBarTitle(Context context) {
         return context.getString(R.string.drawer_item_schedule);
     }
 

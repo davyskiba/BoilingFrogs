@@ -73,7 +73,7 @@ public class SpeechSlotFragment extends ListFragment {
     }
 
     @Override
-    public String getToolbarTitle(Context context) {
+    public String getActionBarTitle(Context context) {
         SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
         return slot.getHeader();
     }

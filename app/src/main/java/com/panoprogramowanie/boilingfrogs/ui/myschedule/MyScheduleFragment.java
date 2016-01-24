@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
  */
 public class MyScheduleFragment extends BoilingFrogsFragment implements MyScheduleRecyclerViewAdapter.OnSlotClickListener {
     @Override
-    public String getToolbarTitle(Context context) {
+    public String getActionBarTitle(Context context) {
         return context.getString(R.string.drawer_item_my_schedule);
     }
 
@@ -83,6 +83,6 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     @Override
     public void onNonEmptySlotClicked(int slotPosition) {
         SpeechSlot tappedSlot=adapter.getItem(slotPosition);
-        presenter.onNonEmptySlotClicked(slotPosition,tappedSlot);
+        presenter.onNonEmptySlotClicked(slotPosition, tappedSlot);
     }
 }
