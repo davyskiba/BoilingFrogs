@@ -116,13 +116,13 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
                 navigationSupplier.navigateToMySchedule();
                 break;
             case R.id.nav_navigation:
-                browseToConferenceNavigation();
+                browseTo(R.string.navigation_url);
                 break;
             case R.id.nav_twitter:
-                browseToTwitterFeed();
+                browseTo(R.string.twitter_feed_url);
                 break;
             case R.id.nav_survey:
-                browseToSurvey();
+                browseTo(R.string.survey_url);
                 break;
             default:return false;
         }
@@ -130,19 +130,8 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
         return true;
     }
 
-    private void browseToTwitterFeed()
-    {
-        BrowserLaunchingUtil.launchBrowser(this, R.string.twitter_feed_url);
-    }
-
-    private void browseToConferenceNavigation()
-    {
-        BrowserLaunchingUtil.launchBrowser(this, R.string.navigation_url);
-    }
-
-    private void browseToSurvey()
-    {
-        BrowserLaunchingUtil.launchBrowser(this, R.string.survey_url);
+    private void browseTo(int urlId){
+        BrowserLaunchingUtil.launchBrowser(this, urlId);
     }
 
     public void animateToCloseDrawer()
