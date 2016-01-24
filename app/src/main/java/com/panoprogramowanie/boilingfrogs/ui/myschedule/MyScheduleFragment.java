@@ -31,42 +31,58 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     @Bind(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    MyScheduleRecyclerViewAdapter adapter;
+    private MyScheduleRecyclerViewAdapter adapter;
+    private MySchedulePresenter presenter;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        SuppliersProvider provider=((SuppliersProvider)getActivity());
+        presenter=new MySchedulePresenter(provider.provideScheduleSupplier(),provider.provideNavigator());
+    }
 
     @Override
     protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View result=inflater.inflate(R.layout.fragment_my_schedule, null);
         ButterKnife.bind(this, result);
 
-        SpeechSlot[] slots=((SuppliersProvider)getActivity()).provideScheduleSupplier().getAllSpeechSlots();
+        setupRecyclerView();
 
-        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));
+        presenter.takeView(this);
+
+        return result;
+    }
+
+    private void setupRecyclerView() {
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        adapter=new MyScheduleRecyclerViewAdapter(slots);
+        adapter=new MyScheduleRecyclerViewAdapter();
         adapter.setOnSlotClickListener(this);
 
         recyclerView.setAdapter(adapter);
-
-
-        return result;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        adapter.notifyDataSetChanged();
+        presenter.onResume();
+    }
+
+    public void setSpeechSlots(SpeechSlot[] slots){
+        adapter.setItems(slots);
     }
 
     @Override
     public void onEmptySlotClicked(int slotPosition) {
-        ((SuppliersProvider)getActivity()).provideNavigator().navigateToSlotDetail(slotPosition);
+        presenter.onEmptySlotClicked(slotPosition);
     }
 
     @Override
     public void onNonEmptySlotClicked(int slotPosition) {
         SpeechSlot tappedSlot=adapter.getItem(slotPosition);
-        ((SuppliersProvider) getActivity()).provideNavigator().navigateToSpeech(slotPosition,tappedSlot.getFavoriteSpeechPath());
+        presenter.onNonEmptySlotClicked(slotPosition,tappedSlot);
     }
 }
