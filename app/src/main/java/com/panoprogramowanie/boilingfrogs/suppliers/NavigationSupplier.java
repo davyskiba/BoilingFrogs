@@ -25,4 +25,6 @@ public interface NavigationSupplier {
     void navigateToMySchedule();
 
     boolean isContainterEmpty();
+
+    boolean onBackPressed();
 }

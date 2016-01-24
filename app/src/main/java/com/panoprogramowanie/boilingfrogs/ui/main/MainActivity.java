@@ -71,10 +71,8 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
             return;
         }
 
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.popBackStack();
-
-        if (fragmentManager.getBackStackEntryCount() == 0) {
+        if(navigationSupplier.onBackPressed())
+        {
             super.onBackPressed();
         }
     }

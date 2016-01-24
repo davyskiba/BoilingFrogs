@@ -105,6 +105,15 @@ public class NavigationSupplierImpl implements NavigationSupplier {
         return currentFragment == null;
     }
 
+    @Override
+    public boolean onBackPressed() {
+
+        FragmentManager fragmentManager = currentFragmentActivity.getFragmentManager();
+        fragmentManager.popBackStack();
+
+        return (fragmentManager.getBackStackEntryCount() == 0);
+    }
+
     private class FragmentBackstackChangeListener implements FragmentManager.OnBackStackChangedListener {
         int previousBackStackCount = 0;
 
