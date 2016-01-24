@@ -17,6 +17,7 @@ import android.view.animation.DecelerateInterpolator;
 
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.model.Schedule;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
@@ -29,6 +30,8 @@ import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
 import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersListFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechActivity;
 
+import javax.inject.Inject;
+
 import butterknife.ButterKnife;
 
 /**
@@ -40,7 +43,10 @@ public class MainActivity extends BoilingFrogsFragmentActivity implements Suppli
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
 
+    @Inject
     NavigationSupplier navigationSupplier;
+    @Inject
+    ScheduleSupplier scheduleSupplier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +55,7 @@ public class MainActivity extends BoilingFrogsFragmentActivity implements Suppli
 
         ButterKnife.bind(this);
 
-        navigationSupplier=new NavigationSupplierImpl(provideScheduleSupplier());
+        BoilingFrogs.getMainComponent(this).inject(this);
 
         setupDrawerAndToolbar();
     }
@@ -116,7 +122,7 @@ public class MainActivity extends BoilingFrogsFragmentActivity implements Suppli
 
     @Override
     public ScheduleSupplier provideScheduleSupplier() {
-        return ((BoilingFrogs)getApplicationContext()).getScheduleSupplier();
+        return scheduleSupplier;
     }
 
     //ednregion

@@ -9,12 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.DividerItemDecoration;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
+
+import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -32,14 +35,15 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     RecyclerView recyclerView;
 
     private MyScheduleRecyclerViewAdapter adapter;
-    private MySchedulePresenter presenter;
+
+    @Inject
+    MySchedulePresenter presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SuppliersProvider provider=((SuppliersProvider)getActivity());
-        presenter=new MySchedulePresenter(provider.provideScheduleSupplier(),provider.provideNavigator());
+        BoilingFrogs.getMainComponent(getActivity()).inject(this);
     }
 
     @Override

@@ -166,7 +166,8 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
     }
 
     private ScheduleSupplier getScheduleSupplier(){
-        return ((BoilingFrogs)getApplicationContext()).getScheduleSupplier();
+        return null;
+//        return ((BoilingFrogs)getApplicationContext()).getScheduleSupplier();
     }
 
     //region MvpView
