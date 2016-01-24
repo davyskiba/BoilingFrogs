@@ -46,7 +46,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
 
     @Override
     protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.fragment_my_schedule, null);
+        View result=inflater.inflate(R.layout.my_schedule_fragment, null);
         ButterKnife.bind(this, result);
 
         setupRecyclerView();

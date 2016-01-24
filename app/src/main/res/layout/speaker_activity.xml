@@ -85,7 +85,7 @@
 
             <include
                 android:id="@+id/speaker_social"
-                layout="@layout/view_social"
+                layout="@layout/social_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="16dp"

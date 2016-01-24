@@ -1,6 +1,5 @@
 package com.panoprogramowanie.boilingfrogs.ui.splash;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.splash_acitivty);
 
         BoilingFrogs.getMainComponent(this).inject(this);
     }

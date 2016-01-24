@@ -64,21 +64,21 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @NonNull
     public MyScheduleBreakViewHolder getBreakSlotViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_break_slot, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.speech_slot_break_list_item, null);
         MyScheduleBreakViewHolder viewHolder=new MyScheduleBreakViewHolder(view);
         return viewHolder;
     }
 
     @NonNull
     public MyScheduleEmptySpeechSlotViewHolder getMyScheduleEmptySpeechSlotViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_empty_speech_slot, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.speech_slot_empty_list_item, null);
         MyScheduleEmptySpeechSlotViewHolder viewHolder=new MyScheduleEmptySpeechSlotViewHolder(view);
         return viewHolder;
     }
 
     @NonNull
     public MyScheduleSpeechSlotViewHolder getMyScheduleSpeechSlotViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_speech_slot, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.speech_slot_list_item, null);
         MyScheduleSpeechSlotViewHolder viewHolder=new MyScheduleSpeechSlotViewHolder(view);
         return viewHolder;
     }

@@ -70,7 +70,7 @@ public class SpeechSlotFragment extends ListFragment {
 
     @Override
     protected int getListItemLayoutId() {
-        return R.layout.list_item_schedule;
+        return R.layout.schedule_list_item;
     }
 
     @Override

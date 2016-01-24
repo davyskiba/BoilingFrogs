@@ -49,7 +49,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
 
     @Override
     protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.fragment_schedule, container, false);
+        View result=inflater.inflate(R.layout.schedule_fragment, container, false);
         ButterKnife.bind(this, result);
 
         adapter=new ScheduleFragmentPagerAdapter(getChildFragmentManager());

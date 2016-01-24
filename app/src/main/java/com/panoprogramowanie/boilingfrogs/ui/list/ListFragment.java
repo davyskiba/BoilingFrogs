@@ -1,7 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.ui.list;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +25,7 @@ public abstract class ListFragment extends BoilingFrogsFragment {
 
     @Override
     protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.fragment_list, container, false);
+        View result=inflater.inflate(R.layout.list_fragment, container, false);
         ButterKnife.bind(this, result);
 
         int listItemLayoutId=getListItemLayoutId();

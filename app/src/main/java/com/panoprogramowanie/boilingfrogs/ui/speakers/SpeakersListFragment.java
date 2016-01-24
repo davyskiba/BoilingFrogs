@@ -51,7 +51,7 @@ public class SpeakersListFragment extends ListFragment{
 
     @Override
     protected int getListItemLayoutId() {
-        return R.layout.list_item_speakers;
+        return R.layout.speakers_list_item;
     }
 
     @Override
