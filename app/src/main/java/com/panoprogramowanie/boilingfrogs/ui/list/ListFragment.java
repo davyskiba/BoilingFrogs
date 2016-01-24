@@ -45,7 +45,7 @@ public abstract class ListFragment extends BoilingFrogsFragment {
         return result;
     }
 
-    protected void setItems(ListItemModel[] items){
+    public void setItems(ListItemModel[] items){
         adapter.setItems(items);
     }
 

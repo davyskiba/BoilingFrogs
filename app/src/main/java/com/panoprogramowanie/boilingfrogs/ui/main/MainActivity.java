@@ -19,16 +19,14 @@ import android.view.animation.DecelerateInterpolator;
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
-import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
-import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSupplierImpl;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.MyScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleSlotFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
-import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
+import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersListFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speech.SpeechActivity;
 
 import butterknife.ButterKnife;
@@ -200,7 +198,7 @@ public class MainActivity extends AppCompatActivity implements NavigationSupplie
                 replaceFragment(new ScheduleFragment(), false);
                 break;
             case R.id.nav_speakers:
-                replaceFragment(new SpeakersFragment(), false);
+                replaceFragment(new SpeakersListFragment(), false);
                 break;
             case R.id.nav_my_schedule:
                 replaceFragment(new MyScheduleFragment(), false);

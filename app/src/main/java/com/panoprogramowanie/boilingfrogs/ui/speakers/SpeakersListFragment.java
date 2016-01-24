@@ -1,39 +1,46 @@
 package com.panoprogramowanie.boilingfrogs.ui.speakers;
 
 import android.content.Context;
-import android.widget.BaseAdapter;
+import android.os.Bundle;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
-import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.SuppliersProvider;
+import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListFragment;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel;
-import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModelAdapter;
 
 /**
  * Created by Wojciech on 07.01.2016.
  */
-public class SpeakersFragment extends ListFragment {
+public class SpeakersListFragment extends ListFragment{
+    private SpeakersListPresenter presenter;
+
     @Override
-    protected int getListItemLayoutId() {
-        return R.layout.list_item_speakers;
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        SuppliersProvider provider=((SuppliersProvider) getActivity());
+        presenter=new SpeakersListPresenter(provider.provideScheduleSupplier(),provider.provideNavigator());
+        presenter.takeView(this);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
-        Speaker[] speakers=((SuppliersProvider)getActivity()).provideScheduleSupplier().getAllSpeakers();
-        setItems(speakers);
+        presenter.onResume();
     }
 
     @Override
     protected void onItemClicked(ListItemModel itemModel) {
         Speaker clickedSpeaker=(Speaker)itemModel;
-        ((SuppliersProvider) getActivity()).provideNavigator().navigateToSpeaker(clickedSpeaker);
+        presenter.speakerClicked(clickedSpeaker);
     }
 
+    @Override
+    protected int getListItemLayoutId() {
+        return R.layout.list_item_speakers;
+    }
 
     @Override
     public String getToolbarTitle(Context context) {

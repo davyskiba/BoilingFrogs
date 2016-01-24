@@ -1,20 +1,14 @@
 package com.panoprogramowanie.boilingfrogs.ui.speaker;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,9 +16,6 @@ import android.widget.TextView;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
-import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
-import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
-import com.panoprogramowanie.boilingfrogs.ui.speakers.SpeakersFragment;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
