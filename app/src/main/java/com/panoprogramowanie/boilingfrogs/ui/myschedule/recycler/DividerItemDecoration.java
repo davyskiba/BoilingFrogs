@@ -1,4 +1,4 @@
-package com.panoprogramowanie.boilingfrogs.ui.myschedule;
+package com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler;
 
 import android.content.Context;
 import android.content.res.TypedArray;

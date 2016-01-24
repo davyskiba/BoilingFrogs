@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.panoprogramowanie.boilingfrogs.R;
@@ -23,26 +22,33 @@ public abstract class ListFragment extends BoilingFrogsFragment {
     @Bind(R.id.listView)
     ListView listView;
 
-    @Nullable
+    private ListItemModelAdapter adapter;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View result=inflater.inflate(R.layout.fragment_list, container, false);
         ButterKnife.bind(this, result);
 
-        listView.setAdapter(getAdapter());
+        int listItemLayoutId=getListItemLayoutId();
+        adapter= new ListItemModelAdapter(getActivity(),listItemLayoutId);
+        listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListItemModelView speechListItem=(ListItemModelView)view;
-                onItemClicked(speechListItem.getModel());
+                ListItemModel clickedItem=adapter.getItem(position);
+                onItemClicked(clickedItem);
             }
         });
 
         return result;
     }
 
-    protected abstract ArrayAdapter<ListItemModel> getAdapter();
+    public void setItems(ListItemModel[] items){
+        adapter.setItems(items);
+    }
+
+    protected abstract int getListItemLayoutId();
 
     protected abstract void onItemClicked(ListItemModel itemModel);
 

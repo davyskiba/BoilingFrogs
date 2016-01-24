@@ -1,9 +1,10 @@
-package com.panoprogramowanie.boilingfrogs.ui.myschedule;
+package com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
+import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
 
 /**
  * Created by Wojciech on 13.01.2016.

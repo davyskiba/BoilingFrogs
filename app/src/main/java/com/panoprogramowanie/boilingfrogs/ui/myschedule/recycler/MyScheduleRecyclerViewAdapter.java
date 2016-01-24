@@ -1,4 +1,4 @@
-package com.panoprogramowanie.boilingfrogs.ui.myschedule;
+package com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
+import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleBreakViewHolder;
+import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleEmptySpeechSlotViewHolder;
+import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpeechSlotViewHolder;
+import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpeechSlotViewHolderBase;
 
 /**
  * Created by Wojciech on 13.01.2016.
@@ -23,8 +27,8 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     private SpeechSlot[] speechSlots;
 
-    public MyScheduleRecyclerViewAdapter(SpeechSlot[] speechSlots) {
-        this.speechSlots = speechSlots;
+    public MyScheduleRecyclerViewAdapter() {
+        speechSlots=new SpeechSlot[0];
     }
 
     @Override
@@ -42,6 +46,8 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
         return EMPTY_SLOT_VIEW_TYPE;
     }
+
+    //region ViewHolders
 
     @Override
     public MyScheduleSpeechSlotViewHolderBase onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -80,24 +86,34 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
     @Override
     public void onBindViewHolder(MyScheduleSpeechSlotViewHolderBase holder, int position) {
         holder.takeSpeechSlot(speechSlots[position],position,onSlotClickListener);
-
     }
+
+    //endregion
 
     @Override
     public int getItemCount() {
         return speechSlots.length;
     }
 
-    public void setOnSlotClickListener(OnSlotClickListener onSlotClickListener) {
-        this.onSlotClickListener = onSlotClickListener;
-    }
-
     public SpeechSlot getItem(int slotPosition) {
         return speechSlots[slotPosition];
+    }
+
+    public void setItems(SpeechSlot[] items){
+        speechSlots=items;
+        notifyDataSetChanged();
+    }
+
+    //region OnSlotClickListener
+
+    public void setOnSlotClickListener(OnSlotClickListener onSlotClickListener) {
+        this.onSlotClickListener = onSlotClickListener;
     }
 
     public interface OnSlotClickListener{
         void onEmptySlotClicked(int slotPosition);
         void onNonEmptySlotClicked(int slotPosition);
     }
+
+    //endregion
 }

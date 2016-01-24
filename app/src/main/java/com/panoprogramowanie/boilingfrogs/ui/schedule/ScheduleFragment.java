@@ -28,6 +28,8 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     @Bind(R.id.tab_layout)
     TabLayout tabLayout;
 
+    private SchedulePresenter presenter;
+
     private int selectedItem;
     ScheduleFragmentPagerAdapter adapter;
 
@@ -36,15 +38,62 @@ public class ScheduleFragment extends BoilingFrogsFragment {
         return context.getString(R.string.drawer_item_schedule);
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        SuppliersProvider provider=((SuppliersProvider) getActivity());
+        presenter=new SchedulePresenter(provider.provideScheduleSupplier());
+    }
+
+    @Override
+    protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View result=inflater.inflate(R.layout.fragment_schedule, container, false);
         ButterKnife.bind(this, result);
 
         adapter=new ScheduleFragmentPagerAdapter(getChildFragmentManager());
         viewPager.setAdapter(adapter);
 
+        setupTabs();
+
+        presenter.takeView(this);
+
+        return result;
+    }
+
+    public void setData(SpeechSlot[] slots) {
+        adapter.setData(slots);
+
+        resetTabs(slots);
+    }
+
+    //region Tabs
+
+    private void resetTabs(SpeechSlot[] slots) {
+        int selectedTabPosition=selectedItem;
+
+        tabLayout.removeAllTabs();
+        addTabs(tabLayout, slots, selectedTabPosition);
+
+        if(tabLayout.getTabCount()>selectedTabPosition && selectedTabPosition>0) {
+            tabLayout.getTabAt(selectedTabPosition).select();
+            viewPager.setCurrentItem(selectedTabPosition);
+            selectedItem=selectedTabPosition;
+        }
+    }
+
+    private void addTabs(TabLayout tabLayout, SpeechSlot[] slots, int selectedPosition){
+        for(int i=0;i<slots.length;i++)
+        {
+            TabLayout.Tab tab=tabLayout.newTab().setText(slots[i].getHeader());
+            if(i==selectedPosition) {
+                tab.select();
+            }
+            tabLayout.addTab(tab);
+        }
+    }
+
+    private void setupTabs() {
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 
@@ -67,42 +116,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
 
             }
         });
-        refreshData();
-
-        return result;
     }
 
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    private void refreshData()
-    {
-        SpeechSlot[] slots=((SuppliersProvider) getActivity()).provideScheduleSupplier().getAllSpeechSlots();
-        adapter.setData(slots);
-
-        int selectedTabPosition=selectedItem;
-
-        tabLayout.removeAllTabs();
-        addTabs(tabLayout,slots,selectedTabPosition);
-
-        if(tabLayout.getTabCount()>selectedTabPosition && selectedTabPosition>0) {
-            tabLayout.getTabAt(selectedTabPosition).select();
-            viewPager.setCurrentItem(selectedTabPosition);
-            selectedItem=selectedTabPosition;
-        }
-    }
-
-    private void addTabs(TabLayout tabLayout, SpeechSlot[] slots, int selectedPosition){
-        for(int i=0;i<slots.length;i++)
-        {
-            TabLayout.Tab tab=tabLayout.newTab().setText(slots[i].getHeader());
-            if(i==selectedPosition) {
-                tab.select();
-            }
-            tabLayout.addTab(tab);
-        }
-    }
+    //endregion
 }

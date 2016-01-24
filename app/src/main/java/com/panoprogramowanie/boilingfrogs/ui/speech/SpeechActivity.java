@@ -1,12 +1,14 @@
 package com.panoprogramowanie.boilingfrogs.ui.speech;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,8 +20,9 @@ import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
-import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
+import com.panoprogramowanie.boilingfrogs.suppliers.implementation.NotificationSupplierImpl;
+import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
@@ -30,18 +33,26 @@ import butterknife.OnClick;
 /**
  * Created by Wojciech on 12.01.2016.
  */
-public class SpeechActivity extends AppCompatActivity {
+public class SpeechActivity extends AppCompatActivity implements MvpView{
+
+    //region Navigation
 
     private final static String SPEECH_SLOT_ARG ="speech_slot_arg";
     private final static String SPEECH_PATH_ARG ="speech_path_arg";
 
-    public static void startForSpeech(int speechSlot,int speechPath, Activity activity)
-    {
+    public static void startForSpeech(int speechSlot,int speechPath, Activity activity){
         Intent intent=new Intent(activity,SpeechActivity.class);
         intent.putExtra(SPEECH_SLOT_ARG, speechSlot);
         intent.putExtra(SPEECH_PATH_ARG, speechPath);
         activity.startActivity(intent);
     }
+
+    //endregion
+
+    //region Views
+
+    @Bind(R.id.contentScroll)
+    NestedScrollView contentScroll;
 
     @Bind(R.id.header)
     ImageView avatar;
@@ -70,51 +81,26 @@ public class SpeechActivity extends AppCompatActivity {
     @Bind(R.id.fab)
     FloatingActionButton floatingActionButton;
 
-    private SpeechSlot speechSlot;
-    private Speech speech;
+    //endregion
 
     private ColorStateList floatingButtonDefaultTint;
+
+    private SpeechPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.speech_activity);
-
         ButterKnife.bind(this);
         floatingButtonDefaultTint=floatingActionButton.getBackgroundTintList();
-
-        int speechSlotPosition=getIntent().getIntExtra(SPEECH_SLOT_ARG,0);
-        int speechPath=getIntent().getIntExtra(SPEECH_PATH_ARG,0);
-
-        speechSlot=getScheduleSupplier().getSpeechSlotForPosition(speechSlotPosition);
-        speech=speechSlot.getSpeechForPath(speechPath);
-
-        Speaker speaker=speech.getSpeaker();
-        speakerName.setText(speaker.getName());
-        speakerOccupation.setText(speaker.getOccupation());
-
-        speechTitle.setText(speech.getTitle());
-        speechTime.setText(speech.getTimeString());
-        speechDescription.setText(speech.getDescription().replace("\\n", "\n").replace("\n\n", "\n").replace("\n", "\n\n"));
-
-        socialView.setupForSpeaker(speech.getSpeaker());
-
         setupDrawerAndToolbar();
 
-        AvatarLoaderUtil.loadAvatar(this, speech.getSpeaker().getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
+        int speechSlotPosition=getIntent().getIntExtra(SPEECH_SLOT_ARG,0);
+        int speechPath=getIntent().getIntExtra(SPEECH_PATH_ARG, 0);
 
-        if(isFavorite())
-        {
-            setSelectedFab();
-        }
-        else {
-            setUnSelectedFab();
-        }
-    }
-
-    private boolean isFavorite()
-    {
-        return speechSlot.getFavoriteSpeechPath()==speech.getPath();
+        presenter=new SpeechPresenter(getScheduleSupplier(), new NotificationSupplierImpl());
+        presenter.takeView(this);
+        presenter.setSpeech(speechSlotPosition, speechPath);
     }
 
     private void setupDrawerAndToolbar() {
@@ -133,49 +119,67 @@ public class SpeechActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
     }
 
-    @OnClick(R.id.fab)
-    public void onFabClick()
-    {
-        if(isFavorite())
-        {
-            speechSlot.setFavoriteSpeechPath(-1);
+    //region DataDisplay
 
-            setUnSelectedFab();
-            showSnackbar(R.string.speech_removed_from_favorites);
+    public void displaySpeech(Speech speech){
+        speechTitle.setText(speech.getTitle());
+        speechTime.setText(speech.getTimeString());
+        speechDescription.setText(speech.getDescription().replace("\\n", "\n").replace("\n\n", "\n").replace("\n", "\n\n"));
+    }
+
+    public void displaySpeakerData(Speaker speaker){
+        speakerName.setText(speaker.getName());
+        speakerOccupation.setText(speaker.getOccupation());
+        socialView.setupForSpeaker(speaker);
+
+        AvatarLoaderUtil.loadAvatar(this, speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
+    }
+
+    public void displayFavorite(boolean isFavorite){
+        if(isFavorite)
+        {
+            setSelectedFab();
         }
         else {
-            speechSlot.setFavoriteSpeechPath(speech.getPath());
-
-            setSelectedFab();
-            showSnackbar(R.string.speech_added_to_favorites);
+            setUnSelectedFab();
         }
-
-        getScheduleSupplier().speechSlotsFavoritesUpdated(this);
     }
 
-    private ScheduleSupplier getScheduleSupplier()
-    {
-        return ((BoilingFrogs)getApplicationContext()).getScheduleSupplier();
-    }
-
-    private void setSelectedFab()
-    {
+    private void setSelectedFab(){
         floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.star_full));
         floatingActionButton.setBackgroundTintList(floatingButtonDefaultTint);
     }
 
-    private void setUnSelectedFab()
-    {
+    private void setUnSelectedFab(){
         floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.star_empty));
         floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
     }
 
-    private void showSnackbar(int textId)
+    //endregion
+
+    @OnClick(R.id.fab)
+    public void onFavoriteClick()
     {
-        Snackbar.make(findViewById(R.id.contentScroll), getString(textId), Snackbar.LENGTH_SHORT)
-                .show();
+        presenter.favoriteClicked();
     }
+
+    private ScheduleSupplier getScheduleSupplier(){
+        return ((BoilingFrogs)getApplicationContext()).getScheduleSupplier();
+    }
+
+    //region MvpView
+
+    @Override
+    public Context getContext() {
+        return this;
+    }
+
+    @Override
+    public View getContainerView() {
+        return contentScroll;
+    }
+
+    //endregion
 }
