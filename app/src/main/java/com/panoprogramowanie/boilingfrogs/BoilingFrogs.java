@@ -43,7 +43,7 @@ public class BoilingFrogs extends Application {
     }
 
     private void initializeMainComponent() {
-        mainComponent = DaggerMainComponent.builder().mainModule(new MainModule()).build();
+        mainComponent = DaggerMainComponent.builder().mainModule(new MainModule(this)).build();
     }
 
     public static MainComponent getMainComponent(Context context){

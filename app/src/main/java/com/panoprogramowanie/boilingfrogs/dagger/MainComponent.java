@@ -19,7 +19,6 @@ import dagger.Component;
 @Singleton
 @Component(modules = MainModule.class)
 public interface MainComponent {
-    void inject(SplashActivity splashActivity);
     void inject(MainActivity mainActivity);
     void inject(SpeakerActivity speakerActivity);
     void inject(SpeechActivity speechActivity);

@@ -29,6 +29,10 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
 
     private Schedule schedule;
 
+    public ScheduleSupplierImpl(Context context) {
+        loadSchedule(context);
+    }
+
     @Override
     public SpeechSlot[] getAllSpeechSlots() {
         return schedule.getSpeechSlots();

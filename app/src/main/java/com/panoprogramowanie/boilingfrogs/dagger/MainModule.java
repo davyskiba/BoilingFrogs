@@ -1,5 +1,7 @@
 package com.panoprogramowanie.boilingfrogs.dagger;
 
+import android.content.Context;
+
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.NotificationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
@@ -18,11 +20,16 @@ import dagger.Provides;
 @Module
 public class MainModule {
 
-    @Singleton
+    private ScheduleSupplier scheduleSupplier;
+
+    public MainModule(Context context) {
+        scheduleSupplier=new ScheduleSupplierImpl(context);
+    }
+
     @Provides
     ScheduleSupplier provideScheduleSupplier()
     {
-        return new ScheduleSupplierImpl();
+        return scheduleSupplier;
     }
 
     @Singleton

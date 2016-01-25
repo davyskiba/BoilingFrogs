@@ -20,15 +20,10 @@ public class SplashActivity extends AppCompatActivity {
     // Splash screen timer
     private static int SPLASH_TIME_OUT = 500;
 
-    @Inject
-    ScheduleSupplier scheduleSupplier;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_acitivty);
-
-        BoilingFrogs.getMainComponent(this).inject(this);
     }
 
     @Override
@@ -44,7 +39,6 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-                scheduleSupplier.loadSchedule(SplashActivity.this);
                 navigateToMainActivity();
             }
         }, SPLASH_TIME_OUT);
