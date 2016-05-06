@@ -26,12 +26,12 @@ public class MyScheduleBreakViewHolder extends MyScheduleSpeechSlotViewHolderBas
 
     public MyScheduleBreakViewHolder(View itemView) {
         super(itemView);
-        ButterKnife.bind(this,itemView);
+        ButterKnife.bind(this, itemView);
     }
 
     @Override
     public void takeSpeechSlot(SpeechSlot speechSlot, int position, MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
-        this.speechSlot=speechSlot;
+        this.speechSlot = speechSlot;
 
         speechSlotTime.setText(speechSlot.getHeader());
 

@@ -46,7 +46,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
 
     @Override
     protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.my_schedule_fragment, null);
+        View result = inflater.inflate(R.layout.my_schedule_fragment, null);
         ButterKnife.bind(this, result);
 
         setupRecyclerView();
@@ -61,7 +61,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        adapter=new MyScheduleRecyclerViewAdapter();
+        adapter = new MyScheduleRecyclerViewAdapter();
         adapter.setOnSlotClickListener(this);
 
         recyclerView.setAdapter(adapter);
@@ -73,7 +73,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
         presenter.onResume();
     }
 
-    public void setSpeechSlots(SpeechSlot[] slots){
+    public void setSpeechSlots(SpeechSlot[] slots) {
         adapter.setItems(slots);
     }
 
@@ -84,7 +84,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
 
     @Override
     public void onNonEmptySlotClicked(int slotPosition) {
-        SpeechSlot tappedSlot=adapter.getItem(slotPosition);
+        SpeechSlot tappedSlot = adapter.getItem(slotPosition);
         presenter.onNonEmptySlotClicked(slotPosition, tappedSlot);
     }
 }

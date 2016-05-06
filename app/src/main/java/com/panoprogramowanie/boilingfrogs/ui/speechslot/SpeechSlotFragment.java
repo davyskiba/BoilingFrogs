@@ -20,15 +20,15 @@ import javax.inject.Inject;
  */
 public class SpeechSlotFragment extends ListFragment {
 
-    private static String SLOT_POSITION_ARG_KEY="slot_position_arg";
-    private static String SLOT_ARG_KEY="slot_arg";
+    private static String SLOT_POSITION_ARG_KEY = "slot_position_arg";
+    private static String SLOT_ARG_KEY = "slot_arg";
 
-    public static SpeechSlotFragment createInstance(SpeechSlot slot, int slotPosition){
-        Bundle args=new Bundle();
+    public static SpeechSlotFragment createInstance(SpeechSlot slot, int slotPosition) {
+        Bundle args = new Bundle();
         args.putParcelable(SLOT_ARG_KEY, slot);
         args.putInt(SLOT_POSITION_ARG_KEY, slotPosition);
 
-        SpeechSlotFragment result=new SpeechSlotFragment();
+        SpeechSlotFragment result = new SpeechSlotFragment();
         result.setArguments(args);
 
         return result;
@@ -45,8 +45,8 @@ public class SpeechSlotFragment extends ListFragment {
     }
 
     @Override
-    protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-    View result=super.onCreateFragmentView(inflater, container, savedInstanceState);
+    protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View result = super.onCreateFragmentView(inflater, container, savedInstanceState);
         presenter.takeView(this);
         return result;
     }
@@ -55,15 +55,15 @@ public class SpeechSlotFragment extends ListFragment {
     public void onResume() {
         super.onResume();
 
-        SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
-        int slotPosition=getArguments().getInt(SLOT_POSITION_ARG_KEY);
+        SpeechSlot slot = getArguments().getParcelable(SLOT_ARG_KEY);
+        int slotPosition = getArguments().getInt(SLOT_POSITION_ARG_KEY);
 
-        presenter.onResume(slot,slotPosition);
+        presenter.onResume(slot, slotPosition);
     }
 
     @Override
     protected void onItemClicked(ListItemModel itemModel) {
-        Speech clickedSpeech=(Speech)itemModel;
+        Speech clickedSpeech = (Speech) itemModel;
 
         presenter.speechClicked(clickedSpeech);
     }
@@ -75,7 +75,7 @@ public class SpeechSlotFragment extends ListFragment {
 
     @Override
     public String getActionBarTitle(Context context) {
-        SpeechSlot slot=getArguments().getParcelable(SLOT_ARG_KEY);
+        SpeechSlot slot = getArguments().getParcelable(SLOT_ARG_KEY);
         return slot.getHeader();
     }
 }

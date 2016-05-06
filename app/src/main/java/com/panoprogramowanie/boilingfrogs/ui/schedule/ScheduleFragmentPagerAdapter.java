@@ -19,7 +19,7 @@ public class ScheduleFragmentPagerAdapter extends FragmentPagerAdapter {
     public ScheduleFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
 
-        this.slots=new SpeechSlot[0];
+        this.slots = new SpeechSlot[0];
     }
 
     @Override
@@ -33,7 +33,7 @@ public class ScheduleFragmentPagerAdapter extends FragmentPagerAdapter {
     }
 
     public void setData(SpeechSlot[] slots) {
-        this.slots=slots;
+        this.slots = slots;
         notifyDataSetChanged();
     }
 }

@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * Created by wdawi on 24.01.2016.
  */
-public abstract class BoilingFrogsFragmentActivity extends AppCompatActivity{
-    public void setActionBarTitle(String title){
+public abstract class BoilingFrogsFragmentActivity extends AppCompatActivity {
+    public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }
 

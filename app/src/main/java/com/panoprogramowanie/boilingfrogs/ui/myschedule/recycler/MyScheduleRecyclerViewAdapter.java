@@ -19,29 +19,28 @@ import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpe
  */
 public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MyScheduleSpeechSlotViewHolderBase> {
 
-    private static final int BREAK_SLOT_VIEW_TYPE =0;
-    private static final int EMPTY_SLOT_VIEW_TYPE=1;
-    private static final int NONEMPTY_SLOT_VIEW_TYPE=2;
+    private static final int BREAK_SLOT_VIEW_TYPE = 0;
+    private static final int EMPTY_SLOT_VIEW_TYPE = 1;
+    private static final int NONEMPTY_SLOT_VIEW_TYPE = 2;
 
     private OnSlotClickListener onSlotClickListener;
 
     private SpeechSlot[] speechSlots;
 
     public MyScheduleRecyclerViewAdapter() {
-        speechSlots=new SpeechSlot[0];
+        speechSlots = new SpeechSlot[0];
     }
 
     @Override
     public int getItemViewType(int position) {
-        SpeechSlot speechSlot=speechSlots[position];
-        Speech[] itemSpeeches=speechSlot.getSpeeches();
+        SpeechSlot speechSlot = speechSlots[position];
+        Speech[] itemSpeeches = speechSlot.getSpeeches();
 
-        if(itemSpeeches.length==1 && itemSpeeches[0].getSpeaker()==null)
-        {
+        if (itemSpeeches.length == 1 && itemSpeeches[0].getSpeaker() == null) {
             return BREAK_SLOT_VIEW_TYPE;
         }
 
-        if(itemSpeeches.length==1 || speechSlot.getFavoriteSpeechPath()!=-1)
+        if (itemSpeeches.length == 1 || speechSlot.getFavoriteSpeechPath() != -1)
             return NONEMPTY_SLOT_VIEW_TYPE;
 
         return EMPTY_SLOT_VIEW_TYPE;
@@ -51,8 +50,7 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @Override
     public MyScheduleSpeechSlotViewHolderBase onCreateViewHolder(ViewGroup parent, int viewType) {
-        switch (viewType)
-        {
+        switch (viewType) {
             case BREAK_SLOT_VIEW_TYPE:
                 return getBreakSlotViewHolder(parent);
             case EMPTY_SLOT_VIEW_TYPE:
@@ -65,27 +63,27 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
     @NonNull
     public MyScheduleBreakViewHolder getBreakSlotViewHolder(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.speech_slot_break_list_item, null);
-        MyScheduleBreakViewHolder viewHolder=new MyScheduleBreakViewHolder(view);
+        MyScheduleBreakViewHolder viewHolder = new MyScheduleBreakViewHolder(view);
         return viewHolder;
     }
 
     @NonNull
     public MyScheduleEmptySpeechSlotViewHolder getMyScheduleEmptySpeechSlotViewHolder(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.speech_slot_empty_list_item, null);
-        MyScheduleEmptySpeechSlotViewHolder viewHolder=new MyScheduleEmptySpeechSlotViewHolder(view);
+        MyScheduleEmptySpeechSlotViewHolder viewHolder = new MyScheduleEmptySpeechSlotViewHolder(view);
         return viewHolder;
     }
 
     @NonNull
     public MyScheduleSpeechSlotViewHolder getMyScheduleSpeechSlotViewHolder(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.speech_slot_list_item, null);
-        MyScheduleSpeechSlotViewHolder viewHolder=new MyScheduleSpeechSlotViewHolder(view);
+        MyScheduleSpeechSlotViewHolder viewHolder = new MyScheduleSpeechSlotViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(MyScheduleSpeechSlotViewHolderBase holder, int position) {
-        holder.takeSpeechSlot(speechSlots[position],position,onSlotClickListener);
+        holder.takeSpeechSlot(speechSlots[position], position, onSlotClickListener);
     }
 
     //endregion
@@ -99,8 +97,8 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
         return speechSlots[slotPosition];
     }
 
-    public void setItems(SpeechSlot[] items){
-        speechSlots=items;
+    public void setItems(SpeechSlot[] items) {
+        speechSlots = items;
         notifyDataSetChanged();
     }
 
@@ -110,8 +108,9 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
         this.onSlotClickListener = onSlotClickListener;
     }
 
-    public interface OnSlotClickListener{
+    public interface OnSlotClickListener {
         void onEmptySlotClicked(int slotPosition);
+
         void onNonEmptySlotClicked(int slotPosition);
     }
 

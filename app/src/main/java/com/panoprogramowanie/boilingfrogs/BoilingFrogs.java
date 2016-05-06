@@ -46,7 +46,7 @@ public class BoilingFrogs extends Application {
         mainComponent = DaggerMainComponent.builder().mainModule(new MainModule(this)).build();
     }
 
-    public static MainComponent getMainComponent(Context context){
-        return ((BoilingFrogs)context.getApplicationContext()).mainComponent;
+    public static MainComponent getMainComponent(Context context) {
+        return ((BoilingFrogs) context.getApplicationContext()).mainComponent;
     }
 }

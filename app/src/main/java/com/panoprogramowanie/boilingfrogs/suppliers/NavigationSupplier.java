@@ -12,10 +12,13 @@ import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragmentActivity;
 public interface NavigationSupplier {
 
     void unregisterFragmentActivity(BoilingFrogsFragmentActivity activity);
+
     void registerFragmentActivity(BoilingFrogsFragmentActivity activity);
 
     void navigateToSpeech(int speechSlot, int speechPath);
+
     void navigateToSpeaker(Speaker speaker);
+
     void navigateToSlotDetail(int speechSlot);
 
     void navigateToSchedule();

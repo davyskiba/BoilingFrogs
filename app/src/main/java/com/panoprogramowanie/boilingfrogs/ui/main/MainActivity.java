@@ -47,8 +47,7 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
         super.onResume();
         navigationSupplier.registerFragmentActivity(this);
 
-        if(navigationSupplier.isContainterEmpty())
-        {
+        if (navigationSupplier.isContainterEmpty()) {
             navigationSupplier.navigateToSchedule();
         }
     }
@@ -66,8 +65,7 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
             return;
         }
 
-        if(navigationSupplier.onBackPressed())
-        {
+        if (navigationSupplier.onBackPressed()) {
             super.onBackPressed();
         }
     }
@@ -124,27 +122,26 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
             case R.id.nav_survey:
                 browseTo(R.string.survey_url);
                 break;
-            default:return false;
+            default:
+                return false;
         }
         closeDrawers();
         return true;
     }
 
-    private void browseTo(int urlId){
+    private void browseTo(int urlId) {
         BrowserLaunchingUtil.launchBrowser(this, urlId);
     }
 
-    public void animateToCloseDrawer()
-    {
+    public void animateToCloseDrawer() {
         animateDrawer(1, 0);
     }
 
-    public void animateToOpenDrawer()
-    {
+    public void animateToOpenDrawer() {
         animateDrawer(0, 1);
     }
 
-    private void animateDrawer(int start, int end){
+    private void animateDrawer(int start, int end) {
         ValueAnimator anim = ValueAnimator.ofFloat(start, end);
         anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override

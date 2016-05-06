@@ -20,11 +20,16 @@ import dagger.Component;
 @Component(modules = MainModule.class)
 public interface MainComponent {
     void inject(MainActivity mainActivity);
+
     void inject(SpeakerActivity speakerActivity);
+
     void inject(SpeechActivity speechActivity);
 
     void inject(ScheduleFragment scheduleFragment);
+
     void inject(SpeechSlotFragment speechSlotFragment);
+
     void inject(MyScheduleFragment myScheduleFragment);
+
     void inject(SpeakersListFragment speakersListFragment);
 }

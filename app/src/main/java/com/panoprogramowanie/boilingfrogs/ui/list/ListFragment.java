@@ -25,17 +25,17 @@ public abstract class ListFragment extends BoilingFrogsFragment {
 
     @Override
     protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.list_fragment, container, false);
+        View result = inflater.inflate(R.layout.list_fragment, container, false);
         ButterKnife.bind(this, result);
 
-        int listItemLayoutId=getListItemLayoutId();
-        adapter= new ListItemModelAdapter(getActivity(),listItemLayoutId);
+        int listItemLayoutId = getListItemLayoutId();
+        adapter = new ListItemModelAdapter(getActivity(), listItemLayoutId);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListItemModel clickedItem=adapter.getItem(position);
+                ListItemModel clickedItem = adapter.getItem(position);
                 onItemClicked(clickedItem);
             }
         });
@@ -43,7 +43,7 @@ public abstract class ListFragment extends BoilingFrogsFragment {
         return result;
     }
 
-    public void setItems(ListItemModel[] items){
+    public void setItems(ListItemModel[] items) {
         adapter.setItems(items);
     }
 

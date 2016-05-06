@@ -20,7 +20,7 @@ public abstract class BoilingFrogsFragment extends Fragment implements MvpView {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        containterView=container;
+        containterView = container;
         return onCreateFragmentView(inflater, container, savedInstanceState);
     }
 

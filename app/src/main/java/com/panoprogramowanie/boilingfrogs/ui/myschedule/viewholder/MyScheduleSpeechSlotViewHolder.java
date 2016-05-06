@@ -53,7 +53,7 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
         subtitle.setText(firstSpeech.getSubtitle());
 
         if (firstSpeech.getDescription() != null) {
-            speechSlotPath.setText(itemView.getContext().getString(R.string.my_schedule_path)+" "+firstSpeech.getPath());
+            speechSlotPath.setText(itemView.getContext().getString(R.string.my_schedule_path) + " " + firstSpeech.getPath());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

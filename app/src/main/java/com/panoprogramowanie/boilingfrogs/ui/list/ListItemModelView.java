@@ -49,19 +49,16 @@ public class ListItemModelView extends RelativeLayout {
 
     public void takeModel(ListItemModel model) {
 
-        this.model=model;
+        this.model = model;
 
         title.setText(model.getTitle());
         subtitle.setText(model.getSubtitle());
-        String photoUrl=model.getPhotoUrl();
+        String photoUrl = model.getPhotoUrl();
 
-        if(photoUrl==null)
-        {
+        if (photoUrl == null) {
             setTextGravity(Gravity.CENTER);
             setPhotoVisibiliy(View.GONE);
-        }
-        else
-        {
+        } else {
             setTextGravity(Gravity.LEFT);
             setPhotoVisibiliy(View.VISIBLE);
             AvatarLoaderUtil.loadAvatar(getContext(), photoUrl, photo, R.drawable.avatar_placeholder);
@@ -73,7 +70,7 @@ public class ListItemModelView extends RelativeLayout {
         subtitle.setGravity(center);
     }
 
-    private void setPhotoVisibiliy(int visibiliy){
+    private void setPhotoVisibiliy(int visibiliy) {
         photo.setVisibility(visibiliy);
     }
 

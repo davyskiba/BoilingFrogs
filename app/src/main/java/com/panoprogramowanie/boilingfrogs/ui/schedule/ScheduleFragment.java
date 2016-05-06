@@ -49,10 +49,10 @@ public class ScheduleFragment extends BoilingFrogsFragment {
 
     @Override
     protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=inflater.inflate(R.layout.schedule_fragment, container, false);
+        View result = inflater.inflate(R.layout.schedule_fragment, container, false);
         ButterKnife.bind(this, result);
 
-        adapter=new ScheduleFragmentPagerAdapter(getChildFragmentManager());
+        adapter = new ScheduleFragmentPagerAdapter(getChildFragmentManager());
         viewPager.setAdapter(adapter);
 
         setupTabs();
@@ -71,23 +71,22 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     //region Tabs
 
     private void resetTabs(SpeechSlot[] slots) {
-        int selectedTabPosition=selectedItem;
+        int selectedTabPosition = selectedItem;
 
         tabLayout.removeAllTabs();
         addTabs(tabLayout, slots, selectedTabPosition);
 
-        if(tabLayout.getTabCount()>selectedTabPosition && selectedTabPosition>0) {
+        if (tabLayout.getTabCount() > selectedTabPosition && selectedTabPosition > 0) {
             tabLayout.getTabAt(selectedTabPosition).select();
             viewPager.setCurrentItem(selectedTabPosition);
-            selectedItem=selectedTabPosition;
+            selectedItem = selectedTabPosition;
         }
     }
 
-    private void addTabs(TabLayout tabLayout, SpeechSlot[] slots, int selectedPosition){
-        for(int i=0;i<slots.length;i++)
-        {
-            TabLayout.Tab tab=tabLayout.newTab().setText(slots[i].getHeader());
-            if(i==selectedPosition) {
+    private void addTabs(TabLayout tabLayout, SpeechSlot[] slots, int selectedPosition) {
+        for (int i = 0; i < slots.length; i++) {
+            TabLayout.Tab tab = tabLayout.newTab().setText(slots[i].getHeader());
+            if (i == selectedPosition) {
                 tab.select();
             }
             tabLayout.addTab(tab);

@@ -11,8 +11,7 @@ import com.panoprogramowanie.boilingfrogs.R;
  * Created by Wojciech on 11.01.2016.
  */
 public class AvatarLoaderUtil {
-    public static void loadAvatar(Context context,String from, ImageView into,int placeholder )
-    {
+    public static void loadAvatar(Context context, String from, ImageView into, int placeholder) {
         DisplayImageOptions options = new DisplayImageOptions.Builder()
                 .cacheOnDisk(true)
                 .showImageOnLoading(placeholder)

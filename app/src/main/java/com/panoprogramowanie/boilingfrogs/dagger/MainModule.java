@@ -23,25 +23,22 @@ public class MainModule {
     private ScheduleSupplier scheduleSupplier;
 
     public MainModule(Context context) {
-        scheduleSupplier=new ScheduleSupplierImpl(context);
+        scheduleSupplier = new ScheduleSupplierImpl(context);
     }
 
     @Provides
-    ScheduleSupplier provideScheduleSupplier()
-    {
+    ScheduleSupplier provideScheduleSupplier() {
         return scheduleSupplier;
     }
 
     @Singleton
     @Provides
-    NavigationSupplier provideNavigationSupplier(ScheduleSupplier scheduleSupplier)
-    {
+    NavigationSupplier provideNavigationSupplier(ScheduleSupplier scheduleSupplier) {
         return new NavigationSupplierImpl(scheduleSupplier);
     }
 
     @Provides
-    NotificationSupplier provideNotificationSupplier()
-    {
+    NotificationSupplier provideNotificationSupplier() {
         return new NotificationSupplierImpl();
     }
 }

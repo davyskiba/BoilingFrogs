@@ -22,7 +22,7 @@ public class SpeakersListPresenter extends Presenter<SpeakersListFragment> {
     }
 
     public void onResume() {
-        Speaker[] speakers=scheduleSupplier.getAllSpeakers();
+        Speaker[] speakers = scheduleSupplier.getAllSpeakers();
         getView().setItems(speakers);
     }
 

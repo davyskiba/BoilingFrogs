@@ -28,15 +28,14 @@ import butterknife.ButterKnife;
 /**
  * Created by Wojciech on 12.01.2016.
  */
-public class SpeakerActivity extends AppCompatActivity implements MvpView{
+public class SpeakerActivity extends AppCompatActivity implements MvpView {
 
     //region Navigation
 
-    private final static String SPEAKER_ARG_KEY ="speaker_arg";
+    private final static String SPEAKER_ARG_KEY = "speaker_arg";
 
-    public static void startForSpeaker(Speaker speaker, Activity activity)
-    {
-        Intent intent=new Intent(activity,SpeakerActivity.class);
+    public static void startForSpeaker(Speaker speaker, Activity activity) {
+        Intent intent = new Intent(activity, SpeakerActivity.class);
         intent.putExtra(SPEAKER_ARG_KEY, speaker);
         activity.startActivity(intent);
     }
@@ -78,7 +77,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView{
 
         ButterKnife.bind(this);
 
-        Speaker speaker=getIntent().getParcelableExtra(SPEAKER_ARG_KEY);
+        Speaker speaker = getIntent().getParcelableExtra(SPEAKER_ARG_KEY);
 
         BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
@@ -88,10 +87,10 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView{
         setupDrawerAndToolbar();
     }
 
-    public void displaySpeakerData(Speaker speaker){
+    public void displaySpeakerData(Speaker speaker) {
         speakerName.setText(speaker.getName());
         speakerOccupation.setText(speaker.getOccupation());
-        speakerAbout.setText(speaker.getDescription().replace("\\n", "\n").replace("\n\n","\n").replace("\n", "\n\n"));
+        speakerAbout.setText(speaker.getDescription().replace("\\n", "\n").replace("\n\n", "\n").replace("\n", "\n\n"));
 
         socialView.setupForSpeaker(speaker);
         AvatarLoaderUtil.loadAvatar(this, speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
@@ -101,7 +100,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView{
         Toolbar toolbar = (Toolbar) findViewById(R.id.anim_toolbar);
         setSupportActionBar(toolbar);
 
-        ActionBar actionBar=getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("");
 

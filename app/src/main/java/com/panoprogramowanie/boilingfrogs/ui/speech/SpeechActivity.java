@@ -35,15 +35,15 @@ import butterknife.OnClick;
 /**
  * Created by Wojciech on 12.01.2016.
  */
-public class SpeechActivity extends AppCompatActivity implements MvpView{
+public class SpeechActivity extends AppCompatActivity implements MvpView {
 
     //region Navigation
 
-    private final static String SPEECH_SLOT_ARG ="speech_slot_arg";
-    private final static String SPEECH_PATH_ARG ="speech_path_arg";
+    private final static String SPEECH_SLOT_ARG = "speech_slot_arg";
+    private final static String SPEECH_PATH_ARG = "speech_path_arg";
 
-    public static void startForSpeech(int speechSlot,int speechPath, Activity activity){
-        Intent intent=new Intent(activity,SpeechActivity.class);
+    public static void startForSpeech(int speechSlot, int speechPath, Activity activity) {
+        Intent intent = new Intent(activity, SpeechActivity.class);
         intent.putExtra(SPEECH_SLOT_ARG, speechSlot);
         intent.putExtra(SPEECH_PATH_ARG, speechPath);
         activity.startActivity(intent);
@@ -95,11 +95,11 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.speech_activity);
         ButterKnife.bind(this);
-        floatingButtonDefaultTint=floatingActionButton.getBackgroundTintList();
+        floatingButtonDefaultTint = floatingActionButton.getBackgroundTintList();
         setupDrawerAndToolbar();
 
-        int speechSlotPosition=getIntent().getIntExtra(SPEECH_SLOT_ARG,0);
-        int speechPath=getIntent().getIntExtra(SPEECH_PATH_ARG, 0);
+        int speechSlotPosition = getIntent().getIntExtra(SPEECH_SLOT_ARG, 0);
+        int speechPath = getIntent().getIntExtra(SPEECH_PATH_ARG, 0);
 
         BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
@@ -110,7 +110,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
         Toolbar toolbar = (Toolbar) findViewById(R.id.anim_toolbar);
         setSupportActionBar(toolbar);
 
-        ActionBar actionBar=getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("");
 
@@ -126,13 +126,13 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
 
     //region DataDisplay
 
-    public void displaySpeech(Speech speech){
+    public void displaySpeech(Speech speech) {
         speechTitle.setText(speech.getTitle());
         speechTime.setText(speech.getTimeString());
         speechDescription.setText(speech.getDescription().replace("\\n", "\n").replace("\n\n", "\n").replace("\n", "\n\n"));
     }
 
-    public void displaySpeakerData(Speaker speaker){
+    public void displaySpeakerData(Speaker speaker) {
         speakerName.setText(speaker.getName());
         speakerOccupation.setText(speaker.getOccupation());
         socialView.setupForSpeaker(speaker);
@@ -140,22 +140,20 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
         AvatarLoaderUtil.loadAvatar(this, speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
     }
 
-    public void displayFavorite(boolean isFavorite){
-        if(isFavorite)
-        {
+    public void displayFavorite(boolean isFavorite) {
+        if (isFavorite) {
             setSelectedFab();
-        }
-        else {
+        } else {
             setUnSelectedFab();
         }
     }
 
-    private void setSelectedFab(){
+    private void setSelectedFab() {
         floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.star_full));
         floatingActionButton.setBackgroundTintList(floatingButtonDefaultTint);
     }
 
-    private void setUnSelectedFab(){
+    private void setUnSelectedFab() {
         floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.star_empty));
         floatingActionButton.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
     }
@@ -163,8 +161,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView{
     //endregion
 
     @OnClick(R.id.fab)
-    public void onFavoriteClick()
-    {
+    public void onFavoriteClick() {
         presenter.favoriteClicked();
     }
 

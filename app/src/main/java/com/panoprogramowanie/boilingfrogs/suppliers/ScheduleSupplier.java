@@ -14,11 +14,13 @@ public interface ScheduleSupplier {
     SpeechSlot[] getAllSpeechSlots();
 
     Speaker[] getAllSpeakers();
+
     Speaker getSpeakerById(int id);
 
     void loadSchedule(Context context);
 
     SpeechSlot getSpeechSlotForPosition(int position);
+
     Speech getSpeechForSlotAndPath(int speechSlot, int speechPath);
 
     void speechSlotsFavoritesUpdated(Context context);

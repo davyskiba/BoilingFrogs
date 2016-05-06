@@ -16,9 +16,8 @@ public class SpeakerPresenter extends Presenter<SpeakerActivity> {
     public SpeakerPresenter() {
     }
 
-    public void setSpeaker(Speaker speaker)
-    {
-        this.speaker=speaker;
+    public void setSpeaker(Speaker speaker) {
+        this.speaker = speaker;
         getView().displaySpeakerData(speaker);
     }
 }

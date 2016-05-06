@@ -18,8 +18,7 @@ public class Speech implements Parcelable, ListItemModel {
     String description;
     private Speaker speaker;
 
-    public Speech()
-    {
+    public Speech() {
 
     }
 
@@ -29,7 +28,7 @@ public class Speech implements Parcelable, ListItemModel {
         path = in.readInt();
         title = in.readString();
         description = in.readString();
-        speaker=in.readParcelable(Speaker.class.getClassLoader());
+        speaker = in.readParcelable(Speaker.class.getClassLoader());
     }
 
     public String getTimeString() {
@@ -84,17 +83,17 @@ public class Speech implements Parcelable, ListItemModel {
 
     @Override
     public String getSubtitle() {
-        return speaker!=null ? speaker.getName() : null;
+        return speaker != null ? speaker.getName() : null;
     }
 
     @Override
     public String getPhotoUrl() {
-        return speaker!=null ? speaker.photoUrl : null;
+        return speaker != null ? speaker.photoUrl : null;
     }
 
     @Override
     public boolean isClickable() {
-        return description!=null;
+        return description != null;
     }
 
     //endregion

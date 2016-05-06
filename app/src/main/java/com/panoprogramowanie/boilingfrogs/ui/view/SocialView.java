@@ -40,57 +40,49 @@ public class SocialView extends LinearLayout {
         ButterKnife.bind(this);
     }
 
-    public void setupForSpeaker(Speaker speaker)
-    {
-        this.speaker=speaker;
+    public void setupForSpeaker(Speaker speaker) {
+        this.speaker = speaker;
 
         facebook.setVisibility(GONE);
         twitter.setVisibility(GONE);
         linkedin.setVisibility(GONE);
 
-        if(speaker==null) {
+        if (speaker == null) {
             return;
         }
 
-        if(speaker.getFacebook()!=null)
-        {
+        if (speaker.getFacebook() != null) {
             facebook.setVisibility(VISIBLE);
         }
 
 
-        if(speaker.getTwitter()!=null)
-        {
+        if (speaker.getTwitter() != null) {
             twitter.setVisibility(VISIBLE);
         }
 
 
-        if(speaker.getLinkedin()!=null)
-        {
+        if (speaker.getLinkedin() != null) {
             linkedin.setVisibility(VISIBLE);
         }
     }
 
     @OnClick(R.id.facebook)
-    public void facebookClicked()
-    {
+    public void facebookClicked() {
         launchBrowser(speaker.getFacebook());
     }
 
     @OnClick(R.id.twitter)
-    public void twitterClicked()
-    {
+    public void twitterClicked() {
         launchBrowser(speaker.getTwitter());
     }
 
     @OnClick(R.id.linkedin)
-    public void linkedinClicked()
-    {
+    public void linkedinClicked() {
         launchBrowser(speaker.getLinkedin());
     }
 
 
-    private void launchBrowser(String url)
-    {
+    private void launchBrowser(String url) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         getContext().startActivity(browserIntent);
     }

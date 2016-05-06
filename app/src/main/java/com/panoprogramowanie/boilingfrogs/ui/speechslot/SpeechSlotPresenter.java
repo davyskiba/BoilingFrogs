@@ -23,8 +23,8 @@ public class SpeechSlotPresenter extends Presenter<SpeechSlotFragment> {
     }
 
     public void onResume(SpeechSlot slot, int slotPosition) {
-        speechSlot=slot;
-        this.slotPosition=slotPosition;
+        speechSlot = slot;
+        this.slotPosition = slotPosition;
 
         getView().setItems(speechSlot.getSpeeches());
     }

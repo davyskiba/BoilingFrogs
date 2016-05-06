@@ -14,7 +14,7 @@ import javax.inject.Inject;
 /**
  * Created by Wojciech on 20.01.2016.
  */
-public class SpeechPresenter extends Presenter<SpeechActivity>{
+public class SpeechPresenter extends Presenter<SpeechActivity> {
 
     private final ScheduleSupplier scheduleSupplier;
     private final NotificationSupplier notificationSupplier;
@@ -31,41 +31,38 @@ public class SpeechPresenter extends Presenter<SpeechActivity>{
         this.notificationSupplier = notificationSupplier;
     }
 
-    public void setSpeech(int speechSlotPosition, int speechPath){
-        this.speechSlotPosition=speechSlotPosition;
-        this.speechPath=speechPath;
+    public void setSpeech(int speechSlotPosition, int speechPath) {
+        this.speechSlotPosition = speechSlotPosition;
+        this.speechPath = speechPath;
 
-        speechSlot=scheduleSupplier.getSpeechSlotForPosition(speechSlotPosition);
-        speech=speechSlot.getSpeechForPath(speechPath);
+        speechSlot = scheduleSupplier.getSpeechSlotForPosition(speechSlotPosition);
+        speech = speechSlot.getSpeechForPath(speechPath);
 
-        SpeechActivity view=getView();
+        SpeechActivity view = getView();
         view.displaySpeech(speech);
         view.displaySpeakerData(speech.getSpeaker());
         view.displayFavorite(isSpeechFavorite());
     }
 
-    public boolean isSpeechFavorite(){
-        return speechSlot.getFavoriteSpeechPath()==speech.getPath();
+    public boolean isSpeechFavorite() {
+        return speechSlot.getFavoriteSpeechPath() == speech.getPath();
     }
 
     public void favoriteClicked() {
-        if(isSpeechFavorite())
-        {
+        if (isSpeechFavorite()) {
             speechSlot.setFavoriteSpeechPath(-1);
             displaySnackbar(R.string.speech_removed_from_favorites);
-        }
-        else {
+        } else {
             speechSlot.setFavoriteSpeechPath(speech.getPath());
             displaySnackbar(R.string.speech_added_to_favorites);
         }
 
         getView().displayFavorite(isSpeechFavorite());
-        
+
         scheduleSupplier.speechSlotsFavoritesUpdated(getContext());
     }
 
-    private void displaySnackbar(int textId)
-    {
-        notificationSupplier.showLongLastingSnackbar(getView().getContainerView(),textId);
+    private void displaySnackbar(int textId) {
+        notificationSupplier.showLongLastingSnackbar(getView().getContainerView(), textId);
     }
 }

@@ -1,39 +1,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.panoprogramowanie.boilingfrogs">
+          package="com.panoprogramowanie.boilingfrogs">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application android:allowBackup="true"
-        android:name=".BoilingFrogs"
-        android:label="@string/app_name"
-        android:icon="@mipmap/ic_launcher"
-        android:supportsRtl="true"
-        android:theme="@style/BoilingFrogsTheme">
+                 android:name=".BoilingFrogs"
+                 android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher"
+                 android:supportsRtl="true"
+                 android:theme="@style/BoilingFrogsTheme">
         <activity
-            android:screenOrientation="portrait"
-            android:theme="@style/BoilingFrogsTheme.NoActionBar"
-            android:name=".ui.splash.SplashActivity">
+                android:screenOrientation="portrait"
+                android:theme="@style/BoilingFrogsTheme.NoActionBar"
+                android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:screenOrientation="portrait"
-            android:theme="@style/BoilingFrogsTheme.NoActionBar"
-            android:name=".ui.main.MainActivity"/>
+                android:screenOrientation="portrait"
+                android:theme="@style/BoilingFrogsTheme.NoActionBar"
+                android:name=".ui.main.MainActivity"/>
         <activity
-            android:screenOrientation="portrait"
-            android:theme="@style/BoilingFrogsTheme.NoActionBar"
-            android:name=".ui.speaker.SpeakerActivity"/>
+                android:screenOrientation="portrait"
+                android:theme="@style/BoilingFrogsTheme.NoActionBar"
+                android:name=".ui.speaker.SpeakerActivity"/>
         <activity
-            android:screenOrientation="portrait"
-            android:theme="@style/BoilingFrogsTheme.NoActionBar"
-            android:name=".ui.speech.SpeechActivity"/>
+                android:screenOrientation="portrait"
+                android:theme="@style/BoilingFrogsTheme.NoActionBar"
+                android:name=".ui.speech.SpeechActivity"/>
 
         <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="1174184981d3fa342d4cb816e1b2b36435676bf6" />
+                android:name="io.fabric.ApiKey"
+                android:value="1174184981d3fa342d4cb816e1b2b36435676bf6"/>
     </application>
 
 </manifest>

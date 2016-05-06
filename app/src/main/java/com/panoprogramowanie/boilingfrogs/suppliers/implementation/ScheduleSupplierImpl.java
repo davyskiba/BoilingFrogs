@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.util.Log;
 
 import com.google.gson.Gson;
+
 import com.panoprogramowanie.boilingfrogs.model.Schedule;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
@@ -22,10 +23,10 @@ import java.util.Arrays;
  */
 public class ScheduleSupplierImpl implements ScheduleSupplier {
 
-    private static final String SCHEDULE_PREFS_NAME="shedule";
-    private static final String SCHEDULE_PREFS_KEY="shedule";
+    private static final String SCHEDULE_PREFS_NAME = "shedule";
+    private static final String SCHEDULE_PREFS_KEY = "shedule";
 
-    private static final String SCHEDULE_ASSET_FILENAME="agenda.json";
+    private static final String SCHEDULE_ASSET_FILENAME = "agenda.json";
 
     private Schedule schedule;
 
@@ -45,12 +46,12 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
 
     @Override
     public Speaker getSpeakerById(int id) {
-        return schedule.getSpeakers()[id-1];
+        return schedule.getSpeakers()[id - 1];
     }
 
     @Override
     public Speech getSpeechForSlotAndPath(int speechSlot, int speechPath) {
-        return schedule.getSpeechSlots()[speechSlot].getSpeeches()[speechPath-1];
+        return schedule.getSpeechSlots()[speechSlot].getSpeeches()[speechPath - 1];
     }
 
     @Override
@@ -68,37 +69,32 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
             for (int i = 0; i < favoritePaths.length; i++) {
                 slots[i].setFavoriteSpeechPath(favoritePaths[i]);
             }
-        }catch (ArrayIndexOutOfBoundsException exc)
-        {
+        } catch (ArrayIndexOutOfBoundsException exc) {
         }
     }
 
     public void loadScheduleFromAssets(Context context) {
-        String scheduleJson=readAssetsFile(context,SCHEDULE_ASSET_FILENAME);
+        String scheduleJson = readAssetsFile(context, SCHEDULE_ASSET_FILENAME);
 
-        Gson gson=new Gson();
-        schedule=gson.fromJson(scheduleJson, Schedule.class);
+        Gson gson = new Gson();
+        schedule = gson.fromJson(scheduleJson, Schedule.class);
 
         fillSpeechSpeakers();
     }
 
     public void fillSpeechSpeakers() {
-        for(SpeechSlot slot:schedule.getSpeechSlots())
-        {
-            for(Speech speech:slot.getSpeeches())
-            {
-                int speakerId=speech.getSpeakerId();
-                if(speakerId>0)
-                {
+        for (SpeechSlot slot : schedule.getSpeechSlots()) {
+            for (Speech speech : slot.getSpeeches()) {
+                int speakerId = speech.getSpeakerId();
+                if (speakerId > 0) {
                     speech.setSpeaker(getSpeakerById(speakerId));
                 }
             }
         }
     }
 
-    private String readAssetsFile(Context context, String fileName)
-    {
-        StringBuilder builder=new StringBuilder();
+    private String readAssetsFile(Context context, String fileName) {
+        StringBuilder builder = new StringBuilder();
         BufferedReader reader = null;
 
         try {
@@ -131,27 +127,24 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
         saveFavoriteSlotsToSharedPreferences(context);
     }
 
-    private void saveFavoriteSlotsToSharedPreferences(Context context)
-    {
-        SpeechSlot[] speechSlots=schedule.getSpeechSlots();
-        int[] favoritePaths=new int[speechSlots.length];
-        for(int i=0;i<speechSlots.length;i++)
-        {
-            favoritePaths[i]=speechSlots[i].getFavoriteSpeechPath();
+    private void saveFavoriteSlotsToSharedPreferences(Context context) {
+        SpeechSlot[] speechSlots = schedule.getSpeechSlots();
+        int[] favoritePaths = new int[speechSlots.length];
+        for (int i = 0; i < speechSlots.length; i++) {
+            favoritePaths[i] = speechSlots[i].getFavoriteSpeechPath();
         }
 
-        String arrayString=Arrays.toString(favoritePaths);
+        String arrayString = Arrays.toString(favoritePaths);
 
-        SharedPreferences.Editor editor=context.getSharedPreferences(SCHEDULE_PREFS_NAME, Context.MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor = context.getSharedPreferences(SCHEDULE_PREFS_NAME, Context.MODE_PRIVATE).edit();
         editor.putString(SCHEDULE_PREFS_KEY, arrayString);
         editor.commit();
     }
 
-    private int[] loadFavoriteSlotsFromSharedPreferences(Context context)
-    {
-        SharedPreferences prefs=context.getSharedPreferences(SCHEDULE_PREFS_NAME, Context.MODE_PRIVATE);
-        String savedFavorite=prefs.getString(SCHEDULE_PREFS_KEY, null);
-        if(savedFavorite==null)
+    private int[] loadFavoriteSlotsFromSharedPreferences(Context context) {
+        SharedPreferences prefs = context.getSharedPreferences(SCHEDULE_PREFS_NAME, Context.MODE_PRIVATE);
+        String savedFavorite = prefs.getString(SCHEDULE_PREFS_KEY, null);
+        if (savedFavorite == null)
             return new int[0];
 
         String[] items = savedFavorite.replaceAll("\\[", "").replaceAll("\\]", "").split(",");
@@ -162,7 +155,8 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
             try {
                 results[i] = Integer.parseInt(items[i].trim());
             } catch (NumberFormatException nfe) {
-            };
+            }
+            ;
         }
 
 

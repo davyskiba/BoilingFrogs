@@ -8,10 +8,10 @@ import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel;
 /**
  * Created by Wojciech on 09.01.2016.
  */
-public class Speaker implements Parcelable,ListItemModel {
+public class Speaker implements Parcelable, ListItemModel {
     int id;
     String name;
-    String 	occupation;
+    String occupation;
     String description;
     String photoUrl;
 
@@ -115,7 +115,7 @@ public class Speaker implements Parcelable,ListItemModel {
         twitter = in.readString();
         linkedin = in.readString();
         facebook = in.readString();
-        photoUrl=in.readString();
+        photoUrl = in.readString();
     }
 
     @Override

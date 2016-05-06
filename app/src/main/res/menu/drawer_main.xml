@@ -3,34 +3,34 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_schedule"
-            android:checked="true"
-            android:icon="@drawable/drawer_schedule"
-            android:title="@string/drawer_item_schedule" />
+                android:id="@+id/nav_schedule"
+                android:checked="true"
+                android:icon="@drawable/drawer_schedule"
+                android:title="@string/drawer_item_schedule"/>
         <item
-            android:id="@+id/nav_speakers"
-            android:icon="@drawable/drawer_speakers"
-            android:title="@string/drawer_item_speakers" />
+                android:id="@+id/nav_speakers"
+                android:icon="@drawable/drawer_speakers"
+                android:title="@string/drawer_item_speakers"/>
         <item
-            android:id="@+id/nav_my_schedule"
-            android:icon="@drawable/drawer_my_schedule"
-            android:title="@string/drawer_item_my_schedule"/>
+                android:id="@+id/nav_my_schedule"
+                android:icon="@drawable/drawer_my_schedule"
+                android:title="@string/drawer_item_my_schedule"/>
         <item
-            android:id="@+id/nav_sponsors"
-            android:icon="@drawable/drawer_sponsors"
-            android:title="@string/drawer_item_sponsors"
-            android:visible="false" />
+                android:id="@+id/nav_sponsors"
+                android:icon="@drawable/drawer_sponsors"
+                android:title="@string/drawer_item_sponsors"
+                android:visible="false"/>
     </group>
     <item
-        android:id="@+id/nav_navigation"
-        android:icon="@drawable/drawer_navigation"
-        android:title="@string/drawer_item_navigation" />
+            android:id="@+id/nav_navigation"
+            android:icon="@drawable/drawer_navigation"
+            android:title="@string/drawer_item_navigation"/>
     <item
-        android:id="@+id/nav_twitter"
-        android:icon="@drawable/twitter_icon"
-        android:title="@string/drawer_item_twitter" />
+            android:id="@+id/nav_twitter"
+            android:icon="@drawable/twitter_icon"
+            android:title="@string/drawer_item_twitter"/>
     <item
-        android:id="@+id/nav_survey"
-        android:icon="@drawable/drawer_survey"
-        android:title="@string/drawer_item_survey" />
+            android:id="@+id/nav_survey"
+            android:icon="@drawable/drawer_survey"
+            android:title="@string/drawer_item_survey"/>
 </menu>

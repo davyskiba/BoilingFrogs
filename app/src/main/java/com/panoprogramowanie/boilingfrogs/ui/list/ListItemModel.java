@@ -5,7 +5,10 @@ package com.panoprogramowanie.boilingfrogs.ui.list;
  */
 public interface ListItemModel {
     String getTitle();
+
     String getSubtitle();
+
     String getPhotoUrl();
+
     boolean isClickable();
 }

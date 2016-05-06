@@ -33,7 +33,7 @@ public class NavigationSupplierImpl implements NavigationSupplier {
     public NavigationSupplierImpl(ScheduleSupplier scheduleSupplier) {
         this.scheduleSupplier = scheduleSupplier;
 
-        onBackStackChangedListener=new FragmentBackstackChangeListener();
+        onBackStackChangedListener = new FragmentBackstackChangeListener();
     }
 
     public void registerFragmentActivity(BoilingFrogsFragmentActivity activity) {

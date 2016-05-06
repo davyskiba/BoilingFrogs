@@ -9,14 +9,12 @@ import android.net.Uri;
  */
 public class BrowserLaunchingUtil {
 
-    public static void launchBrowser(Context context, int urlId)
-    {
-        String url=context.getString(urlId);
-        launchBrowser(context,url);
+    public static void launchBrowser(Context context, int urlId) {
+        String url = context.getString(urlId);
+        launchBrowser(context, url);
     }
 
-    public static void launchBrowser(Context context, String url)
-    {
+    public static void launchBrowser(Context context, String url) {
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                 Uri.parse(url));
         context.startActivity(intent);

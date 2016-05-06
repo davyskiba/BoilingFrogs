@@ -21,14 +21,14 @@ public class ListItemModelAdapter extends BaseAdapter {
 
     private ListItemModel[] items;
 
-    public ListItemModelAdapter(Context context,int resId) {
-        this(context,resId,new ListItemModel[0]);
+    public ListItemModelAdapter(Context context, int resId) {
+        this(context, resId, new ListItemModel[0]);
     }
 
-    public ListItemModelAdapter(Context context,int resId, ListItemModel[] objects) {
-        listItemLayoutId=resId;
-        items=objects;
-        this.context=context;
+    public ListItemModelAdapter(Context context, int resId, ListItemModel[] objects) {
+        listItemLayoutId = resId;
+        items = objects;
+        this.context = context;
     }
 
     @Override
@@ -56,12 +56,10 @@ public class ListItemModelAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         ListItemModelView view;
-        if(convertView==null)
-        {
-            view=(ListItemModelView)inflater.inflate(listItemLayoutId,null);
-        }
-        else {
-            view=(ListItemModelView)convertView;
+        if (convertView == null) {
+            view = (ListItemModelView) inflater.inflate(listItemLayoutId, null);
+        } else {
+            view = (ListItemModelView) convertView;
         }
 
         view.takeModel(getItem(position));
@@ -69,9 +67,8 @@ public class ListItemModelAdapter extends BaseAdapter {
         return view;
     }
 
-    public void setItems(ListItemModel[] newItems)
-    {
-        items=newItems;
+    public void setItems(ListItemModel[] newItems) {
+        items = newItems;
         notifyDataSetChanged();
     }
 }

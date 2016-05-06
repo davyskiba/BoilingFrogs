@@ -17,7 +17,7 @@ import javax.inject.Inject;
 /**
  * Created by Wojciech on 07.01.2016.
  */
-public class SpeakersListFragment extends ListFragment{
+public class SpeakersListFragment extends ListFragment {
 
     @Inject
     SpeakersListPresenter presenter;
@@ -32,7 +32,7 @@ public class SpeakersListFragment extends ListFragment{
 
     @Override
     protected View onCreateFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View result=super.onCreateFragmentView(inflater, container, savedInstanceState);
+        View result = super.onCreateFragmentView(inflater, container, savedInstanceState);
         presenter.takeView(this);
         return result;
     }
@@ -45,7 +45,7 @@ public class SpeakersListFragment extends ListFragment{
 
     @Override
     protected void onItemClicked(ListItemModel itemModel) {
-        Speaker clickedSpeaker=(Speaker)itemModel;
+        Speaker clickedSpeaker = (Speaker) itemModel;
         presenter.speakerClicked(clickedSpeaker);
     }
 
