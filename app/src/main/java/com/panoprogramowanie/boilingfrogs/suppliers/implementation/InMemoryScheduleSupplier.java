@@ -10,6 +10,7 @@ import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
+import com.panoprogramowanie.boilingfrogs.util.AssetJsonLoader;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,8 +24,6 @@ public class InMemoryScheduleSupplier implements ScheduleSupplier {
 
     private static final String SCHEDULE_PREFS_NAME = "shedule";
     private static final String SCHEDULE_PREFS_KEY = "shedule";
-
-    private static final String SCHEDULE_ASSET_FILENAME = "agenda.json";
 
     private Schedule schedule;
 
@@ -70,7 +69,7 @@ public class InMemoryScheduleSupplier implements ScheduleSupplier {
     }
 
     public static Schedule loadScheduleFromAssets(Context context) {
-        String scheduleJson = readAssetsFile(context, SCHEDULE_ASSET_FILENAME);
+        String scheduleJson = AssetJsonLoader.readScheduleJsonFromFile(context);
 
         Gson gson = new Gson();
         Schedule result = gson.fromJson(scheduleJson, Schedule.class);
@@ -89,33 +88,6 @@ public class InMemoryScheduleSupplier implements ScheduleSupplier {
                 }
             }
         }
-    }
-
-    private static String readAssetsFile(Context context, String fileName) {
-        StringBuilder builder = new StringBuilder();
-        BufferedReader reader = null;
-
-        try {
-            reader = new BufferedReader(
-                    new InputStreamReader(context.getAssets().open(fileName), "UTF-8"));
-
-            // do reading, usually loop until end of file reading
-            String mLine;
-            while ((mLine = reader.readLine()) != null) {
-                builder.append(mLine);
-            }
-        } catch (IOException e) {
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    //log the exception
-                }
-            }
-        }
-
-        return builder.toString();
     }
 
     //region SharedPreferences
