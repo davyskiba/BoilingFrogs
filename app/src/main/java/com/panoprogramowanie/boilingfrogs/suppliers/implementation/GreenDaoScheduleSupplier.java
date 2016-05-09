@@ -2,16 +2,24 @@ package com.panoprogramowanie.boilingfrogs.suppliers.implementation;
 
 import com.google.gson.Gson;
 
+import com.panoprogramowanie.boilingfrogs.model.greendao.Schedule;
 import com.panoprogramowanie.boilingfrogs.model.greendao.Speaker;
+import com.panoprogramowanie.boilingfrogs.model.greendao.SpeakerDao;
 import com.panoprogramowanie.boilingfrogs.model.greendao.Speech;
+import com.panoprogramowanie.boilingfrogs.model.greendao.SpeechDao;
 import com.panoprogramowanie.boilingfrogs.model.greendao.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.model.greendao.DaoMaster;
 import com.panoprogramowanie.boilingfrogs.model.greendao.DaoSession;
+import com.panoprogramowanie.boilingfrogs.model.greendao.SpeechSlotDao;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.util.AssetJsonLoader;
+import com.panoprogramowanie.boilingfrogs.util.ModelConverter;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import java.util.List;
 
 public class GreenDaoScheduleSupplier{
 
@@ -23,10 +31,10 @@ public class GreenDaoScheduleSupplier{
         DaoMaster daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
 
-        loadScheduleFromAssets(context);
+        saveScheduleFronJson(context);
     }
 
-//    @Override
+    //    @Override
     public SpeechSlot[] getAllSpeechSlots() {
         return daoSession.getSpeechSlotDao().loadAll().toArray(new SpeechSlot[0]);
     }
@@ -52,33 +60,32 @@ public class GreenDaoScheduleSupplier{
         daoSession.getSpeechSlotDao().update(speechSlot);
     }
 
-    public static Schedule loadScheduleFromAssets(Context context) {
-        String scheduleJson = AssetJsonLoader.readScheduleJsonFromFile(context);
-
-        Gson gson = new Gson();
-        Schedule result = gson.fromJson(scheduleJson, Schedule.class);
-
-        return result;
+    private void saveScheduleFronJson(Context context) {
+        Schedule schedule=loadScheduleFromAssets(context);
+        saveSpeakers(schedule.getSpeakers());
+        saveSpeeches(schedule.getSpeeches());
+        saveSpeechSlots(schedule.getSpeechSlots());
     }
 
-    private static class Schedule{
-        Speaker[] speakers;
-        SpeechSlot[] speechSlots;
+    private void saveSpeakers(Speaker[] speakers){
+        SpeakerDao speakerDao=daoSession.getSpeakerDao();
+        speakerDao.insertOrReplaceInTx(speakers);
+    }
 
-        public Speaker[] getSpeakers() {
-            return speakers;
-        }
+    private void saveSpeeches(Speech[] speeches){
+        SpeechDao speechDao=daoSession.getSpeechDao();
+        speechDao.insertOrReplaceInTx(speeches);
+    }
 
-        public void setSpeakers(Speaker[] speakers) {
-            this.speakers = speakers;
-        }
+    private void saveSpeechSlots(SpeechSlot[] speechSlots){
+        SpeechSlotDao speechSlotDao=daoSession.getSpeechSlotDao();
+        speechSlotDao.insertOrReplaceInTx(speechSlots);
+    }
 
-        public SpeechSlot[] getSpeechSlots() {
-            return speechSlots;
-        }
+    public static Schedule loadScheduleFromAssets(Context context) {
+        Schedule schedule=ModelConverter.inMemoryToGreenDaoSchedule(
+                InMemoryScheduleSupplier.loadScheduleFromAssets(context));
 
-        public void setSpeechSlots(SpeechSlot[] speechSlots) {
-            this.speechSlots = speechSlots;
-        }
+        return schedule;
     }
 }

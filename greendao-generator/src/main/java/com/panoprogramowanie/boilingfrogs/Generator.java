@@ -52,6 +52,7 @@ public class Generator {
         speech.addLongProperty("id").primaryKey();
         speech.addStringProperty("title");
         speech.addStringProperty("description");
+        speech.addIntProperty("path");
         speech.addStringProperty("youtubeUrl");
 
         return speech;

@@ -31,9 +31,10 @@ public class SpeechDao extends AbstractDao<Speech, Long> {
         public final static Property Id = new Property(0, Long.class, "id", true, "ID");
         public final static Property Title = new Property(1, String.class, "title", false, "TITLE");
         public final static Property Description = new Property(2, String.class, "description", false, "DESCRIPTION");
-        public final static Property YoutubeUrl = new Property(3, String.class, "youtubeUrl", false, "YOUTUBE_URL");
-        public final static Property SpeakerId = new Property(4, Long.class, "speakerId", false, "SPEAKER_ID");
-        public final static Property SpeechSlotId = new Property(5, Long.class, "speechSlotId", false, "SPEECH_SLOT_ID");
+        public final static Property Path = new Property(3, Integer.class, "path", false, "PATH");
+        public final static Property YoutubeUrl = new Property(4, String.class, "youtubeUrl", false, "YOUTUBE_URL");
+        public final static Property SpeakerId = new Property(5, Long.class, "speakerId", false, "SPEAKER_ID");
+        public final static Property SpeechSlotId = new Property(6, Long.class, "speechSlotId", false, "SPEECH_SLOT_ID");
     };
 
     private DaoSession daoSession;
@@ -57,9 +58,10 @@ public class SpeechDao extends AbstractDao<Speech, Long> {
                 "\"ID\" INTEGER PRIMARY KEY ," + // 0: id
                 "\"TITLE\" TEXT," + // 1: title
                 "\"DESCRIPTION\" TEXT," + // 2: description
-                "\"YOUTUBE_URL\" TEXT," + // 3: youtubeUrl
-                "\"SPEAKER_ID\" INTEGER," + // 4: speakerId
-                "\"SPEECH_SLOT_ID\" INTEGER);"); // 5: speechSlotId
+                "\"PATH\" INTEGER," + // 3: path
+                "\"YOUTUBE_URL\" TEXT," + // 4: youtubeUrl
+                "\"SPEAKER_ID\" INTEGER," + // 5: speakerId
+                "\"SPEECH_SLOT_ID\" INTEGER);"); // 6: speechSlotId
     }
 
     /** Drops the underlying database table. */
@@ -88,19 +90,24 @@ public class SpeechDao extends AbstractDao<Speech, Long> {
             stmt.bindString(3, description);
         }
  
+        Integer path = entity.getPath();
+        if (path != null) {
+            stmt.bindLong(4, path);
+        }
+ 
         String youtubeUrl = entity.getYoutubeUrl();
         if (youtubeUrl != null) {
-            stmt.bindString(4, youtubeUrl);
+            stmt.bindString(5, youtubeUrl);
         }
  
         Long speakerId = entity.getSpeakerId();
         if (speakerId != null) {
-            stmt.bindLong(5, speakerId);
+            stmt.bindLong(6, speakerId);
         }
  
         Long speechSlotId = entity.getSpeechSlotId();
         if (speechSlotId != null) {
-            stmt.bindLong(6, speechSlotId);
+            stmt.bindLong(7, speechSlotId);
         }
     }
 
@@ -123,9 +130,10 @@ public class SpeechDao extends AbstractDao<Speech, Long> {
             cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // title
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // description
-            cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // youtubeUrl
-            cursor.isNull(offset + 4) ? null : cursor.getLong(offset + 4), // speakerId
-            cursor.isNull(offset + 5) ? null : cursor.getLong(offset + 5) // speechSlotId
+            cursor.isNull(offset + 3) ? null : cursor.getInt(offset + 3), // path
+            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // youtubeUrl
+            cursor.isNull(offset + 5) ? null : cursor.getLong(offset + 5), // speakerId
+            cursor.isNull(offset + 6) ? null : cursor.getLong(offset + 6) // speechSlotId
         );
         return entity;
     }
@@ -136,9 +144,10 @@ public class SpeechDao extends AbstractDao<Speech, Long> {
         entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setTitle(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setDescription(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
-        entity.setYoutubeUrl(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
-        entity.setSpeakerId(cursor.isNull(offset + 4) ? null : cursor.getLong(offset + 4));
-        entity.setSpeechSlotId(cursor.isNull(offset + 5) ? null : cursor.getLong(offset + 5));
+        entity.setPath(cursor.isNull(offset + 3) ? null : cursor.getInt(offset + 3));
+        entity.setYoutubeUrl(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
+        entity.setSpeakerId(cursor.isNull(offset + 5) ? null : cursor.getLong(offset + 5));
+        entity.setSpeechSlotId(cursor.isNull(offset + 6) ? null : cursor.getLong(offset + 6));
      }
     
     /** @inheritdoc */

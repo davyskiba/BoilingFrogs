@@ -143,168 +143,213 @@
   ],
   "speechSlots": [
     {
+	"id": 1,
       "header": "9:10 - 9:40",
       "speeches": [
         {
+	"id": 1,
           "timeString": "9:10 - 9:40",
           "title": "Boiling Frogs - mój pogląd na wytwarzanie oprogramowania",
-          "speakerId": 16
+          "speakerId": 16,
+		  "speechSlotId": 1
         }
       ]
     },
     {
+	"id": 2,
       "header": "10:00 - 11:00",
       "speeches": [
         {
+	"id": 2,
           "timeString": "10:00 - 11:00",
           "title": "From Legacy to DDD",
           "description": "Python, Ruby, JavaScript, C# – the syntax doesn’t really matter. As developers, we (or the mythical *they*) are able to write shitty code regardless of the syntax. What matters most is whether the application is well-structured to be maintained and developed for the next months/years/decades.\\nDomain Driven Design is not a silver bullet. Still, it gives some interesting tools and techniques which we can apply in our everyday legacy projects – in small steps.\\nI will share the lessons we learnt while applying DDD concepts in legacy applications – what worked and what didn’t work. After this talk you should have new ideas how to gradually improve your current project.",
           "speakerId": 17,
-          "path": 1
+          "path": 1,
+		  "speechSlotId": 2
         },
         {
+	"id": 3,
           "timeString": "10:00 - 11:00",
           "title": "Developerze, zdevelopuj się sam!",
           "description": "Zapraszam Was na opowieść o rzeczach, które można robić jako developer, aby ciągle się rozwijać. Będzie o workshopach, hackathonach, code review, pisaniu blogów, udziale w konferencjach i dzieleniu się wiedzą. Wszystko to służy uczeniu się nowych rzeczy, eksperymentowaniu, doskonaleniu się i bawieniu. Bez tego zostanie nam tylko codzienna praca, która może być bardzo mozolna, w nieatrakcyjnych technologiach. Wszystko poprę praktycznymi radami jak to przeprowadzić, jako że większość stosujemy w pracy i mam sporo przemyśleń.",
           "speakerId": 2,
-          "path": 2
+          "path": 2,
+		  "speechSlotId": 2
         },
         {
+	"id": 4,
           "timeString": "10:00 - 11:00",
           "title": "Welcome to Monad Club",
           "description": "Pierwsza zasada klubu – monad się nie tłumaczy. Druga zasada… Zatem zamiast tłumaczyć, będziemy obserwować je w naturze (językach C# i F#) – czasem w całkiem nieoczekiwanych miejscach.",
           "speakerId": 1,
-          "path": 3
+          "path": 3,
+		  "speechSlotId": 2
         }
       ]
     },
     {
+	"id": 3,
       "header": "11:15 - 12:15",
       "speeches": [
         {
+	"id": 5,
           "timeString": "11:15 - 12:15",
           "title": "Czysto funkcyjne struktury danych",
           "description": "‘Bad programmers worry about the code. Good programmers worry about data structures and their relationships.’ powiedział Linus Torvalds. Temat czysto funkcyjnych struktur dokładnie opisał Chris Okasaki w swojej pracy z 1996 roku. Od tego czasu struktury takie zostały zaimplementowane w wielu językach programowania i z sukcesem wykorzystano je do zaimplementowania legendarnego oprogramowania. Podczas swojej prezentacji postaram się przedstawić koncepcję czysto funkcyjnych struktur danych. Zajrzymy także do implementacji Gita, aby lepiej poznać ich praktyczne zastosowania.",
           "speakerId": 16,
-          "path": 1
+          "path": 1,
+		  "speechSlotId": 3
         },
         {
+	"id": 6,
           "timeString": "11:15 - 12:15",
           "title": "BDD i wymagania w Agile",
           "description": "Agile, Scrum, Lean Startup, Testy A/B, Zwinny Marketing, Lean Canvas, Agile Coaching, Test Driven Development, User Stories, BDD, SBE, ATDD, TDD ­ po wrzucania do jednego kotła i odpowiednim zamieszaniu otrzymujemy…(?) Przepis na sukces… Lub wiele mitów i nieporozumień!\\nSukces lub totalną porażkę naszego produktu…\\n\\nWspółczesne metody wytwarzania oprogramowania, nowoczesne technologie i narzędzia, masowy klient/odbiorca oraz dobrze wykwalifikowani, wszechstronni developerzy dają nam możliwości, o których nie mogliśmy marzyć jeszcze kilka lat temu. Niemniej jednak nadal popełniamy wiele błedów i nasze projekt raczej stosunkowo niezbyt często kończą sie spektakularnym sukcesem.\\n\\nByć może jednym z powodów tej niedoskonałości w procesach wytwarzania oprogramowania jest niekoniecznie dobre zrozumienie wspomnianych wyżej metod i narzędzi. A jeśli o zrozumienie chodzi to myślę, że najelpiej zacząć od początku naszego procesu ­ czyli od wymagań. I właśnie o tym jest ta prezentacja… Jeśli wydaje Ci się, że wiesz już wszystko na temat BDD i wymagań w Agile to… Pewnie jesteś w błędzie… Nie, nie twierdzę, że na tym wykładzie dowiesz się wszystkiego w tym temacie… Być może jednak dowiesz się o rzeczach, które nie są oczywiste i które realnie pomoga Ci w pracy.\\n\\nJeśli uważasz, że User Stories, BDD, ATDD i SBE nie mają sensu ­ to… Zgadzam sie z Tobą i z chęcią powiem Ci dlaczego w Twoim kontekście im tego sensu brakuje (wspomożemy się w tym celu Cynefin Framework).\\n\\nMowa będzie o mitach związanych z User Stories, Specification By Example, Behavior Driven Development, różnicy pomiędzy wymaganiami a specyfikacją, Cynefin Framework oraz Continuous Delivery.",
           "speakerId": 6,
-          "path": 2
+          "path": 2,
+		  "speechSlotId": 3
         },
         {
+	"id": 7,
           "timeString": "11:15 - 12:15",
           "title": "Przybornik Devopsa, czyli krótki przewodnik po mikroserwisach",
           "description": "Kilka miesięcy temu Robert opuścił komfortowy fotel programisty i wyruszył w podróż w kierunku nieznanego świata DevOps. Podróż pełną niespodziewanych odkryć.  Z pozycji programisty łatwo stracić z oczu wszystkie narzędzia, które pozwalają pracować twoim mikroserwisom bez żadnych problemów.\\n\\nW tej prezentacji Robert opowie jak zrozumiał, że narzędzia jak Docker są tylko małym kawałkiem układanki w architekturze mikroserwisów. Przedstawi sposób użycia narzędzi takich jak Terraform, Mesos, Marathon i jak praca z nimi otwiera oczy na poziom skomplikowania rozproszonej architektury.",
           "speakerId": 10,
-          "path": 3
+          "path": 3,
+		  "speechSlotId": 3
         }
       ]
     },
     {
+	"id": 4,
       "header": "13:15 - 14:15",
       "speeches": [
         {
+	"id": 8,
           "timeString": "13:15 - 14:15",
           "title": "Testowanie mutacyjne, czyli jak dobre w rzeczywistości są Twoje testy?",
           "description": "Badanie “standardowego” pokrycia kodu przez testy daje nam informację, czy przez daną linię (bądź rozgałęzienie) “przeszedł” jakiś test. Testowanie mutacyjne idzie o krok dalej i weryfikuje poprzez zmianę (modyfikację lub usunięcie) danej linii, czy kod w niej zawarty był w rzeczywistości istotny dla któregokolwiek z testów. Ta znana od ponad 30 lat w kręgach naukowych, a ostatnio odkryta na nowo dla “rozwiązań komercyjnych” technika pozwala dowiedzieć się jak dobre w rzeczywistości są nasze testy oraz które fragmenty kodu tak naprawdę tylko wydają się być testowane (a w rzeczywistości nie są), co bardzo przydaje się szczególnie w rozwiązaniach, dla których poprawność działania jest kluczowym wymaganiem.\\n\\nW czasie prezentacji odpowiem między innymi na poniższe pytania:\\n\\n– Czym jest testowanie mutacyjne?\\n– Co może nam dać (po co je stosować)?\\n– Jakie ma ograniczenia?\\n– Dlaczego mimo że znane od ponad 30 lat dopiero teraz zyskuje na popularności w “komercyjnym programowaniu”?\\n– Jak przygotować naszą aplikację do efektywnego wykorzystywania tej techniki?\\n– Czy ktoś naprawdę używa testowania mutacyjnego w “aplikacjach typu enterprise”?\\n\\nPrezentacja przeznaczona jest dla osób, które chciałyby dowiedzieć się czym jest testowanie mutacyjne, jakie ma przewagi nad “zwykłym” badaniem pokrycia kodu przez testy i jak zastosować je we własnych aplikacjach. Przydatna będzie ogólna wiedza dotycząca testów automatycznych oraz “zwykłego” mierzenie pokrycia (ang. code coverage). Przykłady implementacyjne będą głównie dotyczyły języka Java, niemniej poruszone zostanie wsparcie dla testowania mutacyjnego w różnych językach.",
           "speakerId": 14,
-          "path": 1
+          "path": 1,
+		  "speechSlotId": 4
         },
         {
+	"id": 9,
           "timeString": "13:15 - 14:15",
           "title": "Pozytywistyczny developer, czyli ciągła praca u podstaw",
           "description": "Wytwarzanie oprogramowania to aktywność mocno społeczna i opierająca się na ludziach. Lubimy często pomijać ten aspekt, ale bez zgranego zespołu nie da się wytwarzać oprogramowania.\\nNo ale jak ten zespół zgrać czy jak zapewnić, że zespół będzie dostarczał. Skąd wiemy, że zespół będzie mieć dość technicznej wiedzy by być w stanie dostarczać oraz jak zapewnić by chcieli z sobą pracować.\\nPrzejdźmy się nawet o krok dalej, jak zapewnić, że na tak zwanym rynku, są odpowiedni developerzy z którymi później mamy pracować?\\n\\nA jeśli już mamy zespół, to zastanówmy się jak możemy poprawić jego efektywność i zapewnić środowisko, które wspomoże dostarczanie przez nas oprogramowania.\\n\\nTo nie jest talk dla osób liczących na proste rozwiązania. W duchu pozytywizmu, będę starać się przekonać was, że ciężką pracą da się wiele osiągnać i budować fajne rzeczy, chociaż może to wymagać od nas wyjścia z naszego comfort zone. Ten talk będzie oparty na latach moich doświadczeń czy to jako lider JUG czy zespołu, niemniej postaram się udowodnić, że każdy z nas ma wpływ na zespół, proces i klienta a nawet całe nasze community.",
           "speakerId": 9,
-          "path": 2
+          "path": 2,
+		  "speechSlotId": 4
         },
         {
+	"id": 10,
           "timeString": "13:15 - 14:15",
           "title": "Raj dla poliglotów - wszystko płynie",
           "description": "W naszej codziennej pracy napotykamy wiele podobnie wyglądających problemów. Jednym z nich jest asynchroniczna komunikacja, która klasycznie rozwiązywana jest za pomocą callbacków. To rozwiązanie ma jednak dwie podstawowe wady: callback hell i brak zabezpieczenia przed nadmierną generacją eventów.\\n\\nW tej prezentacji chciałbym przedstawić Wam rozwiązanie tego problemu: reaktywne strumienie (reactive streams). Jest to inicjatywa tworząca model asynchronicznej komunikacji ponad technologicznymi podziałami. Powstało już kilka implementacji w różnych językach i bardzo podobnym API. Raj dla poliglotów!\\n\\nW części teoretycznej prezentacji przedstawię zarys historyczny i podstawowe założenia strumieni. W drugiej części pokażę jak można je wykorzystać w programowaniu prostej gry webowej (Snake). Po stronie frontendu i backendu użyjemy różnych języków i bibliotek, ale bardzo podobnie brzmiącego API.",
           "speakerId": 11,
-          "path": 3
+          "path": 3,
+		  "speechSlotId": 4
         }
       ]
     },
     {
+	"id": 5,
       "header": "14:30 - 15:30",
       "speeches": [
         {
+	"id": 11,
           "timeString": "14:30 - 15:30",
           "title": "Jak przetestować prawdziwy system?",
           "description": "Chciałbym poruszyć temat testowania w pełnym przekroju. Nie będzie to jeden framework lub jedna metodologia – skupię się na realnym przykładzie aplikacji integrującej się z innymi systemami. Jaką część przetestować jednostkowo, a jaką integracyjnie? Jakich narzędzi użyć, żeby nie zginąć, a jednocześnie, żeby testy były szybkie i łatwo modyfikowalne? Przetestować wszystko, czy może coś odpuścić?\\n\\nWyjdziemy od JUnita i assertj, a skończymy na dobrych praktykach, które stosuję w dużych systemach, gdzie integrujemy kilkunastu dostawców.",
           "speakerId": 8,
-          "path": 1
+          "path": 1,
+		  "speechSlotId": 5
         },
         {
+	"id": 12,
           "timeString": "14:30 - 15:30",
           "title": "Effective Software Delivery",
           "description": "Podczas tej prezentacji przejdziemy przez poszczególne fazy dostarczania oprogramowania i odpowiemy sobie na pytanie jakie możliwości optymalizacji mamy do dyspozycji na poszczególnych etapach. Powiemy sobie jakich błędów unikać poczas prototypowania, jak wykorzystać specyfikę projektu i nie dać się ponieść pragnieniu rozwiązywania wszystkich problemów za pomocą złotego młotka. Poruszymy mit spowalniających development testów automatycznych, odpowiemy na pytanie czy DRY mówi tylko o unikaniu copy-paste w naszej aplikacji oraz przeanalizujemy szerzej zagadnienie przedwczesnej optymalizacji. Poznamy także narzędzia i techniki, która pozwalają nam efektywniej pracować nad wytwarzaniem oprogramowania.",
           "speakerId": 13,
-          "path": 2
+          "path": 2,
+		  "speechSlotId": 5
         },
         {
+	"id": 13,
           "timeString": "14:30 - 15:30",
           "title": "Wydajność webowa - czemu miałbym się przejmować?",
           "description": "Wydajność aplikacji internetowych to nie jest ‘feature’, który możemy dodać pod koniec projektu, gdy się nam o tym przypomni. Chcąc mieć wydajny system, temat wydajności musi nam towarzyszyć od początku istnienia projektu. Albo nawet wcześniej, od początku kształtowania się wymagań.\\nAle właściwie czemu owa wydajność jest ważna i ktoś miałby się nią przejmować? I czym właściwie jest ta ‘wydajność’? Czym ryzykujemy ignorując jej istnienie? A jeśli już jesteśmy w miarę przekonani o jej znaczeniu, jak zacząć ją uwzględniać? W trakcie sesji odpowiemy sobie na te pytania. Poznamy obecne wyzwania. Dokonamy przeglądu popularnych narzędzi. Ale najważniejszy przekaz tej sesji to zachęcenie do świadomego i zaangażowanego podejścia do tematu wydajności.",
           "speakerId": 4,
-          "path": 3
+          "path": 3,
+		  "speechSlotId": 5
         }
       ]
     },
     {
+	"id": 6,
       "header": "15:45 - 16:45",
       "speeches": [
         {
+	"id": 14,
           "timeString": "15:45 - 16:45",
           "title": "Be pragmatic, be SOLID!",
           "description": "Wiemy jak projektować dobry kod obiektowy? Ilu z nas zna 5 zasad SOLID? Ilu z nas przestrzega ich w codziennej pracy z kodem? Nie tylko wyjaśnię co to SOLID, ale również pokażę, że to nie sucha teoria a praktyczne rady, które warto aplikować w naszych projektach. Podczas prezentacji szczegółowo omówię każdą z pięciu zasad. Pokażę konkretne przykłady, które naruszają ww. zasady. Zaprezentuję przykładowe rozwiązania i techniki refaktorowania kodu. Omówię również, w jakich sytuacjach można pominąć niektóre z zasad oraz jaki może to mieć wpływ na projekt.",
           "speakerId": 3,
-          "path": 1
+          "path": 1,
+		  "speechSlotId": 6
         },
         {
+	"id": 15,
           "timeString": "15:45 - 16:45",
           "title": "Jak znaleźć czas na jakość? - Teoria Kolejek i Little's Law w procesach wytwarzania oprogramowania",
           "description": "Wydajność każdego systemu jest zależna od najwolniejszego/najsłabszego elementu tego systemu.. Podobnie jest z zespołami developerskimi. Ponadto każdy system, któremu do przeprocesowania dostarczymy zbyt wiele zadań bardzo szybko “zapycha się” i staje się niewydajny. Podobnie jest z zespołami developerskimi – jeśli kolejka zadań jest zbyt duża, to system przestaje być wydajny.\\nCzy kiedykolwiek zdarzyło się Wam słyszeć w rozmowach na temat praktyk jakościowych stwierdzenia typu: “No tak, wiemy że automatyzacja testów jest dobra i fajna, ale nie mamy na nią czasu”, “Tak, poprawili byśmy jakość kodu, ale mamy tyle rzeczy do zrobienia, że nie ma czasu na refaktoring”. Oczywiście tłumaczenie, że jeśli poświęcimy trochę czasu na poprawę jakości to ten czas szybko się zwróci jest na nic.\\nRozwiązanie jest proste – wystarczy zmniejszyć kolejkę zadań do zrobienia. Łatwo powiedzieć- trudniej zrobić, a jeszcze trudniej zrozumieć jak i dlaczego to naprawdę działa! Jeśli stosujemy Scrum, to bierzmy do Sprintu 70% naszej średniej Velocity. Jeśli pracujemy w Kanban to ograniczmy nasz Work In Process limit na całą tablicę do 70% liczby developerów.\\nTak, do mnie też to rozwiązanie początkowo nie przemawiało – “przecież to oczywiste, że w ten sposób będziemy robić mniej”. Tak myślałem, dopóki nie przestudiowałem Teorii Kolejek i nie spróbowałem.\\nZespół, który zawsze miał problem z “dowiezieniem” czegokolwiek, nagle, gdy do Sprintu zaczęliśmy brać mniej niż 80% średniej velocity, zaczął bez problemu dowozić wszystko. Pomyślicie zapewne: “No tak, tylko jakim kosztem – przecież w ten sposób średnie Velocity będzie stopniowo spadać i co za tym idzie efektywność zespołu również spadnie”. Powyższe było by prawdą, gdyby nie to, że zespół za każdym razem kończył to co zaplanował przed czasem i dobierał kolejne zadania. Ostatecznie ilość Story Points spalonych w Sprincie była za każdym razem wyższa niż średnia i zespół przyspieszał.\\nPowyższe to tylko jeden z wielu przykładów i oczywiście możecie stwierdzić, że “u mnie napewno nie zadziała”… Mam w zanadrzu kilka innych, ale szkoda czasu na przekonywanie Was przykładami. Możecie nie zgadzać się z moją wiedzą, możecie nie zgadzać się z moimi doświadczeniami, możecie nie zgadzać się z całą psychologią tłumaczącą dlaczego zespoły pracujące w ten sposób są dużo lepsze od innych, ale nierozsądnym by było gdybyście zaczęli kwestionować matematykę stojącą za Teorią Kolejek. Możecie kłucić się ze mną, ale matematyka to matematyka.",
           "speakerId": 6,
-          "path": 2
+          "path": 2,
+		  "speechSlotId": 6
         },
         {
+	"id": 16,
           "timeString": "15:45 - 16:45",
           "title": "HATEOAS as if you meant it",
           "description": "Pomimo stałego wzrostu stylu REST w tworzeniu usług internetowych niezmiernie rzadko można natknąć się na usługi naprawdę realizujące jego wszystkie postulaty, czyli osiągające trzeci poziom w skali Richardson Maturity Model – Hypermedia Controls. Najczęściej kończy się na przesyłaniu obiektów przez HTTP, lecz wciąż tworzymy klienty mocno związane z danym API oraz zbyt mocno polegamy na tekstowej dokumentacji.\\nPodczas prezentacji przedstawię kilka prostych technik na tworzenie lepszych, samoopisujących się serwisów, dążących do tzw. Glory of REST.",
           "speakerId": 15,
-          "path": 3
+          "path": 3,
+		  "speechSlotId": 6
         }
       ]
     },
     {
+	"id": 7,
       "header": "17:00 - 18:00",
       "speeches": [
         {
+	"id": 17,
           "timeString": "17:00 - 18:00",
           "title": "Machine Learning dla Developerów",
           "description": "My, developerzy, lubimy zamykać algorytmy w określonych strukturach klas, interfejsów, pętli i warunków. W ten sposób posiadamy pełną kontrolę nad wykonaniem naszego kodu, potrafimy zrozumieć i przewidzieć jego zachowanie w określonych warunkach. Jednak w obliczu pewnych problemów jesteśmy bezbronni, a opanowane przez nas techniki, bezużyteczne. Jak poradzić sobie z zadaniem klasyfikacji obiektów o setkach nieliniowo zależnych parametrów? Jak wykrywać anomalie w danych wejściowych (np. operacje fraudowe w płatnościach online), nie posiadając wiedzy o wszystkich możliwych do wystąpieniach przypadkach? W takich sytuacjach bardzo pomocny może być machine-learning, który postaram się przybliżyć w trakcje tej sesji. Poznamy zarówno wycinek teorii, jak i praktyczne techniki i rozwiązania gotowe do zastosowania w naszych projektach.",
           "speakerId": 12,
-          "path": 1
+          "path": 1,
+		  "speechSlotId": 7
         },
         {
+	"id": 18,
           "timeString": "17:00 - 18:00",
           "title": "(Un)productive partnerships, czyli o tym dlaczego wszyscy chcą dobrze, a wychodzi jak zwykle",
           "description": "Techniczne powody przypadają na około 10-20% projektów, które kończą się porażką. Pozostałe 80-90% to powody natury biznesowej. W prezentacji opowiem o tym jak odpowiednie zbudowanie relacji dostawca/zespół-klient wpływa kluczowe elementy projektu: specyfikację/wymagania, proces deweloperski, a nawet design i kod, a w konsekwencji na sukces lub porażkę projektu.",
           "speakerId": 7,
-          "path": 2
+          "path": 2,
+		  "speechSlotId": 7
         },
         {
+	"id": 19,
           "timeString": "17:00 - 18:00",
           "title": "Naturalny porządek refaktoryzacji",
           "description": "Daje się słyszeć głosy, że refaktoryzacja to kluczowa umiejętność każdego programisty. Jeśli tak, to dlaczego w zaledwie 5% zespołach jest ona rzeczywiście praktykowana i jest nieodłączną częścią programowania? Odpowiedź jest prosta. Refaktoryzacja kodu, który ma już kilkuletnią historię jest niezwykle trudna, szczególnie, że musi to być wysiłek zespołowy. Naturalny Porządek Refaktoryzacji to pragmatyczny proces, dzięki któremu będziesz w stanie zidentyfikować w jakiej fazie jest dany fragment kodu oraz jaki powinien być następny krok refaktoryzacji.\\n\\nProstota tego podejścia sprawia, że łatwo je wprowadzić w zespole, bez względu na obecny poziom umiejętności jego członków.",
           "speakerId": 5,
-          "path": 3
+          "path": 3,
+		  "speechSlotId": 7
         }
       ]
     }

@@ -8,6 +8,7 @@ import android.os.Parcelable;
  */
 public class SpeechSlot implements Parcelable {
     String header;
+    long id;
 
     Speech[] speeches;
 
@@ -48,6 +49,14 @@ public class SpeechSlot implements Parcelable {
 
     public void setHeader(String header) {
         this.header = header;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Speech[] getSpeeches() {

@@ -12,6 +12,7 @@ public class Speech {
     private Long id;
     private String title;
     private String description;
+    private Integer path;
     private String youtubeUrl;
     private Long speakerId;
     private Long speechSlotId;
@@ -33,10 +34,11 @@ public class Speech {
         this.id = id;
     }
 
-    public Speech(Long id, String title, String description, String youtubeUrl, Long speakerId, Long speechSlotId) {
+    public Speech(Long id, String title, String description, Integer path, String youtubeUrl, Long speakerId, Long speechSlotId) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.path = path;
         this.youtubeUrl = youtubeUrl;
         this.speakerId = speakerId;
         this.speechSlotId = speechSlotId;
@@ -70,6 +72,14 @@ public class Speech {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Integer getPath() {
+        return path;
+    }
+
+    public void setPath(Integer path) {
+        this.path = path;
     }
 
     public String getYoutubeUrl() {

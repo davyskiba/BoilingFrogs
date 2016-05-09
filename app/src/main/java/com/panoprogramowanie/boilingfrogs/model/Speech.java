@@ -18,6 +18,10 @@ public class Speech implements Parcelable, ListItemModel {
     String description;
     private Speaker speaker;
 
+    String youtubeUrl;
+    long id;
+    long speechSlotId;
+
     public Speech() {
 
     }
@@ -77,6 +81,30 @@ public class Speech implements Parcelable, ListItemModel {
 
     public Speaker getSpeaker() {
         return speaker;
+    }
+
+    public String getYoutubeUrl() {
+        return youtubeUrl;
+    }
+
+    public void setYoutubeUrl(String youtubeUrl) {
+        this.youtubeUrl = youtubeUrl;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getSpeechSlotId() {
+        return speechSlotId;
+    }
+
+    public void setSpeechSlotId(long speechSlotId) {
+        this.speechSlotId = speechSlotId;
     }
 
     //region ListItemModel
