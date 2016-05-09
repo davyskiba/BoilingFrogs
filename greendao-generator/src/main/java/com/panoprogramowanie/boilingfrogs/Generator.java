@@ -60,7 +60,7 @@ public class Generator {
     private static Entity addSpeechSlot(Schema schema) {
         Entity speechSlot=schema.addEntity("SpeechSlot");
         speechSlot.addLongProperty("id").primaryKey();
-        speechSlot.addStringProperty("title");
+        speechSlot.addStringProperty("timeLabel");
 
         return speechSlot;
     }
