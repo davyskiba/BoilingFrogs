@@ -7,7 +7,7 @@ import com.panoprogramowanie.boilingfrogs.suppliers.NotificationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.implementation.NavigationSupplierImpl;
 import com.panoprogramowanie.boilingfrogs.suppliers.implementation.NotificationSupplierImpl;
-import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSupplierImpl;
+import com.panoprogramowanie.boilingfrogs.suppliers.implementation.InMemoryScheduleSupplier;
 
 import javax.inject.Singleton;
 
@@ -23,7 +23,7 @@ public class MainModule {
     private ScheduleSupplier scheduleSupplier;
 
     public MainModule(Context context) {
-        scheduleSupplier = new ScheduleSupplierImpl(context);
+        scheduleSupplier = new InMemoryScheduleSupplier(context);
     }
 
     @Provides

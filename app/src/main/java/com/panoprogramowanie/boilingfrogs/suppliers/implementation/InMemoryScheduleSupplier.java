@@ -19,7 +19,7 @@ import java.util.Arrays;
 /**
  * Created by Wojciech on 09.01.2016.
  */
-public class ScheduleSupplierImpl implements ScheduleSupplier {
+public class InMemoryScheduleSupplier implements ScheduleSupplier {
 
     private static final String SCHEDULE_PREFS_NAME = "shedule";
     private static final String SCHEDULE_PREFS_KEY = "shedule";
@@ -28,7 +28,7 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
 
     private Schedule schedule;
 
-    public ScheduleSupplierImpl(Context context) {
+    public InMemoryScheduleSupplier(Context context) {
         loadSchedule(context);
     }
 
@@ -44,6 +44,10 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
 
     @Override
     public Speaker getSpeakerById(int id) {
+        return getSpeakerById(schedule,id);
+    }
+
+    public static Speaker getSpeakerById(Schedule schedule, int id) {
         return schedule.getSpeakers()[id - 1];
     }
 
@@ -53,7 +57,7 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
     }
 
     public void loadSchedule(Context context) {
-        loadScheduleFromAssets(context);
+        schedule=loadScheduleFromAssets(context);
 
         try {
             SpeechSlot[] slots = schedule.getSpeechSlots();
@@ -65,27 +69,29 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
         }
     }
 
-    public void loadScheduleFromAssets(Context context) {
+    public static Schedule loadScheduleFromAssets(Context context) {
         String scheduleJson = readAssetsFile(context, SCHEDULE_ASSET_FILENAME);
 
         Gson gson = new Gson();
-        schedule = gson.fromJson(scheduleJson, Schedule.class);
+        Schedule result = gson.fromJson(scheduleJson, Schedule.class);
 
-        fillSpeechSpeakers();
+        fillSpeechSpeakers(result);
+
+        return result;
     }
 
-    public void fillSpeechSpeakers() {
+    public static void fillSpeechSpeakers(Schedule schedule) {
         for (SpeechSlot slot : schedule.getSpeechSlots()) {
             for (Speech speech : slot.getSpeeches()) {
                 int speakerId = speech.getSpeakerId();
                 if (speakerId > 0) {
-                    speech.setSpeaker(getSpeakerById(speakerId));
+                    speech.setSpeaker(getSpeakerById(schedule,speakerId));
                 }
             }
         }
     }
 
-    private String readAssetsFile(Context context, String fileName) {
+    private static String readAssetsFile(Context context, String fileName) {
         StringBuilder builder = new StringBuilder();
         BufferedReader reader = null;
 

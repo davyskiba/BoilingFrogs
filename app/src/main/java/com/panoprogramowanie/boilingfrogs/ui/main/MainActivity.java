@@ -14,6 +14,7 @@ import android.view.animation.DecelerateInterpolator;
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
+import com.panoprogramowanie.boilingfrogs.suppliers.implementation.GreenDaoScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.util.BrowserLaunchingUtil;
 
 import javax.inject.Inject;
@@ -38,6 +39,8 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
         ButterKnife.bind(this);
 
         BoilingFrogs.getMainComponent(this).inject(this);
+
+        GreenDaoScheduleSupplier greenDaoScheduleSupplier=new GreenDaoScheduleSupplier(this);
 
         setupDrawerAndToolbar();
     }
