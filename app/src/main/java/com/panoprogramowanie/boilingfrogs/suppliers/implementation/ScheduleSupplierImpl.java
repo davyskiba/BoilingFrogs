@@ -2,8 +2,6 @@ package com.panoprogramowanie.boilingfrogs.suppliers.implementation;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.text.Editable;
-import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -50,16 +48,10 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
     }
 
     @Override
-    public Speech getSpeechForSlotAndPath(int speechSlot, int speechPath) {
-        return schedule.getSpeechSlots()[speechSlot].getSpeeches()[speechPath - 1];
-    }
-
-    @Override
     public SpeechSlot getSpeechSlotForPosition(int position) {
         return schedule.getSpeechSlots()[position];
     }
 
-    @Override
     public void loadSchedule(Context context) {
         loadScheduleFromAssets(context);
 
@@ -123,7 +115,7 @@ public class ScheduleSupplierImpl implements ScheduleSupplier {
     //region SharedPreferences
 
     @Override
-    public void speechSlotsFavoritesUpdated(Context context) {
+    public void speechSlotsFavoritesUpdated(Context context, SpeechSlot speechSlot) {
         saveFavoriteSlotsToSharedPreferences(context);
     }
 

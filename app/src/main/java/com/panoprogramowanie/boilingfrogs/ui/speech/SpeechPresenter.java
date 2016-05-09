@@ -59,7 +59,7 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
 
         getView().displayFavorite(isSpeechFavorite());
 
-        scheduleSupplier.speechSlotsFavoritesUpdated(getContext());
+        scheduleSupplier.speechSlotsFavoritesUpdated(getContext(),speechSlot);
     }
 
     private void displaySnackbar(int textId) {

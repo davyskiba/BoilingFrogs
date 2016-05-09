@@ -17,11 +17,7 @@ public interface ScheduleSupplier {
 
     Speaker getSpeakerById(int id);
 
-    void loadSchedule(Context context);
-
     SpeechSlot getSpeechSlotForPosition(int position);
 
-    Speech getSpeechForSlotAndPath(int speechSlot, int speechPath);
-
-    void speechSlotsFavoritesUpdated(Context context);
+    void speechSlotsFavoritesUpdated(Context context, SpeechSlot speechSlot);
 }
