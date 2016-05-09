@@ -25,6 +25,9 @@ public class Generator {
         Property speechInSpeechSlotProperty=speechSlot.addLongProperty("favoriteSpeechId").getProperty();
         speechSlot.addToOne(speech,speechInSpeechSlotProperty,"favoriteSpeech");
 
+        Property speechSlotInSpeechProperty=speech.addLongProperty("speechSlotId").getProperty();
+        speechSlot.addToMany(speech,speechSlotInSpeechProperty);
+
         new DaoGenerator().generateAll(schema,OUT_DIR);
 
     }
