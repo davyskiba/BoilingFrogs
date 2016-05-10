@@ -1,10 +1,8 @@
 package com.panoprogramowanie.boilingfrogs.model;
 
-/**
- * Created by Wojciech on 09.01.2016.
- */
 public class Schedule {
     Speaker[] speakers;
+    Speech[] speeches;
     SpeechSlot[] speechSlots;
 
     public Speaker[] getSpeakers() {
@@ -13,6 +11,14 @@ public class Schedule {
 
     public void setSpeakers(Speaker[] speakers) {
         this.speakers = speakers;
+    }
+
+    public Speech[] getSpeeches() {
+        return speeches;
+    }
+
+    public void setSpeeches(Speech[] speeches) {
+        this.speeches = speeches;
     }
 
     public SpeechSlot[] getSpeechSlots() {

@@ -32,11 +32,11 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
 
     //region Navigation
 
-    private final static String SPEAKER_ARG_KEY = "speaker_arg";
+    private final static String SPEAKER_ID_ARG_KEY = "speaker_id_arg";
 
     public static void startForSpeaker(Speaker speaker, Activity activity) {
         Intent intent = new Intent(activity, SpeakerActivity.class);
-        intent.putExtra(SPEAKER_ARG_KEY, speaker);
+        intent.putExtra(SPEAKER_ID_ARG_KEY,speaker.getId());
         activity.startActivity(intent);
     }
 
@@ -77,11 +77,11 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
 
         ButterKnife.bind(this);
 
-        Speaker speaker = getIntent().getParcelableExtra(SPEAKER_ARG_KEY);
+        long speakerId = getIntent().getLongExtra(SPEAKER_ID_ARG_KEY,0);
 
         BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
-        presenter.setSpeaker(speaker);
+        presenter.setSpeakerId(speakerId);
 
 
         setupDrawerAndToolbar();

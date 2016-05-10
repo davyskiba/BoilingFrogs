@@ -11,8 +11,6 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.panoprogramowanie.boilingfrogs.dagger.DaggerMainComponent;
 import com.panoprogramowanie.boilingfrogs.dagger.MainComponent;
 import com.panoprogramowanie.boilingfrogs.dagger.MainModule;
-import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
-import com.panoprogramowanie.boilingfrogs.suppliers.implementation.ScheduleSupplierImpl;
 
 import io.fabric.sdk.android.Fabric;
 

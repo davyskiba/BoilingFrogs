@@ -24,11 +24,11 @@ public class MySchedulePresenter extends Presenter<MyScheduleFragment> {
         getView().setSpeechSlots(scheduleSupplier.getAllSpeechSlots());
     }
 
-    public void onEmptySlotClicked(int slotPosition) {
-        navigationSupplier.navigateToSlotDetail(slotPosition);
+    public void onEmptySlotClicked(SpeechSlot speechSlot) {
+        navigationSupplier.navigateToSlotDetail(speechSlot);
     }
 
-    public void onNonEmptySlotClicked(int slotPosition, SpeechSlot tappedSlot) {
-        navigationSupplier.navigateToSpeech(slotPosition, tappedSlot.getFavoriteSpeechPath());
+    public void onNonEmptySlotClicked(long speechId) {
+        navigationSupplier.navigateToSpeech(speechId);
     }
 }

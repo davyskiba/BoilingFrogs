@@ -13,6 +13,8 @@ import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import butterknife.Bind;
@@ -62,7 +64,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
         return result;
     }
 
-    public void setData(SpeechSlot[] slots) {
+    public void setData(List<SpeechSlot> slots) {
         adapter.setData(slots);
 
         resetTabs(slots);
@@ -70,7 +72,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
 
     //region Tabs
 
-    private void resetTabs(SpeechSlot[] slots) {
+    private void resetTabs(List<SpeechSlot> slots) {
         int selectedTabPosition = selectedItem;
 
         tabLayout.removeAllTabs();
@@ -83,9 +85,9 @@ public class ScheduleFragment extends BoilingFrogsFragment {
         }
     }
 
-    private void addTabs(TabLayout tabLayout, SpeechSlot[] slots, int selectedPosition) {
-        for (int i = 0; i < slots.length; i++) {
-            TabLayout.Tab tab = tabLayout.newTab().setText(slots[i].getHeader());
+    private void addTabs(TabLayout tabLayout, List<SpeechSlot> slots, int selectedPosition) {
+        for (int i = 0; i < slots.size(); i++) {
+            TabLayout.Tab tab = tabLayout.newTab().setText(slots.get(i).getTimeLabel());
             if (i == selectedPosition) {
                 tab.select();
             }

@@ -5,6 +5,8 @@ import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.ui.base.Presenter;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 /**
@@ -22,7 +24,7 @@ public class SpeakersListPresenter extends Presenter<SpeakersListFragment> {
     }
 
     public void onResume() {
-        Speaker[] speakers = scheduleSupplier.getAllSpeakers();
+        List<Speaker> speakers = scheduleSupplier.getAllSpeakers();
         getView().setItems(speakers);
     }
 

@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 
 import com.panoprogramowanie.boilingfrogs.R;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -19,13 +20,13 @@ public class ListItemModelAdapter extends BaseAdapter {
     private Context context;
     private int listItemLayoutId;
 
-    private ListItemModel[] items;
+    private List<? extends ListItemModel> items;
 
     public ListItemModelAdapter(Context context, int resId) {
-        this(context, resId, new ListItemModel[0]);
+        this(context, resId, new LinkedList<ListItemModel>());
     }
 
-    public ListItemModelAdapter(Context context, int resId, ListItemModel[] objects) {
+    public ListItemModelAdapter(Context context, int resId, List<? extends ListItemModel> objects) {
         listItemLayoutId = resId;
         items = objects;
         this.context = context;
@@ -33,12 +34,12 @@ public class ListItemModelAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return items.length;
+        return items.size();
     }
 
     @Override
     public ListItemModel getItem(int position) {
-        return items[position];
+        return items.get(position);
     }
 
     @Override
@@ -67,7 +68,7 @@ public class ListItemModelAdapter extends BaseAdapter {
         return view;
     }
 
-    public void setItems(ListItemModel[] newItems) {
+    public void setItems(List<? extends ListItemModel> newItems) {
         items = newItems;
         notifyDataSetChanged();
     }

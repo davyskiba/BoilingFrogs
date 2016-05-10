@@ -1,7 +1,5 @@
 package com.panoprogramowanie.boilingfrogs.ui.speech;
 
-import android.content.Context;
-
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
@@ -22,21 +20,15 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
     private SpeechSlot speechSlot;
     private Speech speech;
 
-    private int speechSlotPosition;
-    private int speechPath;
-
     @Inject
     public SpeechPresenter(ScheduleSupplier scheduleSupplier, NotificationSupplier notificationSupplier) {
         this.scheduleSupplier = scheduleSupplier;
         this.notificationSupplier = notificationSupplier;
     }
 
-    public void setSpeech(int speechSlotPosition, int speechPath) {
-        this.speechSlotPosition = speechSlotPosition;
-        this.speechPath = speechPath;
-
-        speechSlot = scheduleSupplier.getSpeechSlotForPosition(speechSlotPosition);
-        speech = speechSlot.getSpeechForPath(speechPath);
+    public void setSpeech(long speechId) {
+        speech = scheduleSupplier.getSpeechById(speechId);
+        speechSlot = speech.getSpeechSlot();
 
         SpeechActivity view = getView();
         view.displaySpeech(speech);
@@ -45,21 +37,21 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
     }
 
     public boolean isSpeechFavorite() {
-        return speechSlot.getFavoriteSpeechPath() == speech.getPath();
+        return speechSlot.getFavoriteSpeechId()==speech.getId();
     }
 
     public void favoriteClicked() {
         if (isSpeechFavorite()) {
-            speechSlot.setFavoriteSpeechPath(-1);
+            speechSlot.setFavoriteSpeech(null);
             displaySnackbar(R.string.speech_removed_from_favorites);
         } else {
-            speechSlot.setFavoriteSpeechPath(speech.getPath());
+            speechSlot.setFavoriteSpeech(speech);
             displaySnackbar(R.string.speech_added_to_favorites);
         }
 
         getView().displayFavorite(isSpeechFavorite());
 
-        scheduleSupplier.speechSlotsFavoritesUpdated(getContext());
+        scheduleSupplier.updateSpeechSlot(speechSlot);
     }
 
     private void displaySnackbar(int textId) {

@@ -1,27 +1,23 @@
 package com.panoprogramowanie.boilingfrogs.suppliers;
 
-import android.content.Context;
-
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.ui.main.MainActivity;
+
+import android.content.Context;
+
+import java.util.List;
 
 /**
  * Created by Wojciech on 09.01.2016.
  */
-public interface ScheduleSupplier {
-    SpeechSlot[] getAllSpeechSlots();
+public interface ScheduleSupplier{
+    Speech getSpeechById(long id);
 
-    Speaker[] getAllSpeakers();
+    List<Speaker> getAllSpeakers();
+    Speaker getSpeakerById(long speakerId);
 
-    Speaker getSpeakerById(int id);
-
-    void loadSchedule(Context context);
-
-    SpeechSlot getSpeechSlotForPosition(int position);
-
-    Speech getSpeechForSlotAndPath(int speechSlot, int speechPath);
-
-    void speechSlotsFavoritesUpdated(Context context);
+    SpeechSlot getSpeechSlotBytId(long slotId);
+    List<SpeechSlot> getAllSpeechSlots();
+    void updateSpeechSlot(SpeechSlot speechSlot);
 }

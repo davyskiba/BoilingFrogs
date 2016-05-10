@@ -19,14 +19,13 @@ import javax.inject.Inject;
  * Created by Wojciech on 07.01.2016.
  */
 public class SpeechSlotFragment extends ListFragment {
+    private static String SLOT_ID_ARG_KEY = "slot_id_arg";
+    private static String SLOT_TITLE_ARG_KEY = "slot_title_arg";
 
-    private static String SLOT_POSITION_ARG_KEY = "slot_position_arg";
-    private static String SLOT_ARG_KEY = "slot_arg";
-
-    public static SpeechSlotFragment createInstance(SpeechSlot slot, int slotPosition) {
+    public static SpeechSlotFragment createInstance(SpeechSlot speechSlot) {
         Bundle args = new Bundle();
-        args.putParcelable(SLOT_ARG_KEY, slot);
-        args.putInt(SLOT_POSITION_ARG_KEY, slotPosition);
+        args.putLong(SLOT_ID_ARG_KEY, speechSlot.getId());
+        args.putString(SLOT_TITLE_ARG_KEY, speechSlot.getTimeLabel());
 
         SpeechSlotFragment result = new SpeechSlotFragment();
         result.setArguments(args);
@@ -55,10 +54,8 @@ public class SpeechSlotFragment extends ListFragment {
     public void onResume() {
         super.onResume();
 
-        SpeechSlot slot = getArguments().getParcelable(SLOT_ARG_KEY);
-        int slotPosition = getArguments().getInt(SLOT_POSITION_ARG_KEY);
-
-        presenter.onResume(slot, slotPosition);
+        long slotId = getArguments().getLong(SLOT_ID_ARG_KEY);
+        presenter.onResume(slotId);
     }
 
     @Override
@@ -75,7 +72,6 @@ public class SpeechSlotFragment extends ListFragment {
 
     @Override
     public String getActionBarTitle(Context context) {
-        SpeechSlot slot = getArguments().getParcelable(SLOT_ARG_KEY);
-        return slot.getHeader();
+        return getArguments().getString(SLOT_TITLE_ARG_KEY);
     }
 }
