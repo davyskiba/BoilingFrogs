@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Wojciech on 09.01.2016.
@@ -32,22 +33,17 @@ public class InMemoryScheduleSupplier implements ScheduleSupplier {
     }
 
     @Override
-    public SpeechSlot[] getAllSpeechSlots() {
-        return schedule.getSpeechSlots();
+    public List<SpeechSlot> getAllSpeechSlots() {
+        return Arrays.asList(schedule.getSpeechSlots());
     }
 
     @Override
-    public Speaker[] getAllSpeakers() {
-        return schedule.getSpeakers();
+    public List<Speaker> getAllSpeakers() {
+        return Arrays.asList(schedule.getSpeakers());
     }
 
     public static Speaker getSpeakerById(Schedule schedule, int id) {
         return schedule.getSpeakers()[id - 1];
-    }
-
-    @Override
-    public SpeechSlot getSpeechSlotForPosition(int position) {
-        return schedule.getSpeechSlots()[position];
     }
 
     @Override
