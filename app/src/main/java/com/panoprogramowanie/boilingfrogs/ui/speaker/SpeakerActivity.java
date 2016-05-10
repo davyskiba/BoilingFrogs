@@ -77,7 +77,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
 
         ButterKnife.bind(this);
 
-        long speakerId = getIntent().getIntExtra(SPEAKER_ID_ARG_KEY,0);
+        long speakerId = getIntent().getLongExtra(SPEAKER_ID_ARG_KEY,0);
 
         BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);

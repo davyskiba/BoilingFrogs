@@ -36,6 +36,9 @@ public class Generator {
 
     private static Entity addSpeaker(Schema schema) {
         Entity speaker=schema.addEntity("Speaker");
+        speaker.implementsInterface("ListItemModel");
+        speaker.addImport("com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel");
+
         speaker.addLongProperty("id").primaryKey();
         speaker.addStringProperty("name");
         speaker.addStringProperty("occupation");

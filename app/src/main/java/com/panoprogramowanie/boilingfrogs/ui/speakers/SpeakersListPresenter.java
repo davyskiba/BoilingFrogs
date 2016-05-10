@@ -25,8 +25,7 @@ public class SpeakersListPresenter extends Presenter<SpeakersListFragment> {
 
     public void onResume() {
         List<Speaker> speakers = scheduleSupplier.getAllSpeakers();
-        //TODO uncomment
-//        getView().setItems(speakers);
+        getView().setItems(speakers);
     }
 
     public void speakerClicked(Speaker clickedSpeaker) {
