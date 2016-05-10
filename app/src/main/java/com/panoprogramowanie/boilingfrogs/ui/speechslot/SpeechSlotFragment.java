@@ -25,7 +25,7 @@ public class SpeechSlotFragment extends ListFragment {
     public static SpeechSlotFragment createInstance(SpeechSlot speechSlot) {
         Bundle args = new Bundle();
         args.putLong(SLOT_ID_ARG_KEY, speechSlot.getId());
-        args.putString(SLOT_TITLE_ARG_KEY, speechSlot.getHeader());
+        args.putString(SLOT_TITLE_ARG_KEY, speechSlot.getTimeLabel());
 
         SpeechSlotFragment result = new SpeechSlotFragment();
         result.setArguments(args);

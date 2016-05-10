@@ -33,9 +33,9 @@ public class MyScheduleBreakViewHolder extends MyScheduleSpeechSlotViewHolderBas
     public void takeSpeechSlot(SpeechSlot speechSlot, int position, MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
         this.speechSlot = speechSlot;
 
-        speechSlotTime.setText(speechSlot.getHeader());
+        speechSlotTime.setText(speechSlot.getTimeLabel());
 
-        Speech firstSpeech = speechSlot.getSpeeches()[0];
+        Speech firstSpeech = speechSlot.getSpeechList().get(0);
         title.setText(firstSpeech.getTitle());
     }
 }

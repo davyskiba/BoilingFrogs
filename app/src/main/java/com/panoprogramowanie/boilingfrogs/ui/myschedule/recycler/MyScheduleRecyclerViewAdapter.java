@@ -14,6 +14,8 @@ import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleEmp
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpeechSlotViewHolder;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpeechSlotViewHolderBase;
 
+import java.util.List;
+
 /**
  * Created by Wojciech on 13.01.2016.
  */
@@ -34,13 +36,13 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
     @Override
     public int getItemViewType(int position) {
         SpeechSlot speechSlot = speechSlots[position];
-        Speech[] itemSpeeches = speechSlot.getSpeeches();
+        List<Speech> speechList = speechSlot.getSpeechList();
 
-        if (itemSpeeches.length == 1 && itemSpeeches[0].getSpeaker() == null) {
+        if (speechList.size() == 1 && speechList.get(0).getSpeaker()==null) {
             return BREAK_SLOT_VIEW_TYPE;
         }
 
-        if (itemSpeeches.length == 1 || speechSlot.getFavoriteSpeechPath() != -1)
+        if (speechList.size() == 1 || speechSlot.getFavoriteSpeech() != null)
             return NONEMPTY_SLOT_VIEW_TYPE;
 
         return EMPTY_SLOT_VIEW_TYPE;

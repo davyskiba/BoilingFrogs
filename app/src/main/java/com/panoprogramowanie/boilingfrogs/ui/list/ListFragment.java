@@ -8,7 +8,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
+
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -43,8 +46,9 @@ public abstract class ListFragment extends BoilingFrogsFragment {
         return result;
     }
 
-    public void setItems(ListItemModel[] items) {
-        adapter.setItems(items);
+    public void setItems(List<ListItemModel> items) {
+        //TODO array to list
+        adapter.setItems(items.toArray(new ListItemModel[0]));
     }
 
     protected abstract int getListItemLayoutId();

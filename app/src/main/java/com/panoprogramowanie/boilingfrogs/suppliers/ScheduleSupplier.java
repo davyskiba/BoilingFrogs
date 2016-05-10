@@ -1,11 +1,10 @@
 package com.panoprogramowanie.boilingfrogs.suppliers;
 
-import android.content.Context;
-
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.ui.main.MainActivity;
+
+import android.content.Context;
 
 import java.util.List;
 
@@ -20,5 +19,5 @@ public interface ScheduleSupplier{
 
     SpeechSlot getSpeechSlotBytId(long slotId);
     List<SpeechSlot> getAllSpeechSlots();
-    void speechSlotsFavoritesUpdated(Context context, SpeechSlot speechSlot);
+    void updateSpeechSlot(SpeechSlot speechSlot);
 }

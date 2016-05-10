@@ -44,16 +44,16 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
     public void takeSpeechSlot(SpeechSlot speechSlot, final int position, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
         this.speechSlot = speechSlot;
 
-        speechSlotTime.setText(speechSlot.getHeader());
+        speechSlotTime.setText(speechSlot.getTimeLabel());
 
-        Speech firstSpeech = speechSlot.getSpeechForPath(speechSlot.getFavoriteSpeechPath());
+        Speech speech = speechSlot.getFavoriteSpeech();
         AvatarLoaderUtil.loadAvatar(
-                this.itemView.getContext(), firstSpeech.getPhotoUrl(), photo, R.drawable.avatar_placeholder);
-        title.setText(firstSpeech.getTitle());
-        subtitle.setText(firstSpeech.getSubtitle());
+                this.itemView.getContext(), speech.getSpeaker().getPhotoUrl(), photo, R.drawable.avatar_placeholder);
+        title.setText(speech.getTitle());
+        subtitle.setText(speech.getSpeaker().getName());
 
-        if (firstSpeech.getDescription() != null) {
-            speechSlotPath.setText(itemView.getContext().getString(R.string.my_schedule_path) + " " + firstSpeech.getPath());
+        if (speech.getDescription() != null) {
+            speechSlotPath.setText(itemView.getContext().getString(R.string.my_schedule_path) + " " + speech.getPath());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

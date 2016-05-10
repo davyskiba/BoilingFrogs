@@ -26,7 +26,8 @@ public class SpeechSlotPresenter extends Presenter<SpeechSlotFragment> {
 
     public void onResume(long slotId) {
         speechSlot=scheduleSupplier.getSpeechSlotBytId(slotId);
-        getView().setItems(speechSlot.getSpeeches());
+        //TODO uncomment
+//        getView().setItems(speechSlot.getSpeechList().toArray(new Speech[0]));
     }
 
     public void speechClicked(Speech clickedSpeech) {

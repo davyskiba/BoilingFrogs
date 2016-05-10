@@ -15,6 +15,8 @@ import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.DividerItemDecoration;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import butterknife.Bind;
@@ -73,8 +75,9 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
         presenter.onResume();
     }
 
-    public void setSpeechSlots(SpeechSlot[] slots) {
-        adapter.setItems(slots);
+    public void setSpeechSlots(List<SpeechSlot> slots) {
+        //TODO LIST
+        adapter.setItems(slots.toArray(new SpeechSlot[0]));
     }
 
     @Override

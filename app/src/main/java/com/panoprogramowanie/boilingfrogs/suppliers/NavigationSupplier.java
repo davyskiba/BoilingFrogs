@@ -1,9 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.suppliers;
 
-import android.support.v7.app.AppCompatActivity;
-
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
-import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragmentActivity;
 

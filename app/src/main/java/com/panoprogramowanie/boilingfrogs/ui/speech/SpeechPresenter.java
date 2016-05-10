@@ -1,7 +1,5 @@
 package com.panoprogramowanie.boilingfrogs.ui.speech;
 
-import android.content.Context;
-
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
@@ -39,21 +37,21 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
     }
 
     public boolean isSpeechFavorite() {
-        return speechSlot.getFavoriteSpeechPath() == speech.getPath();
+        return speechSlot.getFavoriteSpeechId()==speech.getId();
     }
 
     public void favoriteClicked() {
         if (isSpeechFavorite()) {
-            speechSlot.setFavoriteSpeechPath(-1);
+            speechSlot.setFavoriteSpeech(null);
             displaySnackbar(R.string.speech_removed_from_favorites);
         } else {
-            speechSlot.setFavoriteSpeechPath(speech.getPath());
+            speechSlot.setFavoriteSpeech(speech);
             displaySnackbar(R.string.speech_added_to_favorites);
         }
 
         getView().displayFavorite(isSpeechFavorite());
 
-        scheduleSupplier.speechSlotsFavoritesUpdated(getContext(),speechSlot);
+        scheduleSupplier.updateSpeechSlot(speechSlot);
     }
 
     private void displaySnackbar(int textId) {
