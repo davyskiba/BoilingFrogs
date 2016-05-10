@@ -78,8 +78,8 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     }
 
     @Override
-    public void onEmptySlotClicked(int slotPosition) {
-        presenter.onEmptySlotClicked(slotPosition);
+    public void onEmptySlotClicked(SpeechSlot slot) {
+        presenter.onEmptySlotClicked(slot);
     }
 
     @Override

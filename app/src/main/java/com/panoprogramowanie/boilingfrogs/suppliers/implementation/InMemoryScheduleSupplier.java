@@ -51,6 +51,11 @@ public class InMemoryScheduleSupplier implements ScheduleSupplier {
     }
 
     @Override
+    public SpeechSlot getSpeechSlotBytId(long slotId) {
+        return schedule.getSpeechSlots()[1];
+    }
+
+    @Override
     public Speech getSpeechById(long id) {
         return schedule.getSpeechSlots()[1].getSpeeches()[1];
     }

@@ -24,7 +24,7 @@ public class ScheduleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return SpeechSlotFragment.createInstance(slots[position], position);
+        return SpeechSlotFragment.createInstance(slots[position]);
     }
 
     @Override

@@ -15,4 +15,6 @@ public interface IdScheduleSupplier {
     Speech getSpeechById(long id);
 
     void speechSlotsFavoritesUpdated(Context context, SpeechSlot speechSlot);
+
+    SpeechSlot getSpeechSlotBytId(long slotId);
 }

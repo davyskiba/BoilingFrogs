@@ -64,9 +64,8 @@ public class NavigationSupplierImpl implements NavigationSupplier {
     }
 
     @Override
-    public void navigateToSlotDetail(int speechSlotPosition) {
-        SpeechSlot destinationSpeechSlot = scheduleSupplier.getSpeechSlotForPosition(speechSlotPosition);
-        SpeechSlotFragment fragment = SpeechSlotFragment.createInstance(destinationSpeechSlot, speechSlotPosition);
+    public void navigateToSlotDetail(SpeechSlot speechSlot) {
+        SpeechSlotFragment fragment = SpeechSlotFragment.createInstance(speechSlot);
         replaceFragment(fragment, true);
     }
 

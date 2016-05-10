@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
+import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragmentActivity;
 
 /**
@@ -19,7 +20,7 @@ public interface NavigationSupplier {
 
     void navigateToSpeaker(Speaker speaker);
 
-    void navigateToSlotDetail(int speechSlot);
+    void navigateToSlotDetail(SpeechSlot speechSlot);
 
     void navigateToSchedule();
 

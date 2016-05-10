@@ -3,6 +3,7 @@ package com.panoprogramowanie.boilingfrogs.ui.speechslot;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
+import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.ui.base.Presenter;
 
 import javax.inject.Inject;
@@ -13,19 +14,18 @@ import javax.inject.Inject;
 public class SpeechSlotPresenter extends Presenter<SpeechSlotFragment> {
 
     private SpeechSlot speechSlot;
-    private int slotPosition;
 
     private final NavigationSupplier navigationSupplier;
+    private final ScheduleSupplier scheduleSupplier;
 
     @Inject
-    public SpeechSlotPresenter(NavigationSupplier navigationSupplier) {
+    public SpeechSlotPresenter(NavigationSupplier navigationSupplier, ScheduleSupplier scheduleSupplier) {
         this.navigationSupplier = navigationSupplier;
+        this.scheduleSupplier = scheduleSupplier;
     }
 
-    public void onResume(SpeechSlot slot, int slotPosition) {
-        speechSlot = slot;
-        this.slotPosition = slotPosition;
-
+    public void onResume(long slotId) {
+        speechSlot=scheduleSupplier.getSpeechSlotBytId(slotId);
         getView().setItems(speechSlot.getSpeeches());
     }
 
