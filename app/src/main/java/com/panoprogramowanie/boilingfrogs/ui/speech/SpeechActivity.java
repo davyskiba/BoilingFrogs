@@ -39,13 +39,11 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
 
     //region Navigation
 
-    private final static String SPEECH_SLOT_ARG = "speech_slot_arg";
-    private final static String SPEECH_PATH_ARG = "speech_path_arg";
+    private final static String SPEECH_ID_ARG = "speech_id_arg";
 
-    public static void startForSpeech(int speechSlot, int speechPath, Activity activity) {
+    public static void startForSpeech(long speechId, Activity activity) {
         Intent intent = new Intent(activity, SpeechActivity.class);
-        intent.putExtra(SPEECH_SLOT_ARG, speechSlot);
-        intent.putExtra(SPEECH_PATH_ARG, speechPath);
+        intent.putExtra(SPEECH_ID_ARG, speechId);
         activity.startActivity(intent);
     }
 
@@ -98,12 +96,11 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
         floatingButtonDefaultTint = floatingActionButton.getBackgroundTintList();
         setupDrawerAndToolbar();
 
-        int speechSlotPosition = getIntent().getIntExtra(SPEECH_SLOT_ARG, 0);
-        int speechPath = getIntent().getIntExtra(SPEECH_PATH_ARG, 0);
+        long speechId=getIntent().getLongExtra(SPEECH_ID_ARG,0);
 
         BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
-        presenter.setSpeech(speechSlotPosition, speechPath);
+        presenter.setSpeech(speechId);
     }
 
     private void setupDrawerAndToolbar() {

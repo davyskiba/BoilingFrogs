@@ -28,7 +28,7 @@ public class MySchedulePresenter extends Presenter<MyScheduleFragment> {
         navigationSupplier.navigateToSlotDetail(slotPosition);
     }
 
-    public void onNonEmptySlotClicked(int slotPosition, SpeechSlot tappedSlot) {
-        navigationSupplier.navigateToSpeech(slotPosition, tappedSlot.getFavoriteSpeechPath());
+    public void onNonEmptySlotClicked(long speechId) {
+        navigationSupplier.navigateToSpeech(speechId);
     }
 }

@@ -83,8 +83,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     }
 
     @Override
-    public void onNonEmptySlotClicked(int slotPosition) {
-        SpeechSlot tappedSlot = adapter.getItem(slotPosition);
-        presenter.onNonEmptySlotClicked(slotPosition, tappedSlot);
+    public void onNonEmptySlotClicked(long speechId) {
+        presenter.onNonEmptySlotClicked(speechId);
     }
 }

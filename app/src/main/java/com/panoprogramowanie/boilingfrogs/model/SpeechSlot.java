@@ -15,6 +15,7 @@ public class SpeechSlot implements Parcelable {
     int favoriteSpeechPath = -1;
 
     public SpeechSlot() {
+        speeches=new Speech[0];
     }
 
     public SpeechSlot(Parcel in) {

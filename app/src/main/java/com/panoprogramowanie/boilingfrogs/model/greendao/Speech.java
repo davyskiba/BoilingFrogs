@@ -26,6 +26,9 @@ public class Speech {
     private Speaker speaker;
     private Long speaker__resolvedKey;
 
+    private SpeechSlot speechSlot;
+    private Long speechSlot__resolvedKey;
+
 
     public Speech() {
     }
@@ -128,6 +131,31 @@ public class Speech {
             this.speaker = speaker;
             speakerId = speaker == null ? null : speaker.getId();
             speaker__resolvedKey = speakerId;
+        }
+    }
+
+    /** To-one relationship, resolved on first access. */
+    public SpeechSlot getSpeechSlot() {
+        Long __key = this.speechSlotId;
+        if (speechSlot__resolvedKey == null || !speechSlot__resolvedKey.equals(__key)) {
+            if (daoSession == null) {
+                throw new DaoException("Entity is detached from DAO context");
+            }
+            SpeechSlotDao targetDao = daoSession.getSpeechSlotDao();
+            SpeechSlot speechSlotNew = targetDao.load(__key);
+            synchronized (this) {
+                speechSlot = speechSlotNew;
+            	speechSlot__resolvedKey = __key;
+            }
+        }
+        return speechSlot;
+    }
+
+    public void setSpeechSlot(SpeechSlot speechSlot) {
+        synchronized (this) {
+            this.speechSlot = speechSlot;
+            speechSlotId = speechSlot == null ? null : speechSlot.getId();
+            speechSlot__resolvedKey = speechSlotId;
         }
     }
 

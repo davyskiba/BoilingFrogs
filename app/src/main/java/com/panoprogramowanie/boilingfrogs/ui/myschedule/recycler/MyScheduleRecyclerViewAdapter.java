@@ -109,9 +109,9 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
     }
 
     public interface OnSlotClickListener {
-        void onEmptySlotClicked(int slotPosition);
+        void onEmptySlotClicked(int slotId);
 
-        void onNonEmptySlotClicked(int slotPosition);
+        void onNonEmptySlotClicked(long slotId);
     }
 
     //endregion

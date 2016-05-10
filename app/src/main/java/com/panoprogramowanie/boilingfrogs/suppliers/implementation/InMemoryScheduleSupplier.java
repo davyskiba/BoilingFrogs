@@ -41,11 +41,6 @@ public class InMemoryScheduleSupplier implements ScheduleSupplier {
         return schedule.getSpeakers();
     }
 
-    @Override
-    public Speaker getSpeakerById(int id) {
-        return getSpeakerById(schedule,id);
-    }
-
     public static Speaker getSpeakerById(Schedule schedule, int id) {
         return schedule.getSpeakers()[id - 1];
     }
@@ -53,6 +48,11 @@ public class InMemoryScheduleSupplier implements ScheduleSupplier {
     @Override
     public SpeechSlot getSpeechSlotForPosition(int position) {
         return schedule.getSpeechSlots()[position];
+    }
+
+    @Override
+    public Speech getSpeechById(long id) {
+        return schedule.getSpeechSlots()[1].getSpeeches()[1];
     }
 
     public void loadSchedule(Context context) {

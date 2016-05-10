@@ -156,5 +156,9 @@ public class Speech implements Parcelable, ListItemModel {
         }
     };
 
+    public SpeechSlot getSpeechSlot() {
+        return new SpeechSlot();
+    }
+
     //endregion
 }

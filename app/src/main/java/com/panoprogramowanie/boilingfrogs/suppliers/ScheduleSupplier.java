@@ -10,14 +10,8 @@ import com.panoprogramowanie.boilingfrogs.ui.main.MainActivity;
 /**
  * Created by Wojciech on 09.01.2016.
  */
-public interface ScheduleSupplier {
-    SpeechSlot[] getAllSpeechSlots();
-
-    Speaker[] getAllSpeakers();
-
-    Speaker getSpeakerById(int id);
+public interface ScheduleSupplier extends IdScheduleSupplier{
 
     SpeechSlot getSpeechSlotForPosition(int position);
 
-    void speechSlotsFavoritesUpdated(Context context, SpeechSlot speechSlot);
 }

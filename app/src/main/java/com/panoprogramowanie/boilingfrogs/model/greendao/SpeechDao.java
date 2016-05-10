@@ -209,8 +209,11 @@ public class SpeechDao extends AbstractDao<Speech, Long> {
             SqlUtils.appendColumns(builder, "T", getAllColumns());
             builder.append(',');
             SqlUtils.appendColumns(builder, "T0", daoSession.getSpeakerDao().getAllColumns());
+            builder.append(',');
+            SqlUtils.appendColumns(builder, "T1", daoSession.getSpeechSlotDao().getAllColumns());
             builder.append(" FROM SPEECH T");
             builder.append(" LEFT JOIN SPEAKER T0 ON T.\"SPEAKER_ID\"=T0.\"ID\"");
+            builder.append(" LEFT JOIN SPEECH_SLOT T1 ON T.\"SPEECH_SLOT_ID\"=T1.\"ID\"");
             builder.append(' ');
             selectDeep = builder.toString();
         }
@@ -223,6 +226,10 @@ public class SpeechDao extends AbstractDao<Speech, Long> {
 
         Speaker speaker = loadCurrentOther(daoSession.getSpeakerDao(), cursor, offset);
         entity.setSpeaker(speaker);
+        offset += daoSession.getSpeakerDao().getAllColumns().length;
+
+        SpeechSlot speechSlot = loadCurrentOther(daoSession.getSpeechSlotDao(), cursor, offset);
+        entity.setSpeechSlot(speechSlot);
 
         return entity;    
     }

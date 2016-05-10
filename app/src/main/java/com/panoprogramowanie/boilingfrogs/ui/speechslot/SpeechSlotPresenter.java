@@ -30,6 +30,6 @@ public class SpeechSlotPresenter extends Presenter<SpeechSlotFragment> {
     }
 
     public void speechClicked(Speech clickedSpeech) {
-        navigationSupplier.navigateToSpeech(slotPosition, clickedSpeech.getPath());
+        navigationSupplier.navigateToSpeech(clickedSpeech.getId());
     }
 }

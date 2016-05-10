@@ -15,7 +15,7 @@ public interface NavigationSupplier {
 
     void registerFragmentActivity(BoilingFrogsFragmentActivity activity);
 
-    void navigateToSpeech(int speechSlot, int speechPath);
+    void navigateToSpeech(long speechId);
 
     void navigateToSpeaker(Speaker speaker);
 

@@ -54,8 +54,8 @@ public class NavigationSupplierImpl implements NavigationSupplier {
     }
 
     @Override
-    public void navigateToSpeech(int speechSlot, int speechPath) {
-        SpeechActivity.startForSpeech(speechSlot, speechPath, currentFragmentActivity);
+    public void navigateToSpeech(long speechId) {
+        SpeechActivity.startForSpeech(speechId, currentFragmentActivity);
     }
 
     @Override

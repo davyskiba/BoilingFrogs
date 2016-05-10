@@ -22,21 +22,15 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
     private SpeechSlot speechSlot;
     private Speech speech;
 
-    private int speechSlotPosition;
-    private int speechPath;
-
     @Inject
     public SpeechPresenter(ScheduleSupplier scheduleSupplier, NotificationSupplier notificationSupplier) {
         this.scheduleSupplier = scheduleSupplier;
         this.notificationSupplier = notificationSupplier;
     }
 
-    public void setSpeech(int speechSlotPosition, int speechPath) {
-        this.speechSlotPosition = speechSlotPosition;
-        this.speechPath = speechPath;
-
-        speechSlot = scheduleSupplier.getSpeechSlotForPosition(speechSlotPosition);
-        speech = speechSlot.getSpeechForPath(speechPath);
+    public void setSpeech(long speechId) {
+        speech = scheduleSupplier.getSpeechById(speechId);
+        speechSlot = speech.getSpeechSlot();
 
         SpeechActivity view = getView();
         view.displaySpeech(speech);
