@@ -12,7 +12,8 @@ public class Generator {
     private static final String OUT_DIR = PROJECT_DIR + "/app/src/main/java";
 
     public static void main(String args[]) throws Exception {
-        Schema schema = new Schema(1, "com.panoprogramowanie.boilingfrogs.model.greendao");
+        Schema schema = new Schema(1, "com.panoprogramowanie.boilingfrogs.model");
+        schema.enableKeepSectionsByDefault();
 
         Entity speaker=addSpeaker(schema);
         Entity speech=addSpeech(schema);
@@ -50,6 +51,9 @@ public class Generator {
 
     private static Entity addSpeech(Schema schema) {
         Entity speech=schema.addEntity("Speech");
+        speech.implementsInterface("ListItemModel");
+        speech.addImport("com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel");
+
         speech.addLongProperty("id").primaryKey();
         speech.addStringProperty("title");
         speech.addStringProperty("description");

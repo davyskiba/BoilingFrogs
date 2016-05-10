@@ -46,7 +46,7 @@ public abstract class ListFragment extends BoilingFrogsFragment {
         return result;
     }
 
-    public void setItems(List<ListItemModel> items) {
+    public void setItems(List<? extends ListItemModel> items) {
         //TODO array to list
         adapter.setItems(items.toArray(new ListItemModel[0]));
     }
