@@ -30,7 +30,7 @@ public class MyScheduleBreakViewHolder extends MyScheduleSpeechSlotViewHolderBas
     }
 
     @Override
-    public void takeSpeechSlot(SpeechSlot speechSlot, int position, MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
+    public void takeSpeechSlot(SpeechSlot speechSlot, MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
         this.speechSlot = speechSlot;
 
         speechSlotTime.setText(speechSlot.getTimeLabel());

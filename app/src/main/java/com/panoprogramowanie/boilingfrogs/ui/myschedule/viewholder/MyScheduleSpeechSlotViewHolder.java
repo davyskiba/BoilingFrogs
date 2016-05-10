@@ -41,12 +41,12 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
     }
 
     @Override
-    public void takeSpeechSlot(SpeechSlot speechSlot, final int position, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
+    public void takeSpeechSlot(SpeechSlot speechSlot, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
         this.speechSlot = speechSlot;
 
         speechSlotTime.setText(speechSlot.getTimeLabel());
 
-        Speech speech = speechSlot.getFavoriteSpeech();
+        final Speech speech = speechSlot.getFavoriteSpeech();
         AvatarLoaderUtil.loadAvatar(
                 this.itemView.getContext(), speech.getSpeaker().getPhotoUrl(), photo, R.drawable.avatar_placeholder);
         title.setText(speech.getTitle());
@@ -57,7 +57,7 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onSlotClickListener.onNonEmptySlotClicked(position);
+                    onSlotClickListener.onNonEmptySlotClicked(speech.getId());
                 }
             });
         }

@@ -86,7 +86,7 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @Override
     public void onBindViewHolder(MyScheduleSpeechSlotViewHolderBase holder, int position) {
-        holder.takeSpeechSlot(speechSlots.get(position), position, onSlotClickListener);
+        holder.takeSpeechSlot(speechSlots.get(position), onSlotClickListener);
     }
 
     //endregion
@@ -114,7 +114,7 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
     public interface OnSlotClickListener {
         void onEmptySlotClicked(SpeechSlot slot);
 
-        void onNonEmptySlotClicked(long slotId);
+        void onNonEmptySlotClicked(long speechId);
     }
 
     //endregion

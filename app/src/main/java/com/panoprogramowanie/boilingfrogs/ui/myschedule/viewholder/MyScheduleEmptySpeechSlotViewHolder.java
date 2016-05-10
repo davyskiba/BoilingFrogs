@@ -26,7 +26,7 @@ public class MyScheduleEmptySpeechSlotViewHolder extends MyScheduleSpeechSlotVie
     }
 
     @Override
-    public void takeSpeechSlot(final SpeechSlot speechSlot, final int position, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
+    public void takeSpeechSlot(final SpeechSlot speechSlot, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
         this.speechSlot = speechSlot;
 
         speechSlotTime.setText(speechSlot.getTimeLabel());
