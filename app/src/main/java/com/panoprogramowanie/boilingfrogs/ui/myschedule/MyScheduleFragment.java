@@ -76,8 +76,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     }
 
     public void setSpeechSlots(List<SpeechSlot> slots) {
-        //TODO LIST
-        adapter.setItems(slots.toArray(new SpeechSlot[0]));
+        adapter.setItems(slots);
     }
 
     @Override

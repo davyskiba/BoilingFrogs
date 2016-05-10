@@ -15,5 +15,6 @@ public abstract class MyScheduleSpeechSlotViewHolderBase extends RecyclerView.Vi
     }
 
 
+    //TODO remove position?
     public abstract void takeSpeechSlot(SpeechSlot speechSlot, int position, MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener);
 }

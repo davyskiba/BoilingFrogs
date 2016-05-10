@@ -126,7 +126,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
     public void displaySpeech(Speech speech) {
         speechTitle.setText(speech.getTitle());
         speechTime.setText(speech.getSpeechSlot().getTimeLabel());
-        speechDescription.setText(speech.getDescription().replace("\\n", "\n").replace("\n\n", "\n").replace("\n", "\n\n"));
+        speechDescription.setText(speech.getDescription());
     }
 
     public void displaySpeakerData(Speaker speaker) {

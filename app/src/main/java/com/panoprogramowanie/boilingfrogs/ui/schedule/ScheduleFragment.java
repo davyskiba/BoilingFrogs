@@ -65,16 +65,14 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     }
 
     public void setData(List<SpeechSlot> slots) {
-        //TODO Array to list
-        SpeechSlot[] speechSlots=slots.toArray(new SpeechSlot[0]);
-        adapter.setData(speechSlots);
+        adapter.setData(slots);
 
-        resetTabs(speechSlots);
+        resetTabs(slots);
     }
 
     //region Tabs
 
-    private void resetTabs(SpeechSlot[] slots) {
+    private void resetTabs(List<SpeechSlot> slots) {
         int selectedTabPosition = selectedItem;
 
         tabLayout.removeAllTabs();
@@ -87,9 +85,9 @@ public class ScheduleFragment extends BoilingFrogsFragment {
         }
     }
 
-    private void addTabs(TabLayout tabLayout, SpeechSlot[] slots, int selectedPosition) {
-        for (int i = 0; i < slots.length; i++) {
-            TabLayout.Tab tab = tabLayout.newTab().setText(slots[i].getTimeLabel());
+    private void addTabs(TabLayout tabLayout, List<SpeechSlot> slots, int selectedPosition) {
+        for (int i = 0; i < slots.size(); i++) {
+            TabLayout.Tab tab = tabLayout.newTab().setText(slots.get(i).getTimeLabel());
             if (i == selectedPosition) {
                 tab.select();
             }

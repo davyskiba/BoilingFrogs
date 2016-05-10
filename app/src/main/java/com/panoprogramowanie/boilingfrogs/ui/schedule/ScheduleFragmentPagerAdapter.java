@@ -8,31 +8,34 @@ import android.support.v13.app.FragmentPagerAdapter;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.speechslot.SpeechSlotFragment;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Wojciech on 07.01.2016.
  */
 public class ScheduleFragmentPagerAdapter extends FragmentPagerAdapter {
 
 
-    private SpeechSlot[] slots;
+    private List<SpeechSlot> slots;
 
     public ScheduleFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
 
-        this.slots = new SpeechSlot[0];
+        this.slots = new LinkedList<>();
     }
 
     @Override
     public Fragment getItem(int position) {
-        return SpeechSlotFragment.createInstance(slots[position]);
+        return SpeechSlotFragment.createInstance(slots.get(position));
     }
 
     @Override
     public int getCount() {
-        return slots.length;
+        return slots.size();
     }
 
-    public void setData(SpeechSlot[] slots) {
+    public void setData(List<SpeechSlot> slots) {
         this.slots = slots;
         notifyDataSetChanged();
     }

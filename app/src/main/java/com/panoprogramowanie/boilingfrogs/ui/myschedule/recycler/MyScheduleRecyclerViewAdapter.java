@@ -14,6 +14,7 @@ import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleEmp
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpeechSlotViewHolder;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpeechSlotViewHolderBase;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -27,15 +28,15 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     private OnSlotClickListener onSlotClickListener;
 
-    private SpeechSlot[] speechSlots;
+    private List<SpeechSlot> speechSlots;
 
     public MyScheduleRecyclerViewAdapter() {
-        speechSlots = new SpeechSlot[0];
+        speechSlots = new LinkedList<>();
     }
 
     @Override
     public int getItemViewType(int position) {
-        SpeechSlot speechSlot = speechSlots[position];
+        SpeechSlot speechSlot = speechSlots.get(position);
         List<Speech> speechList = speechSlot.getSpeechList();
 
         if (speechList.size() == 1 && speechList.get(0).getSpeaker()==null) {
@@ -85,21 +86,21 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @Override
     public void onBindViewHolder(MyScheduleSpeechSlotViewHolderBase holder, int position) {
-        holder.takeSpeechSlot(speechSlots[position], position, onSlotClickListener);
+        holder.takeSpeechSlot(speechSlots.get(position), position, onSlotClickListener);
     }
 
     //endregion
 
     @Override
     public int getItemCount() {
-        return speechSlots.length;
+        return speechSlots.size();
     }
 
     public SpeechSlot getItem(int slotPosition) {
-        return speechSlots[slotPosition];
+        return speechSlots.get(slotPosition);
     }
 
-    public void setItems(SpeechSlot[] items) {
+    public void setItems(List<SpeechSlot> items) {
         speechSlots = items;
         notifyDataSetChanged();
     }
