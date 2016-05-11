@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -16,8 +18,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+//import com.panoprogramowanie.boilingfrogs.BR;
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
+//import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
+import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
@@ -83,20 +88,23 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
 
     //endregion
 
+    private SpeechActivityBinding binding;
     private ColorStateList floatingButtonDefaultTint;
 
     @Inject
     SpeechPresenter presenter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.speech_activity);
+        binding=DataBindingUtil.setContentView(this,R.layout.speech_activity);
+
         ButterKnife.bind(this);
         floatingButtonDefaultTint = floatingActionButton.getBackgroundTintList();
         setupDrawerAndToolbar();
 
-        long speechId=getIntent().getLongExtra(SPEECH_ID_ARG,0);
+        long speechId = getIntent().getLongExtra(SPEECH_ID_ARG, 0);
 
         BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
@@ -124,7 +132,10 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
     //region DataDisplay
 
     public void displaySpeech(Speech speech) {
-        speechTitle.setText(speech.getTitle());
+        binding.setSpeech(speech);
+        binding.executePendingBindings();
+
+//        speechTitle.setText(speech.getTitle());
         speechTime.setText(speech.getSpeechSlot().getTimeLabel());
         speechDescription.setText(speech.getDescription());
     }
