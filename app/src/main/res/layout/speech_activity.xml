@@ -2,6 +2,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable name="speech" type="com.panoprogramowanie.boilingfrogs.model.Speech"/>
+        <variable name="speaker" type="com.panoprogramowanie.boilingfrogs.model.Speaker"/>
     </data>
 <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -59,7 +60,8 @@
                     android:singleLine="false"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:text="@{speaker.name}"/>
 
             <TextView
                     android:id="@+id/speaker_occupation"
@@ -67,7 +69,8 @@
                     android:layout_height="wrap_content"
                     android:singleLine="false"
                     android:textColor="@color/dark_gray"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp"
+            android:text="@{speaker.occupation}"/>
 
             <TextView
                     android:id="@+id/speech_title"
@@ -85,6 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="false"
+                    android:text="@{speech.speechSlot.timeLabel}"
                     android:drawableLeft="@drawable/ic_time"
                     android:drawablePadding="2dp"
                     android:textColor="@color/black"
@@ -100,7 +104,8 @@
                     android:textSize="16sp"
                     android:lineSpacingExtra="3dp"
                     android:singleLine="false"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:text="@{speech.description}"/>
             <include
                     android:id="@+id/speaker_social"
                     layout="@layout/social_view"
