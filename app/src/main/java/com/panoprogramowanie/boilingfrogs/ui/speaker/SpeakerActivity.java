@@ -3,6 +3,7 @@ package com.panoprogramowanie.boilingfrogs.ui.speaker;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.widget.NestedScrollView;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.databinding.SpeakerActivityBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
@@ -47,25 +49,12 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
     @Bind(R.id.contentScroll)
     NestedScrollView contentScroll;
 
-    @Bind(R.id.header)
-    ImageView avatar;
-
-    @Bind(R.id.speaker_name)
-    TextView speakerName;
-
-    @Bind(R.id.speaker_occupation)
-    TextView speakerOccupation;
-
-    @Bind(R.id.speaker_about)
-    TextView speakerAbout;
-
     @Bind(R.id.collapsing_toolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
 
-    @Bind(R.id.speaker_social)
-    SocialView socialView;
-
     //endregion
+
+    SpeakerActivityBinding binding;
 
     @Inject
     SpeakerPresenter presenter;
@@ -73,7 +62,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.speaker_activity);
+        binding=DataBindingUtil.setContentView(this,R.layout.speaker_activity);
 
         ButterKnife.bind(this);
 
@@ -88,12 +77,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
     }
 
     public void displaySpeakerData(Speaker speaker) {
-        speakerName.setText(speaker.getName());
-        speakerOccupation.setText(speaker.getOccupation());
-        speakerAbout.setText(speaker.getDescription().replace("\\n", "\n").replace("\n\n", "\n").replace("\n", "\n\n"));
-
-        socialView.setSpeaker(speaker);
-        AvatarLoaderUtil.loadAvatar(speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
+        binding.setSpeaker(speaker);
     }
 
     private void setupDrawerAndToolbar() {

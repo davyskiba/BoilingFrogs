@@ -6,7 +6,6 @@ import android.widget.ImageView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.panoprogramowanie.boilingfrogs.R;
 
 /**
  * Created by Wojciech on 11.01.2016.
