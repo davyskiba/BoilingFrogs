@@ -61,7 +61,7 @@ public class ListItemModelView extends RelativeLayout {
         } else {
             setTextGravity(Gravity.LEFT);
             setPhotoVisibiliy(View.VISIBLE);
-            AvatarLoaderUtil.loadAvatar(getContext(), photoUrl, photo, R.drawable.avatar_placeholder);
+            AvatarLoaderUtil.loadAvatar(photoUrl, photo, R.drawable.avatar_placeholder);
         }
     }
 

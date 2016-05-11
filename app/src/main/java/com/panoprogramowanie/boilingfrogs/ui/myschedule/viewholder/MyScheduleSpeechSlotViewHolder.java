@@ -48,7 +48,7 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
 
         final Speech speech = speechSlot.getFavoriteSpeech();
         AvatarLoaderUtil.loadAvatar(
-                this.itemView.getContext(), speech.getSpeaker().getPhotoUrl(), photo, R.drawable.avatar_placeholder);
+                speech.getSpeaker().getPhotoUrl(), photo, R.drawable.avatar_placeholder);
         title.setText(speech.getTitle());
         subtitle.setText(speech.getSpeaker().getName());
 

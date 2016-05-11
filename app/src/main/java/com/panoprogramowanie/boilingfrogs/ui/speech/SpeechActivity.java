@@ -5,11 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -25,8 +23,6 @@ import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
-import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
-import com.panoprogramowanie.boilingfrogs.suppliers.implementation.NotificationSupplierImpl;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
@@ -139,8 +135,6 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
         binding.setSpeaker(speaker);
 
         socialView.setupForSpeaker(speaker);
-
-        AvatarLoaderUtil.loadAvatar(this, speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
     }
 
     public void displayFavorite(boolean isFavorite) {
