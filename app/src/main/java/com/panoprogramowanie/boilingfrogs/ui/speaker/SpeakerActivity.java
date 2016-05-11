@@ -92,7 +92,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
         speakerOccupation.setText(speaker.getOccupation());
         speakerAbout.setText(speaker.getDescription().replace("\\n", "\n").replace("\n\n", "\n").replace("\n", "\n\n"));
 
-        socialView.setupForSpeaker(speaker);
+        socialView.setSpeaker(speaker);
         AvatarLoaderUtil.loadAvatar(speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
     }
 

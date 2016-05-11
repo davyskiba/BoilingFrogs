@@ -2,6 +2,7 @@ package com.panoprogramowanie.boilingfrogs.ui.view;
 
 import android.content.Context;
 import android.content.Intent;
+import android.databinding.BindingAdapter;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -40,7 +41,7 @@ public class SocialView extends LinearLayout {
         ButterKnife.bind(this);
     }
 
-    public void setupForSpeaker(Speaker speaker) {
+    public void setSpeaker(Speaker speaker) {
         this.speaker = speaker;
 
         facebook.setVisibility(GONE);
@@ -81,9 +82,13 @@ public class SocialView extends LinearLayout {
         launchBrowser(speaker.getLinkedin());
     }
 
-
     private void launchBrowser(String url) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         getContext().startActivity(browserIntent);
+    }
+
+    @BindingAdapter("bind:speaker")
+    public static void setSpeaker(SocialView view, Speaker speaker){
+        view.setSpeaker(speaker);
     }
 }

@@ -25,7 +25,6 @@ import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
-import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
 import javax.inject.Inject;
 
@@ -55,29 +54,8 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
     @Bind(R.id.contentScroll)
     NestedScrollView contentScroll;
 
-    @Bind(R.id.header)
-    ImageView avatar;
-
-    @Bind(R.id.speaker_name)
-    TextView speakerName;
-
-    @Bind(R.id.speaker_occupation)
-    TextView speakerOccupation;
-
-    @Bind(R.id.speech_title)
-    TextView speechTitle;
-
-    @Bind(R.id.speech_time)
-    TextView speechTime;
-
-    @Bind(R.id.speech_description)
-    TextView speechDescription;
-
     @Bind(R.id.collapsing_toolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
-
-    @Bind(R.id.speaker_social)
-    SocialView socialView;
 
     @Bind(R.id.fab)
     FloatingActionButton floatingActionButton;
@@ -133,8 +111,6 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
 
     public void displaySpeakerData(Speaker speaker) {
         binding.setSpeaker(speaker);
-
-        socialView.setupForSpeaker(speaker);
     }
 
     public void displayFavorite(boolean isFavorite) {
