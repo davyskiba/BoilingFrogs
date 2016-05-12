@@ -59,7 +59,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
     }
 
     private void setupRecyclerView() {
-        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL,R.drawable.my_schedule_divider));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
