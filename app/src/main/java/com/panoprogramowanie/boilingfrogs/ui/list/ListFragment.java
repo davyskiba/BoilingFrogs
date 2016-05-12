@@ -31,19 +31,17 @@ public abstract class ListFragment extends BoilingFrogsFragment {
         View result = inflater.inflate(R.layout.list_fragment, container, false);
         ButterKnife.bind(this, result);
 
-        adapter = new ListItemModelRecyclerViewAdapter(getActivity(), R.layout.list_item);
+        adapter = new ListItemModelRecyclerViewAdapter();
+        adapter.setOnItemClickListener(new ListItemModelRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(ListItemModel clickedItem) {
+                onItemClicked(clickedItem);
+            }
+        });
 
         recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL,R.drawable.list_divider));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
-
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                ListItemModel clickedItem = adapter.getItem(position);
-//                onItemClicked(clickedItem);
-//            }
-//        });
 
         return result;
     }
