@@ -5,6 +5,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotListItemBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
@@ -35,25 +36,25 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
 
     SpeechSlot speechSlot;
 
-    public MyScheduleSpeechSlotViewHolder(View itemView) {
-        super(itemView);
+    private SpeechSlotListItemBinding binding;
+
+    public MyScheduleSpeechSlotViewHolder(SpeechSlotListItemBinding binding) {
+        super(binding.getRoot());
+        this.binding=binding;
         ButterKnife.bind(this, itemView);
     }
 
     @Override
     public void takeSpeechSlot(SpeechSlot speechSlot, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
-        this.speechSlot = speechSlot;
-
-        speechSlotTime.setText(speechSlot.getTimeLabel());
+        binding.setSpeechSlot(speechSlot);
 
         final Speech speech = speechSlot.getFavoriteSpeech();
-        AvatarLoaderUtil.loadAvatar(
-                speech.getSpeaker().getPhotoUrl(), photo, R.drawable.avatar_placeholder);
-        title.setText(speech.getTitle());
-        subtitle.setText(speech.getSpeaker().getName());
+//        AvatarLoaderUtil.loadAvatar(
+//                speech.getSpeaker().getPhotoUrl(), photo, R.drawable.avatar_placeholder);
+//        title.setText(speech.getTitle());
+//        subtitle.setText(speech.getSpeaker().getName());
 
         if (speech.getDescription() != null) {
-            speechSlotPath.setText(itemView.getContext().getString(R.string.my_schedule_path) + " " + speech.getPath());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

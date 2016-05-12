@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotEmptyListItemBinding;
+import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotListItemBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleEmptySpeechSlotViewHolder;
@@ -66,8 +67,8 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @NonNull
     public MyScheduleSpeechSlotViewHolder getMyScheduleSpeechSlotViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.speech_slot_list_item, null);
-        MyScheduleSpeechSlotViewHolder viewHolder = new MyScheduleSpeechSlotViewHolder(view);
+        SpeechSlotListItemBinding binding=DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.speech_slot_list_item,null,false);
+        MyScheduleSpeechSlotViewHolder viewHolder = new MyScheduleSpeechSlotViewHolder(binding);
         return viewHolder;
     }
 

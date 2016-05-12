@@ -207,6 +207,14 @@ public class Speech implements ListItemModel {
     public boolean isClickable() {
         return description!=null;
     }
+
+    public String getPathStringIfHasDescription(){
+        if(getDescription()!=null){
+            return "ŚCIEŻKA "+getPath();
+        }
+
+        return "";
+    }
     // KEEP METHODS END
 
 }
