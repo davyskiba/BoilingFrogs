@@ -28,7 +28,6 @@
                     app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                 <ImageView
-                        android:id="@+id/header"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fitsSystemWindows="true"
@@ -61,7 +60,6 @@
                           android:paddingRight="16dp">
 
                 <TextView
-                        android:id="@+id/speaker_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -72,7 +70,6 @@
                         android:text="@{speaker.name}"/>
 
                 <TextView
-                        android:id="@+id/speaker_occupation"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="false"
@@ -81,7 +78,6 @@
                         android:text="@{speaker.occupation}"/>
 
                 <TextView
-                        android:id="@+id/speaker_about"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -93,7 +89,6 @@
                         android:text="@{speaker.description}"/>
 
                 <include
-                        android:id="@+id/speaker_social"
                         layout="@layout/social_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
