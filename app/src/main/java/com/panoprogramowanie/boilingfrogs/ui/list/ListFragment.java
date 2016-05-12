@@ -39,7 +39,7 @@ public abstract class ListFragment extends BoilingFrogsFragment {
             }
         });
 
-        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL,R.drawable.list_divider));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), R.drawable.list_divider));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 
