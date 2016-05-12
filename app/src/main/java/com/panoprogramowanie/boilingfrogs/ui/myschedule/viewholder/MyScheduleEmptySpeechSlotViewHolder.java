@@ -4,38 +4,40 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotEmptyListItemBinding;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Wojciech on 13.01.2016.
  */
 public class MyScheduleEmptySpeechSlotViewHolder extends MyScheduleSpeechSlotViewHolderBase {
 
-    @Bind(R.id.speech_slot_time)
-    TextView speechSlotTime;
+    private MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener;
 
-    SpeechSlot speechSlot;
+    private SpeechSlotEmptyListItemBinding binding;
 
-    public MyScheduleEmptySpeechSlotViewHolder(View itemView) {
-        super(itemView);
+    public MyScheduleEmptySpeechSlotViewHolder(SpeechSlotEmptyListItemBinding binding) {
+        super(binding.getRoot());
+
+        this.binding=binding;
         ButterKnife.bind(this, itemView);
     }
 
     @Override
     public void takeSpeechSlot(final SpeechSlot speechSlot, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
-        this.speechSlot = speechSlot;
+        binding.setSpeechSlot(speechSlot);
+        this.onSlotClickListener=onSlotClickListener;
+    }
 
-        speechSlotTime.setText(speechSlot.getTimeLabel());
-
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onSlotClickListener.onEmptySlotClicked(speechSlot);
-            }
-        });
+    @OnClick(R.id.speech_slot_container)
+    public void onSpeechSlotContainerClicked(){
+        if(onSlotClickListener!=null){
+            onSlotClickListener.onEmptySlotClicked(binding.getSpeechSlot());
+        }
     }
 }

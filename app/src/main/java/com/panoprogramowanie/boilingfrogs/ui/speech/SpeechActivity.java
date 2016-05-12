@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,15 +16,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+//import com.panoprogramowanie.boilingfrogs.BR;
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
+//import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
+import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
-import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
-import com.panoprogramowanie.boilingfrogs.suppliers.implementation.NotificationSupplierImpl;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
-import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
 import javax.inject.Inject;
 
@@ -54,49 +54,31 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
     @Bind(R.id.contentScroll)
     NestedScrollView contentScroll;
 
-    @Bind(R.id.header)
-    ImageView avatar;
-
-    @Bind(R.id.speaker_name)
-    TextView speakerName;
-
-    @Bind(R.id.speaker_occupation)
-    TextView speakerOccupation;
-
-    @Bind(R.id.speech_title)
-    TextView speechTitle;
-
-    @Bind(R.id.speech_time)
-    TextView speechTime;
-
-    @Bind(R.id.speech_description)
-    TextView speechDescription;
-
     @Bind(R.id.collapsing_toolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
-
-    @Bind(R.id.speaker_social)
-    SocialView socialView;
 
     @Bind(R.id.fab)
     FloatingActionButton floatingActionButton;
 
     //endregion
 
+    private SpeechActivityBinding binding;
     private ColorStateList floatingButtonDefaultTint;
 
     @Inject
     SpeechPresenter presenter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.speech_activity);
+        binding=DataBindingUtil.setContentView(this,R.layout.speech_activity);
+
         ButterKnife.bind(this);
         floatingButtonDefaultTint = floatingActionButton.getBackgroundTintList();
         setupDrawerAndToolbar();
 
-        long speechId=getIntent().getLongExtra(SPEECH_ID_ARG,0);
+        long speechId = getIntent().getLongExtra(SPEECH_ID_ARG, 0);
 
         BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
@@ -124,17 +106,11 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
     //region DataDisplay
 
     public void displaySpeech(Speech speech) {
-        speechTitle.setText(speech.getTitle());
-        speechTime.setText(speech.getSpeechSlot().getTimeLabel());
-        speechDescription.setText(speech.getDescription());
+        binding.setSpeech(speech);
     }
 
     public void displaySpeakerData(Speaker speaker) {
-        speakerName.setText(speaker.getName());
-        speakerOccupation.setText(speaker.getOccupation());
-        socialView.setupForSpeaker(speaker);
-
-        AvatarLoaderUtil.loadAvatar(this, speaker.getPhotoUrl(), avatar, R.drawable.avatar_placeholder);
+        binding.setSpeaker(speaker);
     }
 
     public void displayFavorite(boolean isFavorite) {
