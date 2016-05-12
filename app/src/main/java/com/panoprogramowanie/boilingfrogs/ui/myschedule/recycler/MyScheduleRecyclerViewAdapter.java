@@ -1,5 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler;
 
+import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotEmptyListItemBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleEmptySpeechSlotViewHolder;
@@ -57,8 +59,8 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @NonNull
     public MyScheduleEmptySpeechSlotViewHolder getMyScheduleEmptySpeechSlotViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.speech_slot_empty_list_item, null);
-        MyScheduleEmptySpeechSlotViewHolder viewHolder = new MyScheduleEmptySpeechSlotViewHolder(view);
+        SpeechSlotEmptyListItemBinding binding=DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.speech_slot_empty_list_item,null,false);
+        MyScheduleEmptySpeechSlotViewHolder viewHolder = new MyScheduleEmptySpeechSlotViewHolder(binding);
         return viewHolder;
     }
 

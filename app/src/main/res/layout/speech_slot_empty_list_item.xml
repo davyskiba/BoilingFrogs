@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="speechSlot" type="com.panoprogramowanie.boilingfrogs.model.SpeechSlot"/>
+    </data>
 <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/speech_slot_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp">
@@ -20,7 +24,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+        android:text="@{speechSlot.timeLabel}"/>
     </LinearLayout>
     <android.support.v7.widget.CardView
             android:id="@+id/card_view"
@@ -58,3 +63,4 @@
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </RelativeLayout>
+</layout>
