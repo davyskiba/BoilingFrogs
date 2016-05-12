@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
-import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.DividerItemDecoration;
+import com.panoprogramowanie.boilingfrogs.util.DividerItemDecoration;
 
 import java.util.List;
 

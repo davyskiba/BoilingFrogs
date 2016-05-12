@@ -12,7 +12,7 @@ import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
-import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.DividerItemDecoration;
+import com.panoprogramowanie.boilingfrogs.util.DividerItemDecoration;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
 
 import java.util.List;

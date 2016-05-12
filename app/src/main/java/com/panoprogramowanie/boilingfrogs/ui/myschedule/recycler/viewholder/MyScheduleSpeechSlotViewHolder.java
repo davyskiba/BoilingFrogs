@@ -1,17 +1,11 @@
-package com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder;
-
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+package com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.viewholder;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotListItemBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
-import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 

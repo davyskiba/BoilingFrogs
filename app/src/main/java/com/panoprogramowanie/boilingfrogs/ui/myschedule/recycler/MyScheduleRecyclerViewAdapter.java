@@ -4,7 +4,6 @@ import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import com.panoprogramowanie.boilingfrogs.R;
@@ -12,9 +11,9 @@ import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotEmptyListItemBin
 import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotListItemBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleEmptySpeechSlotViewHolder;
-import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpeechSlotViewHolder;
-import com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder.MyScheduleSpeechSlotViewHolderBase;
+import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.viewholder.MyScheduleEmptySpeechSlotViewHolder;
+import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.viewholder.MyScheduleSpeechSlotViewHolder;
+import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.viewholder.MyScheduleSpeechSlotViewHolderBase;
 
 import java.util.LinkedList;
 import java.util.List;

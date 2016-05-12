@@ -1,4 +1,4 @@
-package com.panoprogramowanie.boilingfrogs.ui.myschedule.viewholder;
+package com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
