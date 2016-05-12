@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.DrawableRes;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -26,9 +27,9 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
     private int mOrientation;
 
-    public DividerItemDecoration(Context context, int orientation) {
+    public DividerItemDecoration(Context context, int orientation, @DrawableRes int dividerDrawable) {
         final TypedArray a = context.obtainStyledAttributes(ATTRS);
-        mDivider = context.getResources().getDrawable(R.drawable.my_schedule_divider);
+        mDivider = context.getResources().getDrawable(dividerDrawable);
         a.recycle();
         setOrientation(orientation);
     }

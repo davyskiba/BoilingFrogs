@@ -66,11 +66,6 @@ public class SpeechSlotFragment extends ListFragment {
     }
 
     @Override
-    protected int getListItemLayoutId() {
-        return R.layout.schedule_list_item;
-    }
-
-    @Override
     public String getActionBarTitle(Context context) {
         return getArguments().getString(SLOT_TITLE_ARG_KEY);
     }
