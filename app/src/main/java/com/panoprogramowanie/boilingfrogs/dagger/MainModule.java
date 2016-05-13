@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 
 import android.content.Context;
 
+import com.panoprogramowanie.boilingfrogs.BuildConfig;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.api.ScheduleService;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
@@ -59,18 +60,16 @@ public class MainModule {
     @Singleton
     ScheduleService provideScheduleService(){
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        if(BuildConfig.DEBUG) {
+            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        }
+
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
-
-        Gson gson=new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                .create();
-
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(applicationContext.getString(R.string.schedule_server_url))
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create(gson))
+                .addConverterFactory(GsonConverterFactory.create(new Gson()))
                 .client(client)
                 .build();
 

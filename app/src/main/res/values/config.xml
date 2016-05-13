@@ -2,5 +2,5 @@
     <string name="twitter_feed_url">https://twitter.com/hashtag/boilingfrogs16</string>
     <string name="navigation_url">google.navigation:q=plac+Konstytucji+3+Maja+3,+50-083+Wrocław</string>
     <string name="survey_url">http://boilingfrogs.pl/ankieta</string>
-    <string name="schedule_server_url">http://boilingfrogs.pl/</string>
+    <string name="schedule_server_url">http://private-8ed1a-boilingfrogs.apiary-mock.com/</string>
 </resources>

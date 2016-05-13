@@ -22,7 +22,4 @@ public class SchedulePresenter extends Presenter<ScheduleFragment> {
         super.takeView(view);
         getView().setData(scheduleSupplier.getAllSpeechSlots());
     }
-
-    public void onResume() {
-    }
 }
