@@ -11,16 +11,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.databinding.SpeakerActivityBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
-import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
-import com.panoprogramowanie.boilingfrogs.util.AvatarLoaderUtil;
 
 import javax.inject.Inject;
 

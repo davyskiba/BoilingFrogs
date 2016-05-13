@@ -32,4 +32,6 @@ public interface MainComponent {
     void inject(MyScheduleFragment myScheduleFragment);
 
     void inject(SpeakersListFragment speakersListFragment);
+
+    void inject(SplashActivity splashActivity);
 }

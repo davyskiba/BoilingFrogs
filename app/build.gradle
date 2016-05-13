@@ -54,6 +54,13 @@ dependencies {
 
     compile "org.greenrobot:greendao:${greendao_version}"
 
+    compile "io.reactivex:rxjava:${rxjava_version}"
+    compile "io.reactivex:rxandroid:${rxandroid_version}"
+    compile "com.squareup.retrofit2:retrofit:${retrofit2_version}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${retrofit2_adapter_rxjava_version}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofit2_converter_gson_version}"
+    compile "com.squareup.okhttp3:logging-interceptor:${okhttp3_logging_innterceptor_version}"
+
     // Dagger 2 and Compiler
     compile "com.google.dagger:dagger:${dagger2_version}"
     provided "com.google.dagger:dagger-compiler:${dagger2_version}"

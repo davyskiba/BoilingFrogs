@@ -16,8 +16,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 //import com.panoprogramowanie.boilingfrogs.BR;
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
@@ -27,7 +25,6 @@ import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
-import com.panoprogramowanie.boilingfrogs.ui.view.SocialView;
 
 import javax.inject.Inject;
 

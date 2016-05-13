@@ -1,7 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.ui.base;
 
 import android.content.Context;
-import android.os.Bundle;
 
 import java.lang.ref.WeakReference;
 
