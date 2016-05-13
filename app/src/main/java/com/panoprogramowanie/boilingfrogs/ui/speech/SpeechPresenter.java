@@ -6,6 +6,7 @@ import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.NotificationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.ui.base.Presenter;
+import com.panoprogramowanie.boilingfrogs.util.BrowserLaunchingUtil;
 
 import javax.inject.Inject;
 
@@ -56,5 +57,17 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
 
     private void displaySnackbar(int textId) {
         notificationSupplier.showLongLastingSnackbar(getView().getContainerView(), textId);
+    }
+
+    public void playVideoSelected() {
+        launchYoutubeIntent();
+    }
+
+    private void launchYoutubeIntent(){
+        BrowserLaunchingUtil.launchBrowser(getContext(),speech.getYoutubeUrl());
+    }
+
+    public boolean hasVideo() {
+        return speech!=null && speech.getYoutubeUrl()!=null;
     }
 }

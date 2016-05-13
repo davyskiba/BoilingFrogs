@@ -19,6 +19,7 @@
 
     <string name="speech_added_to_favorites">Prelekcja dodana do ulubionych</string>
     <string name="speech_removed_from_favorites">Prelekcja usunięta z ulubionych</string>
+    <string name="speech_play_youtube_video">Obejrzyj w youtube</string>
 
     <string name="my_schedule_empty_slot_text">Wybierz prelekcję</string>
 </resources>
