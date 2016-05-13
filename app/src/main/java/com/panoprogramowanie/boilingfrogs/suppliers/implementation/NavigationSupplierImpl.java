@@ -3,14 +3,16 @@ package com.panoprogramowanie.boilingfrogs.suppliers.implementation;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
-import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
+import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragmentActivity;
+import com.panoprogramowanie.boilingfrogs.ui.main.MainActivity;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.MyScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.schedule.ScheduleFragment;
 import com.panoprogramowanie.boilingfrogs.ui.speaker.SpeakerActivity;
@@ -28,11 +30,7 @@ public class NavigationSupplierImpl implements NavigationSupplier {
     private FragmentManager.OnBackStackChangedListener onBackStackChangedListener;
     BoilingFrogsFragmentActivity currentFragmentActivity;
 
-    private final ScheduleSupplier scheduleSupplier;
-
-    public NavigationSupplierImpl(ScheduleSupplier scheduleSupplier) {
-        this.scheduleSupplier = scheduleSupplier;
-
+    public NavigationSupplierImpl() {
         onBackStackChangedListener = new FragmentBackstackChangeListener();
     }
 
@@ -51,6 +49,11 @@ public class NavigationSupplierImpl implements NavigationSupplier {
 
         currentFragmentActivity.getFragmentManager().removeOnBackStackChangedListener(onBackStackChangedListener);
         currentFragmentActivity = null;
+    }
+
+    @Override
+    public void navigateToMain(Context context) {
+        MainActivity.start(context);
     }
 
     @Override

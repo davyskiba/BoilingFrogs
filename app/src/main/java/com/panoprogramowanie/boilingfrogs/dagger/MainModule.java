@@ -47,8 +47,8 @@ public class MainModule {
 
     @Singleton
     @Provides
-    NavigationSupplier provideNavigationSupplier(ScheduleSupplier scheduleSupplier) {
-        return new NavigationSupplierImpl(scheduleSupplier);
+    NavigationSupplier provideNavigationSupplier() {
+        return new NavigationSupplierImpl();
     }
 
     @Provides
@@ -61,7 +61,7 @@ public class MainModule {
     ScheduleService provideScheduleService(){
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         if(BuildConfig.DEBUG) {
-            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            interceptor.setLevel(HttpLoggingInterceptor.Level.HEADERS);
         }
 
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();

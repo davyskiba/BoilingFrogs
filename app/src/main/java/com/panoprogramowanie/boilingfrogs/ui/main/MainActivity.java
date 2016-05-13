@@ -1,6 +1,8 @@
 package com.panoprogramowanie.boilingfrogs.ui.main;
 
 import android.animation.ValueAnimator;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,6 +27,11 @@ import butterknife.ButterKnife;
  * Created by Wojciech on 30.12.2015.
  */
 public class MainActivity extends BoilingFrogsFragmentActivity {
+    public static void start(Context context) {
+        Intent intent = new Intent(context, MainActivity.class);
+        context.startActivity(intent);
+    }
+
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
 
@@ -162,5 +169,4 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
         drawer.closeDrawers();
     }
     //endregion
-
 }

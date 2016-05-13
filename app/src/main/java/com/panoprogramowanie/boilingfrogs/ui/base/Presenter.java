@@ -1,8 +1,5 @@
 package com.panoprogramowanie.boilingfrogs.ui.base;
 
-import android.content.Context;
-import android.os.Bundle;
-
 import java.lang.ref.WeakReference;
 
 /**
@@ -20,7 +17,7 @@ public class Presenter<T extends MvpView> {
         return view.get();
     }
 
-    protected Context getContext() {
+    protected android.content.Context getContext() {
         return getView().getContext();
     }
 }
