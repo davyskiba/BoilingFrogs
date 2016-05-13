@@ -12,7 +12,8 @@
         <activity
                 android:screenOrientation="portrait"
                 android:theme="@style/BoilingFrogsTheme.NoActionBar"
-                android:name=".ui.splash.SplashActivity">
+                android:name=".ui.splash.SplashActivity"
+                android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

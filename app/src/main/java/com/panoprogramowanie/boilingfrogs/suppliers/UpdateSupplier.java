@@ -7,6 +7,7 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
+import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -21,21 +22,21 @@ public class UpdateSupplier {
         this.scheduleService = scheduleService;
     }
 
-    public void performUpdate() {
-        scheduleService.getSchedule()
+    public Observable<Schedule> performUpdate() {
+        return scheduleService.getSchedule()
                 .retry(5)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
-                .subscribe(this::onScheduleDownloaded,this::onScheduleError);
+                .map(this::onScheduleDownloaded)
+                .observeOn(AndroidSchedulers.mainThread());
     }
 
-    private void onScheduleDownloaded(Schedule schedule){
+    private Schedule onScheduleDownloaded(Schedule schedule){
         scheduleSupplier.updateSpeeches(schedule.getSpeeches());
         scheduleSupplier.updateSpeakers(schedule.getSpeakers());
         scheduleSupplier.updateSpeechSlots(schedule.getSpeechSlots());
-    }
 
-    private void onScheduleError(Throwable throwable){
-
+        Log.d("FrogsSplash","saved");
+        return schedule;
     }
 }

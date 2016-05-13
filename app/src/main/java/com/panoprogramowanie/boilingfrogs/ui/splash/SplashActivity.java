@@ -18,10 +18,6 @@ import javax.inject.Inject;
  * Created by Wojciech on 13.01.2016.
  */
 public class SplashActivity extends AppCompatActivity implements MvpView {
-
-    // Splash screen timer
-    private static int SPLASH_TIME_OUT = 5000;
-
     @Inject
     SplashPresenter presenter;
 
@@ -33,20 +29,6 @@ public class SplashActivity extends AppCompatActivity implements MvpView {
         BoilingFrogs.getMainComponent(this).inject(this);
 
         presenter.takeView(this);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        new Handler().postDelayed(()->navigateToMainActivity(), SPLASH_TIME_OUT);
-    }
-
-    private void navigateToMainActivity() {
-        presenter.navigateToMainActivity();
-    }
-
-    public void close(){
-        finish();
     }
 
     @Override
