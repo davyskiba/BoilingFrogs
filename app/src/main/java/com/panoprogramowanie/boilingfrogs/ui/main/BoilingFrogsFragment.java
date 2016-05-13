@@ -1,6 +1,7 @@
 package com.panoprogramowanie.boilingfrogs.ui.main;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -30,7 +31,7 @@ public abstract class BoilingFrogsFragment extends Fragment implements MvpView {
         return containterView;
     }
 
-    public abstract String getActionBarTitle(android.content.Context context);
+    public abstract String getActionBarTitle(Context context);
 
 
 }

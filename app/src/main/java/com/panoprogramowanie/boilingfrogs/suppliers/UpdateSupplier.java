@@ -27,11 +27,11 @@ public class UpdateSupplier {
                 .retry(5)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
-                .map(this::onScheduleDownloaded)
+                .map(this::saveSchedule)
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    private Schedule onScheduleDownloaded(Schedule schedule){
+    private Schedule saveSchedule(Schedule schedule){
         scheduleSupplier.updateSpeeches(schedule.getSpeeches());
         scheduleSupplier.updateSpeakers(schedule.getSpeakers());
         scheduleSupplier.updateSpeechSlots(schedule.getSpeechSlots());

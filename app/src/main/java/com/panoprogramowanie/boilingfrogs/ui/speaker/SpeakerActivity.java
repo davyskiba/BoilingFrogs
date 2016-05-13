@@ -1,6 +1,7 @@
 package com.panoprogramowanie.boilingfrogs.ui.speaker;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -96,7 +97,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
     //region MvpView
 
     @Override
-    public android.content.Context getContext() {
+    public Context getContext() {
         return this;
     }
 

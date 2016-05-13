@@ -1,6 +1,7 @@
 package com.panoprogramowanie.boilingfrogs.ui.speech;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.databinding.DataBindingUtil;
@@ -154,7 +155,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
     //region MvpView
 
     @Override
-    public android.content.Context getContext() {
+    public Context getContext() {
         return this;
     }
 
