@@ -1,10 +1,13 @@
 package com.panoprogramowanie.boilingfrogs.suppliers.implementation;
 
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
+import com.panoprogramowanie.boilingfrogs.model.SpeakerDao;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
+import com.panoprogramowanie.boilingfrogs.model.SpeechDao;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.model.DaoMaster;
 import com.panoprogramowanie.boilingfrogs.model.DaoSession;
+import com.panoprogramowanie.boilingfrogs.model.SpeechSlotDao;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 
 import android.content.Context;
@@ -78,6 +81,14 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
     }
 
     @Override
+    public void updateSpeeches(Speech[] speeches) {
+        SpeechDao speechDao = daoSession.getSpeechDao();
+        for(Speech speech : speeches){
+            speechDao.insertOrReplace(speech);
+        }
+    }
+
+    @Override
     public List<Speaker> getAllSpeakers() {
         return daoSession.getSpeakerDao().loadAll();
     }
@@ -85,6 +96,14 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
     @Override
     public Speaker getSpeakerById(long speakerId) {
         return daoSession.getSpeakerDao().load(speakerId);
+    }
+
+    @Override
+    public void updateSpeakers(Speaker[] speakers) {
+        SpeakerDao speakerDao = daoSession.getSpeakerDao();
+        for(Speaker speaker : speakers){
+            speakerDao.insertOrReplace(speaker);
+        }
     }
 
     @Override
@@ -100,5 +119,13 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
     @Override
     public void updateSpeechSlot(SpeechSlot speechSlot) {
         daoSession.getSpeechSlotDao().insertOrReplace(speechSlot);
+    }
+
+    @Override
+    public void updateSpeechSlots(SpeechSlot[] speechSlots) {
+        SpeechSlotDao speechSlotDao = daoSession.getSpeechSlotDao();
+        for(SpeechSlot speechSlot : speechSlots){
+            speechSlotDao.insertOrReplace(speechSlot);
+        }
     }
 }
