@@ -117,12 +117,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
 
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.BoilingFrogsTheme_CollapsingToolbar);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        toolbar.setNavigationOnClickListener((v)->onBackPressed());
     }
 
     //region DataDisplay
