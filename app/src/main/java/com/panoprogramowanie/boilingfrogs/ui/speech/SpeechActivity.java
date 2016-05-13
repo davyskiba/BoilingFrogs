@@ -12,6 +12,9 @@ import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -83,6 +86,25 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
         BoilingFrogs.getMainComponent(this).inject(this);
         presenter.takeView(this);
         presenter.setSpeech(speechId);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        if(presenter.hasVideo()) {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.speech_menu, menu);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.speech_play_video:
+                presenter.playVideoSelected();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setupDrawerAndToolbar() {
