@@ -32,17 +32,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class MainModule {
 
-    private ScheduleSupplier scheduleSupplier;
     private Context applicationContext;
 
     public MainModule(Context context) {
-        scheduleSupplier = new GreenDaoScheduleSupplier(context);
         this.applicationContext=context;
     }
 
+    @Singleton
     @Provides
     ScheduleSupplier provideScheduleSupplier() {
-        return scheduleSupplier;
+        return  new GreenDaoScheduleSupplier(applicationContext);
     }
 
     @Singleton
@@ -57,7 +56,6 @@ public class MainModule {
     }
 
     @Provides
-    @Singleton
     ScheduleService provideScheduleService(){
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         if(BuildConfig.DEBUG) {
