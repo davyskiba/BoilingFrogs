@@ -14,6 +14,7 @@
             android:paddingBottom="16dp"
             android:paddingTop="16dp"
             android:paddingRight="8dp"
+            android:paddingLeft="8dp"
             android:orientation="vertical">
 
         <LinearLayout
@@ -22,12 +23,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp">
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:visibility="@{itemModel.photoUrl==null ? View.GONE : View.VISIBLE}"
-                    app:civ_border_color="@color/colorPrimary"
-                    app:civ_border_width="4dp"
+                    android:background="@drawable/rectangular_border_background"
+                    android:tint="@color/overlay_red"
                     app:imageUrl="@{itemModel.photoUrl}"
                     app:placeholder="@{@drawable/avatar_placeholder}"
             />
@@ -38,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/avatar_wrapper"
                 android:layout_toRightOf="@+id/avatar_wrapper"
+                android:layout_toLeftOf="@+id/list_item_next_arrow"
                 android:maxLines="2"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -50,9 +52,19 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/avatar_wrapper"
                 android:layout_toRightOf="@+id/avatar_wrapper"
+                android:layout_toLeftOf="@+id/list_item_next_arrow"
                 android:maxLines="1"
                 android:textColor="@color/gray"
                 android:text="@{itemModel.subtitle}"
                 android:gravity="@{itemModel.photoUrl==null ? Gravity.CENTER : Gravity.LEFT}"/>
+        <ImageView
+                android:id="@+id/list_item_next_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_next"
+                android:tint="@color/red"
+        />
     </RelativeLayout>
 </layout>
