@@ -16,47 +16,47 @@
             android:paddingRight="8dp"
             android:paddingLeft="8dp"
             android:orientation="vertical">
-
-        <LinearLayout
-                android:id="@+id/avatar_wrapper"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp">
             <ImageView
+                    android:id="@+id/avatar"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
                     android:visibility="@{itemModel.photoUrl==null ? View.GONE : View.VISIBLE}"
                     android:background="@drawable/rectangular_border_background"
                     android:tint="@color/overlay_red"
                     app:imageUrl="@{itemModel.photoUrl}"
                     app:placeholder="@{@drawable/avatar_placeholder}"
             />
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_alignTop="@+id/avatar"
+                      android:layout_alignBottom="@+id/avatar"
+                      android:layout_toRightOf="@+id/avatar"
+                      android:layout_toLeftOf="@+id/list_item_next_arrow"
+                      android:layout_marginLeft="8dp"
+                      android:layout_marginRight="8dp"
+                      android:gravity="center"
+        android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@{itemModel.title}"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray"
+                    android:text="@{itemModel.subtitle}"/>
         </LinearLayout>
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/avatar_wrapper"
-                android:layout_toRightOf="@+id/avatar_wrapper"
-                android:layout_toLeftOf="@+id/list_item_next_arrow"
-                android:maxLines="2"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-        android:text="@{itemModel.title}"
-        android:gravity="@{itemModel.photoUrl==null ? Gravity.CENTER : Gravity.LEFT}"/>
-
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/avatar_wrapper"
-                android:layout_toRightOf="@+id/avatar_wrapper"
-                android:layout_toLeftOf="@+id/list_item_next_arrow"
-                android:maxLines="1"
-                android:textColor="@color/gray"
-                android:text="@{itemModel.subtitle}"
-                android:gravity="@{itemModel.photoUrl==null ? Gravity.CENTER : Gravity.LEFT}"/>
         <ImageView
                 android:id="@+id/list_item_next_arrow"
                 android:layout_width="wrap_content"
