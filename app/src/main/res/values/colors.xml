@@ -12,6 +12,7 @@
     <color name="overlay_red">#33CA3538</color>
     <color name="white">#FBFBFB</color>
 
+    <color name="colorPrimary20">#33CA3538</color>
     <color name="my_schedule_speaker_overlay">#cc8b1517</color>
     <color name="my_schedule_empty_slot_bg">#f7f7f7</color>
     <color name="my_schedule_empty_slot_text">#686868</color>
