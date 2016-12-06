@@ -25,7 +25,7 @@
                     android:layout_marginRight="8dp"
                     android:visibility="@{itemModel.photoUrl==null ? View.GONE : View.VISIBLE}"
                     android:background="@drawable/rectangular_border_background"
-                    android:tint="@color/overlay_red"
+                    android:tint="@color/overlay"
                     app:imageUrl="@{itemModel.photoUrl}"
                     app:placeholder="@{@drawable/avatar_placeholder}"
             />
@@ -65,7 +65,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_next"
-                android:tint="@color/red"
+                android:tint="@color/colorPrimary"
         />
     </RelativeLayout>
 </layout>
