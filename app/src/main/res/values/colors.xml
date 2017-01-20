@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#CA3538</color>
-    <color name="colorPrimaryDark">#a42b2d</color>
+    <color name="colorPrimary">#2BAC95</color>
+    <color name="colorPrimaryDark">#1F7B6B</color>
     <color name="colorAccent">#FBFBFB</color>
     <color name="colorWindowBackground">#252525</color>
 
@@ -9,11 +9,11 @@
     <color name="dark_gray">#252525</color>
     <color name="gray">#6D797A</color>
     <color name="red">#CA3538</color>
-    <color name="overlay_red">#33CA3538</color>
+    <color name="overlay">@color/colorPrimary20</color>
     <color name="white">#FBFBFB</color>
 
-    <color name="colorPrimary20">#33CA3538</color>
-    <color name="my_schedule_speaker_overlay">#cc8b1517</color>
+    <color name="colorPrimary20">#332BAC95</color>
+    <color name="my_schedule_speaker_overlay">#cc1F7B6B</color>
     <color name="my_schedule_empty_slot_bg">#f7f7f7</color>
     <color name="my_schedule_empty_slot_text">#686868</color>
     <color name="my_schedule_empty_slot_time_text">#919191</color>
