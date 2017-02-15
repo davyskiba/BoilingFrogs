@@ -26,6 +26,7 @@
                     android:visibility="@{itemModel.photoUrl==null ? View.GONE : View.VISIBLE}"
                     android:background="@drawable/rectangular_border_background"
                     android:tint="@color/overlay"
+                    android:scaleType="centerCrop"
                     app:imageUrl="@{itemModel.photoUrl}"
                     app:placeholder="@{@drawable/avatar_placeholder}"
             />
