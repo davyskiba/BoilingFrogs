@@ -208,13 +208,6 @@ public class Speech implements ListItemModel {
         return description!=null;
     }
 
-    public String getPathStringIfHasDescription(){
-        if(getDescription()!=null){
-            return "ŚCIEŻKA "+getPath();
-        }
-
-        return "";
-    }
     // KEEP METHODS END
 
 }
