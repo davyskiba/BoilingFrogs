@@ -122,10 +122,19 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
     }
 
     @Override
-    public void updateSpeechSlots(SpeechSlot[] speechSlots) {
+    public void updateSpeechSlotsAndKeepFavorites(SpeechSlot[] speechSlots) {
         SpeechSlotDao speechSlotDao = daoSession.getSpeechSlotDao();
         for(SpeechSlot speechSlot : speechSlots){
-            speechSlotDao.insertOrReplace(speechSlot);
+            updateSpeechSlot(speechSlotDao, speechSlot);
         }
+    }
+
+    private void updateSpeechSlot(SpeechSlotDao speechSlotDao, SpeechSlot speechSlot) {
+        SpeechSlot localSpeechSlot = speechSlotDao.load(speechSlot.getId());
+        if(localSpeechSlot!=null){
+            speechSlot.setFavoriteSpeechId(localSpeechSlot.getFavoriteSpeechId());
+        }
+
+        speechSlotDao.insertOrReplace(speechSlot);
     }
 }

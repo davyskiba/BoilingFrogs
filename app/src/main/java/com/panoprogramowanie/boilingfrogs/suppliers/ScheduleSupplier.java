@@ -23,5 +23,5 @@ public interface ScheduleSupplier{
     SpeechSlot getSpeechSlotBytId(long slotId);
     List<SpeechSlot> getAllSpeechSlots();
     void updateSpeechSlot(SpeechSlot speechSlot);
-    void updateSpeechSlots(SpeechSlot[] speechSlots);
+    void updateSpeechSlotsAndKeepFavorites(SpeechSlot[] speechSlots);
 }

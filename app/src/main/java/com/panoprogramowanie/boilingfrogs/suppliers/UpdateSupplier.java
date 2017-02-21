@@ -34,7 +34,7 @@ public class UpdateSupplier {
     private Schedule saveSchedule(Schedule schedule){
         scheduleSupplier.updateSpeeches(schedule.getSpeeches());
         scheduleSupplier.updateSpeakers(schedule.getSpeakers());
-        scheduleSupplier.updateSpeechSlots(schedule.getSpeechSlots());
+        scheduleSupplier.updateSpeechSlotsAndKeepFavorites(schedule.getSpeechSlots());
 
         Log.d("FrogsSplash","saved");
         return schedule;
