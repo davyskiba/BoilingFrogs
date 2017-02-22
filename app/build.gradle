@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId "com.panoprogramowanie.boilingfrogs"
-        minSdkVersion 21
+        minSdkVersion 17
         targetSdkVersion 23
         versionCode 6
         versionName "1.2.0"
