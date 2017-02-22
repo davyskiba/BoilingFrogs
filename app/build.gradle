@@ -16,8 +16,8 @@ android {
         applicationId "com.panoprogramowanie.boilingfrogs"
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 5
-        versionName "1.1.3"
+        versionCode 6
+        versionName "1.2.0"
     }
     dataBinding {
         enabled = true
