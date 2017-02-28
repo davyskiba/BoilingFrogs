@@ -30,7 +30,7 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
 
     @OnClick(R.id.speech_slot_container)
     public void onSpeechSlotClicked(){
-        Speech speech=binding.getSpeechSlot().getFavoriteSpeech();
+        Speech speech=binding.getSpeechSlot().getFavoriteOrOnlySpeech();
         if(speech.getDescription()!=null && onSlotClickListener!=null){
             onSlotClickListener.onNonEmptySlotClicked(speech.getId());
         }
