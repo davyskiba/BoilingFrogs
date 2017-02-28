@@ -41,6 +41,8 @@ public class SplashPresenter extends Presenter<SplashActivity> {
     }
 
     public void navigateToMainActivity(){
-        navigationSupplier.navigateToMain(getContext());
+        if(getView()!=null) {
+            navigationSupplier.navigateToMain(getContext());
+        }
     }
 }
