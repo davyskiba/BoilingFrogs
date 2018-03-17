@@ -155,7 +155,6 @@ public class SpeechSlot {
             return getFavoriteSpeech();
         }
     }
-
     // KEEP METHODS END
 
 }

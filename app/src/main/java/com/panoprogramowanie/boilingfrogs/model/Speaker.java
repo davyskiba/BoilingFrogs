@@ -185,7 +185,6 @@ public class Speaker implements ListItemModel {
     public boolean isClickable() {
         return true;
     }
-
     // KEEP METHODS END
 
 }
