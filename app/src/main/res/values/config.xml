@@ -2,5 +2,5 @@
     <string name="twitter_feed_url">https://twitter.com/hashtag/boilingfrogs18</string>
     <string name="navigation_url">google.navigation:q=Wrocławskie+Centrum+Kongresowe+(RCTB),Wrocław</string>
     <string name="survey_url">http://2018.boilingfrogs.pl/ankieta</string>
-    <string name="schedule_server_url">http://2017.boilingfrogs.pl/</string>
+    <string name="schedule_server_url">http://2018.boilingfrogs.pl/</string>
 </resources>

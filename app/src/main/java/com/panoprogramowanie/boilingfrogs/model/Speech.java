@@ -207,7 +207,6 @@ public class Speech implements ListItemModel {
     public boolean isClickable() {
         return description!=null;
     }
-
     // KEEP METHODS END
 
 }
