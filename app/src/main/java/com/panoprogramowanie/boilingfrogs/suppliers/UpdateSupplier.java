@@ -3,8 +3,6 @@ package com.panoprogramowanie.boilingfrogs.suppliers;
 import com.panoprogramowanie.boilingfrogs.api.Schedule;
 import com.panoprogramowanie.boilingfrogs.api.ScheduleService;
 
-import android.util.Log;
-
 import javax.inject.Inject;
 
 import rx.Observable;
@@ -27,16 +25,13 @@ public class UpdateSupplier {
                 .retry(5)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
-                .map(this::saveSchedule)
+                .doOnNext(this::saveSchedule)
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    private Schedule saveSchedule(Schedule schedule){
+    private void saveSchedule(Schedule schedule){
         scheduleSupplier.updateSpeeches(schedule.getSpeeches());
         scheduleSupplier.updateSpeakers(schedule.getSpeakers());
         scheduleSupplier.updateSpeechSlotsAndKeepFavorites(schedule.getSpeechSlots());
-
-        Log.d("FrogsSplash","saved");
-        return schedule;
     }
 }

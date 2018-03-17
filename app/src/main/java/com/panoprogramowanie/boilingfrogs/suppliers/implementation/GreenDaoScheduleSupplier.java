@@ -31,7 +31,9 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
         DaoMaster.OpenHelper helper = new DaoMaster.OpenHelper(context, DB_NAME, null) {
             @Override
             public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+                db.execSQL("DELETE FROM SPEAKER");
+                db.execSQL("DELETE FROM SPEECH");
+                db.execSQL("DELETE FROM SPEECH_SLOT");
             }
         };
         SQLiteDatabase db = helper.getWritableDatabase();
