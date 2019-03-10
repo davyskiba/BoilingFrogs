@@ -9,13 +9,13 @@ repositories {
 
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 26
     buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.panoprogramowanie.boilingfrogs"
         minSdkVersion 17
-        targetSdkVersion 23
+        targetSdkVersion 26
         versionCode 7
         versionName "1.2.1"
     }
