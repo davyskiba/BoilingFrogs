@@ -8,8 +8,6 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:${build_gradle_version}"
-        classpath "com.neenbedankt.gradle.plugins:android-apt:${apt_version}"
-        classpath "me.tatarka:gradle-retrolambda:${retrolambda_version}"
         classpath "io.fabric.tools:gradle:${fabric_tools_version}"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
