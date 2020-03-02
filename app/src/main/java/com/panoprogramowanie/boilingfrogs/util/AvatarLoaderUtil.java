@@ -4,7 +4,6 @@ import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
-import com.makeramen.roundedimageview.RoundedImageView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -14,8 +13,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 public class AvatarLoaderUtil {
 
     @BindingAdapter({"bind:imageUrl", "bind:placeholder"})
-    public static void setImageSrc(ImageView view, String url, Drawable placeholder){
-        loadAvatar(url,view, placeholder);
+    public static void setImageSrc(ImageView view, String url, Drawable placeholder) {
+        loadAvatar(url, view, placeholder);
     }
 
     public static void loadAvatar(String from, ImageView into, Drawable placeholder) {

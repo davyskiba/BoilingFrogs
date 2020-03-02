@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -20,13 +20,13 @@ import butterknife.OnClick;
  */
 public class SocialView extends LinearLayout {
 
-    @Bind(R.id.facebook)
+    @BindView(R.id.facebook)
     ImageView facebook;
 
-    @Bind(R.id.twitter)
+    @BindView(R.id.twitter)
     ImageView twitter;
 
-    @Bind(R.id.linkedin)
+    @BindView(R.id.linkedin)
     ImageView linkedin;
 
     private Speaker speaker;

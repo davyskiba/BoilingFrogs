@@ -1,11 +1,8 @@
 package com.panoprogramowanie.boilingfrogs.dagger;
 
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import android.content.Context;
 
+import com.google.gson.Gson;
 import com.panoprogramowanie.boilingfrogs.BuildConfig;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.api.ScheduleService;

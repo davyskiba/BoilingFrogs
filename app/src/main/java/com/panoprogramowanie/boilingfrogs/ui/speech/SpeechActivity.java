@@ -17,10 +17,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-//import com.panoprogramowanie.boilingfrogs.BR;
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
-//import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
 import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
@@ -28,7 +26,7 @@ import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -51,13 +49,13 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
 
     //region Views
 
-    @Bind(R.id.contentScroll)
+    @BindView(R.id.contentScroll)
     NestedScrollView contentScroll;
 
-    @Bind(R.id.collapsing_toolbar)
+    @BindView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
 
-    @Bind(R.id.fab)
+    @BindView(R.id.fab)
     FloatingActionButton floatingActionButton;
 
     //endregion

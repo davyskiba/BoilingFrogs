@@ -5,8 +5,6 @@ import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.UpdateSupplier;
 import com.panoprogramowanie.boilingfrogs.ui.base.Presenter;
 
-import android.util.Log;
-
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;

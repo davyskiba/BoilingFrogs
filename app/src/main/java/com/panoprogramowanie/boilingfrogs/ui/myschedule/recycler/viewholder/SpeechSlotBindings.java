@@ -1,7 +1,6 @@
 package com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.viewholder;
 
 import android.databinding.BindingAdapter;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.panoprogramowanie.boilingfrogs.R;
