@@ -1,510 +1,511 @@
-{
-   "speakers":[
-      {
-         "description":"Programowanie to moja pasja. Podczas swojej kariery zawodowej uczestniczyłem w pracy nad zarówno projektami zakończonymi sukcesem, jak i będącymi totalną porażką. Większość tego co wiem, nauczyłem się z tych drugich.\n\nMocno wierzę w manifest Software Craftsmanship. M.in. z tego powodu organizuję Boiling Frogs oraz założyłem firmę Tratif — software house, w którym jakość kodu jest zawsze na pierwszym miejscu (więcej na http://tratif.com).\n\nCzasami piszę na firmowym blogu (http://blog.tratif.com). Praktykuję Test Driven Development i godzinami mogę rozmawiać o testach automatycznych i ich czytelności.\n\nW pracy używam głównie Javy, ale nie lubię określenia “programista Javy”. Uważam się po prostu za “programistę”, a technologia jest dla mnie jedynie narzędziem. Zawsze należy dobierać narzędzia do specyfiki danego problemu.\n\nLubię wierzyć, że oprogramowaniem można zmieniać świat.",
-         "id":1,
-         "linkedin":"https://www.linkedin.com/in/tkaczmarzyk",
-         "name":"Tomasz Kaczmarzyk",
-         "occupation":"Co-founder at Tratif",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2017/11/avatar-300x300.jpeg",
-         "twitter":"https://twitter.com/tkaczmarzyk"
-      },
-      {
-         "description":"Piotr Stawirej is clean code fanatic, BDD obsessed and agile methodology adherent. Passionate about professional attitude in every aspect of work. With over 10 years of experience in Tele Atlas and TomTom, leading map making industries, with large back-end and transactional systems. He cherishes clean design regardless of used language or technology and is strongly against cargo cult approach.",
-         "id":2,
-         "linkedin":"https://www.linkedin.com/in/piotr-stawirej/",
-         "name":"Piotr Stawirej",
-         "occupation":"Expert Software Engineer at TomTom",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/ps-300x300.jpg"
-      },
-      {
-         "description":"Developer w RST Software Masters, wyznawca idei Software Craftsmanship. Pracował zarówno w międzynarodowych korporacjach, jak i polskich software house’ach. Specjalizuje się w dostarczaniu rozwiązań opartach na JVM. Uważa, że główne przyczyny nieudanych projektów w naszej branży to wadliwa komunikacja międzyludzka oraz brak dogłębnego zrozumienia podstaw takich jak clean code, SOLID itd. W pracy developera najbardziej pasjonuje go analizowanie tak zwanego “big picture” i rozwiązywanie problemów wychodzących poza obszar kodu m.in. pragmatyczne zarządzanie wymaganiami i budowanie samoorganizującego się zespołu.",
-         "id":3,
-         "linkedin":"https://www.linkedin.com/in/krzysztofkedzierski/",
-         "name":"Krzysztof Kędzierski",
-         "occupation":"Software Developer w RST Software Masters",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/kkedzierski-285x300.jpg"
-      },
-      {
-         "description":"",
-         "id":4,
-         "linkedin":"https://www.linkedin.com/in/jkubrynski",
-         "name":"Kuba Kubryński",
-         "occupation":"CEO & co-founder at Devskiller",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/kuba_kubrynski-300x300.jpg",
-         "twitter":"https://twitter.com/jkubrynski"
-      },
-      {
-         "description":"Certyfikowany trener Umbraco i pierwszy w Polsce Umbraco Certified Master. Na co dzień pracuje zdalnie jako senior Umbraco developer w firmie The Cogworks – Złotego Partnera Umbraco z oddziałami w Londynie i Krakowie. Organizuje i prowadzi spotkania grup społeczności w Polsce oraz ewangelizuje Umbraco na wszelkie możliwe sposoby – w ostatnim czasie współtworząc m.in. kanał “umbraCoffee” na YouTube, w którym co tydzień spotyka się “LIVE” z przedstawicielami społeczności z całego świata i rozmawia – przy wspólnej, wirtualnej kawie – na tematy powiązane z Umbraco CMS. Poza pracą programistyczną, współtworzy szkołę programowania dla dzieci WOW School, w której zarządza ponad 40 osobowym zespołem trenerów i dba o jakość przekazywanej przez nich wiedzy oraz wylewa swoje przemyślenia od czasu do czasu na blogu pod adresem https://udfnd.pl.",
-         "id":5,
-         "linkedin":"https://www.linkedin.com/in/marcinzajkowski/",
-         "name":"Marcin Zajkowski",
-         "occupation":"Umbraco Trainer and Certified Master at The Cogworks",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/marcin-zajkowski-300x300.jpg",
-         "twitter":"https://twitter.com/zajkowskimarcin"
-      },
-      {
-         "description":"Software developer, JVM & open-source enthusiast, develops D2C investment platform @ Pragmatic Coders",
-         "id":6,
-         "name":"Kamil Szymański",
-         "occupation":"Team Lead w Pragmatic Coders",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/kszdev-300x300.jpg",
-         "twitter":"https://twitter.com/kszdev"
-      },
-      {
-         "description":"Programista pasjonat, fan “Software Craftsmanship” i zwinnego podejścia do wytwarzania oprogramowania. Lubi proste rozwiązania skomplikowanych problemów. Na codzień zajmuje się tematami z zakresu architektury aplikacji biznesowych, Domain-Driven Design, Continuous Delivery, technologii Java oraz testowania automatycznego. Prywatnie mąż, ojciec piątki dzieci.",
-         "id":7,
-         "linkedin":"https://www.linkedin.com/in/%C5%82ukasz-szyd%C5%82o-14754024",
-         "name":"Łukasz Szydło",
-         "occupation":"Agile-minded Software Journeyman",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/lszydlo-300x300.jpg",
-         "twitter":"https://twitter.com/lszydlo"
-      },
-      {
-         "description":"Notoryczny inżynier w pracy i poza nią, podążający za meandrami sztuki programowania. Zawodowo Remote Freelance Software Gardener, od kilku lat wyrywający chwasty w ogródkach webowych i zwykle przycinający Javę do kształtów pożądanych przez klientów. Miłośnik lekkości i zwinności, która powinna przejawiać się przede wszystkim w stosowaniu właściwych narzędzi. Prelegent na JDD, GeeCON, 4Developers i innych.",
-         "id":8,
-         "linkedin":"https://www.linkedin.com/in/piotrprzybyl/",
-         "name":"Piotr Przybył",
-         "occupation":"Remote Freelance Developer / Software Gardener",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/piotrprzybyl-300x300.jpg",
-         "twitter":"https://twitter.com/piotrprz"
-      },
-      {
-         "description":"",
-         "id":9,
-         "linkedin":"https://www.linkedin.com/in/bzdanowski/",
-         "name":"Bartek Zdanowski",
-         "occupation":"Senior Java Developer at Touk",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/02/sUgGkY19_400x400-300x300.jpg",
-         "twitter":"https://twitter.com/bartekzdanowski"
-      },
-      {
-         "description":"Uczeń czernoksiężnika aka Software Craftsmanship Journeyman z ponad 5 letnim doświadczeniem w ziwnnym wytwarzaniu oprogramowania. Entuzjasta i ewengalista Agile orad dobrych praktyk inżynierskich. Związany głównie z językiem Java obecnie pracujący jako C# .Net + JavaScript developer. Wolny czas poświęca na rozwój, gry planszowe i okazjonalnie eventy survivalowe.",
-         "id":10,
-         "linkedin":"https://www.linkedin.com/in/maciejtrojniarz/",
-         "name":"Maciej Trojniarz",
-         "occupation":"Software Craftsmanship Journeyman at NewVoiceMedia",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/Maciej_Trojniarz-1-300x300.jpg",
-         "twitter":"https://twitter.com/MaciejTrojniarz"
-      },
-      {
-         "description":"Software developer z 9-letnim doświadczeniem. Zagorzały zwolennik automatyzacji testów. Promotor czystego kodu, BDD oraz budowania sprawnej komunikacji w zespole. Moim konikiem jest rozwiązywanie trudnych problemów. Zwolennik Open Source.",
-         "id":11,
-         "linkedin":"https://www.linkedin.com/in/kunickitomasz/",
-         "name":"Tomasz Kunicki",
-         "occupation":"Senior PHP Developer",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/kunicki.jpeg",
-         "twitter":"https://twitter.com/TimiTaoPL"
-      },
-      {
-         "description":"Programista PHP z 12-letnim doświadczeniem. Od 5 lat obsługuje głównie klientów z Bliskiego Wschodu.",
-         "id":12,
-         "linkedin":"https://www.linkedin.com/in/jaceklange/",
-         "name":"Jacek Lange",
-         "occupation":"PHP Developer w XSolve",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/lange.jpg"
-      },
-      {
-         "description":"Programista, manager, architekt, pasjonat. Doświadczony w wielu różnych technologiach i językach programowania. Pracował nad prawie setką różnych projektów dla kilkunastu firm w tuzinie różnych technologii, używając kilku języków obcych. Obecnie współzałożyciel firmy, która pomaga klientom z braży poligraficznej odnaleźć się w świecie współczesnego oprogramowania.",
-         "id":13,
-         "name":"Jakub Kociubiński",
-         "occupation":"CTO at NiceProject",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/J_Kociubinski-300x300.jpg"
-      },
-      {
-         "description":"Krzysztof Rakowski ma wieloletnie doświadczenie w IT: jako programista, architekt, menedżer, prelegent, autor. Karierę zaczynał za czasów PHP 3 i Netscape Navigatora. Od tego czasu pracował dla małych i dużych, polskich i zagranicznych firm pomagając im w kreowaniu ich obecności w internecie przy użyciu skalowalnych, niezawodnych, wydajnych rozwiązań informatycznych.\n\nAktualnie pracuje w eMAG – jednym z największych sklepów internetowych w naszej części Europy, gdzie stoi na czele huba IT zlokalizowanego w Warszawie. Lubi dzielić się swoją wiedzą w artykułach, prezentacjach oraz sporadycznych wpisach na stronie www.rakowski.pro. Jest autorem książki pt. “Learning Apache Thrift” wydanej nakładem wydawnictwa Packt Publishing. W wolnym czasie lubi podróże, snowboard, dobre książki i jedzenie.",
-         "id":14,
-         "linkedin":"https://www.linkedin.com/in/krzrak/",
-         "name":"Krzysztof Rakowski",
-         "occupation":"IT Manager w eMAG",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/rakowski-300x300.jpeg",
-         "twitter":"https://twitter.com/krzrak"
-      },
-      {
-         "description":"Programista o humanistycznych zainteresowaniach, fan koszykówki zza Oceanu, wielbiciel dobrej architektury (nie tylko tej w kodzie) oraz wycieczek po górach. Od 2010 zawodowo związany z tworzeniem aplikacji webowych w języku PHP. Pracuje w Accesto.",
-         "id":15,
-         "linkedin":"https://www.linkedin.com/in/karolkreft/",
-         "name":"Karol Kreft",
-         "occupation":"PHP/Symfony Developer w Accesto",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/karolkreft.jpg"
-      },
-      {
-         "description":"Od ponad 10 lat w branży IT, jako administrator baz danych, programista, architekt, manager i „inżynier od spraw katastrof”. Brałem udział w małych, średnich i nonsensownie dużych projektach, prowadzonych zgodnie zasadami „waterfall”, Agile oraz przy braku jakichkolwiek metodyk, z tym samym zawsze skutkiem. Co doprowadziło mnie do wniosku, że nie ważne co robisz tak długo, jak robisz to dobrze, w najprostszy z możliwych sposobów i używasz właściwych narzędzi które wykonają pracę za Ciebie. W międzyczasie dałem się porwać ideą TDD oraz Software Craftmanship, do granic możliwości wyeksploatować tak piękne w swej prostocie pomysły jak REST, JavaScript i NOSQL, by potem porzucić je by zgłębić tajniki “system thinking” i zachwycić się siłą jaką niesie z sobą “metafora” i odkryć, że rządzą nami te same prawa “natury”.  Od czasu do czasu można usłyszeć moje niskiej jakości żarty na temat architektury na konferencjach w Polsce. W chwilach wolnych członek SSEEP i autor bloga na http://geekyprimitives.wordpress.com/",
-         "id":16,
-         "linkedin":"https://www.linkedin.com/in/jpalka",
-         "name":"Jarosław Pałka",
-         "occupation":"Code mangler at Allegro Group",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/jaroslaw-palka_1_1-300x300.jpg",
-         "twitter":"https://twitter.com/j_palka"
-      },
-      {
-         "description":"Większość zawodowego życia spędził pisząc w językach na JVMa, ale zdarzało mu się oskryptowywać różne rzeczy w pythonie lub shellu. Aktualnie developer w TouKu, committer Apache Aries oraz kotrybutor kilku opensource’owych projektów. Uwielbia testowanie (szczególnie z pomocą Spocka) oraz wszelką automatyzację w procesie wytwarzania oprogramowania. Stara się dbać o czystość kodu (własnego i cudzego) poprzez częste code review.",
-         "id":17,
-         "linkedin":"https://www.linkedin.com/in/alien11689/",
-         "name":"Dominik Przybysz",
-         "occupation":"Software Developer w TouK",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/DominikPrzybysz_kw-296x300.jpg"
-      },
-      {
-         "description":"Pragmatyk, zapalony zwolennik zwinnych metodyk prowadzenia projektów, automatyzacji i efektywności. Z jednej strony programista i architekt (nikt nie jest doskonały!), ściśle związany z rodziną języków JVM oraz kierownik projektów, z drugiej trener zajmujący się wsparciem w zakresie jakości projektów, organizacji zespołu, rekrutacji i rozwoju personalnego. Każdego dnia stara się obalić mit programisty we flanelowej koszuli nie posiadającego zdolności interpersonalnych, a jedynie wiedzę techniczną. Wierzy, że istotą wytwarzania dobrego oprogramowania jest komunikacja, współpraca i umiejętność dzielenia się wiedzą. Współtwórca konferencji SpreadIT oraz aktywny uczestnik wydarzeń ze światka IT. Bloguje na http://software-empathy.pl",
-         "id":18,
-         "linkedin":"https://www.linkedin.com/in/daniel-pokusa-0b71363a/",
-         "name":"Daniel Pokusa",
-         "occupation":"Technical Team Leader w Onwelo",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/dpokusa-avatar-300x300.jpeg",
-         "twitter":"https://twitter.com/dpokusa"
-      },
-      {
-         "description":"Wiktor Żołnowski –  CEO Pragmatic Coders – Disruptive Technologies Software House (http://pragmaticcoders.com).\nDoświadczony Agile Coach, Trener. Od kilku lat pasjonat technologii blockchain oraz konsultant wspierający firmy w budowie innowacyjnych produktów.\nNa swoim koncie oprócz doradztwa biznesowego oraz udanych projektów coachingowo-szkoleniowych mających na celu “uzwinnianie” organizacji, ma również wdrożenia Continuous Delivery i innych praktyk i procesów jakościowych w wielu firmach IT. Zamiłowanie do jakości, Software Craftsmanship oraz Agile pomaga mu w Pragmatic Coders tworzyć kulturę pracy skupioną na innowacjach.\nJak sam mówi: “Problemy współczesnego świata mogą być skutecznie rozwiązywane poprzez odpowiednie połączenie przełomowych technologii z pasją i doświadczeniem właściwych ludzi. I to jest właśnie to, co staramy się robić w Pragmatic Coders.”",
-         "id":19,
-         "linkedin":"https://www.linkedin.com/in/wiktorzolnowski/",
-         "name":"Wiktor Żołnowski",
-         "occupation":"CEO Pragmatic Coders",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/wiktor.jpg"
-      },
-      {
-         "description":"Android Developer od ponad 4 lat. Na co dzień pracuje w Droids On Roids. Pasjonat czystego kodu, koszykarz amator, niedoszły karateka, uwielbia czytanie książek. Lubi myśleć o sobie, że jest kucharzem, ale niczego jeszcze nie ugotował. Od jutra zamierza zdrowo się odżywiać i zacząć treningi. Jego motto to “Hop, hop, buf, buf i działamy”.",
-         "id":20,
-         "linkedin":"https://www.linkedin.com/in/mateusz-budzar-5b598a81/",
-         "name":"Mateusz Budzar",
-         "occupation":"Android Developer w Droids on Roids",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/mateusz.jpg",
-         "twitter":"https://twitter.com/MateuszBudzar"
-      },
-      {
-         "description":"Inżynier platformy danych pracujący od 2013 roku w Allegro, jednej z największych firm technologicznych W Europie Środkowo-Wschodniej. Członek zespołu odpowiedzialnego za platformę Big Data, która dostarcza narzędzia zarówno dla developerów jak i analityków. W latach 2009-2015 zaangażowany w tworzenie i rozbudowę infrastruktury PLGrid – platformy IT dostarczającej polskiej społeczności naukowej jednorodny i bezpieczny dostęp do rozproszonych geograficznie zasobów. Zainteresowany obliczeniami i systemami rozproszonymi oraz wszelkimi metodami przetwarzania dużej ilości danych.",
-         "id":21,
-         "name":"Rafał Kluszczyński",
-         "occupation":"Inżynier platformy danych w Allegro",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/onedrive-ProfilePhoto.jpg"
-      },
-      {
-         "description":"Anna Rogowska -- potocznie nazywana “Happiness Officer”, od 5’ciu lat wspiera zespoły developerskie pracujące w technikach zwinnych i pracuje blisko z klientami przy tworzeniu aplikacji mobilnych i webbowych. Przez kilka lat współorganizowała konferencje i meetupy dla społeczności IT takie Mobile Central Europe. Prywatnie muzyk i fanka piłki ręcznej.\n\nKuba Marchiwcki -- programista od kilkunastu lat, architekt od kilku, analityk czasami, konsultant jak trzeba, manager z wyboru, trener z zamiłowania, wannabe entrepreneur z marzeń, lider Java User Group w Gdańsku. Jest spora szansa, że nic z tego nie robię dobrze, ale próbuję… i wyciągam wnioski z porażek. Złośliwi mówią, że nie umie programować, ale miewa niezłe pomysły.",
-         "id":22,
-         "linkedin":"https://www.linkedin.com/in/annarogowska/",
-         "name":"Anna Rogowska i Kuba Marchwicki",
-         "occupation":"Project Manager/Product Owner & CTO at BetterSolutions",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/02/rogowska-300x297.jpg",
-         "twitter":"https://twitter.com/kubem?lang=en"
-      },
-      {
-         "description":"Developer webowy od ponad 17 lat. Jako hobby bada procesy stojące za refaktoringiem i optymalizacją kodu. Lubi wyciskać z baz danych ostatnie soki. Aktualnie buduje lepszą przyszłość na pokładzie Intela.",
-         "id":23,
-         "linkedin":"https://www.linkedin.com/in/michallukaszewski/",
-         "name":"Michał Łukaszewski",
-         "occupation":"Software Engineer at Intel Corporation",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/mlukaszewski.jpg"
-      },
-      {
-         "description":"Zazwyczaj programista, czasami trener i konsultant, aspirujący mówca konferencyjny, znany między innymi z konferencji 4Developers, JDD i Confitura. Entuzjasta NoSQL’a i orędownik wykorzystywania więcej niż jednej bazy danych w systemach w słusznych celach, dla sławy i zysku.\n\nPrywatnie jeden z liderów łódziego JUG’a oraz Zwinnej Łodzi, grupy pasjonatówmetody “agile”, a także współinicjator spotkań, Software Architecture & Design Debate, platformy nowego, ciekawego i szerszego spojrzenia na architekturę systemów IT.",
-         "id":24,
-         "linkedin":"https://www.linkedin.com/in/wsztajerowski/",
-         "name":"Wiktor Sztajerowski",
-         "occupation":"Programista Java w Smart Coders",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/wiktor_color-298x300.jpg"
-      },
-      {
-         "description":"Java Developer, Solution Architect, Team Leader, currently in Delivery Manager role, with little appreciation to any of job titles. Focused more on solving problems, regardless if soft or tech in nature. In free time building communities, speaking at events, coding and trying to come back to blogging. After working around a decade in software industry, I’ve seen a bit, and try to share what I’ve learned about programming and management. Always with opinion, but open to discussion, stay strong and argue :) Despite using Outlook and Excel on daily basis, I’m still developer at heart with couple of IDE’s installed on my machine.",
-         "id":25,
-         "linkedin":"https://www.linkedin.com/in/michalgruca/",
-         "name":"Michał Gruca",
-         "occupation":"Problem solver w EPAM Systems",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/michalgruca-300x300.jpg",
-         "twitter":"https://twitter.com/michalgruca"
-      },
-      {
-         "description":"W branży IT jestem już od kilkunastu lat. Kiedyś programista, teraz lider a po drodze także i trener. No i ta ostatnia rola bardzo mi przypadła do gustu, bo pozwala uczyć i motywować innych poprzez eksperymenty, wnioski, przykłady działania oraz dyskusje. Rola trenera / coacha pozwoliła mi połączyć rolę programisty i lidera aby dzielić się doświadczeniem z innymi. Głównymi moimi zainteresowania zawsze były jakość kodu źródłowego (a więc i refaktoryzacja) jak i praca z ludźmi. A jako że w branży IT liczy się przede wszystkim praca zespołowa to interesuję się tym w jaki sposób możemy dbać o jakość jako zespół gdyż w pojedynkę jest to bardzo trudne. Do tej pory wystąpiłem na konferencjach JDD, 33rd Degree, Confitura i JBCNConf w Barcelonie a także przeprowadziłem kilkadziesiąt szkoleń z refaktoryzacji w Polsce, USA, Wielkiej Brytanii oraz Hiszpanii.",
-         "id":26,
-         "linkedin":"https://www.linkedin.com/in/w%C5%82odek-krakowski-941aa5/",
-         "name":"Włodek Krakowski",
-         "occupation":"Team Leader w Ocado Technology",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/wlodek-300x300.jpg"
-      },
-      {
-         "description":"Rzemieślnik Javy z zacięciem grafomańskim. Zawodowo od 2009 psuje oprogramowanie. Był już w fińskim telecomie, niemieckiej logistyce, szwajcarskim banku, szwedzkiej fabryce aut i finalnie wylądował w polskim software housie. Jest miłośnikiem pięknego kodu, ewangelistą Scruma, i molem książkowym. Interesuje się psychologią; fantastyką wszelakiego rodzaju; grami planszowymi, komputerowymi i fabularnymi; japońskimi sztukami walki: Aikido i Iaido oraz duńskimi klockami Lego. Od 2014 Prowadzi bloga o tresowaniu Javy ze smokiem w tle, dostępnego pod adresem: www.HowToTrainYourJava.com",
-         "id":27,
-         "linkedin":"https://www.linkedin.com/in/pawe%C5%82-zajaczkowski-b767063/",
-         "name":"Paweł Zajączkowski",
-         "occupation":"Senior Software Developer at PGS Software S.A.",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/pawel_avatar-300x300.jpg",
-         "twitter":"https://twitter.com/gvaireth"
-      },
-      {
-         "description":"CTO, architekt i konsultant skoncentowany na wysokowydajnych i skalowalnych architekturach aplikacji webowych. Z branżą IT związany od ponad 14 lat, w tym czasie pracował m.in. dla Naszej-Klasy, Gadu-Gadu czy Nextclicka, gdzie miał okazję współtworzyć projekty angażujące miliony użytkowników. Swoją wiedzą często dzieli się na konferencjach i meetupach, od kilku lat działa także w radach programowanych konferencji 4Developers i PHPCon Poland. Zaangażowany w rozwój PHPers, polskiego community developerów PHP. Entuzjasta big-data i machine-learningu, po godzinach relaksuje się przy przesterowanych dźwiękach gitar.",
-         "id":28,
-         "linkedin":"https://www.linkedin.com/in/mariuszgil/",
-         "name":"Mariusz Gil",
-         "occupation":"Owner at Source Ministry",
-         "photoUrl":"https://2018.boilingfrogs.pl/wp-content/uploads/2018/01/mariuszgil-300x300.jpg",
-         "twitter":"https://twitter.com/mariuszgil"
-      }
-   ],
-   "speechSlots":[
-      {
-         "id":1,
-         "timeLabel":"9:10 - 9:30"
-      },
-      {
-         "id":2,
-         "timeLabel":"9:50 - 10:35"
-      },
-      {
-         "id":3,
-         "timeLabel":"10:55 - 11:40"
-      },
-      {
-         "id":4,
-         "timeLabel":"12:00 - 12:45"
-      },
-      {
-         "id":5,
-         "timeLabel":"12:50 - 13:05"
-      },
-      {
-         "id":6,
-         "timeLabel":"13:45 - 14:00"
-      },
-      {
-         "id":7,
-         "timeLabel":"14:05 - 14:50"
-      },
-      {
-         "id":8,
-         "timeLabel":"15:10 - 15:55"
-      },
-      {
-         "id":9,
-         "timeLabel":"16:15 - 17:00"
-      },
-      {
-         "id":10,
-         "timeLabel":"17:20 - 18:05"
-      }
-   ],
-   "speeches":[
-      {
-         "description":"Keynote",
-         "id":1,
-         "path":1,
-         "speakerId":1,
-         "speechSlotId":1,
-         "title":"Boiling Frogs -- go live and stay alive! (Audytorium)"
-      },
-      {
-         "description":"Event Storming jest lekką techniką zespołowego odkrywania i eksplorowania złożonych domen oraz problemów. Wykorzystując eventy, obywateli pierwszej kategorii nowoczesnych technik software developmentu, w krótkim czasie możemy odkrywać, modelować i wizualizować to, co nas programistów często interesuje najbardziej: flow logiki biznesowej, agregaty, bounded-contexty, reguły biznesowe i powiązane z nimi hot-spoty, commandy, read-modele… Ale Event Storming jest przede wszystkim platformą komunikacji i transferu wiedzy pomiędzy członkami zespołu i „biznesem”, której użycie pozwala wdrażać na produkcję właściwie zrozumienie problemu, zamiast przybliżeń i niespełnionych założeń.\n\nPodczas sesji zapoznamy się zarówno z ogólnymi konceptami jak i użyciem techniki Event Stormingu na kolejnych poziomach. Od wysokopoziomowego big-picture do modelowania oprogramowania, projektowania agregatów, commandów, łączenia artefaktów wyjściowych sesji z CQRS, Event Sourcingiem, BDD czy implementacjami opartymi o Domain Driven Development.",
-         "id":2,
-         "path":1,
-         "speakerId":28,
-         "speechSlotId":2,
-         "title":"Discovering unknown domain with Event Storming"
-      },
-      {
-         "description":"Agile methodology is attractive for many developers. However badly performed can demotivate and withdrew team from perform in a hypervelocity. One of scrum practices is retrospective. In this session you will see how to avoid common mistakes, use retrospective as a powerful agile tool to improve your teams and truly understand what you are doing.\n\nLadies and gentleman I am giving you – Modern Retro!",
-         "id":3,
-         "path":2,
-         "speakerId":2,
-         "speechSlotId":2,
-         "title":"Modern agile retrospectives"
-      },
-      {
-         "description":"Termin “dług techniczny” jest sennym koszmarem wielu product ownerów i managerów. Wiedzą, że gdy ludzie rozmawiają o długu technicznym, to za jakiś czas z ust developerów padnie przerażający zwrot “przepiszmy to”… Technical debt rozumiany jest zazwyczaj jako brudny kod, lub niechlujnie wykonana praca. Czy na pewno jest to poprawna definicja? Czy używanie tak sformułowanego pojęcia wnosi jakąkolwiek wartość do komunikacji na linii biznes-development?\nPodczas prezentacji odpowiem na pytania czym tak naprawdę jest dług techniczny, kiedy go zaciągać, a kiedy spłacać. Postaram się przekonać Was do tego, że dług techniczny w swoich założeniach jest narzędziem, które pozwala na zwinny i pragmatyczny rozwój oprogramowania, a także pokazywanie transparentności oraz profesjonalizmu w pracy developera.",
-         "id":4,
-         "path":3,
-         "speakerId":3,
-         "speechSlotId":2,
-         "title":"Dług techniczny - narzędzie profesjonalisty"
-      },
-      {
-         "description":"Każdy chce mieć w projekcie świetną architekturę. Taką o której można opowiadać na konferencjach: skalowalną, bezpieczną, testowalną i pozbawioną słynnego już długu technologicznego. Skąd natomiast mamy wiedzieć czy zmierzamy we właściwą stronę? Jak skwantyfikować kryteria sukcesu? Czy dług techniczny da się wyrazić liczbami bardziej wartościowymi niż wszechobecne i pozbawione sensu “MD to fix”? Podczas mojej prezentacji pokażę, że do architektury da się podejść inżyniersko – z kalkulatorem i ekierką. Czas beztroskich artystów i wież z kości słoniowej bezpowrotnie przeminął…",
-         "id":5,
-         "path":1,
-         "speakerId":4,
-         "speechSlotId":3,
-         "title":"Engineering architecture"
-      },
-      {
-         "description":"O Open Source każdy słyszy i prawdopodobnie z tego typu oprogramowania czy bibliotek korzysta, ale gdy dochodzi do kwestii tego ilu z nas – developerów – dołożyło swoje cegiełki do projektów o otwartym źródle, statystyka i liczebność tejże grupy spada dość drastycznie. Dlaczego tak się dzieje? Nie mamy na to czasu? Czy też może cytując hit Kayah nie widzimy w tym sensu i nucimy sobie: “Po co? Po co? Po co? Po co?”. Czy rzeczywiście można “wygrać” swoje developerskie życie jednym commitem oraz o tym jak o 180 stopni moje programistyczne (i nie tylko!) życie zmieniła aktywność na przestrzeni wolnego oprogramowania opowiem w trakcie prezentacji.",
-         "id":6,
-         "path":2,
-         "speakerId":5,
-         "speechSlotId":3,
-         "title":"Kariera w/dzięki Open Source"
-      },
-      {
-         "description":"Finding bugs in distributed systems is challenging.\nFinding bugs on production in distributed systems is even harder due to time pressure, especially if the bug is on critical path.\nAt times like that you can’t afford guessing what’s wrong, you have to take decisions based on real data.\nIn this slides-free session we will see how can we use live data for making bugs discovery quicker and finding root causes of such bugs easier.\nMoreover we’ll see how to roll out fixes to production in almost no time.",
-         "id":7,
-         "path":3,
-         "speakerId":6,
-         "speechSlotId":3,
-         "title":"Nailing down bugs in distributed systems"
-      },
-      {
-         "description":"Nie ważne w jakim stylu architektonicznym tworzymy nasze aplikacje, (monolitycznym, mikroserwisy, serverless) warunkiem koniecznym niewystarczającym, do uzyskania takich właściwości jak: łatwość utrzymania, testowalność, reużywalność czy skalowalność, jest odpowiedni podział na moduły. Odpowiedni czyli jaki? I tu się zaczynają schody, bo przecież nigdzie nie ma do tego instrukcji. To co jest to ogólnikowe rady w stylu „musisz znaleść bounded context”. Jak to zrobić?\n\nSkąd będę wiedział, że zrobiłem to dobrze? Jak to odzwierciedlić w strukturze paczek? Nie mam jedynych słusznych odpowiedzi, ale podzielę się z wami tym jak ja to robię.",
-         "id":8,
-         "path":1,
-         "speakerId":7,
-         "speechSlotId":4,
-         "title":"Modularity - the final frontier."
-      },
-      {
-         "description":"Niektórzy uważają, że przepis na bezpieczne hasła w aplikacji [webowej] jest prosty: trochę pomieszać, czasem trochę posolić i gotowe! Tymczasem przechowywanie haseł i innych wrażliwych danych może wymagać nieco więcej zachodu. Garść przykładów tego, czego nie robić i tego, co robić, okraszonych historiami z życia wolnego strzelca. Bezwzględne stosowanie nie jest wymagane, ale pozwala uniknąć typowych niestrawności i nadmiaru kwasu. Prezentowane przykłady będą napisane w Javie, PHP i C, dlatego zrozumie je każdy programista, bez względu na język i poziom doświadczenia",
-         "id":9,
-         "path":2,
-         "speakerId":8,
-         "speechSlotId":4,
-         "title":"Passwords: do you keep them safe?"
-      },
-      {
-         "description":"Dobre użycie loggera nie jest powszechną praktyką. Zazwyczaj skupiamy się na pisaniu programu jako takiego, czyli na jego implementacji, ale zapominamy o zapewnieniu sobie kontroli nad jego wykonaniem. Szczególnie, jeśli dopiero na produkcji ujawni się błąd.\nChodzi o to, żeby mieć dobre nawyki logowania od początku powstawania programu. Nie dopiero, gdy “mleko się rozleje” i nie będziemy wiedzieli jak doszło do sytuacji kryzysowej na produkcji.\nOpowiem o tym jak mądrze używać loggerów, na co zwrócić uwagę, jak logować wydajnie i bezpiecznie dla aplikacji, jak odnaleźć się w gąszczu informacji, również w środowiskach rozproszonych.\nZapraszam na moją prezentację.",
-         "id":10,
-         "path":3,
-         "speakerId":9,
-         "speechSlotId":4,
-         "title":"Jak odzyskać kontrolę nad aplikacją? Logger Ci w tym pomoże!"
-      },
-      {
-         "description":"Dostarczenie oprogramowania w sposób iteracyjny i inkrementacyjny nie jest łatwym zdaniem. Zaniedbanie dobrych praktyk choć daje czasem rezultaty na krótką metę w ogólnym rozrachunku nie przynosi nic dobrego.\n\nPodczas prelekcji podzielę się doświadczeniem zarówno skracania sobie drogi jak i podążania za dobrymi praktykami, które dość znacząco przełożyły się na dostarczany produkt.",
-         "id":11,
-         "path":1,
-         "speakerId":10,
-         "speechSlotId":5,
-         "title":"Upewnij się, że dostarczasz increment, a nie ekskrement produktu."
-      },
-      {
-         "description":"W tej okolicy wszyscy go znają. Każdy rozpozna ten krok, gdy wchodzi do salonu i mierzy każdego wzrokiem – doświadczony i obeznany z problemami obecnych. Z każdym zdaniem wszyscy zgadzają się – czy aby na pewno?\n\nCzy recenzent powinien być kowbojem? Trzy słowa o komunikacji podczas Code Review.",
-         "id":12,
-         "path":2,
-         "speakerId":11,
-         "speechSlotId":5,
-         "title":"Rola mądrej sowy w code review"
-      },
-      {
-         "description":"Wyzwania dla zespołu deweloperskiego i ich rozwiązania w tworzeniu aplikacji dostępnych w wielu krajach – na podstawie doświadczeń m. in. z tworzenia serwisu społecznościowego dla krajów arabskich. W prezentacji zostaną poruszone takie tematy, jak typowe błędy w internacjonalizacji i jak ich uniknąć, internacjonalizacja a SCRUM, narzędzia i biblioteki do internacjonalizacji",
-         "id":13,
-         "path":3,
-         "speakerId":12,
-         "speechSlotId":5,
-         "title":"'the i-word' czyli internacjonalizacja w praktyce"
-      },
-      {
-         "description":"Języków programowania, tak jak języków naturalnych, są tysiące. Czy poznawanie nowych języków niesie za sobą wartość? Czy język to tylko zbiór reguł i zasad służących komunikacji pomiędzy ludźmi albo maszynami? Czy naukę niemieckiego można porównać z nauką Erlanga? Jakich języków warto się uczyć? Na te i inne pytania postaramy się odpowiedzieć podczas tej prezentacji.",
-         "id":14,
-         "path":1,
-         "speakerId":13,
-         "speechSlotId":6,
-         "title":"Czego programista może nauczyć się od poligloty?"
-      },
-      {
-         "description":"Obiegowa opinia mówi, że osoby, które potrafią pisać w językach zrozumiałych dla maszyn nie radzą sobie z językami zrozumiałymi dla ludzi. To nieprawda: w moim lightning talku w ekspresowym tempie przedstawię prosty, sprawdzony, siedmiokrokowy algorytm, który pozwoli Ci swobodnie pisać artykuły, bloga, konspekty prezentacji czy nawet książki.\n\nPod koniec prezentacji każdy uczestnik otrzyma dostęp do dodatkowych zasobów zawierających rozszerzoną prezentację, szereg narzędzi i materiałów dodatkowych oraz przedpremierowe informacje na temat mojej książki, która niebawem pojawi się na rynku i pomoże Ci dzielić się wiedzą i budować swoją markę.",
-         "id":15,
-         "path":2,
-         "speakerId":14,
-         "speechSlotId":6,
-         "title":"Dziel się wiedzą i buduj swoją markę: 7 kroków do skutecznego pisania"
-      },
-      {
-         "description":"Konsola jest dla wielu programistów jednym z podstawowych narzędzi. Jedni ją kochają, drudzy nienawidzą ale każdy kto z niej korzysta powinien znać kilka sposób na to, by swoją pracę przyśpieszyć i ułatwić. Podczas ligting talka przedstawię mój workflow, pokażę kilka skrótów, o których wielu nie ma pojęcia oraz podsunę pluginy, które pomagają mi w codzinnej pracy.",
-         "id":16,
-         "path":3,
-         "speakerId":15,
-         "speechSlotId":6,
-         "title":"Terminal tips and tricks"
-      },
-      {
-         "description":"Dzień za dniem, CRUD za CRUD’em, dni przeciekają między palcami pośród takich samych usług RESTowych. Smutek, zgryzota, szara codzienność. Jedyną radością jest nowa wersja Spring MVC czy też kolejne potyczki pomiędzy obozami RESTafarian. Lecz czasami, raz w życiu, dostajesz w swoje ręce projekt, który budzi Cię do życia. Tym projektem jest “data streaming”. I od teraz wszystko co wiesz, całe zdobyte doświadczenie, nie ma już znaczenia.\n\nHektolitry zdarzeń w binarnym formacie spadają na Twoją głowę jak konfetti. Nagle Twoim problemem zaczyna być opóźnienie w czasach odpowiedzi na poziomie milisekund, rozmiary kolejek i pule wątków. A GC topi kwarc na Twoich procesorach. Głowę zaprzątasz sobie problemami “causal consistency” i “happens beforemilisekund, rozmiarami kolejek i pulami wątków.\n\nTa prezentacja to pamiętnik z pola bitwy. Opowieść o RX extensions, Apache Kafka i Hazelcast. Opowieść o tym, kiedy budowanie własnego rozwiązania ma sens. O tym z jakimi problemami się spotkacie, których będziecie starali się unikać jak ognia, a które z nich będziecie musieli rozwiązać sami. Zastanowimy sie też jakie problemy pomożecie rozwiązać biznesowi wykorzystując strumieniowanie danych. A jeśli jedyne co pozostanie po tej prezentacji w Waszych głowach, to świadomość, że kolejność zdarzeń ma znaczenie i wiedza na temat tego jak radzić sobie z tym w systemach rozproszonych, wówczas uznam to za sukces.",
-         "id":17,
-         "path":1,
-         "speakerId":16,
-         "speechSlotId":7,
-         "title":"Sagi, strumienie, reaktywność i inne buzzwordy"
-      },
-      {
-         "description":"Czy zdarzyło Ci się kiedyś przebudować całą aplikację, bo trzeba dodać nowe pole na frontendzie? Albo gdy zmiana organizacji tabel w DB zmieniała całą Twoją domenę? Jak radzić sobie ze zmieniającym się światem i wymaganiami? Jak utrzymywać porządek wewnątrz aplikacji i skupiać się na jej domenie? Jak sprawić, by zewnętrzny świat stał się detalem implementacyjnym? Odpowiedzią jest architektura portów i adapterów.\n\nNa prezentacji opowiem o doświadczeniach z budowaniem aplikacji, gdzie Twoja domena jest najważniejsza i odpowiem m. in. na pytania:\n– Co mi to da?\n– Jak to zrobić?\n– Na co uważać?\n– Dlaczego to jest trudne?",
-         "id":18,
-         "path":2,
-         "speakerId":17,
-         "speechSlotId":7,
-         "title":"Porty i adaptery"
-      },
-      {
-         "description":"Pewnego razu grupa programistów zdecydowała się, że zgodnie z aktualnie panującymi na rynku trendami nie będą już pisać “monolitów”. Wybrali kilka popularnych wzorców architektury (takich jak CQRS, Microservices, EDA, Event Sourcing) i zastosowali je w swoim produkcie. Po wdrożeniu okazało się, że wraz ze wzrostem skalowalności, który bardzo ich cieszył wzrósł również diametralnie koszt infrastruktury, a obsługa błędów stała się koszmarem- serwisy padały w bliżej nieokreślonych momentach, połączenie sieciowe nie zawsze było stabilne, bazy danych traciły dane, a obsługa rozproszonej transakcji przyprawiała o ciężki ból głowy i pozbawiała weekendów.\n\nByłeś tam może?\n\nChciałbym opowiedzieć o praktykach obsługi błędów. Jak radzić sobie z problemami biznesowowymi w systemach asynchronicznych? Jak obsługiwać wyjątki nie tracąc danych klientów? Jak wiele razy można próbować ponowić konkretną operację? Na te pytania nie ma jednej dobrej odpowiedzi, warto zatem poznać więcej niż jedno potencjalne rozwiązanie. Historia o tym co może się nie udać w naszej wspanaiałej, skalowalnej, rozproszonej aplikacji.",
-         "id":19,
-         "path":3,
-         "speakerId":18,
-         "speechSlotId":7,
-         "title":"Errors, errors everywhere"
-      },
-      {
-         "description":"Blockchain – temat o którym każdy dzisiaj mówi, każdy mówi że coś o tym wie, ale mało kto tak naprawdę rozumie o co w tym wszystkim chodzi.\nBlockchain to nie tylko Bitcoin, blockchain to nie tylko okazja do szybkiego wzbogacenia się (i stracenia wszystkiego) na szalejących kursach krypto-walut. Blockchain to nie tylko okazja do zdobycia kapitału dla zbudowania produktu poprzez ICO. Blockchain to przede wszystkim technologia, technologia, która może zrewolucjonizować współczesny świat.\nOpowiem o samej technologii, jej zastosowaniach – tych uzasadnionych, ale też zupełnie bezzasadnych, a także opowiem o ograniczeniach, o których mało kto wspomina. Podzielę się również własnymi przemyśleniami na temat przyszłości tej technologii.\nNasza przygoda z technologią Blockchain, którą rozpoczęliśmy prawie dwa lata temu nauczyła nas też bardzo dużo o często pomijanych aspektach Software Craftsmanship takich jak asertywność, odwaga, rozsądek etc. Duży (często zbyt duży) budżet, wyczarowany z powietrza (ICO) przeznaczony na realizację projektów, wyzwala w ludziach bardzo ciekawe emocje, nad którymi często ciężko jest zapanować.",
-         "id":20,
-         "path":1,
-         "speakerId":19,
-         "speechSlotId":8,
-         "title":"Blockchain - technologia, jej zastosowania, ograniczenia a także to, czego nauczyłem się dzięki blockchain o software craftsmanship"
-      },
-      {
-         "description":"Bycie programistą nie sprowadza się już jedynie do programowania. Mało tego, nie dość, że nie piszemy już tylko kodu, to bardzo często to od nas zależy powodzenie całego projektu. Już teraz mamy wiele nowych obowiązków i ciągle wymaga się od nas jeszcze więcej: bezpośredniego kontaktu z klientem, estymowania, ustalania priorytetów, doboru technologii. Oczywiście przez cały czas trwania projektu kod powienien być jak najwyższej jakości.\n\nJak się w tym wszystkim odnaleźć? W jaki sposób podejść do tych nowych obowiązków? Jak lepiej odpowiadać na potrzeby klientów i rynku? Podczas prezentacji spróbujemy odpowiedzieć sobie na te pytania oraz postaramy się zdefiniować profesjonalnego programistę.",
-         "id":21,
-         "path":2,
-         "speakerId":20,
-         "speechSlotId":8,
-         "title":"Profesjonalny developer. Kto to taki?"
-      },
-      {
-         "description":"Obecnie architektura w oparciu o mikroserwisy jest standardem w wielu organizacjach. Natomiast standardem formatu komunikacji pomiędzy serwisami jest zazwyczaj JSON. Może on być wykorzystywany zarówno w komunikacji bezpośredniej jak i z wykorzystaniem systemów kolejkowania wiadomości jak Apache Kafka. Jeśli dodatkowo komunikaty z Apache Kafka są przechowywane na platformie Hadoop (HDFS) w celu dalszego przetwarzania i analizy danych, to okazuje się że nie jest to optymalny format. Alternatywą są ustrukturyzowane formaty danych jak Avro, ORC lub Parquet.\n\nPodczas prezentacji przedstawię sposób w jaki wykorzystaliśmy format Avro do opisu danych przekazywanych pomiędzy mikrousługami z wykorzystaniem Hermesa i Apache Kafka. Omówię sposób przechowywania schematów Avro za pomocą usługi Schema Registry rozszerzonej o dodatkowe funkcjonalności, których brakowało na potrzeby ekosystemu Allegro. Dodatkowo, przedstawię problemy jakie się pojawiły podczas integracji z pozostałymi narzędziami platformy Big Data jak Hive lub Presto. Omówię ograniczenia schematu Avro jakie wprowadziliśmy oraz sposób w jaki są one weryfikowane podczas aktualizacji. Na koniec, przedstawię jak wygląda proces migracji z nieustrutkryzowanego formatu JSON do Avro w Allegro.",
-         "id":22,
-         "path":3,
-         "speakerId":21,
-         "speechSlotId":8,
-         "title":"Strukturyzacja danych na potrzeby platformy Big Data"
-      },
-      {
-         "description":"Jest wiele prezentacji o komunikacji, o budowaniu zespołów, o wspólnej i efektywnej pracy. I one są wszystkie takie same: słodkie, cukierkowe. Dlatego mamy dla Was zupełnie coś innego. Nie będziemy silić się na wyszukane parafrazy – będziemy nazywać rzeczy jakimi są. Przedstawimy 7 podstawowych technik rozniesienia zespołu w drobny mak. Szybko, sprawnie, treściwie – od 3 do 12 sprintów i nie będzie co zbierać. Mało kto potrafi być tak efektywny.\n\nCo więcej, podpowiemy jak pracować z tymi którzy chcą zespołu bronić, którzy (pełni ideałów, adżajlowych frazesów) starają się uniemożliwić Wam waszą pracę. Na takich też mamy sposoby – i też się nimi podzielimy.\n\nPamiętajcie, nie bierzemy jeńców, jesteśmy diabelnie skuteczni i zawsze osiągamy cel…",
-         "id":23,
-         "path":1,
-         "speakerId":22,
-         "speechSlotId":9,
-         "title":"Jak rozwalić swoj zespół w od 3 do 12 sprintów - 7 praktycznych porad"
-      },
-      {
-         "description":"Gdy Wujek Bob ogłaszał swoją koncepcję czystej architektury wskazał na bazę danych jako na szczegół implementacyjny.\nWiele osób mu uwierzyło.\nCzy tak jest w rzeczywistości? W prezentacji opowiem jaki wpływ na aplikację ma wybór właściwej bazy danych i sposób z nią komunikacji może stanowić o sukcesie lub porażce projektu.",
-         "id":24,
-         "path":2,
-         "speakerId":23,
-         "speechSlotId":9,
-         "title":"Baza danych jako szczegół optymalizacyjny"
-      },
-      {
-         "description":"Według badań amerykańskich naukowców, 90% architektur aplikacji na tym świecie składa się z warstwy prezentacji, warstwy tzw. “logiki biznesowej” oraz bazy danych. Z tych 90 procent 90% aplikacji cieszy się z posiadania jednej centralnej bazy danych, bazy od zadań specjalnych i banalnych. Bazy, która staje się z czasem warstwą integracji w miarę jak system ewoluuje. Staje się także uchem igielnym waszej skalowalności. Podczas prezentacji spróbuje was skonfrontować z ideą wielu baz danych w jednym systemie. Odpowiedzieć na pytanie kiedy i czy w ogóle to ma sens, porozmawiać o pewnych wzorcach, które pozwolą wam pozostać przy zdrowych zmysłach oraz cenie jaką trzeba zapłacić za wejście w świat polyglot persistence. Pokażę też i dobre strony takiego podejścia do architektury. A to wszystko na przykładzie który postaram się zrekonstruować na waszych oczach, zastępując bazę relacyjną, bazą dokumentowaną, “klucz-wartość” i grafem.\n\nP.S. Tak na serio to żartowałem z tymi amerykańskimi naukowcami… to byli radzieccy.",
-         "id":25,
-         "path":3,
-         "speakerId":24,
-         "speechSlotId":9,
-         "title":"Polyglot persistence"
-      },
-      {
-         "description":"Być liderem, być liderem – marzę ciągle będąc midem,\nbyć liderem, bo liderzy są paskudni i zdradzieccy.\nByć liderem, być liderem – pokazywać, kazać, nic nie robić\nnawet, gdyby komuś miało to przeszkadzać.\n\n\nRok temu było o karierze po seniorze i ścieżkach kariery. Tym razem skupimy się na porozmawianiu o roli lidera w zespole, tego nieformalnego jak i namaszczonego.\n\nBędzie trochę teorii o tym kim jest lider i jakich liderów wyróżniamy oraz co ważniejsze: kim lider nie jest.\n\nOpowiem jak w rolę wejść, jak zacząć oraz czego osobiście wymagam od osób które zostaną liderem nazwane. Podpowiem też czego organizacja może wymagać od lidera i jak w roli się odnaleźć. A na after party proponuję dyskusję jak z liderem pracować (czy z korporacyjnego: jak pod liderem pracować)\n\nPrzypowieść będzie na podstawie własnych doświadczeń z budowania zespołów, pracy z ludźmi i doświadczeń różnych.\n\nA co najważniejsze: obiecuję nie śpiewać!",
-         "id":26,
-         "path":1,
-         "speakerId":25,
-         "speechSlotId":10,
-         "title":"Być liderem, być liderem"
-      },
-      {
-         "description":"Kiedy refaktoryzacja ma miejsce w Twoim zespole? A kiedy jej nie ma w ogóle? Są to pytania na które spróbuję odpowiedzieć aby pomóc Tobie zadbać o jakość kodu w Twoim zespole. Podczas 17 lat w mojej karierze IT wzrastałem od juniora do lidera zespołu zawsze mając na uwadze dbałość o jakość kodu, a po drodze stałem się także prowadzącym szkolenia (głównie) z refaktoryzacji.\nPodczas tej prezentacji chciałbym się podzielić moimi obserwacjami, doświadczeniem oraz wnioskami odnośnie wielu rzeczy które w mojej opinii są bezpośrednio powiązane z jakością kodu z którym pracujemy i który tworzymy. Należą do nich to w jaki sposób ludzie pracują razem nad dostarczeniem wartości biznesowej, jak członkowie zespołu pomagają sobie nawzajem aby razem wzrastać w swoich umiejętnościach a także w jaki sposób zespół jest zarządzany.\nPrzedstawię także w jaki sposób obecnie dbamy z moim zespole o jakość kodu poprzez regularne sesje inspektoryzacji kodu a także w jaki sposób do nich doszliśmy poprzez nasze próby i doświadczenia.",
-         "id":27,
-         "path":2,
-         "speakerId":26,
-         "speechSlotId":10,
-         "title":"Refaktoryzacja w Świecie Biznesu… dla Programistów?"
-      },
-      {
-         "description":"Aplikacje internetowe nie rozmawiają już tylko ze swoimi użytkownikami i bazą danych. Rozmawiają coraz częściej i gęściej ze sobą nawzajem. Żeby nie zwariować w tym gąszczu komunikacji, warto zwrócić uwagę na kilkanaście różnych aspektów tworzenia API. Porozmawiamy o Fieldingu, Richardsonie, zasobach, zachowaniu, relacjach, parametrach, nagłówkach, wersjonowaniu, błędach, bezpieczeństwie, wydajności, zdrowiu i biznesie. Do tego garść przydatnych trików na poprawienie humoru konsumentów naszego interfejsu. Uwaga: może zawierać śladowe ilości węży i wielbłądów.",
-         "id":27,
-         "path":3,
-         "speakerId":27,
-         "speechSlotId":10,
-         "title":"The Art of Web API Design"
-      }
-   ]
+    {  
+"speakers":[  
+  {  
+     "description":"Programowanie to moja pasja. Podczas swojej kariery zawodowej uczestniczyłem w pracy nad zarówno projektami zakończonymi sukcesem, jak i będącymi totalną porażką. Większość tego co wiem, nauczyłem się z tych drugich.\n\nMocno wierzę w manifest Software Craftsmanship. M.in. z tego powodu organizuję Boiling Frogs oraz założyłem firmę Tratif — software house, w którym jakość kodu jest zawsze na pierwszym miejscu (więcej na http://tratif.com).\n\nCzasami piszę na firmowym blogu (http://blog.tratif.com). Praktykuję Test Driven Development i godzinami mogę rozmawiać o testach automatycznych i ich czytelności.\n\nW pracy używam głównie Javy, ale nie lubię określenia “programista Javy”. Uważam się po prostu za “programistę”, a technologia jest dla mnie jedynie narzędziem. Zawsze należy dobierać narzędzia do specyfiki danego problemu.\n\nLubię wierzyć, że oprogramowaniem można zmieniać świat.",
+     "id":1,
+     "linkedin":"https://www.linkedin.com/in/tkaczmarzyk",
+     "name":"Tomasz Kaczmarzyk",
+     "occupation":"Co-founder at Tratif",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2019/09/avatar-300x300.jpeg",
+     "twitter":"https://twitter.com/tkaczmarzyk"
+  },
+  {  
+     "description":"Software architect interesujący się złożonymi systemami o wysokiej wartości biznesowej, związany głównie z platformami webowymi. Ex-CTO, konsultant, speaker i trener w Bottega IT Minds. Z branżą IT związany od ponad 18 lat. Od kilku lat wykorzystuje EventStorming jako narzędzie do komunikacji pomiędzy zespołami developerskimi i biznesowymi, a także do modelowania oprogramowania w oparciu o DDD, CQRS czy EventSourcing. Uczestnik EventStorming Summit 2017, gdzie wspólnie z innymi zaproszonymi przez Alberto Brandoliniego osobami pracował nad rozwojem tej techniki. Po godzinach oddaje się swoim innym pasjom, fotografii i gitarze elektrycznej.",
+     "id":2,
+     "linkedin":"https://www.linkedin.com/in/mariuszgil/",
+     "name":"Mariusz Gil",
+     "occupation":"Software architect",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/gil-300x300-1.jpg",
+     "twitter":"https://twitter.com/mariuszgil"
+  },
+  {  
+     "description":"Wyznawca minimalizmu i maniak wszelkich idei, które usprawniają komunikację i wymianę wiedzy w zespole. Programistycznie od kilkunastu lat związany z PHP. Dba o przestrzeganie zasad: SOLID i czystej do bólu architektury. Założyciel łódzkiej myśli programistycznej: migawka.it",
+     "id":3,
+     "name":"Michał Cisz",
+     "occupation":"Software Development Manager",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/mcisz2-1.jpg",
+     "twitter":"https://twitter.com/michalcisz",
+     "linkedin": "https://www.linkedin.com/in/michal-cisz"
+  },
+  {  
+     "description":"Programista, czasem devops, preferuje Backend, toleruje Frontend, okazjonalnie speaker. Z Javą związany od 9, a z GO od 5 lat. Na co dzień pracuje w Nokii. Jeden z założycieli wrocławskiego GoWroc (Golang Wroclaw user group).",
+     "id":4,
+     "name":"Mateusz Dymiński",
+     "occupation":"Software Developer at Nokia",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/dyminski.jpg"
+  },
+  {  
+     "description":"Programista pasjonat, fan “Software Craftsmanship” i zwinnego podejścia do wytwarzania oprogramowania. Lubi proste rozwiązania skomplikowanych problemów.  Na codzień zajmuje się tematami z zakresu architektury aplikacji biznesowych, Domain-Driven Design, Continuous Delivery, technologii Java oraz testowania automatycznego. Prywatnie mąż, ojciec piątki dzieci.",
+     "id":5,
+     "linkedin":"https://www.linkedin.com/in/%C5%82ukasz-szyd%C5%82o-14754024/",
+     "name":"Łukasz Szydło",
+     "occupation":"Software Consultant/Architect/Trainer",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/szydlo-300x300-1.jpg",
+     "twitter":"https://twitter.com/lszydlo"
+  },
+  {  
+     "description":"Programista, inżynier, rzemieślnik, projektant i rowerzysta.Korzysta z każdej technologii, która prowadzi do celu.Wierzy w ludzi, a nie w papiery. Jest wyznawcą DevOps i wszelkiej automatyzacji.Jak przystało na człowieka inteligentnego, prowadzi bloga – https://stapp.space/Od czerwca 2018 znany jako “główny” dotnetomaniak.Na codzień główny architekt w FinAi oraz Microsoft MVP.",
+     "id":6,
+     "name":"Piotr Stapp",
+     "occupation":"Software Architect at FinAi",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/stapp.jpeg",
+     "twitter": "https://twitter.com/ptrstpp950",
+     "linkedin": "https://www.linkedin.com/in/piotrstapp/"
+  },
+  {  
+     "description":"Miałem szczęście obserwować rozwój IT: od Atari 2600 i C64 poprzez Amigę do współczesnych PC i Clouda. Doświadczając po drodze całego spektrum technologii i wielopoziomowych problemów z tym związanych. Pracowałem zarówno jako QA jak i DEV dzięki czemu wiem, że Excele są tak samo czerwone po każdej stronie. Obecnie łącze te działy, zajmując się testami wydajnościowymi i performance tuningiem. Gdy dzieci już śpią bawię się w gamedev lub retro.",
+     "id":7,
+     "name":"Sebastian Korczyk",
+     "occupation":"Software Developer",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/Sebastian_Korczyk.jpg"
+  },
+  {  
+     "description":"Kilkanaście lat doświadczenia, wiele błędów i porażek ale i dostarczonych systemów. Tak naprawdę gdzieś w głębi nadal jestem matematykiem-topologiem, może dlatego lubię Scalę, programowanie funkcyjne i takie tam. Ale także systemy rozproszone, przetwarzanie strumieniowe, Flinka i tym podobne. Przez prawie całe dorosłe życie (tzn. w IT) w TouK – jako deweloper, architekt, analityk i kto tam akurat jest potrzebny",
+     "id":8,
+     "name":"Maciek Próchniak",
+     "occupation":"Software developer at Touk",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/prochniak-e1580729224570.jpg",
+     "twitter":"https://twitter.com/mpproch",
+     "linkedin": "https://www.linkedin.com/in/maciej-prchniak-139b3110/"
+  },
+  {  
+     "description":"Najpierw marzył o zajmowaniu się sieciami, potem wylądował jako javowiec w projektach webowych. Później, po rocznej przygodzie jako konsultant CI/CD zobaczył, jak ogromną wartość mogą przynieść te metodyki w zespołach i usprawnianiu procesu wytwarzania oprogramowania. Obecnie na przemian wykorzystuje swoje twarde kompetencje java/devops oraz wspiera w rozwoju zespoły, w których pracuje w Boldare. Szerzy kulturę transparencji, zaufania oraz sprawnej komunikacji. Po pracy wsiada na rower albo planuje kolejne wypady, aby wraz z żoną poznawać nowe okolice – bliższe i dalsze.",
+     "id":9,
+     "name":"Maciej Papież",
+     "occupation":"Java Developer & Devops Engineer at Boldare",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/papiez.jpg",
+     "twitter": "https://twitter.com/maciejpapiez",
+     "linkedin": "https://www.linkedin.com/in/maciej-papiez/"
+  },
+  {  
+     "description":"Programista z pasji od prawie półtorej dekady, profesjonalnie przeszło 8 lat. Lead UI Developer w BNY Mellon. Po godzinach Toastmaster, a także miłośnik podróży, gór oraz psychologii. Silnie nastawiony na innowacje technologiczne i rozwój osobisty.",
+     "id":10,
+     "name":"Marcin Milewicz",
+     "occupation":"Lead UI Developer w BNY Mellon",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/milewicz.jpg",
+     "linkedin": "https://www.linkedin.com/in/marcinmilewicz/"
+  },
+  {  
+     "description":"Software Java Developer z 8-letnim doświadczeniem. Pasjonat testów automatycznych, dobrych praktych pisania kodu i dobrych praktych architektonicznych. Wierzę, ze umiejętności miękkie – jak komunikacja, autoprezentacja, zdolności dyskusyjne – stoją ramię w ramię z innymi zdolnościami programisty. Prywatnie mąż, ojciec, idealista i improwizator. Często w swoich prezentacjach stosjuę Techniki Improwizacji nabytych jako aktor jednego z wrocławskich Teatrów Improwizacji.",
+     "id":11,
+     "name":"Tomasz Przybylski",
+     "occupation":"Software Developer",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/przybylski.jpg"
+  },
+  {  
+     "description":"Programista o humanistycznych zainteresowaniach, fan NBA, wielbiciel dobrej architektury (nie tylko tej w kodzie) oraz wycieczek po górach. Od 2010 zawodowo związany z tworzeniem aplikacji webowych w języku PHP. Pracuje w Intive.",
+     "id":12,
+     "linkedin":"https://www.linkedin.com/in/karolkreft/",
+     "name":"Karol Kreft",
+     "occupation":"Symfony & PHP Developer",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/karol_75kb.png",
+     "twitter":"https://twitter.com/karol_kreft"
+  },
+  {  
+     "description":"Od kilku lat pełni rolę Scrum Mastera w brytyjskiej firmie IT. Doskonale czuje się w roli lidera służebnego dla swoich prężnie rozwijających się zespołów. Miłością do Agile zaraziła się kilka lata temu, kiedy to zaczęła uczęszczać na lokalne meet-up’y i konferencje poświęcone tej tematyce. Ewelina głęboko wierzy w stwierdzenie, iż jacy jesteśmy dla świata taki świat jest dla nas, dlatego też po godzinach współtworzy Fundację Gra o Sens.Poza pracą pasjonuje ją psychologia w zarządzaniu, taniec, śpiew, rysowanie oraz cosplay",
+     "id":13,
+     "name":"Ewelina Wyspiańska-Trojniarz",
+     "occupation":"Scrum Master at NewVoiceMedia",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/ewelina.jpeg"
+  },
+  {  
+     "description":"Pracuję na co dzień jako senior developer w JH (wearejh.com), jestem też współzałożycielem Gallinago. Pracuję jako trener prowadząc kursy z Magento. Bywam również prelegentem, występowałem m.in. na MeetMagento w Polsce i Rumunii, na PHPers Summit czy BB Days 4 IT.",
+     "id":14,
+     "name":"Maciej Sławik",
+     "occupation":"Co-Founder at Gallinago & Senior Software Engineer at JH",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/slawik-e1580729052228.png",
+     "twitter": "https://twitter.com/MaciejSlawik",
+     "linkedin": "https://www.linkedin.com/in/maciej-slawik/"
+  },
+  {  
+     "description":"Android Developer mieszkający we Wrocławiu. Jest członkiem grupy GDG Wrocław, organizatorem konferencji DevFest Wrocław, podcastu na żywo Piątki Na Produkcji oraz byłym organizatorem wrocławskiego meetupu Toast – Android Developers Meetup. Od ponad 6 lat jest w związku z urządzeniami mobilnymi. Uwielbia dzielić się tym, czego się nauczył, więc można go spotkać na różnych konferencjach, meetupach i okazjonalnie na blogu. Uważa, że umiejętności miękkie w procesie wytwarzania oprogramowania są niejednokrotnie ważniejsze, niż umiejętności techniczne. W wolnym czasie czyta książki, ogląda Dragon Ball i skróty z meczów NBA oraz gra w Pokemony.",
+     "id":15,
+     "name":"Mateusz Budzar",
+     "occupation":"Android Developer w Kangaroo",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/MateuszBudzar.jpg",
+     "twitter": "https://twitter.com/MateuszBudzar",
+     "linkedin": "https://www.linkedin.com/in/mateuszbudzar/"
+  },
+  {  
+     "description":"Jako dzieciak zakochałem się w programowaniu, a było to już ponad ćwierć wieku temu. Od tego czasu miałem wiele różnych związków językowo-technologicznych.\nObecnie najmocniej rozwijam się w obszarach .NET w powiązaniu z DDD, Event Storming’iem, Event Modeling’iem, Clean Code, TDD. Continuous Development – tak można nazwać pasjonata IT dlatego ciągle się rozwijam i uwielbiam poznawać nowe technologie.\nWyszedłem też do ludzi i występuję na różnych Polskich konferencjach i meetup-ach. Dzieląc się swoją wiedzą i doświadczeniami.\nOd 2017 roku prowadzę też blog MrDev.pl. Udało mi się też wystartować podcast o konferencjach i wystąpieniach publicznych After.conf.\nPrzeprowadziłem też kilkukrotnie warsztaty dotyczące: GIT Flow, TDD, Event Storming, Event Modeling.\nMoja najświeższa działalność to modelowanie aplikacji z wykorzystaniem Event Storming i Event Modeling. Można śledzić te poczynania w daily vlog’u Moje 5 minut.",
+     "id":16,
+     "name":"Krzysztof Owsiany",
+     "occupation":"Programista .NET w Billennium",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/krzysztof_owsiany.jpg",
+     "twitter": "https://twitter.com/k_owsiany",
+     "linkedin": "https://www.linkedin.com/in/krzysztof-owsiany-1a218876/"
+  },
+  {  
+     "description":"Od ponad 20 lat w branży IT, jako administrator baz danych, programista, architekt, manager i „inżynier od spraw katastrof”. Brałem udział w małych, średnich i nonsensownie dużych projektach, prowadzonych zgodnie zasadami „waterfall”, Agile oraz przy braku jakichkolwiek metodyk, z tym samym zawsze skutkiem. Co doprowadziło mnie do wniosku, że nieważne co robisz tak długo, jak robisz to dobrze, w najprostszy z możliwych sposobów i używasz właściwych narzędzi, które wykonają pracę za ciebie. W międzyczasie dałem się porwać ideą TDD oraz Software Craftmanship, do granic możliwości wyeksploatować tak piękne w swej prostocie pomysły jak REST i NoSQL, by potem porzucić je, by zgłębić tajniki „system thinking” i zachwycić się siłą jaką niesie z sobą „metafora” i odkryć, że rządzą nami te same prawa „natury”. Niepokorny wyznawca kościoła JVM, badacz bytecode’u i JIT oraz wszelkiej maści parserów, interpreterów i kompilatorów. Na co dzień walczący o lepszą wydajność w Neo4j. Od czasu do czasu można usłyszeć moje niskiej jakości żarty na temat architektury na konferencjach w Polsce. W wolnych chwilach trener w http://symentis.pl i autor bloga na http://geekyprimitives.wordpress.com/ oraz samozwańczy dyktator w radach programowych konferencji CoreDump, SegFault, JDD oraz 4Developers.",
+     "id":17,
+     "linkedin":"https://www.linkedin.com/in/jpalka/",
+     "name":"Jarek Pałka",
+     "occupation":"Performance Engineer",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/palka.jpg",
+     "twitter":"https://twitter.com/j_palka"
+  },
+  {  
+     "description":"Trener umiejętności społecznych, coach, absolwentka psychologii oraz Zarządzania Potencjałem Pracowników. Przez kilka lat odpowiadała za szkolenia pracowników w międzynarodowej korporacji. Aktualnie trener freelancer. Specjalizuje się w szkoleniach z zakresu umiejętności społecznych m.in. komunikacji, zarządzania zespołem, budowania zespołu, asertywności, rozwiązywania konfliktów, inteligencji emocjonalnej. Wyznaje pogląd, że bycie wykwalifikowanym specjalistą to za mało, a wysoko rozwinięte kompetencje społeczne są niezbędnym elementem sukcesu ludzi i całych organizacji.",
+     "id":18,
+     "linkedin":"https://www.linkedin.com/in/anita-przybyl/",
+     "name":"Anita Przybył",
+     "occupation":"Trainer w SOFT - SKILLS Anita Przybył",
+     "photoUrl":"https://2019.boilingfrogs.pl/wp-content/uploads/2019/02/dubikowski-300x300.jpeg",
+     "twitter":"https://twitter.com/anita_przybyl"
+  },
+  {  
+     "description":"Architekt, Team Leader oraz programista związany z technologią .NET od ponad 12 lat. Absolwent Politechniki Warszawskiej i kierunku Informatyka o specjalizacji Inżynieria Oprogramowania. Zwolennik podejścia Software Craftsmanship, Agile, automatyzacji, Czystego Kodu oraz pragmatycznego rozwiązywania problemów zgodnie z ich klasą. Pasjonat tematów związanych z architekturą oprogramowania i projektowaniem systemów. Entuzjasta i praktyk Domain-Driven Design. Popularyzator architektury Modularnego Monolitu oraz wysokiej jakości programowania obiektowego. Przemyślenia i wnioski opisuje na swoim blogu https://www.kamilgrzybek.com i Twitterze: @kamgrzybek.Związany z firmą ITSG Global, gdzie jako architekt, programista i konsultant odpowiedzialny jest za wytwarzanie oprogramowania dla firm z branży finansowej, medycznej i Big Data. Prywatnie – mąż, tata ukochanej córeczki, opiekun niesfornego psa, biegacz – amator i pasjonat samodoskonalenia żyjący zgodnie z Sokratesową dewizą – “wiem, że nic wiem”.",
+     "id":19,
+     "linkedin":"https://www.linkedin.com/in/kamilgrzybek",
+     "name":"Kamil Grzybek",
+     "occupation":".NET Software Developer / Architect / Team Leader",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/KamilGrzybekBioImage_small-1.jpg",
+     "twitter":"https://twitter.com/kamgrzybek"
+  },
+  {  
+     "description":"Combining quality engineering, software engineering, and business analysis, ingredients, into one, hefty meal, called Product Engineer. Programme committee chair of Agile & Automation Days, conference dedicated to achieving higher velocity in delivering software. Has been giving speeches, workshops, and trainings around Poland, Europe, and World. Always eager to learn. Doesn’t believe in silos. To improve your product, one needs to become a fluid, that adapts to environment and fills it.",
+     "id":20,
+     "linkedin":"https://www.linkedin.com/in/bartszulc/",
+     "twitter": "https://twitter.com/bartszulc",
+     "name":"Bart Szulc",
+     "occupation":"Senior Product Engineer at Spartez/Atlassian",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/szulc.png"
+  },
+  {  
+     "description":"Notoryczny inżynier w pracy i poza nią, podążający za meandrami sztuki programowania. Zawodowo Remote Freelance Software Gardener, od kilku lat wyrywający chwasty w ogródkach webowych i zwykle przycinający Javę do kształtów pożądanych przez klientów. Miłośnik lekkości i zwinności, która powinna przejawiać się przede wszystkim w stosowaniu właściwych narzędzi. Lead developer, trener, prelegent.",
+     "id":21,
+     "name":"Piotr Przybył",
+     "occupation":"Remote Freelance Developer",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/przybyl.jpg",
+     "twitter":"https://twitter.com/piotrprz",
+     "linkedin": "https://www.linkedin.com/in/piotrprzybyl/"
+  },
+  {  
+     "description":"Ola Kunysz tworzy oprogramowanie od 13 lat. Pisała backendy, frontendy i kod biznesowy, zbierała wymagania, testowała i szkoliła. Pracowała w korporacjach, startupach i pro bono w różnych branżach i krajach. Najbardziej lubi pisać kod, który ma znaczenie i rozwiązywać prawdziwe problemy. Kiedy jest offline, jeździ na rowerze, spaceruje z psem, albo ćwiczy jogę z kotami.",
+     "id":22,
+     "linkedin":"https://www.linkedin.com/in/akunysz/",
+     "name":"Ola Kunysz",
+     "occupation":"lider zespołu",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/kunysz_ola.jpg",
+     "twitter":"https://twitter.com/olaqnysz"
+  },
+  {  
+     "description":"Od drugiej klasy podstawówki chciałem zajmować się komputerami. Azymut na programistę utrzymałem do studiów, na których zrozumiałem, że droga IT managera fascynuje mnie jeszcze bardziej.Od tego czasu pracowałem w korporacji, agencji interaktywnej, kilku software house’ach, firmach produktowych, game devie, przy rozwiązaniach pudełkowych i szytych na miarę. Obecnie kieruję wrocławskim biurem STX Next – pythonowego software house’u.",
+     "id":23,
+     "name":"Marcin Zabawa",
+     "occupation":"Head of Service Delivery at STX Next (python powerhouse)",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/zabawa.jpg",
+     "linkedin": "https://www.linkedin.com/in/zabawa/"
+  },
+  {  
+     "description":"Polyglot programmer z wieloletnim stażem oraz doświadczeniem w projektach dużych i małych. Jego ścieżka kariery wiodła prowadziła przez wiele języków programowania m.in. ActionScript, PHP, Perl, C++, Python, CoffeeScript, JavaScript, ostatnio Java i TypeScript. Uważa, że idealny programista powinien znać perfekcyjnie conajmniej jeden język dynamiczny i jeden statyczny. Do tej pory miał okazję realizować projekty m.in. z sektora publicznego, przetwarzania wideo w czasie rzeczywistym oraz analizy obrazów przy wykorzystaniu sieci neuronowych (również w Javie :))). Od czasu tego ostatniego dość sceptycznie nastawiony do możliwości przejęcia kontroli nad światem przez sztuczną inteligencję. Po godzinach próbuje dotrzymać tempa swojej trójce dzieci no i marzy o Tesli ",
+     "id":24,
+     "linkedin":"https://www.linkedin.com/in/marek-b%C4%99dkowski-4844bb177",
+     "name":"Marek Będkowski",
+     "occupation":"Software Developer/Technical Architect",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/marek_bedkowski_small.jpg",
+     "twitter":"https://twitter.com/bendi007/"
+  },
+  {  
+     "description":"W branży IT działam od 2005 roku. Zawodowo zajmuję się tworzeniem aplikacji internetowych i mobilnych a także zarządzaniem zespołami programistów. Specjalizuję się w technologiach Ruby on Rails oraz Elixir. Dodatkowo prowadzę podcast skierowany do branży IT oraz blog programistyczny. Oprócz programowania staram się inspirować ludzi z branży do ciągłego rozwoju i poszerzania swoich horyzontów.",
+     "id":25,
+     "name":"Krzysztof Kempiński",
+     "occupation":"Podcaster at porozmawiajmyoit.pl",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/kempinski_-1.jpg",
+     "twitter": "https://twitter.com/k_kempinski",
+     "linkedin": "https://www.linkedin.com/in/kkempinski/"
+  },
+  {  
+     "description":"Software Development Manager at Ocado Technology. 8 years of experience working as a Software Engineer, Leader, Agile Trainer and Development Manager. As an engineer, passionate about craftsmanship, propagating clean code, automated tests, behaviour-driven development and domain-driven design. As a leader, helps to build an organizational culture based upon autonomy, collaboration, and trust so that developers are equipped with both the hard and soft skills necessary to build truly awesome products. Tomek loves to change the reality around. He is highly pragmatic, challenge orthodoxy at all levels and believes that there is always room for improvement. Always eager to share and discuss ideas.",
+     "id":26,
+     "linkedin":"https://www.linkedin.com/in/tomasz-dubikowski",
+     "name":"Tomasz Dubikowski",
+     "occupation":"Software Development Manager at Ocado Technology",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/dubikowski.jpeg",
+     "twitter":"https://twitter.com/tdubikowski"
+  },
+  {  
+     "description":"Programista z 10-letnim doświadczeniem. Specjalizuje się w dostarczaniu prostych i wydajnych rozwiązań opartych na JVM. Na codzień zajmuje się tematami z zakresu architektury aplikacji biznesowych, zwinnego wytwarzania oprogramowania oraz continuous delivery. W pracy programisty najbardziej pasjonuje go rozwiązywanie problemów dotyczących procesu wytwarzania oprogramowania jako całości i budowanie samoorganizujących się zespołów. Uwielbia dzielić się wiedzą oraz szerzyć dobre praktyki, przed którymi branża bankowa nieustannie się opiera. Wyznaje pogląd, że bycie wykwalifikowanym programistą to za mało, a umiejętności komunikacji w zespole i produktywnego planowania są w dzisiejszym świecie niezbędne do osiągnięcia swoich celów. Obecnie zafascynowany pracą mózgu, produktywnością i biohackingiem.",
+     "id":27,
+     "name":"Sławomir Plamowski",
+     "occupation":"Software Developer",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/plamowski.jpg"
+  },
+  {  
+     "description":"Zawodowo: Engineering Manager w Finder.com\nHistorycznie: Programista.Mentalnie: Człowiek który utknął w latach 80W wyzwaniach uwielbiam się w skokach na głęboką wodę – albo się szybko nauczy pływać, albo utonie. Preferuję agnostyczne podejście do programowania, gdzie język jest narzędziem, a prawdziwa potęga tkwi w Problem Solving.",
+     "id":28,
+     "name":"Maciej Król",
+     "occupation":"Engineering Manager w Finder.com",
+     "photoUrl":"https://2020.boilingfrogs.pl/wp-content/uploads/2020/02/krol.jpg",
+     "linkedin": "https://www.linkedin.com/in/maciej-krl-168a61105/"
+  }
+],
+"speechSlots":[  
+  {  
+     "id":1,
+     "timeLabel":"9:10 - 9:30"
+  },
+  {  
+     "id":2,
+     "timeLabel":"9:50 - 10:35"
+  },
+  {  
+     "id":3,
+     "timeLabel":"10:55 - 11:40"
+  },
+  {  
+     "id":4,
+     "timeLabel":"12:00 - 12:45"
+  },
+  {  
+     "id":5,
+     "timeLabel":"12:50 - 13:05"
+  },
+  {  
+     "id":6,
+     "timeLabel":"14:00 - 14:15"
+  },
+  {  
+     "id":7,
+     "timeLabel":"14:20 - 15:05"
+  },
+  {  
+     "id":8,
+     "timeLabel":"15:25 - 16:10"
+  },
+  {  
+     "id":9,
+     "timeLabel":"16:30 - 17:15"
+  },
+  {  
+     "id":10,
+     "timeLabel":"17:35 - 18:20"
+  }
+],
+"speeches":[  
+  {  
+     "description":"Wstępniak",
+     "id":1,
+     "path":1,
+     "speakerId":1,
+     "speechSlotId":1,
+     "title":"Boiling Frogs: Co może pójść nie tak!?"
+  },
+  {  
+     "description":"Bounded contexty, agregaty, encje, VOs, repozytoria czy serwisy – wszystkie wzorce strategicznego i taktycznego Domain Driven Design pomagają mocno porządkować i strukturalizować projekt. Odpowiedzialności poszczególnych elementów pozwalają łatwo wpisywać je w ogólny design systemu, bez wprowadzania niepotrzebnego chaosu i couplingu.\nCzasem jednak sam model domeny jest mocno  złożony i rozbudowany. Ujawniają się w nim struktury wielkoskalowe DDD, które nałożone ponad wzorcami taktycznymi, pozwalają na jeszcze lepszą organizację i przygotowanie projektu do przyszłych zmian. Jedna ze struktur, tzw. Warstwy Odpowiedzialności, pozwalają wyróżniać warstwy Możliwości, Operacji, Zobowiązań, Polityk czy Wsparcia Decyzji, obejmujących swoim działaniem rozłączne obszary modelu.\nPodczas prezentacji przyjrzymy się konceptom N-warstwowego modelu domenowego, heurystykom wyznaczania granic oraz zastosowaniem ich przy pracy z projektem.",
+     "id":2,
+     "path":1,
+     "speakerId":2,
+     "speechSlotId":2,
+     "title":"N-warstwowe modele domenowe"
+  },
+  {  
+     "description":"Za późno mi powiedzieli, że ten projekt startuje! Brak czasu na analizę. Bye bye czysta architektura. Teraz to już zostaje mi tylko dopisanie modułu do brzydkiego monolitycznego legacy. Tego z nudną, trudną, nietykalną architekturą, która wita mnie przy kubku porannej kawy.\nA może nie jest za późno? Na konkretnym przykładzie pokażę Ci pewną drogę – sposób myślenia, dzięki któremu, z każdym projektem, będziesz coraz bliżej marzenia o lepszej architekturze. Jak wybrać właściwą bibliotekę? Jakie zależności uwzględnić przy wyborze architektury wdrożeniowej? Jak z głową zaaplikować wybrany wzorzec architektoniczny, aby nie doprowadzić do wielkiej przebudowy w kodzie legacy lub niechcący przekroczyć bezpieczny load cpu na produkcji? W oparciu o studium przypadku odpowiemy na postawione pytania. A na podstawie odpowiedzi, na koniec, powstanie checklista, której będziesz mógł użyć w przyszłości.",
+     "id":3,
+     "path":2,
+     "speakerId":3,
+     "speechSlotId":2,
+     "title":"Mali wojownicy wielkiego legacy"
+  },
+  {  
+     "description":"This session contains set of best practices for managing and configuring applications in Linux container(docker, containerd, rkt, etc). We will cover the following topics:\nChoosing best Docker base image\nGraceful Shutdown – handling SIGINT and other signals\nFast and Efficient Docker Builds\nLogging\nExposing metrics\nIntelligent Health Checks\nApplication configuration – reloading app configuration without downtime",
+     "id":4,
+     "path":3,
+     "speakerId":4,
+     "speechSlotId":2,
+     "title":"Apps in Containers – Best Practices for containerised Apps"
+  },
+  {  
+     "description":"Zdarza się, że ślepo dążymy do modularnego kodu, dla samego faktu modularności i enkapsulacji. Stawiamy równoważnik między „modularny” a „dobry”. Nie bierzemy pod uwagę, że modularność niesie są sobą koszty. Pytanie czy zawsze opłacalne jest dla nas ich ponoszenie.",
+     "id":5,
+     "path":1,
+     "speakerId":5,
+     "speechSlotId":3,
+     "title":"DDD w systemach rozproszonych"
+  },
+  {  
+     "description":"W epoce buzzwords gdzie wiodą prym DDD, BDD, K8S, ES, DevOps, CloudNative, Serverless czy nawet SPA, linked in driven CV’s jak i ekspert mode retweets fajnych skrótów, zapominamy o podstawach. Potrafimy zaprojektować system, a potem nagle za węgla uderza w nas PROBLEM i leżymy jak dłudzy. Aż nie sposób się podnieść. Najgorsze jest to, że jako środowisko wpadamy cały czas w to samo i wymyślamy koło na nowo albo Amerykę w konserwie. A wystarczy usiąść na chwilę i pomyśleć o podstawach. Na sesji w sposób lekko humorystyczny porozmawiać o tematach, które inżynierowie powinni znać a których nie da się łatwo RTeetnąć.",
+     "id":6,
+     "path":2,
+     "speakerId":6,
+     "speechSlotId":3,
+     "title":"To są przecież podstawowe rzeczy"
+  },
+  {  
+     "description":"Testy wydajnościowe są jak cebula – mają warstwy. I uwaga: na każdej z nich czają się problemy, czekające na nieświadomych nieszczęśników. Dlatego opowiem o tym na co warto zwrócić uwagę żeby później nie bolało lub bolało mniej. W końcu lepiej uczyć się na błędach innych bo możemy nie mieć dość czasu aby je wszystkie samemu popełnić. Powiem również co wspólnego miał Sir Terry Pratchett z testami wydajnościowymi. Prezentacja techniczna, przekrojowa. Zaprezentuję jakie mamy etapy w testach wydajnościowych, na jakie rzeczy warto zwrócić uwagę na każdym z nich i w jakie pułapki można się wpakować.",
+     "id":7,
+     "path":3,
+     "speakerId":7,
+     "speechSlotId":3,
+     "title":"Testy wydajnościowe - to proste (*)"
+  },
+  {  
+     "description":"Dawno temu, na studiach, uczyłem się o ACID – brzmiało sensownie. Ale potem poszedłem do pracy i dowiedziałem się jak różnie dostawcy baz danych rozumieją np. pojęcie izolacji...\nPotem, około 2009 roku dowiedziałem się o NoSQL, twierdzeniu CAP – no i to też było całkiem rozsądne. Ale potem kolejny twórcy baz zaczęli twierdzić że pokonali CAP (* tzn. w następującym rozumieniu – i tutaj długi i mętny wywód...)\nA potem zająłem się strumieniami, Kafką i oni mieli oczywiście własne rozumienie transakcji...\nChciałbym spróbować trochę opowiedzieć o różnych rodzajach spójności, izolacji itd – co one tak naprawdę znaczą i kiedy w sumie czego potrzebujemy? Oczywiście będzie to w sporej mierze oparte na własnych, czasami niełatwych doświadczeniach...",
+     "id":8,
+     "path":1,
+     "speakerId":8,
+     "speechSlotId":4,
+     "title":"Transakcyjność w 2020 - co to właściwie znaczy?"
+  },
+  {  
+     "description":"We’ve all been there – spotkanie, na którym wszyscy są, nikomu nie zależy, a problem po dwóch godzinach pozostaje nierozwiązany. Albo, być może co gorsza, wszystkim zależy, a problem po trzech godzinach pozostaje nierozwiązany, urósł i pojawiły się 3 kolejne. Od kiedy uświadomiłem sobie, że dobry deweloper w zespole może sprawić, że Scrum Master jest mniej potrzebny, zauważyłem, że zastosowanie kilku prostych technik pozwala na bycie katalizatorem spotkań, które:\n- każdemu pozwalają na wyrażenie swojej opinii\n- prowadzą do rozwiązania danego problemu w zaplanowanym czasie\n- są konstruktywne, ale też na tyle luźne, że uruchamiają kreatywność\nTechniki, o których opowiem, dotyczą zarówno zachowań, ról poszczególnych osób, procesów, jak i samych dyskutowanych zagadnień. Możesz je zaaplikować do niskopoziomowych dyskusji, kiedy szukacie najlepszego sposobu na refaktoryzację kodu, jak i omawiając wysokopoziomowo z Product Ownerem jego potrzeby biznesowe.",
+     "id":9,
+     "path":2,
+     "speakerId":9,
+     "speechSlotId":4,
+     "title":"10 sposobów, abyś mniej nienawidził spotkań"
+  },
+  {  
+     "description":"Czy microfrontends to rewolucyjne podejście i warto je wdrażać? Zalety stosowania microservices zostały opowiedziane już setki razy, ale co z monolitami frontendowymi? W prezentacji nie tylko przedstawie Wam co kryje się za pojęciem microfrontendów, ale także pokażę jak zastosować to podejście w prosty i praktyczny sposób.",
+     "id":10,
+     "path":3,
+     "speakerId":10,
+     "speechSlotId":4,
+     "title":"Microfrontends – czyli jak wdrożyć idee microservices na frontendzie"
+  },
+  {  
+     "description":"Czasami patrząc na kod testowy można wywnioskować, co kryje się na kodzie produkcyjnym. Błędny design czy słaba testowalność kodu jest jednym z wielu problemów jakie możemy napotkać podczas czytania takiego testu. Czy dobrze zastosowałem Test Doubles? Czy moja aplikacja ma możliwosć testowania? Czy posiada dobrą strukturę? Przestudiujemy kilka use case’om wnioskując czy struktura jaką dobraliśmy w naszej aplikacji jest odpowiednia do naszych potrzeb, spoglądając najpierw na kod źródłowy już napisanych testów. W rezultacie będzemi mogli porozmawiać o proponowanych rozwiązaniach i omówić ich słuszność.",
+     "id":11,
+     "path":1,
+     "speakerId":11,
+     "speechSlotId":5,
+     "title":"Show me your test code and I tell you how production works"
+  },
+  {  
+     "description":"W ciągu ostatnich 2 lat wystąpiłem przed ponad tysiącem programistów na meetupach i konferencjach w wielu miastach w całej Polsce. Warszawa, Gdańsk, Poznań, Wrocław, Szczecin czy Szczyrk – zawsze próbowałem nawiązać kontakt ze słuchaczami, poznać ich zdanie i znaleźć odpowiedź na pytanie jaką wartość ma to co robię, czy wnosi coś nowego i co powinienem poprawić. Tymczasem standardowy feedback to brak jakiegokolwiek feedbacku.\nAnalogiczna sytuacja ma miejsce w naszych zespołach. Pracujemy razem, razem rozwiązujemy problemy ale czy wspólnie wymieniamy się spostrzeżeniami dotyczącymi tego co w naszym podejściu do pracy działa a co kuleje? Czy potrafimy określić mocne i słabe strony współpracowników? I co równie ważne, czy wiemy jak to zakomunikować. W prezentacji podzielę się swoimi doświadczeniami dotyczącymi dawania feedbacku, co powinien zawierać i jak go przekazywać by osoba, której został udzielony wyniosła z niego jak najwięcej.",
+     "id":12,
+     "path":2,
+     "speakerId":12,
+     "speechSlotId":5,
+     "title":"Chcę wiedzieć co myślisz czyli rzecz o feedbacku"
+  },
+  {  
+     "description":"Poczucie sensu ma głęboki wpływ na naszą motywację wenętrzną. Gdy go brakuje najzwyczajniej w świecie nie chce nam się wstać rano z łóżka, czy iść na kolejne dłużące się spotkanie. Jak zatem odkrywać i nadawać sens naszym działaniom, aby chciało nam się chcieć? Na to i kilka innych pytań spróbujemy odpowiedzieć podczas prelekcji.",
+     "id":13,
+     "path":3,
+     "speakerId":13,
+     "speechSlotId":5,
+     "title":"Poczucie sensu kluczem do budowania motywacji wewnętrznej"
+  },
+  {  
+     "description":"Od jakiegoś czasu pracuję dla zdalnie dla firmy z Wielkiej Brytanii jako programista. Chciałbym opowiedzieć o tym, jak wygląda praca zdalna dla zagranicznej firmy, w jaki sposób szukać pracy za granicą i w jaki sposób zwiększyć swoje szanse na zatrudnienie. Postaram się wskazać plusy i minusy takiego modelu.",
+     "id":14,
+     "path":1,
+     "speakerId":14,
+     "speechSlotId":6,
+     "title":"O pracy zdalnej dla firmy z zagranicy"
+  },
+  {  
+     "description":"Szacowanie czasu wykonania zadania. Tak niewinnie to brzmi, a tak wiele od tego zależy. Opowiem o tym, co może pójść nie tak i co zrobić, żeby tak się nie stało.",
+     "id":15,
+     "path":2,
+     "speakerId":15,
+     "speechSlotId":6,
+     "title":"Nie zgaduj"
+  },
+  {  
+     "description":"Wszedłem w świat wystąpień publicznych. Nie było to łatwe, pierwsze moje wystąpienie było tak słabe, że chciałem nigdy więcej tego nie robić. Jednak mam za sobą obecnie ponad 30 wystąpień jako prelegent/trener.\nBardzo częstym problemem jest stres, jaki rodzi się w powiązaniu z wystąpieniami publicznymi.\nPo przeprowadzeniu wielu prezentacji często nie czuję już takiego paraliżu jak w pierwszych wystąpieniach. Jednak czasem pojawia się paraliżująca sytuacja. To skłoniło mnie do ciekawego wniosku. Stres trzeba doświadczać i rozwijać się.\nJak radziłem sobie z tym problemem i przy okazji kształtowałem swoje możliwości jako mówca. Czyli o niekonwencjonalnym podejściu do zapanowania nad stresem i wychodzeniu na scenę.",
+     "id":16,
+     "path":3,
+     "speakerId":16,
+     "speechSlotId":6,
+     "title":"Doświadczaj stresu - hakowanie prelegenta"
+  },
+  {  
+     "description":"Czasy się zmieniają. Systemy informatyczne wtargnęły burtalnie w nasze życie a oprogramowanie zjada ludzkość na śniadanie.\nW międzyczasie w naszych kieszeniach zagościło osiem rdzeni i 8 Gb RAM. Firma AMD zaprezentowała 12 rdzeniowy procesor na tzw. rynek konsumencki.\nA GMail jak się zacinał przy przewijaniu maili tak się zacina. Aby edytować plik tesktowy potrzebujemy 2 Gb RAM’u, a pewna aplikacja która pełni takie same funkcje co IRC w latach 90tych pożera każdą ilość CPU i pamięci.\nI nikt się tym nie przejmuje. Przecież sprzęt jest tańszy niż czas programisty. Czy to prawda?\nOdkąd na ustach architektów zagościły na stałe takie słowa jak chmura, czy serverless, powtarzana od lat prawda stała się fałszem.\nPodczas prezentacji chciałbym się z wami zastanowić nad odpowiedzią na pytanie postawione w tytule prezentacji, czy wydajność to jakość?\nJak zapewnić wydajność waszych systemów?\nKto za to wszystko jest odpowiedzialny ( ze smutkiem ogryjemy na końcu, że to dział HR:))\nJak to się wszystko ma do krakowskiego smogu.\nOpowiem jak zacząć z testowaniem wydajności. Jakie techniki, narzędzia i umiejętności musimy posiąść. I dlaczego “człowiek od wydajności” to najlepszy zawód na świecie.",
+     "id":17,
+     "path":1,
+     "speakerId":17,
+     "speechSlotId":7,
+     "title":"Czy wydajność to jakość?"
+  },
+  {  
+     "description":"Większość swoich sukcesów w pracy i nauce uważasz za przypadek? Swoją pozycję najwyraźniej osiągnąłeś jedynie dzięki łutowi szczęścia? Twoi współpracownicy ewidentnie mają lepsze kwalifikacje niż ty? Boisz się, że kiedyś ktoś odkryje, że w rzeczywistości jesteś niekompetentny? Syndrom Oszusta: czy dotyczy także Ciebie? Czym właściwie jest ten syndrom? Czym się objawia oraz jak sobie z nim radzić?",
+     "id":18,
+     "path":2,
+     "speakerId":18,
+     "speechSlotId":7,
+     "title":"Syndrom oszusta - czyli hamulec rozwoju. Czym jest, czy dotyczy ciebie i jak sobie z nim radzić"
+  },
+  {  
+     "description":"“Jeden, by wszystkimi rządzić, jeden, by wszystkie odnaleźć, Jeden, by wszystkie zgromadzić i w ciemności związać.”\n\nZachłyśnięcie się architekturą mikrousługową trwa już ładnych parę lat. Falstart jaki popełniliśmy w IT adoptując architekturę systemu rozproszonego bez uzasadnionych driverów architektonicznych boli niejeden zespół developerski i utrzymaniowy do dnia dzisiejszego. Historia lubi zataczać krąg, dlatego do łask wracają niechlubne “Monolity”. Czy rzeczywiście architektura monolityczna jest zła?\n\nNa prezentacji zostanie omówiony Modularny Monolit – młodszy brat monolitu, który dba o dobre imię architektur monolitycznych. Omówione zostaną główne cechy takiego systemu jak modularność oraz drivery architektoniczne, które za tą architekturą przemawiają wraz z tymi, które skłaniają do podziału Monolitu i migracji do architektury mikrousługowej.\n\nPodczas sesji zaprezentowany zostanie jeden ze sposóbów zaprojektowania Modularnego Monolitu, zgodny z najlepszymi praktykami i wzorcami projektowymi znanymi w środowisku inżynierii systemów IT.\n\nCzy “One Monolith to rule them all” ma uzasadnienie w praktyce? Przekonajmy się.",
+     "id":19,
+     "path":3,
+     "speakerId":19,
+     "speechSlotId":7,
+     "title":"Architektura Modularnego Monolitu: Jeden, by wszystkimi rządzić"
+  },
+  {  
+     "description":"“Chaos to najniebezpieczniejsza rzecz na tym świecie… również bardzo potężne narzędzie. Bez kontroli, chaos cię zniszczy.”\nNiektórzy z was pewnie rozpoznają powyższy cytat z Wiedźmina. Niestety w mojej prezentacji nie będzie smoków, czy demonów.\nMoże zaskakiwać jak chaos opisywany w Wiedźminie dobrze wpisuje się w świat wytwarzania oprogramowania. Szczególnie tego rozproszonego.\n\nPracując nad rozwiązaniami rozproszonymi, skalujący się, aby obsłużyć coraz to większy zapotrzebowanie, można być pewnym jednej rzeczy. Wszystko złego co się może wydarzyć, wydarzy się na pewno, jeżeli nie jest już w trakcie. Mówi nam o tym prawo wielkich liczb.\nNasz system jest w ciągłym stanie awarii. Świadomi rzeczywistości, mamy trzy ścieżki do wyboru.\nNajprostsza. Zignorowanie problemu. Akceptujemy ryzyko totalnego przestoju, modląc się by wszechświat był po naszej stronie.\nNiepraktyczna. Wpadamy w paraliż decyzyjny. Staramy się zaimplementować nasz system w taki sposób, aby był w stanie poradzić sobie z każdą nieprzewidzianą sytuacją. Gdzie jego zmiana jest praktycznie niemożliwa.\nW końcu pragmatyczna. Akceptujemy stan rzeczy i wykorzystujemy go na swoją korzyść. Zaczynamy zagłębiać się w nasz system. Eksplorujemy chaos. Eksperymentujemy, by zaobserwować niepożądaną reakcję. Wyprzedzić realia produkcyjne.\n\nJak Wiedźmin (ale serio… to już ostatni raz jak o nim wspominam), przeprowadzę was ścieżką pragmatyczną. Wprowadzę w Chaos Engineering. Opowiem czym jest. Jak się w to gra. Jakie typy ćwiczeń możecie przeprowadzić w swoich zespołach, aby uzyskać przewagę nad chaosem i trochę lepiej go kontrolować. Jako, że chaos jest potężny, a nasze systemy skomplikowane, opowiem również o tym jak być przygotowanym na przegraną z żywiołem. Czy jest root cause analysis, jak pomaga failure culture, dostęp do playbook, świadomość you build it you run it.\nObawiasz się, że prezentacja będzie za “mało techniczna”. Nie martw się. Jeżeli ceremonie nie są twoim konikiem, przedstawię też narzędzia oraz typy ataków, do których można je wykorzystać.",
+     "id":20,
+     "path":1,
+     "speakerId":20,
+     "speechSlotId":8,
+     "title":"Spokojnie, to tylko kontrolowany chaos"
+  },
+  {  
+     "description":"Wyczekowałeś Grzesiu brancza, tak jak cię prosiłam?\nWyczekowałem i pusznąłem bagfiksa, ciociu miła!\n\nPoznałeś w tym miesiącu dwa super kul frejmłorki, które pozwolą ricznąć więcej kipiajów? Fantastycznie, a kiedy ostatnio w twym ręku był słownik? Albo jakakolwiek książka (lub czasopismo)?\n\nWszystko się teraz informatyzuje, takie czasy. e-Urząd, e-commerce, e-tamto, e-siamto… Żeby to wszystko zrobić i utrzymać, potrzeba rzeszy informatyków i inżynierów. (I straszą, że ma być jeszcze gorzej.) Coraz więcej rzeczy przechodzi przez ręce naszej branżuni.\nLudzie narzekają na “arystokację IT”, że nie można jej zrozumieć. “Arystokracja” ma wysokie mniemanie o sobie i zadziera nosa jeszcze bardziej, bo nie po to studiowała pięć lat… itd. W tym celu coraz bardziej hermetyzuje swoje specyficzne narzecze, będące worem makaronizów, kalek językowych, nawet kanajackiej grypsery..\nTymczasem celem każdej arystokracji jest także dawanie przykładu, niesienie kaganka oświaty, dążenie do gwiazd.\n\nSpojler alert: prezentacja nie jest dla ludzi, którzy są obrażalscy i już wszystko wiedzą. Na tapet weźmiemy nasze przywary oraz cały ten bełkot, na który pozwalamy innym. Zapraszem serdecznie, choć miło może nie być.",
+     "id":21,
+     "path":2,
+     "speakerId":21,
+     "speechSlotId":8,
+     "title":"#ąęszcz Rzecz o języku informatyków"
+  },
+  {  
+     "description":"Podczas tej prezentacji opowiem o tym jak kupują ludzie spoza IT i dlaczego powinno nas to obchodzić. Pokażę dwie główne drogi implementacji wyszukiwania wizualnego oraz proces tworzenia i trenowania modelu do rozpoznawania zdjęć w oparciu o Fashion MNIST. A Pokemony posłużą mi do zaprezentowania wyzwań, jakie stoją na drodze do znajdowania właściwych obrazów. Zapraszam!",
+     "id":22,
+     "path":3,
+     "speakerId":22,
+     "speechSlotId":8,
+     "title":"Wyszukiwanie wizualne, uczenie maszynowe i Pokemony"
+  },
+  {  
+     "description":"Ta prelekcja jest dla Ciebie, jeśli przeglądając setną ofertę pracy myślisz raczej o sensie życia, niż o widełkach płacowych. Przyjdź i posłuchaj, jeśli wszyscy rzucają w ciebie hajsem, a Ty tymczasem zastanawiasz się gdzie będziesz czerpał satysfakcję z pracy, przeżywał przygody, gdzie będziesz mógł dążyć do osobistego mistrzostwa i robić coś, o czym z dumą można opowiadać dzieciom.\nW trakcie prelekcji będę bezwstydnie generalizował i porównywał duże firmy produktowe, startupy i software house’y pod kątem pozapłacowej jakości pracy. Zmierzę się w szczególności z opinią, że software house to miejsce dla ludzi bez pasji i misji, którzy sprzedają duszę za kasę lub święty spokój.",
+     "id":23,
+     "path":1,
+     "speakerId":23,
+     "speechSlotId":9,
+     "title":"Czy pracując w software housie zmarnuję sobie życie?"
+  },
+  {  
+     "description":"Założeniem hipotezy relatywizmu językowego Saphira-Whorfa są różnice w postrzeganiu świata w zależności o języka, którym się posługujemy. Wielojęzyczność oznacza dużo większą plastyczność mózgu, co przekłada się na lepsze zdolności komunikacyjne, większą otwartość oraz innowacyjne podejście do rozwiązywania problemów. Podczas prezentacji przejdziemy przez różne języki programowania pokazując ich specyfikę oraz jak te elementy mogą wpływać na sposób rozwiązywania problemów.",
+     "id":24,
+     "path":2,
+     "speakerId":24,
+     "speechSlotId":9,
+     "title":"Relatywizm języków programowania"
+  },
+  {  
+     "description":"Zapewne nigdy Twoja rozmowa telefoniczna nie została przerwana z powodu aktualizacji oprogramowania na urządzeniach telekomunikacyjnych. Dzieje się tak ze względu na niezawodność języka programowania jakim jest Erlang.\n\nW prelekcji opowiem trochę o tym języku i o jego młodszym bracie, Elixirze, stworzonym przez członka core teamu Ruby on Rails, brazylijczyka mieszkającego w Polsce, który to język, z uwagi na swą wydajność jest coraz mocniej używany przez startupy. Powiem jak programowanie funkcyjne, model współbieżności i podmiana kodu bez zatrzymywania serwera przyczyniają się do polepszenia niezawodności programów pisanych w Erlang i Elixir. Zobaczymy jak WhatsApp (napisany w Erlang) może obsługiwać 900 milionów użytkowników przy wsparciu tylko 50 osobowego zespołu inżynierskiego.",
+     "id":25,
+     "path":3,
+     "speakerId":25,
+     "speechSlotId":9,
+     "title":"Niezawodność języków programowania na bazie Erlang i Elixir"
+  },
+  {  
+     "description":"Mimo okiełznania wymagających arkan programowania i osiągnięcia technologicznych szczytów, ciągle zdarza nam się popełniać te same błędy. Lubimy oczekiwać wiele od innych, samemu naginając definicję profesjonalizmu. Krytykować, samemu krytycznych słów nie przyjmując. Narzekać, samemu nie robiąc oczekiwanych rzeczy. Przyglądniemy się zatem historiom kilku programistów, którzy na pewno mogliby zrobić kilka rzeczy lepiej. Dla siebie i dla wszystkich.",
+     "id":26,
+     "path":1,
+     "speakerId":26,
+     "speechSlotId":10,
+     "title":"IT. Krótka historia o tym jak spieprzyliśmy wszystko"
+  },
+  {  
+     "description":"Jednym z trudniejszych wyzwań przed jakimi stoją dzisiaj developerzy jest wdrażanie nowych osób do zespołu. Rotacja osób w zespole wprwadza chaos nawet w najlepiej naoliwionej maszynie, powoduje opóźnienia w dostarczaniu produktów, konflikty kulturowe i osobowościowe. A przecież tak być nie musi.\n\nWiększość firm na rynku posiada bardziej lub mniej sformalizowane sposoby wdrażania nowych osób do zespołu, ale zazwyczaj opierają się one na czytaniu nudnej dokumentacji lub odbywaniu niepotrzebnych treningów. Wielu osobom niezwiązanym bezpośrednio z IT wydaje się, że najważniejsze jest aby osoba dołączająca do zespołu była zasypana listą rzeczy do zrobienia w pierwszych tygodniach pracy, podczas gdy czego chcą developerzy to rozpoczęcie kodowania bez zbędnych ceremonii. Chcą poznać system od strony programistycznej i napisać swój pierwszy kod.\n\nW tej prezentacji opowiem o sposobach na wdrażanie nowych osób do zespołu. Przedstawię rozwiązania, z którymi spotkałem się w różnych firmach – zarówno te działające, jak i te denerwujące nowych pracowników.",
+     "id":27,
+     "path":2,
+     "speakerId":27,
+     "speechSlotId":10,
+     "title":"Onboarding, czyli jak odróżnić najlepsze zespoły od tych przeciętnych"
+  },
+  {  
+     "description":"Jak skutecznie komunikować się w zespołach, które dzielą godziny i tysiące kilometrów? Które narzędzia mogą nam w tym pomóc?\nCzy da się pracować w teamie, którego członkowie rozsiani są po różnych krajach i strefach czasowych?\nJakie zagrożenia projektowe, kulturowe i ludzkie czekają na nas, gdy nie ma nikogo pod ręką?\nPraca zdalna, a praca z biura. Która jest dla nas lepsza?\nJak spowodować żeby wideokonferencje w większej grupie nie były tak chaotyczne i często mało produktywne?\n\nNa wiele z tych pytań już sobie odpowiedzieliśmy, a dzisiaj chcemy podzielić się naszymi wnioskami i doświadczeniami.",
+     "id":28,
+     "path":3,
+     "speakerId":28,
+     "speechSlotId":10,
+     "title":"Efektywne zarządzanie i praca w zespołach rozproszonych"
+  }
+]
 }
