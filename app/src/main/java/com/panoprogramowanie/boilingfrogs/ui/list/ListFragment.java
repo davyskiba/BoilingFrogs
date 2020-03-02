@@ -13,7 +13,7 @@ import com.panoprogramowanie.boilingfrogs.util.DividerItemDecoration;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
  */
 public abstract class ListFragment extends BoilingFrogsFragment {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
     private ListItemModelRecyclerViewAdapter adapter;

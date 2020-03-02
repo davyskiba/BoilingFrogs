@@ -20,7 +20,7 @@ import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -42,10 +42,10 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
 
     //region Views
 
-    @Bind(R.id.contentScroll)
+    @BindView(R.id.contentScroll)
     NestedScrollView contentScroll;
 
-    @Bind(R.id.collapsing_toolbar)
+    @BindView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
 
     //endregion

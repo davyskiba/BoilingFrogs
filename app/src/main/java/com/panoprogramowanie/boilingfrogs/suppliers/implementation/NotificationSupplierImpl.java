@@ -3,7 +3,6 @@ package com.panoprogramowanie.boilingfrogs.suppliers.implementation;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 
-import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.suppliers.NotificationSupplier;
 
 /**

@@ -1,11 +1,9 @@
 package com.panoprogramowanie.boilingfrogs.ui.list;
 
-import com.android.databinding.library.baseAdapters.BR;
-import com.panoprogramowanie.boilingfrogs.databinding.ListItemBinding;
-
-import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.panoprogramowanie.boilingfrogs.databinding.ListItemBinding;
 
 public class ListItemViewHolder extends RecyclerView.ViewHolder {
 

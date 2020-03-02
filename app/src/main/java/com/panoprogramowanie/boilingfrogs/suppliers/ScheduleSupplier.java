@@ -4,8 +4,6 @@ import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 
-import android.content.Context;
-
 import java.util.List;
 
 /**

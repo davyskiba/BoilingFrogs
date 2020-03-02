@@ -1,11 +1,10 @@
 package com.panoprogramowanie.boilingfrogs.suppliers;
 
+import android.content.Context;
+
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragmentActivity;
-
-import android.content.Context;
 
 /**
  * Created by Wojciech on 07.01.2016.

@@ -12,14 +12,14 @@ import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
-import com.panoprogramowanie.boilingfrogs.util.DividerItemDecoration;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
+import com.panoprogramowanie.boilingfrogs.util.DividerItemDecoration;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -31,7 +31,7 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
         return context.getString(R.string.drawer_item_my_schedule);
     }
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
     private MyScheduleRecyclerViewAdapter adapter;

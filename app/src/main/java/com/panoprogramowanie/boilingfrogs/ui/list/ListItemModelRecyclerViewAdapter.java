@@ -1,13 +1,12 @@
 package com.panoprogramowanie.boilingfrogs.ui.list;
 
-import com.panoprogramowanie.boilingfrogs.R;
-import com.panoprogramowanie.boilingfrogs.databinding.ListItemBinding;
-
-import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.databinding.ListItemBinding;
 
 import java.util.LinkedList;
 import java.util.List;

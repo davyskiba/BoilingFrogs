@@ -1,17 +1,17 @@
 package com.panoprogramowanie.boilingfrogs.suppliers.implementation;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.panoprogramowanie.boilingfrogs.model.DaoMaster;
+import com.panoprogramowanie.boilingfrogs.model.DaoSession;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.SpeakerDao;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechDao;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
-import com.panoprogramowanie.boilingfrogs.model.DaoMaster;
-import com.panoprogramowanie.boilingfrogs.model.DaoSession;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlotDao;
 import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
-
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 
 import java.io.File;
 import java.io.FileOutputStream;

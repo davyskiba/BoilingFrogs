@@ -2,15 +2,12 @@ package com.panoprogramowanie.boilingfrogs.ui.splash;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
 import com.panoprogramowanie.boilingfrogs.R;
-import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
-import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragmentActivity;
 
 import javax.inject.Inject;
 
