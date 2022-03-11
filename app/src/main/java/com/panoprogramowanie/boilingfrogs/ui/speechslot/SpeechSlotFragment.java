@@ -6,13 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
+import com.panoprogramowanie.boilingfrogs.koin.KoinModule;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListFragment;
 import com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel;
-
-import javax.inject.Inject;
 
 /**
  * Created by Wojciech on 07.01.2016.
@@ -32,14 +30,13 @@ public class SpeechSlotFragment extends ListFragment {
         return result;
     }
 
-    @Inject
     SpeechSlotPresenter presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        BoilingFrogs.getMainComponent(getActivity()).inject(this);
+        presenter = KoinModule.getSpeechSlotPresenter();
     }
 
     @Override

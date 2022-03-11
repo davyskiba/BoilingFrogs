@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
-        <variable name="speechSlot" type="com.panoprogramowanie.boilingfrogs.model.SpeechSlot"/>
+
+        <variable
+            name="speechSlot"
+            type="com.panoprogramowanie.boilingfrogs.model.SpeechSlot" />
     </data>
 
 
-<LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/speech_slot_container"
         android:paddingLeft="8dp">
 
-    <LinearLayout
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
-        <TextView
+
+            <TextView
                 android:layout_width="88dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-        android:text="@{speechSlot.timeLabel}"/>
-        <TextView
+                android:text="@{speechSlot.timeLabel}" />
+
+            <TextView
                 android:layout_width="88dp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:textSize="12sp"
                 android:textColor="@color/gray"
-                app:speechLocationIfNonEmpty="@{speechSlot.favoriteOrOnlySpeech}"/>
-    </LinearLayout>
-    <android.support.v7.widget.CardView
+                app:speechLocationIfNonEmpty="@{speechSlot.favoriteOrOnlySpeech}" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,11 +52,12 @@
             app:cardPreventCornerOverlap="false"
             app:cardCornerRadius="8dp"
             app:contentPadding="0dp">
-        <RelativeLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <com.makeramen.roundedimageview.RoundedImageView
+                <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
@@ -58,18 +65,18 @@
                     app:riv_border_width="0dp"
                     android:scaleType="centerCrop"
                     app:imageUrl="@{speechSlot.favoriteOrOnlySpeech.speaker.photoUrl}"
-                    app:placeholder="@{@drawable/avatar_placeholder}"
-            />
-            <View
+                    app:placeholder="@{@drawable/avatar_placeholder}" />
+
+                <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignTop="@+id/photo"
                     android:layout_alignLeft="@+id/photo"
                     android:layout_alignRight="@+id/photo"
                     android:layout_alignBottom="@+id/photo"
-                    android:background="@drawable/my_schedule_speaker_overlay"/>
+                    android:background="@drawable/my_schedule_speaker_overlay" />
 
-            <TextView
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -80,9 +87,9 @@
                     android:maxLines="2"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-            android:text="@{speechSlot.favoriteOrOnlySpeech.title}"/>
+                    android:text="@{speechSlot.favoriteOrOnlySpeech.title}" />
 
-            <TextView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/empty_view"
@@ -90,15 +97,15 @@
                     android:layout_marginLeft="8dp"
                     android:maxLines="1"
                     android:textColor="@color/white"
-                    android:text="@{speechSlot.favoriteOrOnlySpeech.speaker.name}"/>
+                    android:text="@{speechSlot.favoriteOrOnlySpeech.speaker.name}" />
 
-            <View
+                <View
                     android:id="@+id/empty_view"
                     android:layout_width="match_parent"
                     android:layout_height="8dp"
                     android:layout_alignBottom="@+id/photo"
-                    android:visibility="invisible"/>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-</LinearLayout>
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </layout>

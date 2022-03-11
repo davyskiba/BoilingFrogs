@@ -3,22 +3,21 @@ package com.panoprogramowanie.boilingfrogs.ui.speaker;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.NestedScrollView;
+import androidx.databinding.DataBindingUtil;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.databinding.SpeakerActivityBinding;
+import com.panoprogramowanie.boilingfrogs.koin.KoinModule;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
-
-import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,7 +33,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
 
     public static void startForSpeaker(Speaker speaker, Activity activity) {
         Intent intent = new Intent(activity, SpeakerActivity.class);
-        intent.putExtra(SPEAKER_ID_ARG_KEY,speaker.getId());
+        intent.putExtra(SPEAKER_ID_ARG_KEY, speaker.getId());
         activity.startActivity(intent);
     }
 
@@ -52,19 +51,18 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
 
     SpeakerActivityBinding binding;
 
-    @Inject
     SpeakerPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=DataBindingUtil.setContentView(this,R.layout.speaker_activity);
+        binding = DataBindingUtil.setContentView(this, R.layout.speaker_activity);
 
         ButterKnife.bind(this);
 
-        long speakerId = getIntent().getLongExtra(SPEAKER_ID_ARG_KEY,0);
+        long speakerId = getIntent().getLongExtra(SPEAKER_ID_ARG_KEY, 0);
 
-        BoilingFrogs.getMainComponent(this).inject(this);
+        presenter = KoinModule.getSpeakerPresenter();
         presenter.takeView(this);
         presenter.setSpeakerId(speakerId);
 
@@ -77,7 +75,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
     }
 
     private void setupDrawerAndToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.anim_toolbar);
+        Toolbar toolbar = findViewById(R.id.anim_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
@@ -86,12 +84,7 @@ public class SpeakerActivity extends AppCompatActivity implements MvpView {
 
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.BoilingFrogsTheme_CollapsingToolbar);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
     }
 
     //region MvpView

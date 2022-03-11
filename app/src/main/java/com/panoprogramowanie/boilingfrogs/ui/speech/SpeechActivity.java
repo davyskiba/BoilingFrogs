@@ -4,27 +4,26 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.NestedScrollView;
+import androidx.databinding.DataBindingUtil;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.databinding.SpeechActivityBinding;
+import com.panoprogramowanie.boilingfrogs.koin.KoinModule;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
 import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
-
-import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -63,14 +62,12 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
     private SpeechActivityBinding binding;
     private ColorStateList floatingButtonDefaultTint;
 
-    @Inject
     SpeechPresenter presenter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=DataBindingUtil.setContentView(this,R.layout.speech_activity);
+        binding = DataBindingUtil.setContentView(this, R.layout.speech_activity);
 
         ButterKnife.bind(this);
         floatingButtonDefaultTint = floatingActionButton.getBackgroundTintList();
@@ -78,14 +75,14 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
 
         long speechId = getIntent().getLongExtra(SPEECH_ID_ARG, 0);
 
-        BoilingFrogs.getMainComponent(this).inject(this);
+        presenter = KoinModule.getSpeechPresenter();
         presenter.takeView(this);
         presenter.setSpeech(speechId);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if(presenter.hasVideo()) {
+        if (presenter.hasVideo()) {
             MenuInflater inflater = getMenuInflater();
             inflater.inflate(R.menu.speech_menu, menu);
         }
@@ -94,7 +91,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.speech_play_video:
                 presenter.playVideoSelected();
                 return true;
@@ -103,7 +100,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
     }
 
     private void setupDrawerAndToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.anim_toolbar);
+        Toolbar toolbar = findViewById(R.id.anim_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
@@ -112,7 +109,7 @@ public class SpeechActivity extends AppCompatActivity implements MvpView {
 
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.BoilingFrogsTheme_CollapsingToolbar);
 
-        toolbar.setNavigationOnClickListener((v)->onBackPressed());
+        toolbar.setNavigationOnClickListener((v) -> onBackPressed());
     }
 
     //region DataDisplay

@@ -205,7 +205,7 @@ public class Speech implements ListItemModel {
 
     @Override
     public boolean isClickable() {
-        return description!=null;
+        return description != null;
     }
     // KEEP METHODS END
 

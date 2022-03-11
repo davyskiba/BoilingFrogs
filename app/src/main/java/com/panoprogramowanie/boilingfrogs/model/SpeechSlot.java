@@ -148,10 +148,9 @@ public class SpeechSlot {
     // KEEP METHODS - put your custom methods here
 
     public Speech getFavoriteOrOnlySpeech() {
-        if(speechList.size()==1){
+        if (speechList.size() == 1) {
             return speechList.get(0);
-        }
-        else{
+        } else {
             return getFavoriteSpeech();
         }
     }

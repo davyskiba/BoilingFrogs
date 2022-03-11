@@ -3,7 +3,8 @@ package com.panoprogramowanie.boilingfrogs.ui.schedule;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v13.app.FragmentPagerAdapter;
+
+import androidx.legacy.app.FragmentPagerAdapter;
 
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.speechslot.SpeechSlotFragment;

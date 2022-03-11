@@ -2,20 +2,19 @@ package com.panoprogramowanie.boilingfrogs.ui.splash;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
-import com.panoprogramowanie.boilingfrogs.R;
-import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
+import androidx.appcompat.app.AppCompatActivity;
 
-import javax.inject.Inject;
+import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.koin.KoinModule;
+import com.panoprogramowanie.boilingfrogs.ui.base.MvpView;
 
 /**
  * Created by Wojciech on 13.01.2016.
  */
 public class SplashActivity extends AppCompatActivity implements MvpView {
-    @Inject
+
     SplashPresenter presenter;
 
     @Override
@@ -23,7 +22,7 @@ public class SplashActivity extends AppCompatActivity implements MvpView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_acitivty);
 
-        BoilingFrogs.getMainComponent(this).inject(this);
+        presenter = KoinModule.getSplashPresenter();
 
         presenter.takeView(this);
     }

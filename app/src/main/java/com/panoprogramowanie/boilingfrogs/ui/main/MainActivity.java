@@ -4,22 +4,20 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.koin.KoinModule;
 import com.panoprogramowanie.boilingfrogs.suppliers.NavigationSupplier;
 import com.panoprogramowanie.boilingfrogs.suppliers.implementation.GreenDaoScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.util.BrowserLaunchingUtil;
-
-import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 
@@ -35,7 +33,6 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
 
-    @Inject
     NavigationSupplier navigationSupplier;
 
     @Override
@@ -45,9 +42,9 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
 
         ButterKnife.bind(this);
 
-        BoilingFrogs.getMainComponent(this).inject(this);
+        navigationSupplier = KoinModule.getNavigationSupplier();
 
-        GreenDaoScheduleSupplier greenDaoScheduleSupplier=new GreenDaoScheduleSupplier(this);
+        GreenDaoScheduleSupplier greenDaoScheduleSupplier = new GreenDaoScheduleSupplier(this);
 
         setupDrawerAndToolbar();
     }
@@ -92,22 +89,14 @@ public class MainActivity extends BoilingFrogsFragmentActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                return drawerOptionSelected(item);
-            }
-        });
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(item -> drawerOptionSelected(item));
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (getFragmentManager().getBackStackEntryCount() == 0) {
-                    drawer.openDrawer(GravityCompat.START);
-                } else {
-                    onBackPressed();
-                }
+        toolbar.setNavigationOnClickListener(v -> {
+            if (getFragmentManager().getBackStackEntryCount() == 0) {
+                drawer.openDrawer(GravityCompat.START);
+            } else {
+                onBackPressed();
             }
         });
     }
