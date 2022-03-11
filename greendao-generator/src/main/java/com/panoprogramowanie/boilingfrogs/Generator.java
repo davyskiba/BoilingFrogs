@@ -11,7 +11,7 @@ public class Generator {
     private static final String OUT_DIR = PROJECT_DIR + "/app/src/main/java";
 
     public static void main(String args[]) throws Exception {
-        Schema schema = new Schema(4, "com.panoprogramowanie.boilingfrogs.model");
+        Schema schema = new Schema(5, "com.panoprogramowanie.boilingfrogs.model");
         schema.enableKeepSectionsByDefault();
 
         Entity speaker = addSpeaker(schema);
