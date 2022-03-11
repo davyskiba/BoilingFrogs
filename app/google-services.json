@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "537871140077",
+    "firebase_url": "https://boilingfrogs-45765.firebaseio.com",
+    "project_id": "boilingfrogs-45765",
+    "storage_bucket": "boilingfrogs-45765.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537871140077:android:8beb8b672dd0a5fbf738e4",
+        "android_client_info": {
+          "package_name": "com.panoprogramowanie.boilingfrogs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537871140077-n6hjl56h7afm8j536u3qrleqeneu4m6p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK0iPWBb_m14tjCxhxmVgzLzNvsa-Wmsg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537871140077-n6hjl56h7afm8j536u3qrleqeneu4m6p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

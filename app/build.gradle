@@ -1,11 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'io.fabric'
-
-repositories {
-    maven { url 'https://maven.fabric.io/public' }
-}
-
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 31
@@ -51,9 +47,8 @@ dependencies {
     implementation "de.hdodenhof:circleimageview:${circle_imageview_version}"
     implementation "com.makeramen:roundedimageview:${rounded_imageview_version}"
     implementation "org.immutables:gson:${gson_version}"
-    implementation('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
-        transitive = true;
-    }
+    implementation platform('com.google.firebase:firebase-bom:29.1.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
 
     implementation "org.greenrobot:greendao:${greendao_version}"
 

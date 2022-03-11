@@ -2,14 +2,11 @@ package com.panoprogramowanie.boilingfrogs;
 
 import android.app.Application;
 
-import com.crashlytics.android.Crashlytics;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.panoprogramowanie.boilingfrogs.koin.KoinModule;
-
-import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by Wojciech on 30.12.2015.
@@ -19,9 +16,6 @@ public class BoilingFrogs extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        if (!BuildConfig.DEBUG) {
-            Fabric.with(this, new Crashlytics());
-        }
 
         ImageLoaderConfiguration.Builder config = new ImageLoaderConfiguration.Builder(this);
         config.threadPriority(Thread.NORM_PRIORITY - 2);
