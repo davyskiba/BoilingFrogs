@@ -18,20 +18,20 @@ public class MyScheduleSpeechSlotViewHolder extends MyScheduleSpeechSlotViewHold
 
     public MyScheduleSpeechSlotViewHolder(SpeechSlotListItemBinding binding) {
         super(binding.getRoot());
-        this.binding=binding;
+        this.binding = binding;
         ButterKnife.bind(this, itemView);
     }
 
     @Override
     public void takeSpeechSlot(SpeechSlot speechSlot, final MyScheduleRecyclerViewAdapter.OnSlotClickListener onSlotClickListener) {
         binding.setSpeechSlot(speechSlot);
-        this.onSlotClickListener=onSlotClickListener;
+        this.onSlotClickListener = onSlotClickListener;
     }
 
     @OnClick(R.id.speech_slot_container)
-    public void onSpeechSlotClicked(){
-        Speech speech=binding.getSpeechSlot().getFavoriteOrOnlySpeech();
-        if(speech.getDescription()!=null && onSlotClickListener!=null){
+    public void onSpeechSlotClicked() {
+        Speech speech = binding.getSpeechSlot().getFavoriteOrOnlySpeech();
+        if (speech.getDescription() != null && onSlotClickListener != null) {
             onSlotClickListener.onNonEmptySlotClicked(speech.getId());
         }
     }

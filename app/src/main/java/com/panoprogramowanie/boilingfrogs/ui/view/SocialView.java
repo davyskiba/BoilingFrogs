@@ -89,7 +89,7 @@ public class SocialView extends LinearLayout {
     }
 
     @BindingAdapter("bind:speaker")
-    public static void setSpeaker(SocialView view, Speaker speaker){
+    public static void setSpeaker(SocialView view, Speaker speaker) {
         view.setSpeaker(speaker);
     }
 }

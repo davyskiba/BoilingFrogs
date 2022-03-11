@@ -35,7 +35,7 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
     }
 
     public boolean isSpeechFavorite() {
-        return speechSlot.getFavoriteSpeechId()==speech.getId();
+        return speechSlot.getFavoriteSpeechId() == speech.getId();
     }
 
     public void favoriteClicked() {
@@ -60,11 +60,11 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
         launchYoutubeIntent();
     }
 
-    private void launchYoutubeIntent(){
-        BrowserLaunchingUtil.launchBrowser(getContext(),speech.getYoutubeUrl());
+    private void launchYoutubeIntent() {
+        BrowserLaunchingUtil.launchBrowser(getContext(), speech.getYoutubeUrl());
     }
 
     public boolean hasVideo() {
-        return speech!=null && speech.getYoutubeUrl()!=null;
+        return speech != null && speech.getYoutubeUrl() != null;
     }
 }

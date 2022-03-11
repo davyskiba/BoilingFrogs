@@ -1,72 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
-        <import type="android.view.Gravity"/>
-        <import type="android.view.View"/>
-        <variable name="itemModel" type="com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel"/>
+
+        <import type="android.view.Gravity" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="itemModel"
+            type="com.panoprogramowanie.boilingfrogs.ui.list.ListItemModel" />
     </data>
+
     <RelativeLayout
-            android:id="@+id/speaker_container"
+        android:id="@+id/speaker_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{itemModel.isClickable ? @drawable/listitem_background : @drawable/white_background}"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingTop="16dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/rectangular_border_background"
+            android:scaleType="centerCrop"
+            android:visibility="@{itemModel.photoUrl==null ? View.GONE : View.VISIBLE}"
+            app:imageUrl="@{itemModel.photoUrl}"
+            app:placeholder="@{@drawable/avatar_placeholder}"
+            app:tint="@color/overlay" />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingTop="16dp"
-            android:paddingRight="8dp"
-            android:paddingLeft="8dp"
-            android:orientation="vertical"
-    android:background="@{itemModel.isClickable ? @drawable/listitem_background : @drawable/white_background}">
-            <ImageView
-                    android:id="@+id/avatar"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:visibility="@{itemModel.photoUrl==null ? View.GONE : View.VISIBLE}"
-                    android:background="@drawable/rectangular_border_background"
-                    app:tint="@color/overlay"
-                    android:scaleType="centerCrop"
-                    app:imageUrl="@{itemModel.photoUrl}"
-                    app:placeholder="@{@drawable/avatar_placeholder}"
-            />
-
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="match_parent"
-                      android:layout_alignTop="@+id/avatar"
-                      android:layout_alignBottom="@+id/avatar"
-                      android:layout_toRightOf="@+id/avatar"
-                      android:layout_toLeftOf="@+id/list_item_next_arrow"
-                      android:layout_marginLeft="8dp"
-                      android:layout_marginRight="8dp"
-                      android:gravity="center"
-        android:orientation="vertical">
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:text="@{itemModel.title}"/>
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/avatar"
+            android:layout_alignBottom="@+id/avatar"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/list_item_next_arrow"
+            android:layout_toRightOf="@+id/avatar"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:textSize="12sp"
-                    android:textColor="@color/gray"
-                    android:text="@{itemModel.subtitle}"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="@{itemModel.title}"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@{itemModel.subtitle}"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <ImageView
-                android:id="@+id/list_item_next_arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_next"
-                app:tint="@color/colorPrimary"
-        />
+            android:id="@+id/list_item_next_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_next"
+            app:tint="@color/colorPrimary" />
     </RelativeLayout>
 </layout>

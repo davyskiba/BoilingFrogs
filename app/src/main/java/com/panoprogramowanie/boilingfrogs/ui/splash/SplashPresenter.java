@@ -25,18 +25,18 @@ public class SplashPresenter extends Presenter<SplashActivity> {
     public void takeView(SplashActivity view) {
         super.takeView(view);
         Observable.zip(updateSupplier.performUpdate(),
-                        Observable.interval(SPLASH_TIME_OUT, TimeUnit.MILLISECONDS).first(),
-                        this::zipScheduleWithInterval)
-                .subscribe((schedule)->navigateToMainActivity(),
-                        (error)->navigateToMainActivity());
+                Observable.interval(SPLASH_TIME_OUT, TimeUnit.MILLISECONDS).first(),
+                this::zipScheduleWithInterval)
+                .subscribe((schedule) -> navigateToMainActivity(),
+                        (error) -> navigateToMainActivity());
     }
 
-    private Schedule zipScheduleWithInterval(Schedule schedule, Long interval){
+    private Schedule zipScheduleWithInterval(Schedule schedule, Long interval) {
         return schedule;
     }
 
-    public void navigateToMainActivity(){
-        if(getView()!=null) {
+    public void navigateToMainActivity() {
+        if (getView() != null) {
             navigationSupplier.navigateToMain(getContext());
         }
     }

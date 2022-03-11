@@ -23,7 +23,7 @@ public class SpeechSlotPresenter extends Presenter<SpeechSlotFragment> {
     }
 
     public void onResume(long slotId) {
-        speechSlot=scheduleSupplier.getSpeechSlotBytId(slotId);
+        speechSlot = scheduleSupplier.getSpeechSlotBytId(slotId);
         getView().setItems(speechSlot.getSpeechList());
     }
 

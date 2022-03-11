@@ -26,7 +26,7 @@ public class UpdateSupplier {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    private void saveSchedule(Schedule schedule){
+    private void saveSchedule(Schedule schedule) {
         scheduleSupplier.updateSpeeches(schedule.getSpeeches());
         scheduleSupplier.updateSpeakers(schedule.getSpeakers());
         scheduleSupplier.updateSpeechSlotsAndKeepFavorites(schedule.getSpeechSlots());
