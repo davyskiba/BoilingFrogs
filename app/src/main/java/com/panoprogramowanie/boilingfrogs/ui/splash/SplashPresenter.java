@@ -7,8 +7,6 @@ import com.panoprogramowanie.boilingfrogs.ui.base.Presenter;
 
 import java.util.concurrent.TimeUnit;
 
-import javax.inject.Inject;
-
 import rx.Observable;
 
 public class SplashPresenter extends Presenter<SplashActivity> {
@@ -18,7 +16,6 @@ public class SplashPresenter extends Presenter<SplashActivity> {
     private final UpdateSupplier updateSupplier;
     private final NavigationSupplier navigationSupplier;
 
-    @Inject
     public SplashPresenter(UpdateSupplier updateSupplier, NavigationSupplier navigationSupplier) {
         this.updateSupplier = updateSupplier;
         this.navigationSupplier = navigationSupplier;

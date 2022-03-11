@@ -2,20 +2,19 @@ package com.panoprogramowanie.boilingfrogs.ui.schedule;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.koin.KoinModule;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 
 import java.util.List;
-
-import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,7 +30,6 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     @BindView(R.id.tab_layout)
     TabLayout tabLayout;
 
-    @Inject
     SchedulePresenter presenter;
 
     private int selectedItem;
@@ -46,7 +44,7 @@ public class ScheduleFragment extends BoilingFrogsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        BoilingFrogs.getMainComponent(getActivity()).inject(this);
+        presenter = KoinModule.getSchedulePresenter();
     }
 
     @Override

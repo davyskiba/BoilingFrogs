@@ -1,7 +1,8 @@
 package com.panoprogramowanie.boilingfrogs.ui.list;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.panoprogramowanie.boilingfrogs.databinding.ListItemBinding;
 
@@ -12,7 +13,7 @@ public class ListItemViewHolder extends RecyclerView.ViewHolder {
 
     public ListItemViewHolder(ListItemBinding binding) {
         super(binding.getRoot());
-        this.binding=binding;
+        this.binding = binding;
 
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,14 +23,14 @@ public class ListItemViewHolder extends RecyclerView.ViewHolder {
         });
     }
 
-    public void setListItemModel(ListItemModel itemModel, ListItemModelRecyclerViewAdapter.OnItemClickListener onItemClickListener){
+    public void setListItemModel(ListItemModel itemModel, ListItemModelRecyclerViewAdapter.OnItemClickListener onItemClickListener) {
         binding.setItemModel(itemModel);
-        this.onItemClickListener=onItemClickListener;
+        this.onItemClickListener = onItemClickListener;
     }
 
-    public void onViewClicked(){
+    public void onViewClicked() {
         ListItemModel itemModel = binding.getItemModel();
-        if(itemModel.isClickable() && onItemClickListener!=null){
+        if (itemModel.isClickable() && onItemClickListener != null) {
             onItemClickListener.onItemClick(itemModel);
         }
     }

@@ -3,8 +3,6 @@ package com.panoprogramowanie.boilingfrogs.suppliers;
 import com.panoprogramowanie.boilingfrogs.api.Schedule;
 import com.panoprogramowanie.boilingfrogs.api.ScheduleService;
 
-import javax.inject.Inject;
-
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -14,7 +12,6 @@ public class UpdateSupplier {
     private final ScheduleSupplier scheduleSupplier;
     private final ScheduleService scheduleService;
 
-    @Inject
     public UpdateSupplier(ScheduleSupplier scheduleSupplier, ScheduleService scheduleService) {
         this.scheduleSupplier = scheduleSupplier;
         this.scheduleService = scheduleService;

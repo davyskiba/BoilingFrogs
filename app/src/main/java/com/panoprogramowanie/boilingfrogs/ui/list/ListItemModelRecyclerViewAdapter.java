@@ -1,9 +1,10 @@
 package com.panoprogramowanie.boilingfrogs.ui.list;
 
-import android.databinding.DataBindingUtil;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.databinding.ListItemBinding;
@@ -25,13 +26,13 @@ public class ListItemModelRecyclerViewAdapter extends RecyclerView.Adapter<ListI
 
     @Override
     public ListItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ListItemBinding binding=DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.list_item,parent,false);
+        ListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.list_item, parent, false);
         return new ListItemViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(ListItemViewHolder holder, int position) {
-        holder.setListItemModel(items.get(position),onItemClickListener);
+        holder.setListItemModel(items.get(position), onItemClickListener);
     }
 
     @Override
@@ -48,7 +49,7 @@ public class ListItemModelRecyclerViewAdapter extends RecyclerView.Adapter<ListI
         this.onItemClickListener = onItemClickListener;
     }
 
-    public interface OnItemClickListener{
-            void onItemClick(ListItemModel clickedItem);
+    public interface OnItemClickListener {
+        void onItemClick(ListItemModel clickedItem);
     }
 }

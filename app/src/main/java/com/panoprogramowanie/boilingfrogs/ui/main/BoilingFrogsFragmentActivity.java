@@ -1,6 +1,7 @@
 package com.panoprogramowanie.boilingfrogs.ui.main;
 
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by wdawi on 24.01.2016.

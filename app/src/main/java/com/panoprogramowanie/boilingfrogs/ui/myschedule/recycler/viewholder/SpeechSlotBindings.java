@@ -1,7 +1,8 @@
 package com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.viewholder;
 
-import android.databinding.BindingAdapter;
 import android.widget.TextView;
+
+import androidx.databinding.BindingAdapter;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speech;
