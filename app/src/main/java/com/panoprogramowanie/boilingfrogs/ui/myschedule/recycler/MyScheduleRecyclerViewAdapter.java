@@ -1,10 +1,11 @@
 package com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler;
 
-import android.databinding.DataBindingUtil;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.databinding.SpeechSlotEmptyListItemBinding;
@@ -59,14 +60,14 @@ public class MyScheduleRecyclerViewAdapter extends RecyclerView.Adapter<MySchedu
 
     @NonNull
     public MyScheduleEmptySpeechSlotViewHolder getMyScheduleEmptySpeechSlotViewHolder(ViewGroup parent) {
-        SpeechSlotEmptyListItemBinding binding=DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.speech_slot_empty_list_item,null,false);
+        SpeechSlotEmptyListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.speech_slot_empty_list_item, null, false);
         MyScheduleEmptySpeechSlotViewHolder viewHolder = new MyScheduleEmptySpeechSlotViewHolder(binding);
         return viewHolder;
     }
 
     @NonNull
     public MyScheduleSpeechSlotViewHolder getMyScheduleSpeechSlotViewHolder(ViewGroup parent) {
-        SpeechSlotListItemBinding binding=DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.speech_slot_list_item,null,false);
+        SpeechSlotListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.speech_slot_list_item, null, false);
         MyScheduleSpeechSlotViewHolder viewHolder = new MyScheduleSpeechSlotViewHolder(binding);
         return viewHolder;
     }

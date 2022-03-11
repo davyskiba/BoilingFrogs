@@ -2,11 +2,12 @@ package com.panoprogramowanie.boilingfrogs.ui.view;
 
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.BindingAdapter;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import androidx.databinding.BindingAdapter;
 
 import com.panoprogramowanie.boilingfrogs.R;
 import com.panoprogramowanie.boilingfrogs.model.Speaker;
@@ -88,7 +89,7 @@ public class SocialView extends LinearLayout {
     }
 
     @BindingAdapter("bind:speaker")
-    public static void setSpeaker(SocialView view, Speaker speaker){
+    public static void setSpeaker(SocialView view, Speaker speaker) {
         view.setSpeaker(speaker);
     }
 }

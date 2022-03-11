@@ -20,7 +20,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
 
-public class GreenDaoScheduleSupplier implements ScheduleSupplier{
+public class GreenDaoScheduleSupplier implements ScheduleSupplier {
     public static final String DB_NAME = "boilingfrogs_db";
 
     DaoSession daoSession;
@@ -56,7 +56,7 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
         try {
             dbFile.getParentFile().mkdirs();
             copyStream(context.getAssets().open(DB_NAME), new FileOutputStream(dbFile));
-        }catch (IOException exc){
+        } catch (IOException exc) {
 
         }
     }
@@ -85,7 +85,7 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
     @Override
     public void updateSpeeches(Speech[] speeches) {
         SpeechDao speechDao = daoSession.getSpeechDao();
-        for(Speech speech : speeches){
+        for (Speech speech : speeches) {
             speechDao.insertOrReplace(speech);
         }
     }
@@ -103,7 +103,7 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
     @Override
     public void updateSpeakers(Speaker[] speakers) {
         SpeakerDao speakerDao = daoSession.getSpeakerDao();
-        for(Speaker speaker : speakers){
+        for (Speaker speaker : speakers) {
             speakerDao.insertOrReplace(speaker);
         }
     }
@@ -126,14 +126,14 @@ public class GreenDaoScheduleSupplier implements ScheduleSupplier{
     @Override
     public void updateSpeechSlotsAndKeepFavorites(SpeechSlot[] speechSlots) {
         SpeechSlotDao speechSlotDao = daoSession.getSpeechSlotDao();
-        for(SpeechSlot speechSlot : speechSlots){
+        for (SpeechSlot speechSlot : speechSlots) {
             updateSpeechSlot(speechSlotDao, speechSlot);
         }
     }
 
     private void updateSpeechSlot(SpeechSlotDao speechSlotDao, SpeechSlot speechSlot) {
         SpeechSlot localSpeechSlot = speechSlotDao.load(speechSlot.getId());
-        if(localSpeechSlot!=null){
+        if (localSpeechSlot != null) {
             speechSlot.setFavoriteSpeechId(localSpeechSlot.getFavoriteSpeechId());
         }
 

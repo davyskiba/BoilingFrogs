@@ -1,8 +1,9 @@
 package com.panoprogramowanie.boilingfrogs.util;
 
-import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
+
+import androidx.databinding.BindingAdapter;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;

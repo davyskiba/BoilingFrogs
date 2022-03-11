@@ -8,8 +8,6 @@ import com.panoprogramowanie.boilingfrogs.suppliers.ScheduleSupplier;
 import com.panoprogramowanie.boilingfrogs.ui.base.Presenter;
 import com.panoprogramowanie.boilingfrogs.util.BrowserLaunchingUtil;
 
-import javax.inject.Inject;
-
 /**
  * Created by Wojciech on 20.01.2016.
  */
@@ -21,7 +19,6 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
     private SpeechSlot speechSlot;
     private Speech speech;
 
-    @Inject
     public SpeechPresenter(ScheduleSupplier scheduleSupplier, NotificationSupplier notificationSupplier) {
         this.scheduleSupplier = scheduleSupplier;
         this.notificationSupplier = notificationSupplier;
@@ -38,7 +35,7 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
     }
 
     public boolean isSpeechFavorite() {
-        return speechSlot.getFavoriteSpeechId()==speech.getId();
+        return speechSlot.getFavoriteSpeechId() == speech.getId();
     }
 
     public void favoriteClicked() {
@@ -63,11 +60,11 @@ public class SpeechPresenter extends Presenter<SpeechActivity> {
         launchYoutubeIntent();
     }
 
-    private void launchYoutubeIntent(){
-        BrowserLaunchingUtil.launchBrowser(getContext(),speech.getYoutubeUrl());
+    private void launchYoutubeIntent() {
+        BrowserLaunchingUtil.launchBrowser(getContext(), speech.getYoutubeUrl());
     }
 
     public boolean hasVideo() {
-        return speech!=null && speech.getYoutubeUrl()!=null;
+        return speech != null && speech.getYoutubeUrl() != null;
     }
 }

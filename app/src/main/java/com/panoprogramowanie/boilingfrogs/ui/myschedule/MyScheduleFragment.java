@@ -2,22 +2,21 @@ package com.panoprogramowanie.boilingfrogs.ui.myschedule;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.panoprogramowanie.boilingfrogs.BoilingFrogs;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.panoprogramowanie.boilingfrogs.R;
+import com.panoprogramowanie.boilingfrogs.koin.KoinModule;
 import com.panoprogramowanie.boilingfrogs.model.SpeechSlot;
 import com.panoprogramowanie.boilingfrogs.ui.main.BoilingFrogsFragment;
 import com.panoprogramowanie.boilingfrogs.ui.myschedule.recycler.MyScheduleRecyclerViewAdapter;
 import com.panoprogramowanie.boilingfrogs.util.DividerItemDecoration;
 
 import java.util.List;
-
-import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,14 +35,13 @@ public class MyScheduleFragment extends BoilingFrogsFragment implements MySchedu
 
     private MyScheduleRecyclerViewAdapter adapter;
 
-    @Inject
     MySchedulePresenter presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        BoilingFrogs.getMainComponent(getActivity()).inject(this);
+        presenter = KoinModule.getMySchedulePresenter();
     }
 
     @Override

@@ -10,8 +10,8 @@ public class AssetJsonLoader {
 
     private static final String SCHEDULE_ASSET_FILENAME = "agenda.json";
 
-    public static String readScheduleJsonFromFile(Context context){
-        return readAssetsFile(context,SCHEDULE_ASSET_FILENAME);
+    public static String readScheduleJsonFromFile(Context context) {
+        return readAssetsFile(context, SCHEDULE_ASSET_FILENAME);
     }
 
     public static String readAssetsFile(Context context, String fileName) {
