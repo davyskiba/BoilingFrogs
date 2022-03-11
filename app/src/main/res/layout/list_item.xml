@@ -35,7 +35,7 @@
             android:visibility="@{itemModel.photoUrl==null ? View.GONE : View.VISIBLE}"
             app:imageUrl="@{itemModel.photoUrl}"
             app:placeholder="@{@drawable/avatar_placeholder}"
-            app:tint="@color/overlay" />
+            android:tint="@color/overlay" />
 
         <LinearLayout
             android:layout_width="match_parent"
