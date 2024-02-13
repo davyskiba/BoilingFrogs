@@ -4,13 +4,12 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.panoprogramowanie.boilingfrogs"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 33
+        compileSdk 33
         versionCode 11
         versionName "1.5.1"
         multiDexEnabled true

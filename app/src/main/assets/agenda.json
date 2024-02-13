@@ -1,521 +1,461 @@
 {
-  "speakers":[
-    {
-      "description":"Programowanie to moja pasja. Podczas swojej kariery zawodowej uczestniczyłem w pracy nad zarówno projektami zakończonymi sukcesem, jak i będącymi totalną porażką. Większość tego co wiem, nauczyłem się z tych drugich.\n\nMocno wierzę w manifest Software Craftsmanship. M.in. z tego powodu organizuję konferencję Boiling Frogs (http://boilingfrogs.pl) oraz otworzyłem software house Tratif (http://tratif.com), w którym jakość kodu jest zawsze na pierwszym miejscu.\n\nCzasami piszę na swoim blogu (http://blog.kaczmarzyk.net). Praktykuję Test Driven Development i godzinami mogę rozmawiać o testach automatycznych i ich czytelności.\n\nLubię wierzyć, że oprogramowaniem można zmieniać świat.",
-      "id":1,
-      "name":"Tomasz Kaczmarzyk",
-      "occupation":"Software Developer",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2021/10/avatar-300x300-1.jpeg",
-      "twitter":"https://twitter.com/tkaczmarzyk",
-      "linkedin":"https://www.linkedin.com/in/tkaczmarzyk"
-    },
-    {
-      "description":"Java Champion. Spędził połowę życia na programowaniu, przez ostatnią dekadę w okolicach Javy. Uwielbia back-end i wizualizację danych. Zainteresowany alternatywnymi językami na JVM. Rozczarowany jakością oprogramowania tworzonego w dzisiejszych czasach (także przez siebie!), nie znosi długich metod i ukrytych efektów ubocznych. Zainteresowany analizą danych i programowaniem reaktywnym. Wierzy, że komputery stworzono, żeby programiści mogli automatyzować nudne i powtarzalne zadania. Także własne. Związany z open-source. DZone's Most Valuable Blogger, kiedyś bardzo aktywny na Stack Overflow. Autor, podcaster, trener, prelegent, recenzent techniczny wielu książek, biegacz. Twierdzi, że kod pozbawiony testów jednostkowych to nie feature tylko plotka. Napisał książkę o RxJavie dla O'Reilly. CTO w DevSkiller.",
-      "id":2,
-      "name":"Tomasz Nurkiewicz",
-      "occupation":"Java Champion | CTO at DevSkiller | Podcaster | Trainer",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/tnurkiewicz.jpeg",
-      "twitter":"https://twitter.com/tnurkiewicz",
-      "linkedin":"https://www.linkedin.com/in/tomasz-nurkiewicz-80513b92/"
-    },
-    {
-      "description":"Krzysztof Rakowski i Paweł Rekowski są doświadczonymi liderami w IT. Funkcjonują w branży od kilkunastu lat. Obaj zaczynali jako developerzy, a teraz pracują na stanowiskach liderskich (Krzysztof - od 11 lat, Paweł - od 5 lat) w eMAG - jednej z największych firm e-commerce w Europie Południowo-Środkowej. Prowadzą podcast Nerd Management, skierowany do świeżo upieczonych i przyszłych liderów w IT.",
-      "id":3,
-      "name":"Krzysztof Rakowski i Paweł Rekowski",
-      "occupation":"Hosts at Nerd Management",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/krakowski_prekowski.jpeg",
-      "facebook":"https://www.facebook.com/learn.nerd.management",
-      "linkedin":"https://www.linkedin.com/company/nerd-management/",
-      "youtube":"https://www.youtube.com/channel/UCX9aGgDoA2j4FX9lLOz2wKQ"
-    },
-    {
-      "description":"Kilkanaście lat doświadczenia, wiele błędów i porażek ale i dostarczonych systemów. Tak naprawdę gdzieś w głębi nadal jestem matematykiem-topologiem, może dlatego lubię Scalę, programowanie funkcyjne i takie tam. Ale także systemy rozproszone, przetwarzanie strumieniowe i tym podobne. Przez prawie całe dorosłe życie (tzn. w IT) w TouK - jako developer, architekt, analityk i kto tam akurat jest potrzebny - od kilku lat rozwijam projekt Nussknacker.",
-      "id":4,
-      "name":"Maciej Próchniak",
-      "occupation":"Software developer at TouK",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/mprochniak.jpeg",
-      "twitter":"https://twitter.com/mpproch",
-      "linkedin":"https://www.linkedin.com/in/maciej-próchniak-139b3110/"
-    },
-    {
-      "description":"Programista pasjonat, fan “Software Craftsmanship” i zwinnego podejścia do wytwarzania oprogramowania.\n\nLubi proste rozwiązania skomplikowanych problemów. Na codzień zajmuje się tematami z zakresu architektury aplikacji biznesowych, Domain-Driven Design, Continuous Delivery, technologii Java oraz testowania automatycznego. Prywatnie mąż, ojciec piątki dzieci.",
-      "id":5,
-      "name":"Łukasz Szydło",
-      "occupation":"Software Consultant/Architect/Trainer",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/szydlo-300x300-1.jpg",
-      "twitter":"https://twitter.com/lszydlo",
-      "linkedin":"https://www.linkedin.com/in/łukasz-szydło-14754024/"
-    },
-    {
-      "description":"Michał Szczepanik PhD is a mobile solutions architect and developer with more than 10 years of experience. He is also a trainer and conference speaker in Java, Kotlin, Android, and mobile security - you might have met him at one of the Polish or international conference stages. Michał is a huge fan of LEGO and a Halfbike.",
-      "id":6,
-      "name":"Michał Szczepanik",
-      "occupation":"Mobile Solutions Architect",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/mszczepanik.jpeg",
-      "linkedin":"https://www.linkedin.com/in/michael-szczepanik/"
-    },
-    {
-      "description":"Pracuje jako trener w Bottega IT Minds oraz Principal Software Engineer in Webinterpret. Ma obsesję na punkcie optymalizacji procesów wytwarzania oprogramowania. Ceni czysty kod i jeszcze czystsze testy. Autor książki o implementowaniu czystej architektury w Pythonie.",
-      "id":7,
-      "name":"Sebastian Buczyński",
-      "occupation":"Principal Software Engineer in Webinterpret",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/Sebastian-Buczynski2-150x150-1.png",
-      "linkedin":"https://www.linkedin.com/in/sebastianbuczynski/"
-    },
-    {
-      "description":"Software architect interesujący się złożonymi systemami o wysokiej wartości biznesowej, związany głównie z platformami webowymi. EX-CTO, konsultant, speaker i trener w Bottega IT Minds. Z branżą IT związany od ponad 18 lat. Od kilku lat wykorzystuje EventStorming jako narzędzie do komunikacji pomiędzy zespołami developerskimi i biznesowymi, a także do modelowania oprogramowania w oparciu o DDD, CQRS czy EventSourcing. Uczestnik EventStorming Summit 2017, gdzie wspólnie z innymi zaproszonymi przez Alberto Brandoliniego osobami pracował nad rozwojem tej techniki. Po godzinach oddaje się swoim innym pasjom, fotografii i gitarze elektrycznej.",
-      "id":8,
-      "name":"Mariusz Gil",
-      "occupation":"Software Architect",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/gil-300x300-1.jpeg",
-      "twitter":"https://twitter.com/mariuszgil",
-      "linkedin":"https://www.linkedin.com/in/mariuszgil/"
-    },
-    {
-      "description":"Software Developer z ponad 15-letnim stażem; miałem już na wizytówkach różne tytuły włącznie z Solution Architectem. Obecnie pełnię rolę Technical Team Leadera w projekcie EV.",
-      "id":9,
-      "name":"Marek Będkowski",
-      "occupation":"Software Developer",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/mbedkowski.png",
-      "linkedin":"https://www.linkedin.com/in/marek-będkowski-4844bb177/"
-    },
-    {
-      "description":"Programista i designer związany od wielu lat z systemami webowymi, często o dużym stopniu skomplikowania procesów biznesowych. Od dłuższego czasu pracuję w dziedzinie badań klinicznych - pracy, dla której przeniosłem się do Londynu, choć obecnie kontraktuję zdalnie z Wrocławia.\n\nWciąż lubię być zaskakiwany odkrywaniem starych idei na nowo: wzorców, technologii, definicji jakości. Fan czystego kodu i równowagi między treścią i formą. W wolnym czasie basista, szachista i amator sportów z deską na nogach.",
-      "id":10,
-      "name":"Maciej Szewczyszyn",
-      "occupation":"Software Engineer at Medidata",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/mszewczyszyn.png",
-      "linkedin":"https://www.linkedin.com/in/mszewczyszyn/",
-      "instagram":"https://www.instagram.com/cobblerson/"
-    },
-    {
-      "description":"Scala developer at SoftwareMill trying to find \"the right way\" of doing things. Leader of Zielona Góra JUG and co-organiser of the Greenfield Conference. After hours, she enjoys biking, gardening, and reading long books.",
-      "id":11,
-      "name":"Magda Stożek",
-      "occupation":"Software Developer at SoftwareMill",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/magdastozek.png",
-      "twitter":"https://twitter.com/magdastozek"
-    },
-    {
-      "description":"Praktykujący esencjalista nieustannie poszukujący usprawnień w pracy, komunikacji i wymianie wiedzy. Programistycznie od kilkunastu lat związany z ekosystemem PHP. Na co dzień manager zespołów produktowych rozwijających platformę wielokanałowej komunikacji.",
-      "id":12,
-      "name":"Michał Cisz",
-      "occupation":"Software Development Manager",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/mcisz-square.jpg",
-      "linkedin":"https://www.linkedin.com/in/michal-cisz/"
-    },
-    {
-      "description":"W branży IT działam od 2005 roku. Zawodowo zajmuję się developmentem aplikacji webowych i zarządzaniem działami IT. Dodatkowo prowadzę podcast „Porozmawiajmy o IT”.",
-      "id":13,
-      "name":"Krzysztof Kempiński",
-      "occupation":"Podcaster @ porozmawiajmyoit.pl",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/krzysztof_kempinski_small.png",
-      "twitter":"https://twitter.com/k_kempinski",
-      "linkedin":"https://www.linkedin.com/in/kkempinski/"
-    },
-    {
-      "description":"Ola Kunysz tworzy oprogramowanie od kilkunastu lat. Ma doświadczenie w programowaniu full stack, testowaniu, zbieraniu wymagań i prowadzeniu szkoleń. Pracowała w korporacjach, startupach i pro bono w różnych branżach i krajach. Najbardziej lubi pisać kod, który ma znaczenie i rozwiązywać prawdziwe problemy. Od 2019 roku prowadzi Szkołę Testów i zwiększa świadomość w temacie jakości wśród programistów. Kiedy jest offline, jeździ na jednośladach, spaceruje z psem albo ćwiczy jogę.",
-      "id":14,
-      "name":"Ola Kunysz",
-      "occupation":"Programistka i założycielka Szkoły Testów",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/kunysz_ola.jpg",
-      "twitter": "https://twitter.com/OlaQnysz",
-      "linkedin": "https://www.linkedin.com/in/akunysz",
-      "instagram":"https://www.instagram.com/ola.qnysz",
-      "youtube":"https://www.youtube.com/c/OlaKunysz"
-    },
-    {
-      "description":"Odkąd pamiętam, fascynowały mnie języki programowania i wszystko, co było z nimi związane. Tworzenie czegoś z „niczego” jest ekscytujące na tyle, że postanowiłem iść tą ścieżką kariery. Pracuję jako developer od ponad 6 lat. Ciągle poszukuję odpowiedzi na pytanie \"co to znaczy być profesjonalny”. Swoich odpowiedzi szukam razem z firmą softwaremill, dla której aktualnie zdalnie pracuję. Jestem entuzjastą tematów związanych z czystym kodem, software craftsmanship i metodykami zwinnymi.",
-      "id":15,
-      "name":"Sebastian Rabiej",
-      "occupation":"Software Developer at SoftwareMill",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/srabiej-1.jpg",
-      "twitter": "http://twitter.com/sebastianrabiej"
-    },
-    {
-      "description":"W świecie technologii od prawie 10 lat, obecnie pracuje przy systemach big data w Ocado Technology. Inżynier, który myśli jak produktowiec, technologia i frameworki to dla niego tylko środek do osiągnięcia celu. Fan user testów, silnych więzi z użytkownikiem i produktów, do których nie trzeba instrukcji. Poza pracą pisze scenariusze na leśne urodziny dla firmy żony, a także tworzy planszówki. Jest współautorem gry „Palec Boży” nagradzanej w plebiscycie Planszowe Gram Prix oraz konkursie Planszowa Gra Roku.",
-      "id":16,
-      "name":"Paweł Stobiecki",
-      "occupation":"Software Developer w Ocado Technology",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/02/pawel-stobiecki-photo-1-sm.jpg",
-      "linkedin": "https://www.linkedin.com/in/pstobiecki/"
-    },
-    {
-      "description":"Od ponad 20 lat w branży IT, jako administrator baz danych, programista, architekt, manager i „inżynier od spraw katastrof”. Brałem udział w małych, średnich i nonsensownie dużych projektach, prowadzonych zgodnie zasadami „waterfall”, Agile oraz przy braku jakichkolwiek metodyk, z tym samym zawsze skutkiem. Co doprowadziło mnie do wniosku, że nieważne co robisz tak długo, jak robisz to dobrze, w najprostszy z możliwych sposobów i używasz właściwych narzędzi, które wykonają pracę za ciebie. W międzyczasie dałem się porwać ideą TDD oraz Software Craftmanship, do granic możliwości wyeksploatować tak piękne w swej prostocie pomysły jak REST i NoSQL, by potem porzucić je, by zgłębić tajniki „system thinking” i zachwycić się siłą jaką niesie z sobą „metafora” i odkryć, że rządzą nami te same prawa „natury”. Niepokorny wyznawca kościoła JVM, badacz bytecode’u i JIT oraz wszelkiej maści parserów, interpreterów i kompilatorów. Na co dzień walczący o lepszą wydajność w Neo4j. Od czasu do czasu można usłyszeć moje niskiej jakości żarty na temat architektury na konferencjach w Polsce. W wolnych chwilach trener w http://symentis.pl i autor bloga na http://geekyprimitives.wordpress.com/ oraz samozwańczy dyktator w radach programowych konferencji CoreDump, SegFault, JDD oraz 4Developers.",
-      "id":17,
-      "name":"Jarosław Pałka",
-      "occupation":"Performance Engineer",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/palka.jpeg",
-      "twitter":"https://twitter.com/j_palka",
-      "linkedin":"https://www.linkedin.com/in/jpalka/"
-    },
-    {
-      "description":"Trenerka biznesu z doświadczeniem na sali szkoleniowej od 2006 roku. Uczestniczka wielu szkoleń doskonalących metody pracy z ludźmi oraz wspierających ich rozwój, m.in. Szkoły Coachingu, Szkoły Trenerów Biznesu, Racjonalnej Terapii Zachowań, Terapii Skoncentrowanej na Rozwiązaniach. Przez kilka lat odpowiadała za szkolenia pracowników w międzynarodowej korporacji. Aktualnie trener freelancer. Specjalizuje się w szkoleniach z zakresu umiejętności społecznych w biznesie, m.in. wspiera liderów w zakresie kompetencji miękkich. W swoich szkoleniach stawia na naukę przez doświadczenie, kładąc nacisk na interaktywne, warsztatowe formy nauczania oraz intensywny trening umiejętności. Od niedawna prowadząca podcast Liderem być.",
-      "id":18,
-      "name":"Anita Przybył",
-      "occupation":"Trener biznesu",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/aprzybyl.jpg",
-      "facebook":"https://www.facebook.com/liderembyc",
-      "twitter":"https://twitter.com/anita_przybyl",
-      "linkedin":"https://www.linkedin.com/in/anita-przybyl/",
-      "youtube":"https://www.youtube.com/channel/UCl9RVUOJx-sOksT9trcKNHA/featured"
-    },
-    {
-      "description":"Programista, inżynier, rzemieślnik, projektant i rowerzysta\nKorzysta z każdej technologii, która prowadzi do celu\nJest wyznawcą DevOps i wszelkiej automatyzacji\nWierzy w ludzi, a nie w papiery\nGłówny dotnetomaniak\nMicrosoft MVP",
-      "id":19,
-      "name":"Piotr Stapp",
-      "occupation":"Software Architect",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/pstapp.jpg",
-      "twitter":"https://twitter.com/ptrstpp950",
-      "linkedin":"https://www.linkedin.com/in/piotrstapp/"
-    },
-    {
-      "description":"Programista z ponad 10-letnim doświadzeniem. Specjalizuje się w dostarczaniu wydajnych rozwiązań dla świata finansowego. Na codzień zajmuje się tematami z zakresu architektury aplikacji, zwinnego wytwarzania oprogramowania oraz continuous delivery. W pracy programisty najbardziej interesuje się rozwiązywaniem problemów dotyczących procesu wytwarzania oprogramowania jako całości.\n\nUwielbia dzielić się wiedzą oraz szerzyć dobre praktyki, przed którymi branża finansowa nieustannie się opiera. Wyznaje pogląd, że bycie wykwalifikowanym programistą to za mało, a umiejętności komunikacji w zespole są w dzisiejszym świecie niezbędne do osiagnięcia swoich celów. W wolnych chwilach rozwija swój projekt edukacyjny dla początkujących programistów.",
-      "id":20,
-      "name":"Sławomir Plamowski",
-      "occupation":"Senior Software Engineer at AlgoTrader",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/splamowski.png",
-      "facebook":"https://www.facebook.com/slawek.plamowski",
-      "linkedin":"https://www.linkedin.com/in/slawomir-plamowski/"
-    },
-    {
-      "description":"QA Lead w Displate. W branży od 10 lat. Swoją przygodę zaczął od Testowania i automatyzacji obecnie pomaga innym jako consultant i mentor. Pracował w wielu projektach w Polsce i zagranicą. Od pięciu lat udziela się aktywniej w community, prezentując na wielu konferencjach i meetupach. W wolnym czasie prowadzi kanał na youtube poświęcony dzieleniu się wiedzą https://www.youtube.com/c/ITeaMorning",
-      "id":21,
-      "name":"Maciej Wyrodek",
-      "occupation":"QA Lead w Displate",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/mwyrodek.jpg",
-      "facebook":"https://www.facebook.com/MaciejWyrodek.ITea/",
-      "twitter":"https://twitter.com/maciejwyrodek",
-      "linkedin": "https://www.linkedin.com/in/wyrodek/",
-      "instagram":"https://www.instagram.com/iteamorning/",
-      "youtube":"https://www.youtube.com/c/ITeaMorning/videos"
-    },
-    {
-      "description":"Od dziecka chciałem być programistą i tak też się stało. Teraz jako starszy architekt walczę o dostarczanie lepszego softu, który ma być też bardziej atrakcyjny i stanowić pole do rozwoju dla samych developerów. Moje doświadczenia w końcu zmotywowały mnie do dzielenia się wiedzą i doświadczeniem publicznie.",
-      "id":22,
-      "name":"Konrad Piorunek",
-      "occupation":"Software Architect",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/Konrad-Piorunek-small-1.jpg",
-      "linkedin":"https://pl.linkedin.com/in/konrad-piorunek-4243ab67"
-    },
-    {
-      "description":"Programista z zacięciem produktowym, skupiający się na dostarczeniu wartości interesariuszom. Współtwórca i CEO http://fincastly.com/ - narzędzia do zarządzania finansami w firmie. Aktywny członek społeczności IT, współtwórca fundacji Gruba.IT. Organizator meetupów oraz konferencji branżowych np. Cloudyna. Aktualnie Senior Software Engineer w Tidio.",
-      "id":23,
-      "name":"Bartłomiej Glac",
-      "occupation":"Software Engineer",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/bglac.jpg",
-      "linkedin": "https://pl.linkedin.com/in/bartomiej-glac"
-    },
-    {
-      "description":"Od dziecka chciałem zajmować się komputerami. Azymut na programistę utrzymałem do studiów, na których zrozumiałem, że droga IT managera fascynuje mnie jeszcze bardziej. Od tego czasu pracowałem w korporacji, agencji interaktywnej, kilku software house'ach, firmach produktowych, game devie, przy rozwiązaniach pudełkowych i szytych na miarę. Obecnie pracuję w STX Next - pythonowym software housie.",
-      "id":24,
-      "name":"Marcin Zabawa",
-      "occupation":"Director of Core Services at STX Next",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/mzabawa.jpg",
-      "linkedin":"https://www.linkedin.com/in/zabawa/"
-    },
-    {
-      "description":"Ruby On Rails Tech Lead w uPacjenta. Z railsowym klimatem miłość od pierwsego wejrzenia, choć korzenie w Microsoftowym środowisku automatyzacji biznesowych. Fan dyskutowania o architekturze i podejściu do pisania kodu. Nieustannie szukam luk w utartych schematach by znaleźć tam nową wartość dla projektu. Strażnik zgodności kodu z procesami biznesowymi. Prywatnie gitara, simracing i dobe piwo.",
-      "id":25,
-      "name":"Karol Piekara",
-      "occupation":"Ruby On Rails Tech Lead w uPacjenta",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/kpiekara.jpg",
-      "linkedin": "https://www.linkedin.com/in/karol-piekara-a9554211a/",
-      "instagram": "https://www.instagram.com/kpiekaraa/"
-    },
-    {
-      "description":"Tomek is a Public Speaker and Trainer, working also as a Head of Engineering. He has over 10 years of professional experience working as a Software Engineer, Leader and Manager.\nAs an engineer, he is passionate about craftsmanship, propagating clean code, automated tests, behaviour driven development and domain driven design. As a leader, he helps to build an organisational culture based upon autonomy, collaboration and trust so that developers are equipped with both the hard and soft skills necessary to build truly awesome products.\nTomek loves to change the reality around him. He is highly pragmatic, challenges orthodoxy at all levels and believes that there is always room for improvement. He is always eager to discuss and share his ideas. ",
-      "id":26,
-      "name":"Tomasz Dubikowski",
-      "occupation":"Software Engineer",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/tdubikowski.jpg",
-      "linkedin":"https://www.linkedin.com/in/tomasz-dubikowski/"
-    },
-    {
-      "description":"Solution Architect i Engineering Manager w obszarze Azure. Pracuje przy pełnym zakresie tworzenia produktów cyfrowych - od analizy wymagań, przez architekturę i budowę systemu informatycznego, po jego utrzymanie na produkcji. Po pracy realizuje konsultacje i warsztaty dla firm oraz wspomaga technologicznie organizacje pozarządowe. Zwolennik pracy zwinnej i ciągłego samodoskonalenia. Można go złapać na blogu https://radekmaziarka.pl i Twitterze @RadekMaziarka",
-      "id":27,
-      "name":"Radek Maziarka",
-      "occupation":"Solution Architect / Engineering Manager",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/radekmaziarka.jpg",
-      "twitter":"https://twitter.com/RadekMaziarka",
-      "linkedin":"https://www.linkedin.com/in/maziarka-radoslaw/",
-      "instagram":"https://www.instagram.com/radekmaziarka_pl/"
-    },
-    {
-      "description":"Artur pracuje jako Consulting Manager w firmie EY GDS Poland. Pierwsze kroki w branży IT stawiał jeszcze za czasów ZX Spectrum i innych popularnych w tamtych czasach komputerów osobistych. Od ponad 15 lat pracuje przy rozwoju różnego rodzaju produktów, które powstają w metodykach zwinnych (głównie SCRUM - tym jednozespołowym, jak również zeskalowanym nawet do ponad 30 zespołów). Prywatnie mąź i ojciec, formalnie już dorosłej trójki dzieci. Z zamiłowania stolarz i cieśla, miłośnik domowych wyrobów, początkujący tancerz tańca argentyńskiego.",
-      "id":28,
-      "name":"Artur Włoszek",
-      "occupation":"Consulting Manager w EY GDS",
-      "photoUrl":"https://2022.boilingfrogs.pl/wp-content/uploads/2022/01/Artur-Woloszek-EY-GDS-PL-1.png",
-      "linkedin": "https://www.linkedin.com/in/artur-włoszek-b6b99344/"
-    }
-  ],
-  "speechSlots":[
-    {
-      "id":1,
-      "timeLabel":"9:10 - 9:30"
-    },
-    {
-      "id":2,
-      "timeLabel":"9:50 - 10:35"
-    },
-    {
-      "id":3,
-      "timeLabel":"10:55 - 11:40"
-    },
-    {
-      "id":4,
-      "timeLabel":"12:00 - 12:45"
-    },
-    {
-      "id":5,
-      "timeLabel":"12:50 - 13:05"
-    },
-    {
-      "id":6,
-      "timeLabel":"14:00 - 14:15"
-    },
-    {
-      "id":7,
-      "timeLabel":"14:20 - 15:05"
-    },
-    {
-      "id":8,
-      "timeLabel":"15:25 - 16:10"
-    },
-    {
-      "id":9,
-      "timeLabel":"16:30 - 17:15"
-    },
-    {
-      "id":10,
-      "timeLabel":"17:35 - 18:20"
-    }
-  ],
-  "speeches":[
-    {
-      "description":"Wstępniak",
-      "id":1,
-      "path":1,
-      "speakerId":1,
-      "speechSlotId":1,
-      "title":"Boiling Frogs: Wszechobecne idiomy"
-    },
-    {
-      "description":"* Jeśli wydaje Ci się, że w Twoim ulubionym języku do zapisu liter najlepiej użyć typu 'char' - zapraszam!\nJeśli używasz metody length() do policzenia długości stringa i wydaje ci się, że zwraca ona liczbę znaków - wyprowadzę cię z błędu.\nJeśli nie chcesz, by przez błąd w obsłudze Unicode w twojej aplikacji zginęli ludzie, zapraszam tym bardziej. Tak, nieznajomość Unicode zabija. Dosłownie.\n\nKodowanie znaków, jak wiele innych zadań w naszej branży, wydaje się proste i przewidywalne. Gdy jednak przyjrzeć się dokładnie, poprawny zapis polskich czy chińskich liter wcale nie jest taki oczywisty. Podczas tej pozornie banalnej prezentacji pokażę wam, jak trudną domeną jest Unicode. Jakie problemy, także z bezpieczeństwem, możemy napotkać. Ile pułapek kryje się w specyfikacji oraz jej implementacji. Na przykład czy wiedzieliście, że jeden symbol w UTF-32 może zajmować nawet... 28 bajtów? Nie mówiąc już o słowie roku 2015 wg Oxford English Dictionary, czyli... 'U+1F602' (tak, emoji, o nich też będzie).\n\nZapraszam programistów i programistki, QA, bazodanowców, ekspertów i ekspertki od bezpieczeństwa. Z dowolnym doświadczeniem.",
-      "id":2,
-      "path":1,
-      "speakerId":2,
-      "speechSlotId":2,
-      "title":"Charbusters: 10 mitów o Unicode"
-    },
-    {
-      "description":"Niektórzy uważają, że wystarczy się nauczyć jakiegoś rzemiosła (języka programowania, frameworka, metody pracy) i potem można już pracować do zasłużonej emerytury. Niestety (a może na szczęście?) w świecie IT taki schemat od pewnego czasu nie funkcjonuje. Ci, którzy nie uczą się - nie tylko stoją w miejscu, ale cofają się. Młodsi koledzy i koleżanki przychodzą, awansują, robią coraz ciekawsze projekty. A Ty cały czas klepiesz to samo i czujesz zagrożenie ze strony „młodzieży”. No i latka lecą...\nSpecjaliści IT dowiedzą się z tej prezentacji, co zrobić, żeby nie podzielić losu dinozaurów. Starszym damy impuls do wyrwania się z okowów „zasiedzenia” w tym, co umieją a młodszym - plan, jak nie stać się prehistorycznym gadem. ",
-      "id":3,
-      "path":2,
-      "speakerId":3,
-      "speechSlotId":2,
-      "title":"Rozwijasz się czy zwijasz? Nie stań się IT-dinozaurem"
-    },
-    {
-      "description":"Czyli właściwie co zrobić? Jak tak naprawdę mierzymy upływ czasu na serwerze (nawet jeśli jesteśmy serverless)? Czy zastanawialiście się skąd wiadomo jaki jest czas systemowy i jak jest mierzony? Pewnie jest kilka haczyków i pułapek, o których trzeba pamiętać...\n\nA co jeśli nasz system staje się rozproszony - jak uzgadnia się czas między serwerami? Jak dokładnie można to zrobić. A także - dlaczego może to okazać się ważniejsze niż czasami nam się wydaje?\n\nNie wiem czy uda mi się (wyczerpująco) odpowiedzieć na wszystkie powyższe pytania - ale na pewno spróbuję.",
-      "id":4,
-      "path":3,
-      "speakerId":4,
-      "speechSlotId":2,
-      "title":"No dobra, czas zsynchronizować zegarki..."
-    },
-    {
-      "description":"Po wielu latach ciężkiej pracy, nasz Gwidon zostaje Cloud-Native-Event-Driven-Data-Intensive-Hyper-Scale Architektem w jednej z renomowanych firm.\nJeśli istnieje jedna rzecz, której jest on pewien, będąc na tym stanowisku, to jest to fakt, że komunikacja oparta o zdarzenia (eventy), zmniejsza zależności (coupling) pomiędzy komponentami (mikro-serwisami) i daje im autonomiczność (cokolwiek to znaczy). Nie wie jeszcze, że najbliższe wydarzenia pokażą mu, w jak wielkim tkwił błędzie ...",
-      "id":5,
-      "path":1,
-      "speakerId":5,
-      "speechSlotId":3,
-      "title":"Event-Driven to jednak nie takie proste"
-    },
-    {
-      "description":"„We have API for web, you can reuse it” - sounds familiar? You know this problem which we usually have with API which is not tailored for our needs or mobile app.\n\nA BFF address the needs of respective frontend frameworks, like desktop, browser, and mobile apps. One of the biggest appeals of BFF is that it ensures seamless user interaction regardless of the platform the frontend application is running on. Ideally, the front-end team will be responsible for managing the BFF as well, and now we can do this with the support of Kotlin for Backend.\n During this presentation, we will discuss aspects of BFF and how we can implement it as a frontend team.",
-      "id":6,
-      "path":2,
-      "speakerId":6,
-      "speechSlotId":3,
-      "title":"Backend for Frontend - why to use it?"
-    },
-    {
-      "description":"Design oprogramowania - to coś, co robimy częściowo nieświadomie pisząc kod. Nie myślimy o tym aktywnie dzięki doświadczeniu, stosowaniu wzorców projektowych, a także podążaniu za konwencjami w projekcie. Mimo tej magii nieświadomości po drodze, projektowanie jest zwykłą umiejętnością. Co więcej architektura heksagonalna czy wzorce projektowe są jedynie przykładami designu.\n\nW trakcie prezentacji „odkurzę” RDD oraz GRASPa. Pokażę wygodny sposób uczenia (siebie lub innych) oraz testowania designu. Nauczymy się też go skalować na poziom komponentów i wyższy. Zobaczycie też inną perspektywę na architekturę heksagonalną, DDD czy wzorce projektowe, co pozwoli je bardziej zgłębić.",
-      "id":7,
-      "path":3,
-      "speakerId":7,
-      "speechSlotId":3,
-      "title":"Zaprojektuj to - od klas przez komponenty po systemy"
-    },
-    {
-      "description":"Abstrakt pojawi się wkrótce. Ale ja już po samym tytule nie mogę się doczekać tego wykładu.",
-      "id":8,
-      "path":1,
-      "speakerId":8,
-      "speechSlotId":4,
-      "title":"Archetypy modeli - historia lubi się powtarzać, tylko o tym nie mówi"
-    },
-    {
-      "description":"Rozmowa kwalifikacyjna to czas w którym mam zazwyczaj jedną godzinę, żeby stwierdzić czy kandydat pasuje do mojego zespołu/projektu! Podczas prezentacji podzielę się z Tobą moim planem rozmowy rekrutacyjnej oraz jak poszczególne elementy wpływają na ocenę kandydata. Jej trzonem jest część techniczna (java + spring), ale szukam czegoś więcej niż znajomość technologii - nawet jej nieznajomość może wyjść kandydatowi na plus, jeżeli zaprezentuje ją w odpowiedniej formie. W podsumowaniu będą konkretne przykłady odpowiedzi na pytania i jak wpłynęły na ocenę kandydata (oraz jak to wyglądało później).",
-      "id":9,
-      "path":2,
-      "speakerId":9,
-      "speechSlotId":4,
-      "title":"Czego szuka Tech Lead?"
-    },
-    {
-      "description":"Zastanawiałeś się kiedyś, czy samo odwiedzenie jakiejś strony może skończyć się automatycznym polubieniem czegoś na facebooku? Albo czy skrypt zaimportowany z zewnętrznej domeny (np. Google Adwords) może dowolnie manipulować twoim HYMLem?\n\nOpowiem o fundamentalnej polityce bezpieczeństwa w przeglądarkach i mechanizmach „uczciwej” wymiany treści pomiędzy systemami webowymi o różnych pochodzeniach.",
-      "id":10,
-      "path":3,
-      "speakerId":10,
-      "speechSlotId":4,
-      "title":"SOP i CORS - Reguły bezpieczeństwa w przeglądarkach"
-    },
-    {
-      "description":"Nie pytaj co ty możesz zrobić dla swojej biblioteki do testów, zapytaj co ona może zrobić dla ciebie! A co może? Jak się okazuje, sporo więcej niż tylko wyświetlić ładny czerwono-zielony raport. Co powiecie na pomysł, żeby to ona zajęła się generowaniem danych testowych? A skoro o tym mowa, to może niech od razu wymyśli nam takie przypadki brzegowe, dla których nasz kod nie działa? Ale jak już taki znajdzie, to niech nam go trochę uprości przed podaniem - żeby łatwiej nam było zrozumieć dlaczego. No i dla pewności niech zrobi to tak z 1000 razy. Brzmi dobrze? To wszystko i jeszcze więcej da wam property-based testing. Na przykładzie jqwik (https://jqwik.net/) pokażę, jak się do tego zabrać w javie. Ale czy to nie zbyt piękne, na pewno jest tam jakiś drobny druczek? Oczywiście, że jest. Będzie i o nim.",
-      "id":11,
-      "path":1,
-      "speakerId":11,
-      "speechSlotId":5,
-      "title":"Testowanie oparte na właściwościach - jak zaprząc bibliotekę testującą do pracy"
-    },
-    {
-      "description":"Janek z trudem odnalazł miejsce w kodzie. Miał już dość ubogich, nic nie mówiących opisów commitów. Postanowił wziąć sprawy w swoje ręce i wprowadził nowy standard w zespole.\n\nZapraszam Cię na opowieść jak budował świadomość i potrzebę, a później implementował i umacniał zmianę nawyków w swoim zespole.\n\nOkiem managera przekażę Ci odrobinę niezbędnej wiedzy - checklistę, którą musisz zrealizować, aby skutecznie wprowadzić zmianę.\n\nPS. Mała tajemnica: wcale nie musisz być managerem, aby korzystać z tego skilla.",
-      "id":12,
-      "path":2,
-      "speakerId":12,
-      "speechSlotId":5,
-      "title":"Dosyć, pora na zmianę"
-    },
-    {
-      "description":"Wiele osób pracujących w IT słysząc zwrot „marka osobista” wyobraża sobie celebrytów znanych z tego, że są znani, internetowych guru od spraw wszelakich czy wyśmiewanych coachów wmawiających nam, że jesteśmy zwycięzcami. Pora to odczarować! Silna marka osobista programisty może służyć do powiększania wpływu na firmę/projekt, polepszania pozycji na rynku pracy czy zarabiania na swojej wiedzy. Pytanie tylko jak ją zbudować?",
-      "id":13,
-      "path":3,
-      "speakerId":13,
-      "speechSlotId":5,
-      "title":"Marka osobista programisty"
-    },
-    {
-      "description":"Wypalenie zawodowe dotyka coraz większej liczby pracowników, IT nie jest wyjątkiem. Pomimo świetnych zarobkówi, komfortowych warunków pracy, ergonomicznych krzeseł i owocowych wtorków wiele osób traci motywację do robienia czegokolwiek. Zwłaszcza tych osób, których praca jest pasją. Nie musi tak być! Pasja może w Tobie płonąć i Cię nie spalać. Trzeba tylko ostrożnie obchodzić się z tym ogniem. Podczas tej prezentacji powiem Ci, jak rozpoznawać niepokojące symptomy wypalenia, co na to WHO i czego doświadczyłam na własnej skórze.",
-      "id":14,
-      "path":1,
-      "speakerId":14,
-      "speechSlotId":6,
-      "title":"Nie wypalaj się!"
-    },
-    {
-      "description":"Każdy wie, że ludzie z projektu odchodzą a wraz z nimi wiedza i kontekst. W ciągu prezentacji opowiem wam, co możemy z tym zrobić, aby uniknąć niezręcznego wzruszania ramion ze słowami „w sumie u nas już tak się robi” albo „był jakiś ważny argument, ale nie pamiętam jaki”. Jeżeli chcesz się dowiedzieć, o co chodzi z zielonym krzesłem, to zapraszam na moją prezentację.",
-      "id":15,
-      "path":2,
-      "speakerId":15,
-      "speechSlotId":6,
-      "title":"Story of the green chair"
-    },
-    {
-      "description":"Myśli abstrakcyjnie, systemowo, a i modeluje. Godzinami siedzi nad „pracą”, czasem też po pracy. Nie musi, bo chce i jeszcze to uwielbia. I do tego pije kawę. Dużo kawy.\n\nProjektant planszówek czy programista?\n\nPodobieństwa nie są przypadkowe. Pod wieloma względami tworzenie planszówek przypomina pracę nad oprogramowaniem. Jednak są pewne kwestie, które różnicują te dwie zajawki. Porównajmy je i sprawdźmy, jaki mają na siebie wpływ.\n\nCzym chciałbym się z Wami podzielić?\n\nMoją przygodą czerpania satysfakcji z łączenia tych dwóch zajawek. Potrzebowałem zostać twórcą planszówek, żeby zrozumieć, jak pewne znane mi w teorii koncepcje działają i to skutecznie. Będzie o błyskawicznym prototypowaniu, bezustannej współpracy z użytkownikami, bezkompromisowym dążeniu do prostoty i feedbacku, który jest królem! Zapraszam Cię w podróż do innego świata, w której najpierw sprawdzimy, „jak oni to robią”, a potem przeniesiemy te sposoby z powrotem do świata oprogramowania.",
-      "id":16,
-      "path":3,
-      "speakerId":16,
-      "speechSlotId":6,
-      "title":"W poszukiwaniu feedbacku. Czego możemy się nauczyć od projektantów gier planszowych?"
-    },
-    {
-      "description":"Odkąd porzuciłem korporacje, świat architektury i absurdalnie, wprost nieprzyzwoicie wielkie systemy, odzyskałem radość z pracy.\nCzy to oznacza, że nie mam już zmartwień, problemów i zagadek, które wpędzają mnie w stany na pograniczu katatonii i załamania nerwowego?\nAleż nie. Każdy dzień w krainie wydajności przynosi coś nowego, jak w dobrym serialu kryminalnym do końca nie wiadomo kto zabił, jakie były motywy i dlaczego wszyscy kłamią.\nPodczas prezentacji chciałbym opowiedzieć o technikach „śledczych”, które pomogą Wam znaleźć kod winny całego zamieszania.\nTechniki te oparte są na prostych heurystykach, których stosowanie nie wymaga stopni naukowych z utytułowanych uczelni.\n\nMusimy pamiętać o tym, że potrzebujemy danych, by być w stanie nakarmić nasze heurystyki. Dlatego będzie też o narzędziach, które wykorzystuję w swojej codziennej pracy. I o tym, jak czasami musimy traktować efekty ich działania z przymrużeniem oka i podawać to, co widzimy w wątpliwość. Ponieważ wszyscy kłamią.\n\nBędąc tak przygotowanym będziecie ze spokojem w sercu i wiarą w swoje możliwości pokonywali kolejne wydajnościowe „wąskie gardła”.\nDla przyszłych pokoleń, które będą wam wdzięczne za zatrzymanie klimatycznej katastrofy, której jako branża jesteśmy jedną z przyczyn.\nGdyż to nasz kod jest odpowiedzialny za eksplozję centrów danych, w których na potęgę skalujemy mikrousługi, kopiemy kryptowaluty i ładujemy tysiące niepotrzebnych zależności.\n\n(Dla jasności, klimatyczni denialiści mogą się poczuć urażeni, ciągle liczę, że uda mi się was przekonać)\n\nCo ma do tego „horyzont zdarzeń” w tytule? Dowiecie się na prezentacji.",
-      "id":17,
-      "path":1,
-      "speakerId":17,
-      "speechSlotId":7,
-      "title":"Wydajność: poza horyzont zdarzeń"
-    },
-    {
-      "description":"Twój zespół nie dowozi? Nie możesz powiedzieć, że działa efektywnie? Ludzie nie mówią otwarcie o problemach? Ukrywają błędy? Boją się eksperymentować? Nie udzielają się na spotkaniach? Biernie czekają na polecenia? Nie chcą dzielić się wiedzą? Co jest przyczyną tych bolączek? Co jest kluczem i sekretnym sosem skutecznego zespołu? O co zadbać, by ludzie tworzyli sprawne zespoły? Co możesz konkretnie zrobić Ty, by przyczynić się do lepszego działania swojego zespołu?",
-      "id":18,
-      "path":2,
-      "speakerId":18,
-      "speechSlotId":7,
-      "title":"Czego zespołowi potrzeba do szczęścia?"
-    },
-    {
-      "description":"Wyobraź sobie następującą sytuację. Pracujesz sobie w pewnej firmie i na drzwiach masz tabliczkę (do wyboru): „senior architekt”, „główny projektant” albo po prostu „Ten-Którego-Imienia-Nie-Wolno-Wymawiać”. Przybiega do Ciebie szef wszystkich szefów, czyli jak wiadomo Krzysztof Jarzyna ze Szczecina i zaczyna monolog z następującym tekstem: „Nasi handlowcy odnieśli wczoraj ZAJE…ISTY sukces. Robimy apkę do losowania biletów na finały Ligi Mistrzów!”. Ty patrzysz nerwowo w kalendarz, szybko wrzucasz w Google potwierdzenie terminu i już wiesz - mamy tylko miesiąc na dostarczenie aplikacji.\n\nO czym będzie w prezentacji:\n– jakich komponentów możemy użyć w chmurze na przykładzie Azure\n– dlaczego A jest lepsze niż B, B lepsze niż C, a C lepsze niż A (i mamy rekurencje)\n– czy zawsze Azure czy może jednak nie?\n– a dlaczego nie AWS/GCP/Alibaba?\n– itd. itp",
-      "id":19,
-      "path":3,
-      "speakerId":19,
-      "speechSlotId":7,
-      "title":"Bilety na Ligę Mistrzów w miesiąc?!? WHAT?? - czyli w czym chmura może nam pomóc"
-    },
-    {
-      "description":"W dzisiejszym świecie tworzenie aplikacji, które są z natury asynchroniczne wymaga od nas opanowania technik programowania które pozwalają na pisanie czytelnego i łatwego w rozwijaniu kodu. Reactive Programming może pomóc w pisaniu kodu, który jest niezawodny, skalowalny i bardziej wydajny.\n\nPrzykładem aplikacji z natury asynchronicznych są aplikacje umożliwiające granie i inwestowanie na giełdach - zarówno tradycyjnych, jak i giełdach kryptowalut. Obsługa wielu strumieni danych rynkowych pochodzących z różnych źródeł przy jednoczesnym zapewnieniu poprawnej obsługi wyjątków, błędów i zerwanych połączeń byłaby zadaniem karkołomnym, gdyby nie możliwości jakie daje nam reactive programming.\n\nW tej prezentacji pokażę w jaki sposób reactive programming pomaga w pisaniu oprogramowania do automatycznego inwestowania w kryptowaluty na +30 giełdach z całego świata na przykładzie rozwiązań firmy Algotrader. Opowiem o zaletach takiego podejścia, ale i pułapkach, na jakie natrafiłem pisząc kod integrujący wiele strumieni danych z zleceniami użytkowników i obsługą wszelkiej maści możliwych wyjątków.",
-      "id":20,
-      "path":1,
-      "speakerId":20,
-      "speechSlotId":8,
-      "title":"Reactive Programming w świecie inwestowania w kryptowaluty - case study"
-    },
-    {
-      "description":"Czy zastanawialiście się kiedyś, jak wygląda praca Waszych leaderów? Jako członkowie zespołów na co dzień widzimy tylko jej wycinek. Dopóki problemy, które pojawiają się w toku pracy nie dotyczą nas, rola lidera jest często niewidoczna. Gorzej, kiedy kolejne aspekty w pracy zespołowej zaczynają się psuć. Brak zrozumienia, z czym zmaga się lider i z czego wynikają jego decyzje, może prowadzić do frustracji i niepotrzebnych konfliktów.\nW ramach tej prezentacji chcę pokazać, jak wygląda praca lidera od kuchni. Nie będziemy mówić o tych „fajnych” rzeczach (o tym jest mnóstwo prezentacji!). Ale o tym co trudne, mozolne i często okupione nerwami. Następnie porozmawiamy o tym, dlaczego warto pomagać osobom na stanowiskach liderskich i jak Wy możecie to robić.\n\nAgenda\n– Tydzień z życia leadera – tylko nudne i stresujące aspekty.\n– Lider, a Wy – jak zespół pomaga, a czasem dobija lidera.\n– Czemu warto pomóc liderowi.\n– Jak pomóc.\n– Jak nie dać sobie wejść na głowę.",
-      "id":21,
-      "path":2,
-      "speakerId":21,
-      "speechSlotId":8,
-      "title":"Trudne życie lidera, czyli jak „zajeżdżamy” naszych przełożonych."
-    },
-    {
-      "description":"You don't know if you should write something to an application log? Maybe you want to review more complex logging concepts? What content should go into the logs is highly neglected topic/ I'd like to fill this gap by providing practical concepts and advise on logging approach.",
-      "id":22,
-      "path":3,
-      "speakerId":22,
-      "speechSlotId":8,
-      "title":"Log - your missing feature"
-    },
-    {
-      "description":"Być może Ty też tak miałeś - kilka lat po tym jak wpadłeś na genialny pomysł produktu „robiącego różnicę” słyszysz o startupie z kosmiczną wyceną realizującego „Twój” pomysł. Myślisz sobie: „nigdy więcej”. A rok później sytuacja się powtarza.\n W środowisku produktowym mówi się, że pomysł jest wart tyle co jego realizacja.\n\nJak zatem przejść od pomysłu do realizacji nie tracąc przy tym czasu i pieniędzy?\n Jakie czynniki wpływają na to, czy mój produkt odniesie sukces?\n Jakich częstych błędów powinienem unikać budując produkt?\n\nNa te pytania odpowiem dzieląc się przykładami z budowy http://fincastly.com/, który pomimo dobrego startu nie podbił rynku.\n\nNawet jeśli sam nie planujesz w najbliższej przyszłości realizować „czegoś swojego”, to mam nadzieję, że dzięki tej prezentacji zdobędziesz nową perspektywę i będziesz mógł dostarczyć jeszcze więcej wartości w projekcie w którym aktualnie pracujesz.",
-      "id":23,
-      "path":1,
-      "speakerId":23,
-      "speechSlotId":9,
-      "title":"5 lekcji z budowania własnego produktu. Czyli jak wydaliśmy pół miliona i rok developmentu nie odnosząc rynkowego sukcesu."
-    },
-    {
-      "description":"Jako programiści regularnie mierzymy się z zadaniami o wysokim stopniu skomplikowania, wymagającymi wykorzystywania dużej ilości pamięci roboczej naszego mózgu. Może to prowadzić do przeciążenia poznawczego wpływającego negatywnie na jakość i komfort naszej pracy.\n Jakie są rodzaje obciążenia poznawczego? Czy można zmierzyć obciążenie poznawcze zespołu? Jakie relacje łączą je z architekturą aplikacji, a jakie ze strukturą działu programistycznego? Jak można zredukować wymagany od programisty wysiłek poznawczy? W ramach prezentacji postaram się odpowiedzieć na powyższe pytania, oraz podać kilka praktycznych pomysłów, jak radzić sobie z przeciążeniem poznawczym towarzyszącym tworzeniu i utrzymaniu oprogramowania.",
-      "id":24,
-      "path":2,
-      "speakerId":24,
-      "speechSlotId":9,
-      "title":"Mózg rozje*any, czyli przeciążenie poznawcze programisty"
-    },
-    {
-      "description":"Na rzucone hasło o refactoringu często pojawia się myśl „przepisać”. Nie ważne czy całą aplikację, serwis, moduł czy klasę - przepisać! Historia zna wiele przypadków gdzie takie podejście spowodowało wykolejenie projektu i sam nie jestem tutaj bez winy. Kropla drąży skałę a drobne systematyczne zmiany pozwalają na przestrzeni miesięcy zmienić jakość kodu nie do poznania. Opowiem Ci o arsenale narzędzi dostępnym na wyciągnięcie ręki by zacząć refactoring już dziś.",
-      "id":25,
-      "path":3,
-      "speakerId":25,
-      "speechSlotId":9,
-      "title":"Czego mama nie mówiła Ci o refaktoryzacji"
-    },
-    {
-      "description":"Macie czasem poczucie, że w pracy czujecie się jak w piekle? Mimo ‘software developer’ w nazwie stanowiska kodowanie zaczyna być rzadsze, albo wręcz całkiem znika z dnia pracy. Cały czas zalewają nas nowe wymagania, ale nie zawsze wymagają napisania chociażby linii kodu. Spotkania, calle, ustalenia, discovery, modelingi, stormingi zamiast starego, dobrego naparzania kodu.\n\nNie gwarantuję, że z tego piekła da się wydostać, ale może chociaż postarajmy się, żeby było nam w nim łatwiej.",
-      "id":26,
-      "path":1,
-      "speakerId":26,
-      "speechSlotId":10,
-      "title":"Porzućcie wszelką nadzieję, wy, którzy tu wchodzicie."
-    },
-    {
-      "description":"„Naszym celem jest rozwiązywanie problemów w sposób, który kochają nasi klienci, a jednocześnie działa dla naszego biznesu.” To zdanie Marty Cagana, lidera Silicon Valley Product Group, jest uznawane za podstawę myślenia o produktach cyfrowych. Jest to jednocześnie mocno przeciwne do standardowego rozumienia tworzenia oprogramowania = wrzucam funkcjonalność na produkcję i praca została zakończona. Tak naprawdę, to dopiero wtedy praca się rozpoczyna...\n\nChciałbym wam opowiedzieć w jaki sposób przejść od myślenia typowo wytwórczego do myślenia skoncentrowanego na tworzeniu produktu. Co musimy zmienić w naszym postrzeganiu rozwoju oprogramowania, i jego mierzeniu, aby lepiej odpowiadać na potrzeby klienta. Dlaczego tempo dostarczania wcale nie jest najważniejsze.\n\nZespoły produktowe będą coraz częstszym elementem naszego środowiska programistycznego. To powoduje dużą zmianę, ale jest to zmiana na dobre – na większe dostosowanie do potrzeb klienta, a nie tworzenie nikomu niepotrzebnych funkcjonalności.",
-      "id":27,
-      "path":2,
-      "speakerId":27,
-      "speechSlotId":10,
-      "title":"Jak tworzyć produkt, a nie zbiór funkcjonalności"
-    },
-    {
-      "description":"Tworząc produkty w IT, zespoły czasami podejmują działania w celu przyspieszenia dostarczenia funkcjonalności lub projektu, które później wymagają refaktoryzacji. Nazywamy to długiem technologicznym. Są też tacy, którzy powiedzą, że efekt pracy jest wystarczająco dobry i dokładnie takiego potrzebowali. Czy dążenie do perfekcji jest w każdym przypadku potrzebne? Czy każdy produkt musi być idealny? A jeśli nie musi, to czy nie musi zawsze, czy tylko czasami? Co pomaga w znalezieniu odpowiedniego balansu pomiędzy perfekcją a prowizorką? Na wszystkie te i inne tego rodzaju pytania postaram się wam odpowiedzieć, odnosząc się do realnych przykładów.",
-      "id":28,
-      "path":3,
-      "speakerId":28,
-      "speechSlotId":10,
-      "title":"Ciągłe dążenie do perfekcji w tworzeniu produktów technologicznych"
-    }
-  ]
+  "speakers" : [ {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2023/09/avatar.jpeg",
+    "twitter" : "https://twitter.com/tkaczmarzyk",
+    "occupation" : "Software Developer",
+    "name" : "Tomasz Kaczmarzyk",
+    "description" : "Programowanie to moja pasja. Podczas swojej kariery zawodowej uczestniczyłem w pracy nad zarówno projektami zakończonymi sukcesem, jak i będącymi totalną porażką. Większość tego co wiem, nauczyłem się z tych drugich.\n\nMocno wierzę w manifest Software Craftsmanship. M.in. z tego powodu organizuję konferencję Boiling Frogs (http://boilingfrogs.pl) oraz otworzyłem software house Tratif (http://tratif.com), w którym jakość kodu jest zawsze na pierwszym miejscu.\n\nCzasami piszę na blogu (http://blog.tratif.com). Praktykuję Test Driven Development i godzinami mogę rozmawiać o testach automatycznych i ich czytelności.\n\nLubię wierzyć, że oprogramowaniem można zmieniać świat.",
+    "id" : 102,
+    "linkedin" : "https://www.linkedin.com/in/tkaczmarzyk/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/Wojtek_square.jpg",
+    "twitter" : "",
+    "occupation" : "Head of Product Engineering",
+    "name" : "Wojtek Ptak",
+    "description" : "Wojtek works as Head of Product Engineering and Engineering Executive at Revolut. Before, he worked as CTO for several companies, provided consulting, training, and assisted in building various data collecting, analytics, and applied ML/AI solutions, including Big Data implementations, data stream processing systems, and data insight projects. He worked with multiple Forbes 500 brands in the US, UK, and the Netherlands, including The Coca-Cola Company, the American Bankers Association, Macy’s, Bloomingdales, Heineken, Saks 5th Avenue, BP, Boots, Polo Ralph Lauren, Porsche, HSBC, and others.",
+    "id" : 1,
+    "linkedin" : "https://www.linkedin.com/in/wojtekptak/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/images.png",
+    "twitter" : "",
+    "occupation" : "Java Champion",
+    "name" : "Andrzej Grzesik",
+    "description" : "Andrzej likes distributed systems in all shapes and form. Coding since the age of 8, loves simplicity and continuous delivery. While he has written in many languages, he favours the JVM. Since „most software problems are people problems”, he stirs communities, organizes and speaks at conferences (proud to be a JavaONE Rockstar!). He is passionate about all things data, because science! In his spare time… cycling, photography and books. And he is a Java Champion!",
+    "id" : 2,
+    "linkedin" : "https://www.linkedin.com/in/andrzejgrzesik/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/Krzysztof-and-Pawel-Nerd-Management.jpeg",
+    "twitter" : "",
+    "occupation" : "Founders at Nerd Management",
+    "name" : "Krzysztof Rakowski i Paweł Rekowski",
+    "description" : "Krzysztof Krzysztof Rakowski jest doświadczonym liderem. Zaczynał w branży IT dwadzieścia lat temu jako webdeveloper. Obecnie jest dyrektorem pionu Supply Chain Management oraz zarządza warszawskim hubem IT firmy eMAG – lidera e-commerce w Europie południowo-wschodniej. Odpowiada za 9 zespołów developerskich i produktowych w dwóch krajach. W swojej pracy kieruje się transparencją i stawianiem człowieka na pierwszym miejscu. Uwielbia się uczyć i pomagać innym w rozwoju. Współprowadzi wideo podcast Nerd.Management, skierowany do świeżo upieczonych i przyszłych liderów w IT. Paweł Człowiek wielu pasji i zawodów – Przedsiębiorca, Programista, Lider, Mówca, Trener, Podcaster oraz finalista konkursu IT Manager of Tomorrow Awards, a poza tym tata dwóch rozrabiaków, poszukujący skutecznych sposobów jak Czuć się, Wyglądać i Żyć #Lepiej. Od ponad 14 lat w branży IT – od początku związany z PHP. Pracował dla takich marek jak Oferia, Allegro czy BlaBlaCar. Obecnie Team Leader w eMAG. Miłośnik ostrych brzmień, skutecznej komunikacji oraz uświadamiania programistów ile kosztuje ich praca. Razem z Krzysztofem prowadzi wideo podcast Nerd.Management, skierowany do świeżo upieczonych i przyszłych liderów w IT.",
+    "id" : 3,
+    "linkedin" : "https://www.linkedin.com/company/nerd-management/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/mm_crop-1-930x620-1.jpg",
+    "twitter" : "",
+    "occupation" : "Frontend Tech Leader w Xebia",
+    "name" : "Marcin Milewicz",
+    "description" : "Programista z pasji od ponad dwóch dekad. Google Developer Expert (Web Technologies), Principal Developer, Frontend Architect oraz Frontend Tech Leader w Xebia Poland. Po godzinach Toastmaster, miłośnik podróży, gór oraz psychologii silnych stron. Silnie nastawiony na innowacje technologiczne oraz rozwój osobisty. Podcaster kanału “Na Froncie”.",
+    "id" : 4,
+    "linkedin" : "https://www.linkedin.com/in/marcinmilewicz/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/kgrzybek.jpg",
+    "twitter" : "https://twitter.com/kamgrzybek",
+    "occupation" : "Head of Software Engineering / Architekt",
+    "name" : "Kamil Grzybek",
+    "description" : "Head of Software Engineering oraz Architekt – związany głównie z technologią .NET. Zwolennik podejścia Software Craftsmanship, automatyzacji, refactoringu, czystego kodu oraz pragmatycznego rozwiązywania problemów – zgodnie z ich klasą. Pasjonat tematów związanych z architekturą oprogramowania i projektowaniem systemów. Entuzjasta i praktyk Domain-Driven Design. Przemyślenia i wnioski opisuje na swoim blogu (https://www.kamilgrzybek.com/) i Twitterze: @kamgrzybek. Związany z firmą ITSG Global, gdzie jako architekt, programista i konsultant odpowiedzialny jest za wytwarzanie oprogramowania dla firm z branży finansowej, medycznej i Big Data. Trener DDD oraz architektury w Bottega IT Minds. Prywatnie – mąż, tata ukochanej córeczki, opiekun niesfornego psa, biegacz – amator i pasjonat samodoskonalenia żyjący zgodnie z Sokratesową dewizą – “wiem, że nic wiem”.",
+    "id" : 5,
+    "linkedin" : "https://www.linkedin.com/in/kamilgrzybek/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/lreszke-1024x1024.jpg",
+    "twitter" : "https://twitter.com/lreszke",
+    "occupation" : "Software Developer",
+    "name" : "Łukasz Reszke",
+    "description" : "Na codzień pracuje w @arkency gdzie ratujemy projekty klasy legacy i szerzymy wiedzę o dobrych praktykach w świecie Railsowym. Wierzę w to że zrozumienie problemu i zaprojektowanie modelu dostosowanego do jego rozwiązania pozwala na stworzenie dobrego produktu dla biznesu. Produktu, który będzie zrozumiały i latwy do rozwijania dla innych programistów. Stad naturalnie ciągnie mnie do takich technik jak DDD i EventStorming.",
+    "id" : 6,
+    "linkedin" : "https://www.linkedin.com/in/lreszke"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/piotr_gankiewicz.jpeg",
+    "twitter" : "https://twitter.com/spetzu",
+    "occupation" : "Inżynier oprogramowania, współzałożyciel DevMentors.io",
+    "name" : "Piotr Gankiewicz",
+    "description" : "Inżynier oprogramowania, współzałożyciel DevMentors.io. kontrybutor open source rozwijający message streaming Iggy.rs",
+    "id" : 7,
+    "linkedin" : "https://www.linkedin.com/in/piotrgankiewicz/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/jpalka.jpeg",
+    "twitter" : "https://twitter.com/j_palka",
+    "occupation" : "Performance Engineer",
+    "name" : "Jarosław Pałka",
+    "description" : "Od ponad 20 lat w branży IT, jako administrator baz danych, programista, architekt, manager i „inżynier od spraw katastrof”. Brałem udział w małych, średnich i nonsensownie dużych projektach, prowadzonych zgodnie zasadami „waterfall”, Agile oraz przy braku jakichkolwiek metodyk, z tym samym zawsze skutkiem. Co doprowadziło mnie do wniosku, że nieważne co robisz tak długo, jak robisz to dobrze, w najprostszy z możliwych sposobów i używasz właściwych narzędzi, które wykonają pracę za ciebie. W międzyczasie dałem się porwać ideą TDD oraz Software Craftmanship, do granic możliwości wyeksploatować tak piękne w swej prostocie pomysły jak REST i NoSQL, by potem porzucić je, by zgłębić tajniki „system thinking” i zachwycić się siłą jaką niesie z sobą „metafora” i odkryć, że rządzą nami te same prawa „natury”. Niepokorny wyznawca kościoła JVM, badacz bytecode’u i JIT oraz wszelkiej maści parserów, interpreterów i kompilatorów. Na co dzień walczący o lepszą wydajność w Neo4j. Od czasu do czasu można usłyszeć moje niskiej jakości żarty na temat architektury na konferencjach w Polsce. W wolnych chwilach trener w http://symentis.pl i autor bloga na http://geekyprimitives.wordpress.com/ oraz samozwańczy dyktator w radach programowych konferencji CoreDump, SegFault, JDD oraz 4Developers.",
+    "id" : 8,
+    "linkedin" : "https://www.linkedin.com/in/jpalka/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/mmoroz.jpg",
+    "twitter" : "",
+    "occupation" : "Chief Innovation Officer i współzałożyciel Makimo",
+    "name" : "Michał Moroz",
+    "description" : "Michał Moroz – Chief Innovation Officer i współzałożyciel Makimo, software house i firmy konsultingowej IT. Programista przez 15 lat, na studiach zainteresował się przywództwem i rozwijał swoje umiejętności w Niezależnym Zrzeszeniu Studentów Regionu Łódzkiego. Prywatnie interesuje się przemawianiem publicznym i ćwiczy swoje umiejętności w klubie Speakers of Łódź i Łódź Toastmasters. Zawsze poszukuje nowych konceptów, które może włączyć do swojego postrzegania świata.",
+    "id" : 9,
+    "linkedin" : "https://www.linkedin.com/in/michalpiotrmoroz/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/mlotko.jpg",
+    "twitter" : "",
+    "occupation" : "Software Developer",
+    "name" : "Mariusz Lotko",
+    "description" : "Od 22 lat zawodowy programista, od 18 lat śni na Javie.",
+    "id" : 10,
+    "linkedin" : "https://www.linkedin.com/company/boiling-frogs/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/pzjc.jpg",
+    "twitter" : "",
+    "occupation" : "Software Developer",
+    "name" : "Piotr Zając",
+    "description" : "Inżynier związany z technologiami JVM. Entuzjasta stosowania rozwiązań dających możliwość zautomatyzowania powtarzalnej pracy w każdej sferze życia, w której jest to możliwe – co w ostatnim czasie zostało znacznie ułatwione poprzez rozwój narzędzi AI. Czas wolny spędza na graniu w gry planszowe, wspinaczce sportowej, bądź tworzeniu hobbystycznych aplikacji wspierających te zainteresowania.",
+    "id" : 11,
+    "linkedin" : "https://www.linkedin.com/in/ptrzjc/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/images.png",
+    "twitter" : "",
+    "occupation" : "HR Business Partner",
+    "name" : "Marta Domasz",
+    "description" : "Jestem HR Business Partnerką. Współpracuję bezpośrednio z Zarządami i kadrą menadżerską firm technologicznych i wspieram ich rozwój. Wierzę, że każda organizacja ma przed sobą praktycznie nieograniczony wzrost. Kwestia tego, kiedy da sobie pomóc. Pomagam biznesom uporządkować swoje procesy organizacyjne i kulturę firmy w takim sposób, by progres był tylko kwestią czasu. Lubię o sobie mówić, że jestem osobą, która ogarnia chaos w organizacji. Porządkuję procesy, postrzeganie, ludzi.",
+    "id" : 12,
+    "linkedin" : "https://www.linkedin.com/in/martadomasz/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/pr-pawel-lewtak-large-cadf264230de47ab.jpg",
+    "twitter" : "https://twitter.com/pawel_lewtak",
+    "occupation" : "Software Developer",
+    "name" : "Paweł Lewtak",
+    "description" : "",
+    "id" : 13,
+    "linkedin" : "https://www.linkedin.com/company/boiling-frogs/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/aprzybyl.jpg",
+    "twitter" : "https://twitter.com/Anita_Przybyl",
+    "occupation" : "Trenerka kompetencji społecznych, psycholog",
+    "name" : "Anita Przybył",
+    "description" : "Trenerka kompetencji społecznych, psycholog. Trenerka Bottega IT Minds. Specjalizuję się w rozwoju liderów, liderów technicznych, managerów oraz wyższej kadry zarządzającej w zakresie nowoczesnego leadershipu (m.in. idee i narzędzia management 3.0, servant leadership, coachingowy, partycypacyjny styl zarządzania oraz aktualna wiedza psychologiczna). Z liderami pracuję od kilku lat zarówno szkoleniowo jak i w indywidualnych sesjach coachingowych. Pracuję też nad rozwojem soft skilli z specjalistami IT oraz z całymi zespołami developerskimi w celu zwiększenia efektywności i satysfakcji. W swoich szkoleniach stawiam na naukę przez doświadczenie, kładąc nacisk na interaktywne, warsztatowe formy nauczania oraz intensywny trening umiejętności. Prelegentka na wielu konferencjach IT. Współorganizatorka i trenerka warsztatów Soft Skille Dla Programistów.",
+    "id" : 14,
+    "linkedin" : "https://linkedin.com/in/anita-przybyl"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/pkrysiak.jpg",
+    "twitter" : "",
+    "occupation" : "Head of Engineering Poland at BNY Mellon",
+    "name" : "Piotr Krysiak",
+    "description" : "Software Engineer z wieloletnim doswiadczeniem. Najlepiej czuje sie w asynchronicznych systemach klasy Enterprise. Obecnie jako manager poznaje branze z innej strony.",
+    "id" : 15,
+    "linkedin" : "https://www.linkedin.com/in/piotr-krysiak-800bb185/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/ajelonek.jpg",
+    "twitter" : "",
+    "occupation" : "Senior Quality Assurance Engineer w eSky",
+    "name" : "Arkadiusz Jelonek",
+    "description" : "Senior Quality Assurance Engineer w firmie eSky. Swoją przygodę z IT rozpoczął od testowania aplikacji wbudowanych na telewizory i set-top boxy, a obecnie skupia się na testowaniu aplikacji webowych i mobilnych. Na co dzień rozwija projekt w branży tech travel, który pomaga klientom w ponad 50 krajach realizować swoje podróżnicze marzenia. W swojej pracy przeprowadza zarówno testy manualne jak i automatyzuje przypadki testowe przy użyciu takich frameworków jak Playwright czy Cypress, pisząc testy w JavaScriptcie / TypeScriptcie w zależności od potrzeb. Preferuje jednak język TypeScript. Jako lider techniczny stara się być mentorem dla mniej doświadczonych kolegów. Częsty gość podcastu technicznego pt. „Pieprzenie o kodzeniu”, gdzie wraz z zaproszonymi gośćmi opowiada z pasją o testach E2E i nie tylko. Był prelegentem na takich konferencjach jak Test Warez, 4Developers, test:fest, Na Podbój IT, Automatyzacja Testowania w praktyce, Tester Summit czy QA Summit.",
+    "id" : 16,
+    "linkedin" : "https://www.linkedin.com/in/ajelonek"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/szydlo-300x300-1.jpg",
+    "twitter" : "https://twitter.com/lszydlo",
+    "occupation" : "Software Consultant/Architect/Trainer",
+    "name" : "Łukasz Szydło",
+    "description" : "Programista pasjonat, fan “Software Craftsmanship” i zwinnego podejścia do wytwarzania oprogramowania. Lubi proste rozwiązania skomplikowanych problemów. Na codzień zajmuje się tematami z zakresu architektury aplikacji biznesowych, Domain-Driven Design, Continuous Delivery, technologii Java oraz testowania automatycznego. Prywatnie mąż, ojciec piątki dzieci.",
+    "id" : 17,
+    "linkedin" : "https://www.linkedin.com/in/łukasz-szydło-14754024/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/ola_kunysz.jpg",
+    "twitter" : "https://twitter.com/OlaQnysz",
+    "occupation" : "Programistka i założycielka Szkoły Testów",
+    "name" : "Aleksandra Kunysz",
+    "description" : "Ola Kunysz tworzy oprogramowanie od kilkunastu lat. Ma doświadczenie w programowaniu full stack, testowaniu, zbieraniu wymagań i prowadzeniu szkoleń. Pracowała w korporacjach, startupach i pro bono w różnych branżach i krajach. Najbardziej lubi pisać kod, który ma znaczenie i rozwiązywać prawdziwe problemy. Od 2019 roku prowadzi Szkołę Testów i zwiększa świadomość w temacie jakości wśród programistów. Kiedy jest offline, jeździ na jednośladach, spaceruje z psem albo ćwiczy jogę.",
+    "id" : 18,
+    "linkedin" : "https://www.linkedin.com/in/akunysz"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/dpokusa.jpg",
+    "twitter" : "",
+    "occupation" : "Architekt Oprogramowania",
+    "name" : "Daniel Pokusa",
+    "description" : "Architekt oprogramowania, programista, a czasami nawet delivery manager z ponad 13 letnim doświadczeniem w branży IT ściśle związany z rodziną języków JVM. Na co dzień pragmatyk i zapalony zwolennik automatyzacji i efektywności, a równolegle trener i konsultant w zakresie systemów rozproszonych, jakości, organizacji zespołu i rekrutacji technicznej. Po godzinach tata i miłośnik kawy alternatywnej oraz nałogowy mówca konferencyjny na takich wydarzeniach jak 4Developers, BoilingFrogs, Confitura, Devoxx, Geecon, JDD, QualityExcites, czy Testwarez. Wierzy, że istotą wytwarzania dobrego oprogramowania jest komunikacja, współpraca i umiejętność dzielenia się wiedzą.",
+    "id" : 19,
+    "linkedin" : "https://www.linkedin.com/in/daniel-pokusa/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/gil-300x300-1.jpeg",
+    "twitter" : "https://twitter.com/mariuszgil",
+    "occupation" : "Software Architect",
+    "name" : "Mariusz Gil",
+    "description" : "Software architect interesujący się złożonymi systemami o wysokiej wartości biznesowej, związany głównie z platformami webowymi. Ex-CTO, konsultant, speaker i trener w Bottega IT Minds. Z branżą IT związany od ponad 18 lat. Od kilku lat wykorzystuje EventStorming jako narzędzie do komunikacji pomiędzy zespołami developerskimi i biznesowymi, a także do modelowania oprogramowania w oparciu o DDD, CQRS czy EventSourcing. Uczestnik EventStorming Summit 2017, gdzie wspólnie z innymi zaproszonymi przez Alberto Brandoliniego osobami pracował nad rozwojem tej techniki. Po godzinach oddaje się swoim innym pasjom, fotografii i gitarze elektrycznej.",
+    "id" : 20,
+    "linkedin" : "https://www.linkedin.com/in/mariuszgil/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/MichalBartyzel2-1024x683-1-2.jpg",
+    "twitter" : "",
+    "occupation" : "Software Developer, Consultant",
+    "name" : "Michał Bartyzel",
+    "description" : "Pracuję w branży IT od 20 lat jako programista, team leader, architekt, przedsiębiorca. Przez wiele lat pomagałem zespołom refaktoryzować kod, od jakiegoś czasu zajmuję się reorganizacją procesów dostarczania oprogramowania oraz usprawnianiem współpracy z klientem. Napisałem kilka książek min. “Oprogramowanie szyte na miarę. Jak rozmawiać z klientem, który nie wie, czego chce?” i “Getting Things Programmed. Droga do efektywności”. Więcej o mnie i o mojej pracy dowiesz się na stronie http://michalbartyzel.pl",
+    "id" : 21,
+    "linkedin" : "https://www.linkedin.com/in/mbartyzel"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/pprzybyl.jpg",
+    "twitter" : "https://twitter.com/piotrprz",
+    "occupation" : "Senior Developer Advocate @Elastic",
+    "name" : "Piotr Przybył",
+    "description" : "Notoryczny inżynier w pracy i poza nią, podążający za meandrami sztuki programowania. Java Champion. Testcontainers Champion. Oracle ACE. Zawodowo Remote Software Gardener, od kilkunastu lat wyrywający chwasty w ogródkach webowych. Zwykle przycinający Javę (od wersji 1.3), Scalę i Go do kształtów pożądanych przez klientów, ale i inne języki nie są mu obce. Miłośnik lekkości i zwinności, która powinna przejawiać się przede wszystkim w stosowaniu właściwych narzędzi. Programista, trener, prelegent. W swoich wystąpieniach mówi nie tylko o czystej Javie, ale także o architekturze oprogramowania, bezpieczeństwie komputerowym i umiejętnościach miękkich.",
+    "id" : 22,
+    "linkedin" : "https://www.linkedin.com/in/piotrprzybyl/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/pstapp.jpg",
+    "twitter" : "https://twitter.com/ptrstpp950",
+    "occupation" : "Technology Advisor, Microsoft MVP",
+    "name" : "Piotr Stapp",
+    "description" : "Programista, inżynier, rzemieślnik, projektant oraz ojciec bliźniaków. Wierzy w ludzi, a nie w papiery – jest wyznawcą DevOps i wszelkiej automatyzacji. Jednym zdaniem: “Don’t Stapp me now”",
+    "id" : 23,
+    "linkedin" : "https://www.linkedin.com/in/piotrstapp/"
+  }, {
+    "name" : "Andrzej Konarski i Patryk Roguszewski",
+    "description" : "Andrzej - Senior Software Engineer w Just Join IT, Interesujący się Domain Driven Design, CQRS, Architekturą Oprogramowania. W życiu zawodowym kierujący się maksymą, 'Rób to co kochasz, a nie przepracujesz, ani jednego dnia w życia'. Osoba nie umiejąca w sociale i blogowanie, Ze światkiem IT związany od 2013 roku, gdzie zaczynałem jako Backend Developer w PHP, a obecnie związany z technologią NodeJS. Ex Tech Lead, Przyszły tata, a w wolnym czasie oddaje się swoim zainteresowaniom, nurkowaniem i wędkarstwem. \n\n Patryk - autor bloga http://the-worst.dev/",
+    "occupation": "Senior Software Engineer i Full Stack Engineer w Just Join IT",
+    "photoUrl": "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/images.png",
+    "id" : 24
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/pstawirej.jpg",
+    "twitter" : "https://twitter.com/p_stawirej",
+    "occupation" : "Software Engineer, Trainer",
+    "name" : "Piotr Stawirej",
+    "description" : "Piotr Stawirej – jeśli go jeszcze nie poznałeś, to znaczy, że nie wiesz, jak wygląda prawdziwy fanatyk czystego kodu, ogarnięty obsesją TDD, piewca metod zwinnych w prowadzeniu projektów IT, wierny przekonaniu, że jedynie profesjonalne podejście do każdego aspektu życia jest drogą do sukcesu. W ciągu swojej ponad  16-letniej przygody z firmami z obszaru tworzenia map, nawigacji oraz systemów transakcyjnych (TeleAtlas, TomTom), oraz narzędzi do szkoleń zdalnych (Pragmatic Brains) Piotr stał się mentorem dla wielu młodszych kolegów i ekspertem domenowym. Równolegle, od 2018 roku Piotr prowadzi szkolenia jako trener firmy Bottega IT Minds. W pracy programisty stawia przede wszystkim na czysty design bez względu na język programowania czy użytą technologię. Jest przeciwnikiem cultu cargo w każdym jego przejawie. Od swoich współpracowników wymaga dużo, od siebie jeszcze więcej. Zaraża innych swoją pasją, profesjonalizmem i wyszukanym poczuciem humoru. W wolnym czasie możesz go spotkać na koncercie metalowym – próżno jednak szukać Piotra wśród publiki. Wypatruj go raczej zasiadającego za perkusją, gdzie podobnie jak w zespołach, z którymi pracuje, wybija rytm i nadaje tempo, tworząc jednocześnie przestrzeń dla innych.",
+    "id" : 25,
+    "linkedin" : "https://pl.linkedin.com/in/piotr-stawirej-6475127"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/tdubikowski-kwadrat-small.jpg",
+    "twitter" : "",
+    "occupation" : "Engineering SVP and Head of Wroclaw Site at Sportradar",
+    "name" : "Tomasz Dubikowski",
+    "description" : "Tomek is Engineering SVP and Head of Wroclaw Site at Sportradar, a Public Speaker and Trainer. He has over 10 years of professional experience working as a Software Engineer, Leader and Manager. As an engineer, he is passionate about craftsmanship, propagating clean code, automated tests, behaviour driven development and domain driven design. As a leader, he helps to build an organisational culture based upon autonomy, collaboration and trust so that developers are equipped with both the hard and soft skills necessary to build truly awesome products. Tomek loves to change the reality around him. He his highly pragmatic, challenges orthodoxy at all levels and believes that there is always room for improvement. He is always eager to discuss and share his ideas.",
+    "id" : 26,
+    "linkedin" : "https://www.linkedin.com/in/tomasz-dubikowski/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/kkreft.jpeg",
+    "twitter" : "",
+    "occupation" : "Technical Lead at Volt.io",
+    "name" : "Karol Kreft",
+    "description" : "Programista o humanistycznych zainteresowaniach, fan NBA, wielbiciel dobrej architektury (nie tylko tej w kodzie) oraz wycieczek po górach. Zawodowo od ponad 10 lat związany z tworzeniem aplikacji w języku PHP. Pracuje w Volt jako Tech Lead gdzie wspiera zespoły programistyczne w dostarczaniu testowalnego, skalowalnego i bezpiecznego kodu zgodnie ze sprawdzonymi praktykami inżynierii oprogramowania.",
+    "id" : 27,
+    "linkedin" : "https://www.linkedin.com/in/karolkreft/"
+  }, {
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/mostruszka.jpeg",
+    "twitter" : "https://twitter.com/mostruszka",
+    "occupation" : "Software engineer, tech lead",
+    "name" : "Michał Ostruszka",
+    "description" : "Doświadczony software engineer i tech lead, póki co głównie w obszarach JVMowych i w tzw. “love-hate relationship” z systemami rozproszonymi. Cenię sobie pragmatyczne podejście zarówno do architektury, kodu jak i prowadzenia zespołów i projektów. Fan event-sourcingu i DDD ale tylko tam gdzie ma to sens. Na codzień introwertyk, od czasu do czasu występujący i rozmawiający z ludźmi na konferencjach technicznych.",
+    "id" : 28,
+    "linkedin" : "https://www.linkedin.com/in/michalostruszka/"
+  } ],
+  "speeches" : [ {
+    "path" : 1,
+    "speechSlotId" : 1,
+    "description" : "Wstępniak",
+    "speakerId" : 102,
+    "id" : 102,
+    "title" : "Boiling Frogs: Nieopowiedziane historie"
+  },{
+    "path" : 1,
+    "speechSlotId" : 2,
+    "description" : "Forget about the spine-chilling tales of managing large–scale systems. It doesn’t have to be a daunting task. We’re here to advocate for battle’s proven simplicity with a pinch of fun. We’ll slice through the Gordian knot of complexity, juggle scalability patterns while uncovering their dark sides, and turn time modelling into a time-travel adventure. No sale of silver bullets here; instead, we arm you with practical solutions and actionable strategies based on real-world examples and the dark sides of rapid-scaling problems. Join us to transform your approach to evolving system architecture, leaving you with insights immediately applicable to your work. https://www.linkedin.com/in/wojtekptak/ https://www.linkedin.com/in/andrzejgrzesik/",
+    "speakerId" : 1,
+    "id" : 1,
+    "title" : "Architecture Uncomplicated: tools for simplified large scale systems"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 2,
+    "description" : "Myślenie o myśleniu jest istotne, ale niedoceniane w naszej pracy. I w odróżnieniu od kodu – myślenia nie widać, a jego rezultaty nie uwidaczniają włożonego wysiłku. Niestety, bardzo łatwo pominąć istotne elementy, które wysypią nasze projekty w najmniej spodziewanym momencie. W końcu 15 minut planowania może zaoszczędzić tydzień kodowania – tylko kto ma na to czas? \uD83D\uDE42 W tej prezentacji zobaczysz jak nie wpaść w pułapki myślenia i podejmować lepsze decyzje. Dowiesz się: – Jak i kiedy zadawać właściwe pytania? – Jak analizować decyzje, szanse oraz zagrożenia? – Jak poznać problem, zanim odlecisz w rozwiązania? – Kiedy myśleć, a kiedy działać? – Jak podejmować właściwe decyzje? I wiele więcej!",
+    "speakerId" : 3,
+    "id" : 2,
+    "title" : "Najpierw pomyśl, potem zrób – jak mądrze podejmować decyzje"
+  }, {
+    "path" : 3,
+    "speechSlotId" : 2,
+    "description" : "DDD na frontendzie to z pewnością kolejny buzzword w świecie frontendu. Czy rzeczywiście DDD ma w ogóle sens jeśli chodzi o tworzenie frontendu? Czy możemy przenieść podstawowe koncepcje DDD z backendu na frontend? Czas odpowiedzieć na to pytanie w sposób pragmatyczny i jasno powiedzieć co ma sens, a co zupełnie jeśli chodzi o DDD nie pasuje do frontendu.",
+    "speakerId" : 4,
+    "id" : 3,
+    "title" : "DDD na frontendzie? A komu to potrzebne?"
+  }, {
+    "path" : 1,
+    "speechSlotId" : 3,
+    "description" : "Często programowanie kojarzy nam się głównie z pisaniem kodu, projektowanie – z rysowaniem wysoko poziomowych diagramów a przygotowywanie przypadków testowych ze żmudnym pisaniem scenariuszy. Zapominamy jednak, że wszystkie te czynności poprzedza analiza problemu oraz rozwiązania a wszelkie artefakty, które powstają, są de facto jej rezultatem – reprezentacją wiedzy. Mówi się, że “kod jest jedynie efektem ubocznym procesu myślowego”. Skoro analiza ma tak duży wpływ na każdy element inżynierii oprogramowania to czemu poświęcamy jej tak mało uwagi? Czy posiadanie w zespole analityka zwalnia nas z analitycznego myślenia? Czy w dobie rozwijającego się AI osoby bez umiejętności analitycznych będą w przyszłości w ogóle potrzebne? Na prelekcji przedstawię odpowiedzi na powyższe pytania oraz postaram się przekonać uczestników, że programista to nie “koder/crudowiec”, tester to nie “klikacz” a architekt to ktoś więcej niż osoba rysująca strzałki i prostokąty w Visio siedząc na wieży z kości słoniowej. Omówimy umiejętności analityczne, które powinien posiadać każdy członek zespołu programistycznego oraz techniki analityczne, które wspomagają proces analizy na każdym etapie inżynierii. Opowiemy też sobie, co to znaczy dobra analiza i co się dzieje, kiedy jej zabraknie. Prelekcja ma za zadanie zwiększyć świadomość na temat wagi analizy i umiejętności analitycznych w codziennej pracy oraz zachęcić uczestników do rozwoju kompetencji w tym obszarze.",
+    "speakerId" : 5,
+    "id" : 4,
+    "title" : "A good craftsman is a good analyst"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 3,
+    "description" : "W bezkresie narzędzi i frameworków których musimy się uczyć jako programiści zdarza nam się zapomnieć o fundamentach. Jednym z nich jest powoli zapominana sztuka programowania obiektowego. Na nowo odkryjemy kanony jej piękna. Razem przypomnimy sobie zasady, którymi warto się kierować aby nie popełniać programistycznego faux pas. Nie będziemy ich cytować niczym na rozmowie rekrutacyjnej. Zamiast tego skupimy się na konkretnych przykładach.",
+    "speakerId" : 6,
+    "id" : 5,
+    "title" : "Zapomniana sztuka programowania obiektowego"
+  }, {
+    "path" : 3,
+    "speechSlotId" : 3,
+    "description" : "Mechanizm strumieniowania wiadomości nierzadko stanowi nieodzowny element infrastruktury w systemach rozproszonych. Od klasycznej integracji za pomocą zdarzeń (event-driven architecture) w architekturze mikroserwisowej, po zaawansowane systemy tradingowe typu HFT oparte na podejściu low latency — niezawodna (i możliwie szybka) komunikacja pomiędzy niezależnymi aplikacjami ma krytyczne znaczenie dla poprawnego działania systemu. Jak wygląda message streaming od podstaw? Z jakimi wyzwaniami musi zmierzyć się inżynier oprogramowania rozwijający takie narzędzie? Skąd bierze się przepustowość rzędu milionów wiadomości na sekundę? Jak duży wpływ może mieć kernel Linuxa na wydajność takiego rozwiązania? Chciałbym podzielić się swoim doświadczeniem, gdzie po kilku latach pracy w sektorze “tradingowym”, zdecydowałem się na dogłębne poznanie mechanizmu strumieniowania komunikatów właśnie poprzez rozwój własnego “message streamingu” od zera. Iggy.rs — projekt, który oryginalnie miał posłużyć do nauki języka programowania w Rust, z czasem trafił na listę GitHub Trending, zyskał kilkunastu stałych kontrybutorów, posiada całkiem pokaźny ekosystem i powoli zyskuje coraz większą popularność. To dzięki pracy nad nim, zrozumiałem m.in. dlaczego projektanci takich narzędzi jak choćby Kafka podjęli takie, a nie inne decyzje i jak duże znaczenie na stabilność, niezawodność oraz wydajność ma faktyczne zrozumienie mechanizmów synchronizacji danych, I/O, oraz niskopoziomowych API na poziomie konkretnego systemu operacyjnego.",
+    "speakerId" : 7,
+    "id" : 6,
+    "title" : "Zbudujmy własną Kafkę, czyli strumieniowanie wiadomości od kuchni"
+  }, {
+    "path" : 1,
+    "speechSlotId" : 4,
+    "description" : "Powszechnie znaną prawdą jest, iż niewielu z nas przejmuję się wydajnością naszego kodu, jeszcze mniej z nas miało do czynienia z testami wydajnościowymi. Wśród tych z nas, którzy toczą nierówną walkę z wydajnością, wąska garstka z nas jest świadoma jak wiele kryję się w nich kłamstw, niedomówień i fałszywych obietnic. Podczas prezentacji poznamy antywzorce w testowaniu wydajności oraz kilka sprawdzonych w boju praktycznych rad jak nie dać się omamić wynikom testów. Czy powinniśmy się obawiać „coordinated ommision”? Dlaczego statystyka to najwyższa forma kłamstwa, czyli szybki kurs czytania wyników testów. Dlaczego „latency” i „throughput” to nie to samo? Dlaczego dane wejściowe są równie ważne jak scenariusze testowe? Na jakie pytania odpowiadają microbenchmarki? Czy testy wydajnościowe mają warstwy? Dlaczego w testach wydajnościowych nie chodzi o liczby? To tylko wybrane zagadnienia, o których opowiem. Jeśli nie interesują Cię testy wydajnościowe i unikasz tego tematu jak zarazy, na tej prezentacji dowiesz się dlaczego tak jest. Jeśli jednak czujesz się wyznawcą maszyny i tematy wydajności nie są Ci obce, pomogę Ci z większą świadomością projektować testy i interpretować ich wyniki.",
+    "speakerId" : 8,
+    "id" : 7,
+    "title" : "Testy wydajnościowe i inne kłamstwa"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 7,
+    "description" : "Od lat 70-tych przejawia się w świadomości programistów na całym świecie. Niby nieuchwytne, mówi, że “Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization’s communication structure.” Co kilka lat wypływa w ten lub inny sposób, ostatnio przy okazji książki Team Topologies. Wydaje się, że zostanie z nami na zawsze. Tylko jak to przełożyć na codzienną pracę inżyniera? W ramach tej prezentacji postaram się odpowiedzieć na to pytanie, odnosząc się do własnych doświadczeń w pracy z zespołami programistów, odwołując się do rozmaitych źródeł książkowych i internetowych, a także promując jedną główną ideę, którą spłycić można do: “pracuj nie tylko nad API swojego kodu, ale też API komunikacji Twojego zespołu z pozostałymi zespołami”. Co to dokładnie znaczy? Po to powstał ten wykład. A jako bonus, zobaczymy, jak to może się odzwierciedlić w kodzie i przełożyć na kod legacy.",
+    "speakerId" : 9,
+    "id" : 8,
+    "title" : "Prawo Conwaya w akcji"
+  }, {
+    "path" : 3,
+    "speechSlotId" : 4,
+    "description" : "Pesymistyczne blokowanie rekordów było bezpiecznie i proste, ale niezbyt wydajne. Czy blokowanie optymistyczne jest odpowiedzią? A jeśli jest, to czy na pewno implementujemy je w taki sposób, żeby spełniało swoje założenia? Czy ORMy odrabiają za nas pracę domową, czy tylko dają nam narzędzia? Nieco więcej o tym protokole w aplikacjach z interfejsem REST, a może nie tylko.",
+    "speakerId" : 10,
+    "id" : 9,
+    "title" : "Zbyt optymistyczne lockowanie"
+  }, {
+    "path" : 1,
+    "speechSlotId" : 5,
+    "description" : "Narzędzia AI zajmują dziś ważne miejsce w pracy programisty, a ChatGPT wciąż jest najpopularniejszym z nich. Mimo że korzystanie z niego jest banalnie proste, to dopiero znajomość mocnych stron i świadomość ograniczeń otwiera drogę do poprawy efektywności pracy. Podczas tej krótkiej prezentacji podzielę się swoimi praktykami i sposobami, które pozwalają zwiększyć efektywność pracy z kodem. ",
+    "speakerId" : 11,
+    "id" : 10,
+    "title" : "Dłuto programisty, czyli efektywna praca z kodem przy użyciu ChatGPT"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 5,
+    "description" : "Opowiem wam o tym, jak HR może pomóc programistom w rozwoju kariery. Dowiecie się, jakie narzędzia i strategie są kluczowe w procesie przechodzenia od ‘Hello World‘ do ‘Hello Career‘. Gotowi na tę fascynującą podróż? W dzisiejszym dynamicznym środowisku IT, rozwijanie kariery programistów staje się coraz ważniejsze. HR ma kluczową rolę w wspieraniu i kształtowaniu rozwoju zawodowego programistów.",
+    "speakerId" : 12,
+    "id" : 11,
+    "title" : "Kodowanie rozwoju: Od 'Hello World' do 'Hello Career'"
+  }, {
+    "path" : 3,
+    "speechSlotId" : 5,
+    "description" : "Doświadczenie Dewelopera (ang. Developer Experience) to termin rzadko spotykany, w większości firm jeszcze nieznany. W tej prezentacji chciałbym przybliżyć to zagadnienie, pokazać jak to może wyglądać w teorii i jak to rozwiązujemy praktycznie w firmie gdzie pracuję. Mam nadzieję, że po tej prezentacji wyjdziesz z wiedzą i motywacją, by zadbać o doświadczenie swoje i innych deweloperów.  ",
+    "speakerId" : 13,
+    "id" : 12,
+    "title" : "Developer Experience w kwadrans"
+  }, {
+    "path" : 1,
+    "speechSlotId" : 6,
+    "description" : "Opowiem Wam o liderach, o tym w jakie pułapki najczęściej wpadają, z jakimi najczęściej trudnościami i błędami mierzą się chcąc sprostać swojej roli. Pracuję z liderami od kilku lat, przeprowadziłam wiele szkoleń liderskich. Łącznie to około 3000 osób, które piastują stanowiska liderskie albo pretendują do tej roli. O błędach liderów powiedziano już wiele. Moja perspektywa, to perspektywa trenera, który spotyka liderów, kierowników, menedżerów z różnym poziomem doświadczenia, słucha ich historii, trudności, bolączek i wspiera ich w zakresie kompetencji miękkich. To także perspektywa psychologa, który dostrzega mechanizmy, jakie się za tymi trudnościami kryją. Podzielę się z Wami moimi osobistymi spostrzeżeniami. Kto wie, może dzięki nim Wy, stając się liderami, popełnicie mniej błędów w przyszłości.",
+    "speakerId" : 14,
+    "id" : 13,
+    "title" : "Subiektywnie o liderach w IT"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 6,
+    "description" : "Pracujemy na globalnym rynku. Wielokulturowosc to nasza codziennosc. Zastanowimy sie, jak przeanalizowac roznice kulturowe na podstawie badan naukowych. Porozmawiamy o Do and Don't. Przyjrzymy sie tez postrzeganiu Polski przez inne kultury.",
+    "speakerId" : 15,
+    "id" : 14,
+    "title" : "Jak poruszac sie w miedzynarodowym projekcie"
+  }, {
+    "path" : 3,
+    "speechSlotId" : 6,
+    "description" : "Playwright to obecnie jedna z najbardziej perspektywicznych technologii do automatyzacji testów aplikacji webowych w świecie JS/TS i nie tylko. Dzięki niemu możemy pisać testy E2E, testy integracyjne z wykorzystaniem mocków czy też nawet automatyzować testowanie naszego API (aby życie było prostsze!). Czy w 2024 roku wejdzie on z drzwiami do domu polskich bojowników o jakość? Czy wygra on bitwę z bardziej doświadczonymi rywalami jakimi są Jest, Cypress, WebdriverIO czy Selenium? Podczas wystąpienia porównam go do innych narzędzi tego typu, pokaże wady i zalety każdego z nich oraz postaram się przekazać to w taki sposób, żeby zarówno mniej doświadczeni uczestnicy jak i Ci bardziej zaawansowani mogli zrozumieć przedstawiany temat. Opowiem również o nowościach w Playwrightcie jakie przyniosły nam ostatnie wersje oraz porównam je do featurów dostarczanych przez inne frameworki tego typu. See you soon!",
+    "speakerId" : 16,
+    "id" : 15,
+    "title" : "Czy Playwright zdominuje testy automatyczne aplikacji webowych w 2024 roku?"
+  }, {
+    "path" : 1,
+    "speechSlotId" : 7,
+    "description" : "Skąd wiesz czy piszesz dobry kod?! Bo jest zgodny z konwencjami? Bo statyczna analiza nie wykrywa błędów? Bo przestrzega SOLID, CUPID, DRY, KISS? Wszystkie te kryteria są niesamowicie subiektywne, bo czy zgadzamy się wszyscy czym jest pojedyncza odpowiedzialność, albo ile linii ma krótką metoda, czy dana klasa wystarczająco enkapsuluje? I tu pojawia się pytanie, czy da się obiektywnie oceniać kod? W 100% raczej nie, ale da się dużo bardziej niż do tej pory.",
+    "speakerId" : 17,
+    "id" : 16,
+    "title" : "Czysty kod - to jednak nie takie proste"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 4,
+    "description" : "Badania pokazują, że nasza kraina mlekiem i miodem płynąca wcale nie jest takim Eldorado jak obiecują organizatorzy bootcampów. Wypalenie jest demokratycznie – płeć, wiek, ilość doświadczenia nie mają dla niego znaczenia (chociaż wypalamy się w inny sposób). Podczas tej prezentacji skupię się na analizie czynników związanych z pracą, które mają istotny wpływ na poziom wypalenia wśród pracowników IT. Prezentacja przedstawi konkretne zagrożenia związane z obciążeniem pracą, długimi godzinami pracy i dojazdów, jednocześnie proponując strategie i praktyki, które mogą przeciwdziałać wypaleniu i promować zdrowie psychiczne w miejscu pracy. Wsparcie teoretyczne prezentacji oparte jest na najnowszych badaniach naukowych, literaturze specjalistycznej oraz praktykach rekomendowanych przez ekspertów w dziedzinie zdrowia psychicznego. Ale podzielę się też historią swojego wypalenia i strategiami, które działają u moich podopiecznych. Ola Kunysz jest programistką, mentorką i autorką treści edukacyjnych. Z branżą IT jest związana od kilkunastu lat. Doświadczenie zdobywała w Polsce i Stanach Zjednoczonych. Pracowała w wielu międzynarodowych projektach ― od telekomunikacji, przez fin-tech, po e-commerce. W 2018 roku zmagała się z wypaleniem zawodowym, rok później założyła Szkołę Testów, a w 2021 roku opublikowała książkę Kierunek Jakość. Kiedy jest offline, jeździ na jednośladach, chodzi po górach albo ćwiczy jogę.",
+    "speakerId" : 18,
+    "id" : 17,
+    "title" : "Czy można pracować inaczej? Prosta droga branży IT do wypalenia"
+  }, {
+    "path" : 3,
+    "speechSlotId" : 7,
+    "description" : "Aplikacje CLI (Command–line interface) są z nami od połowy lat sześćdziesiątych. Zapewne znasz ich przynajmniej kilka, a może nawet miałeś okazję z nich korzystać. Istnieje całkiem duże prawdopodobieństwo, że w najbliższym czasie będziesz zmuszony zaprzyjaźnić się z nimi w mniejszym lub większym stopniu niezależnie od Twojej woli- aktualne trendy gdy się im bliżej przyjrzeć jasno wskazują na coraz szersze i popularniejsze zastosowanie aplikacji obsługiwanych z linii komend. Wystarczy wspomnieć narzędzia dostarczone przez dostawców chmur publicznych jak Azure CLI, AWS CLI, gcloud CLI, gsutil, narzędzia do budowania aplikacji jak Quarkus CLI, Angular CLI, czy nawet takie klasyki jak git, czy docker. Trend ten trwający już kilka dobrych lat nie słabnie, wręcz przeciwnie i warto wiedzieć czy i kiedy rozważyć zbudowanie aplikacji CLI, jak taka aplikacja jest zbudowana, jak zadbać o jej jakość i jakie są dobre praktyki pozwalające na stworzenie wartościowych i dobrze wykonanych programów obsługiwanych z linii komend- zarówno od strony użyteczności jak i architektury samego rozwiązania. Na te i wiele więcej pytań odpowiem w trakcie prezentacji.",
+    "speakerId" : 19,
+    "id" : 18,
+    "title" : "Raise of CLI applications"
+  }, {
+    "path" : 1,
+    "speechSlotId" : 8,
+    "description" : "DDD i jego pozytywy odmieniono już w prezentacjach chyba na wszystkie możliwe przypadki. „Wdrażanie” DDD często może być marszem ku klęsce, bo rzeczywistość nie jest już tak różowa jak na slajdach… Nie mówmy więc kolejny raz o roli i znaczeniu agregatów czy bounded-contextów, ale na konkretnych przykładach pokażmy, jakie pułapki tu czekają i jak można je skutecznie ominąć, aby uniknąć tytułowej porażki i kolejnych szram z Wietnamu.",
+    "speakerId" : 20,
+    "id" : 19,
+    "title" : "Domain Driven Disaster"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 8,
+    "description" : "Niektórym inżynierom/-kom w pewnym momencie przychodzi do głowy, że są traktowani jako podwykonawcy biznesu. Jeśli jest to klient wewnętrzny to inżynier jest dla biznes po prostu dostawca, a jeśli są w jednej organizacji, to IT jest dla biznesu wewnętrznym podwykonem. Tyle, że Ci inżynierowie/-ki chcą być dla klienta partnerem, nie podwykonem i nie wiedzą jak to zrobić. Jeśli to, co wyżej napisałem w jakiś sposób odzwierciedla Twoje wewnętrzne przemyślenia, wpadnij na moją prezkę. Podam Ci kilka punktów, na które warto zwrócić uwagę, jeśli chcesz budować partnerską relację z biznesem.",
+    "speakerId" : 21,
+    "id" : 20,
+    "title" : "Szybki kurs myślenia biznesowego dla inżynierów i inżynierek"
+  }, {
+    "path" : 3,
+    "speechSlotId" : 8,
+    "description" : "Każda i każdy z nas wie, co to jest piramida testów i dlaczego słuszna jest. Wszyscy też wiemy, jak wygląda porządnie zbudowana piramida. Może nie byliśmy w Egipcie, Mezoameryce albo Iraku czy Iranie, ale przynajmniej widzieliśmy zdjęcia i wiemy: tak należy budować, jak ktoś chce mieć solidny kawał budynku na lata!!!11jeden. Tylko czy dziś też postawisz sobie zgrabną piramidkę na działce, bądź jako domek jednorodzinny, bądź jako centrum handlowe? Może chociaż garaż? Niekoniecznie? O, a dlaczego? \uD83D\uDE09 No właśnie… Piramidy stawiane w starożytności odpowiadały potrzebom ludzi z tamtych czasów (także religijnym). Dziś nasze potrzeby, materiały i możliwości są już zupełnie inne. I o ile możemy cały czas (z technicznego punktu widzenia) walnąć sobie zgrabną piramidkę, to jakość życia po zamieszkaniu w takim czymś będzie co najwyżej średnia (i jak w to ogóle ocieplić???) A co jeśli podobnie jest z piramidą testów? Co jeśli powstała w czasach, gdy systemy wyglądały zupełnie inaczej, gdy system przez nią pokrywany potrzebował sprzętu, który nie zmieściłby się w Twoim mieszkaniu? Co jeśli mieliśmy wtedy inne zespoły, komunikujące się faksem? Gdy nie było internetu, o mikrousługach nie wspominając? Co jeśli narzędzia i automatyzacja weszły na zupełnie inny poziom, z perspektywy starożytnych wręcz kosmiczny? Co jeśli starożytne receptury medyczne, wykute w pocie czoła na ścianach świątyń, dziś służą tylko za ciekawostkę, a nie zestaw ponadczasowych i niekwestionowanych prawd? Wpadnij na wspólne drapanie się po głowie (każdy swojej).",
+    "speakerId" : 22,
+    "id" : 21,
+    "title" : "O piramidzie testów i jakości życia"
+  }, {
+    "path" : 1,
+    "speechSlotId" : 9,
+    "description" : "Pewnie pracujesz w jakimś “agile“. Może jest to “kanban”, może “scrum”, może “SAFe”, a może “Janueszeks-ogile”. Na 100% nie jest to waterfall, bo przecież waterfall to zło \uD83D\uDE42 Z drugiej strony (prawie) wszyscy narzekają na scrum masterów, na proces, retrospektywa się nie posuwa, a całość …. lepiej nie mówić. Ta prezentacja to zbiór obserwacji i lekcji, które ja z tego wyniosłem. Jak spojrzeć na proces trochę inaczej, na co szczególnie zwrócić uwagę i gdzie “lekko” nacisnąć. Szczególnie, że co może pójść nie tak? Na kolejnej retrospektywnie góra to omówimy \uD83D\uDE09 Uwaga: jestem techniczny i patrzę z poziomu architekta i nigdy nie byłem scrum master. Będzie też ironicznie i może nie być miło \uD83D\uDE09",
+    "speakerId" : 23,
+    "id" : 22,
+    "title" : "Co poszło nie tak z agile i co Ty możesz z tym zrobić"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 9,
+    "speakerId" : 24,
+    "id" : 23,
+    "title" : "Jak pies z kotem, czyli Miniserwisy w podejściu Tech Agnostic, czyli ciężej się nie dało",
+    "description": "Czy w firmie produktowej, gdzie nie istnieje rola CTO, gdzie dział IT należy do produktu, a na jego szczycie stoi Head Of Product nie znający się na kwestiach technologii, czy przysłowiowy piec może porozumieć się i współpracować z kotem ? Gdzie rolę Architekta, pełni grupa specjalistów, o odmiennych poglądach, mających różne podejścia do programowania, stosujących w tym samym czasie odmienne techniki. Jak i czy można to wszystko pogodzić? Jeżeli tak, czy uda się stworzyć działający zespół oraz produkt z wdrożonymi procesami i zasadami Team Topologies. Te oraz inne zagadnienia będą poruszone podczas proponowanego wystąpienia.\n\nW trakcie prezentacji skupimy się na case study organizacji Just Join IT, w której na początku panowała teoria chaosu, gdzie zespoły oraz struktura wywracane były do góry nogami, a core systemu przepisywany był wielokrotnie w różnych technologiach, po przez stopniowe wdrażanie konceptu Team Topologies wraz z Inhouse procesami kształcenia się, aż po powstanie Gildii Architektów złożonej z grona specjalistów podejmujących strategiczne decyzje, dzięki którym możliwa jest współpraca wielu zespołów, wykorzystujących odrębne technologie i paradygmaty."
+  }, {
+    "path" : 3,
+    "speechSlotId" : 9,
+    "description" : "Podczas mojej kariery jako programista, trener i mentor, spotkałem wiele sytuacji, gdy moi współpracownicy lub ja sam napotkaliśmy na trudny do przetestowania kod. Niektóre z tych sytuacji się powtarzały, a niektóre z nich nie. Ta prezentacja jest kontynuacją poprzedniej części. Pokażę, jak można uprościć aplikację i umożliwić jej testowanie poprzez analizę napotkanych przypadków i zastosowanych rozwiązań. Przed dołączeniem do prezentacji zalecana jest wiedza na temat OOP, Onion/Hexagonal Architecture, języka Java (i JUnit) lub języka podobnego do Javy oraz doświadczenie w pisaniu testów jednostkowych, integracyjnych i end-to-end. Po prezentacji będziecie zaznajomieni z tematami: – Jak testować problematyczne klasy. – Jak testować aplikacje wielowątkowe. – Jak testować tolerancję na błędy (fault tolerance and resilience) – Dlaczego warto stosować Property Based Testing – Strategie testowania obiektów mutowalnych. – Czy potrzebuję testować logowanie? – Jak i dlaczego testować mutowalność i porównywanie obiektów.",
+    "speakerId" : 25,
+    "id" : 24,
+    "title" : "Testing the untestable PART II – patterns, use cases and practices"
+  }, {
+    "path" : 1,
+    "speechSlotId" : 10,
+    "description" : "Mam wrażenie, że tworzenie oprogramowania stało się ostatnio dość nerwowym zajęciem. Teoretycznie wszystko jest jasne – mamy tysiące wzorców projektowych, dobre praktyki na wszystko, a w razie potrzeby zawsze istnieje biblioteka w JavaScripcie która robi to czego akurat potrzebujemy. Ba, jest też ChatGPT który przecież zakoduje wszystko za nas. No i ostatecznie, mamy też wspaniały management, który zawsze pomoże rozwiązać problemy, prawda? Czemu zatem mając to wszystko projekty nie pędzą do przodu, jakość nie wystrzeliła przez sufit, a dług techniczny ma się świetnie? Czerpiąc inspirację z pragmatyzmu (lub jego braku), w swojej prezentacji chciałbym podzielić się kilkoma przykładami z życia, jak łatwo zakopać się w bieżączce i zapomnieć co jest ważne. Spróbujemy też pomyśleć, gdzie rady rodem z Akademii Chłopskiego Rozumu mogłyby pomóc.",
+    "speakerId" : 26,
+    "id" : 25,
+    "title" : "Pragmatism Rediscovered: podróż z powrotem do zdrowego rozsądku"
+  }, {
+    "path" : 2,
+    "speechSlotId" : 10,
+    "description" : "Bycie Liderem Technicznym to nie tylko większa odpowiedzialność ale i miejsce przy stole gdzie podejmuje się kluczowe decyzje, przede wszystkim te, związane z technologią. Taka sytuacja przypomina jednak bycie między młotem (biznesem) a kowadłem (zespołem developerskim). Podczas prezentacji zastanowimy się, czy w takich warunkach można odnaleźć się i dlaczego warto oraz jaka jest rola przywództwa w środowiskach zwinnych? Na końcu dotrzemy do miejsc najciemniejszych i zmierzymy się z największymi lękami związanymi z byciem liderem. Być może wspólnie uda nam się znaleźć na nie remedium.",
+    "speakerId" : 27,
+    "id" : 26,
+    "title" : "Czego boi się Tech Lead?"
+  }, {
+    "path" : 3,
+    "speechSlotId" : 10,
+    "description" : "Awarie się zdarzają, wdrożenia nie idą zgodnie z planem, systemy produkcyjne przestają działać. Czy to błąd w kodzie (twoim, czy biblioteki z której korzystasz), czy awaria infrastruktury lub sprzętu, pierwszą rzeczą jest przywrócenie pracy systemu z minimalnymi stratami. Ale co dzieje się później? Czy powinniśmy po prostu wrócić do swoich zajęć? Słyszałeś o “Post Mortem Analysis”? Brzmi strasznie, ale tak naprawdę jest szalenie przydatna praktyka o ile użyta jest poprawnie. I o tym właśnie chciałbym opowiedzieć. Czym jest taka analiza, jak ją efektywnie przeprowadzić, kto powinien (a kto nie) wziąć w niej udział, na co uważać i do czego dążyć podczas tego procesu. W końcu chyba nie chcesz skończyć z taką samą awarią produkcji jutro, prawda?",
+    "speakerId" : 28,
+    "id" : 27,
+    "title" : "Ugasiłeś pożar na produkcji, co dalej?"
+  } ],
+  "speechSlots" : [ {
+    "timeLabel" : "9:10 - 9:30",
+    "id" : 1
+  }, {
+    "timeLabel" : "9:50 - 10:35",
+    "id" : 2
+  }, {
+    "timeLabel" : "10:55 - 11:40",
+    "id" : 3
+  }, {
+    "timeLabel" : "12:00 - 12:45",
+    "id" : 4
+  }, {
+    "timeLabel" : "12:50 - 13:05",
+    "id" : 5
+  }, {
+    "timeLabel" : "14:00 - 14:15",
+    "id" : 6
+  }, {
+    "timeLabel" : "14:20 - 15:05",
+    "id" : 7
+  }, {
+    "timeLabel" : "15:25 - 16:10",
+    "id" : 8
+  }, {
+    "timeLabel" : "16:30 - 17:15",
+    "id" : 9
+  }, {
+    "timeLabel" : "17:35 - 18:20",
+    "id" : 10
+  } ]
 }
