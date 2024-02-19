@@ -8,11 +8,11 @@
     "id" : 102,
     "linkedin" : "https://www.linkedin.com/in/tkaczmarzyk/"
   }, {
-    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/Wojtek_square.jpg",
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/wptak_agrzesik.jpg",
     "twitter" : "",
-    "occupation" : "Head of Product Engineering",
-    "name" : "Wojtek Ptak",
-    "description" : "Wojtek works as Head of Product Engineering and Engineering Executive at Revolut. Before, he worked as CTO for several companies, provided consulting, training, and assisted in building various data collecting, analytics, and applied ML/AI solutions, including Big Data implementations, data stream processing systems, and data insight projects. He worked with multiple Forbes 500 brands in the US, UK, and the Netherlands, including The Coca-Cola Company, the American Bankers Association, Macy’s, Bloomingdales, Heineken, Saks 5th Avenue, BP, Boots, Polo Ralph Lauren, Porsche, HSBC, and others.",
+    "occupation" : "Head of Product Engineering & Java Champion",
+    "name" : "Wojtek Ptak i Andrzej Grzesik",
+    "description" : "Wojtek works as Head of Product Engineering and Engineering Executive at Revolut. Before, he worked as CTO for several companies, provided consulting, training, and assisted in building various data collecting, analytics, and applied ML/AI solutions, including Big Data implementations, data stream processing systems, and data insight projects. He worked with multiple Forbes 500 brands in the US, UK, and the Netherlands, including The Coca-Cola Company, the American Bankers Association, Macy’s, Bloomingdales, Heineken, Saks 5th Avenue, BP, Boots, Polo Ralph Lauren, Porsche, HSBC, and others.\n\nAndrzej likes distributed systems in all shapes and form. Coding since the age of 8, loves simplicity and continuous delivery. While he has written in many languages, he favours the JVM. Since „most software problems are people problems”, he stirs communities, organizes and speaks at conferences (proud to be a JavaONE Rockstar!). He is passionate about all things data, because science! In his spare time… cycling, photography and books. And he is a Java Champion!",
     "id" : 1,
     "linkedin" : "https://www.linkedin.com/in/wojtekptak/"
   }, {
@@ -96,7 +96,7 @@
     "id" : 11,
     "linkedin" : "https://www.linkedin.com/in/ptrzjc/"
   }, {
-    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/images.png",
+    "photoUrl" : "https://2024.boilingfrogs.pl/wp-content/uploads/2024/01/mdomasz.jpeg",
     "twitter" : "",
     "occupation" : "HR Business Partner",
     "name" : "Marta Domasz",
@@ -226,7 +226,7 @@
     "twitter" : "https://twitter.com/mostruszka",
     "occupation" : "Software engineer, tech lead",
     "name" : "Michał Ostruszka",
-    "description" : "Doświadczony software engineer i tech lead, póki co głównie w obszarach JVMowych i w tzw. “love-hate relationship” z systemami rozproszonymi. Cenię sobie pragmatyczne podejście zarówno do architektury, kodu jak i prowadzenia zespołów i projektów. Fan event-sourcingu i DDD ale tylko tam gdzie ma to sens. Na codzień introwertyk, od czasu do czasu występujący i rozmawiający z ludźmi na konferencjach technicznych.",
+    "description" : "Doświadczony pathsoftware engineer i tech lead, póki co głównie w obszarach JVMowych i w tzw. “love-hate relationship” z systemami rozproszonymi. Cenię sobie pragmatyczne podejście zarówno do architektury, kodu jak i prowadzenia zespołów i projektów. Fan event-sourcingu i DDD ale tylko tam gdzie ma to sens. Na codzień introwertyk, od czasu do czasu występujący i rozmawiający z ludźmi na konferencjach technicznych.",
     "id" : 28,
     "linkedin" : "https://www.linkedin.com/in/michalostruszka/"
   } ],
@@ -286,19 +286,33 @@
     "speakerId" : 8,
     "id" : 7,
     "title" : "Testy wydajnościowe i inne kłamstwa"
-  }, {
+  },{
+    "path" : 1,
+    "speechSlotId" : 7,
+    "description" : "Skąd wiesz czy piszesz dobry kod?! Bo jest zgodny z konwencjami? Bo statyczna analiza nie wykrywa błędów? Bo przestrzega SOLID, CUPID, DRY, KISS? Wszystkie te kryteria są niesamowicie subiektywne, bo czy zgadzamy się wszyscy czym jest pojedyncza odpowiedzialność, albo ile linii ma krótką metoda, czy dana klasa wystarczająco enkapsuluje? I tu pojawia się pytanie, czy da się obiektywnie oceniać kod? W 100% raczej nie, ale da się dużo bardziej niż do tej pory.",
+    "speakerId" : 17,
+    "id" : 16,
+    "title" : "Czysty kod - to jednak nie takie proste"
+  },  {
     "path" : 2,
     "speechSlotId" : 7,
     "description" : "Od lat 70-tych przejawia się w świadomości programistów na całym świecie. Niby nieuchwytne, mówi, że “Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization’s communication structure.” Co kilka lat wypływa w ten lub inny sposób, ostatnio przy okazji książki Team Topologies. Wydaje się, że zostanie z nami na zawsze. Tylko jak to przełożyć na codzienną pracę inżyniera? W ramach tej prezentacji postaram się odpowiedzieć na to pytanie, odnosząc się do własnych doświadczeń w pracy z zespołami programistów, odwołując się do rozmaitych źródeł książkowych i internetowych, a także promując jedną główną ideę, którą spłycić można do: “pracuj nie tylko nad API swojego kodu, ale też API komunikacji Twojego zespołu z pozostałymi zespołami”. Co to dokładnie znaczy? Po to powstał ten wykład. A jako bonus, zobaczymy, jak to może się odzwierciedlić w kodzie i przełożyć na kod legacy.",
     "speakerId" : 9,
-    "id" : 8,
+    "id" : 81,
     "title" : "Prawo Conwaya w akcji"
+  },{
+    "path" : 2,
+    "speechSlotId" : 4,
+    "description" : "Badania pokazują, że nasza kraina mlekiem i miodem płynąca wcale nie jest takim Eldorado jak obiecują organizatorzy bootcampów. Wypalenie jest demokratycznie – płeć, wiek, ilość doświadczenia nie mają dla niego znaczenia (chociaż wypalamy się w inny sposób). Podczas tej prezentacji skupię się na analizie czynników związanych z pracą, które mają istotny wpływ na poziom wypalenia wśród pracowników IT. Prezentacja przedstawi konkretne zagrożenia związane z obciążeniem pracą, długimi godzinami pracy i dojazdów, jednocześnie proponując strategie i praktyki, które mogą przeciwdziałać wypaleniu i promować zdrowie psychiczne w miejscu pracy. Wsparcie teoretyczne prezentacji oparte jest na najnowszych badaniach naukowych, literaturze specjalistycznej oraz praktykach rekomendowanych przez ekspertów w dziedzinie zdrowia psychicznego. Ale podzielę się też historią swojego wypalenia i strategiami, które działają u moich podopiecznych. Ola Kunysz jest programistką, mentorką i autorką treści edukacyjnych. Z branżą IT jest związana od kilkunastu lat. Doświadczenie zdobywała w Polsce i Stanach Zjednoczonych. Pracowała w wielu międzynarodowych projektach ― od telekomunikacji, przez fin-tech, po e-commerce. W 2018 roku zmagała się z wypaleniem zawodowym, rok później założyła Szkołę Testów, a w 2021 roku opublikowała książkę Kierunek Jakość. Kiedy jest offline, jeździ na jednośladach, chodzi po górach albo ćwiczy jogę.",
+    "speakerId" : 18,
+    "id" : 17,
+    "title" : "Czy można pracować inaczej? Prosta droga branży IT do wypalenia"
   }, {
     "path" : 3,
     "speechSlotId" : 4,
-    "description" : "Pesymistyczne blokowanie rekordów było bezpiecznie i proste, ale niezbyt wydajne. Czy blokowanie optymistyczne jest odpowiedzią? A jeśli jest, to czy na pewno implementujemy je w taki sposób, żeby spełniało swoje założenia? Czy ORMy odrabiają za nas pracę domową, czy tylko dają nam narzędzia? Nieco więcej o tym protokole w aplikacjach z interfejsem REST, a może nie tylko.",
+    "description" : "Pesymistyczne blokowanie rekordów było bezpiecznie i proste, ale niezbyt wydajne. Czy blokowanie optymistyczne jest odpowiedzią? A jeśli jest, to czy na pewno implementujemy je w taki sposób, żeby spełniało swoje założenia? Czy ORM-y odrabiają za nas pracę domową, czy tylko dają nam narzędzia? Nieco więcej o tym protokole w aplikacjach z interfejsem REST, a może nie tylko.",
     "speakerId" : 10,
-    "id" : 9,
+    "id" : 99,
     "title" : "Zbyt optymistyczne lockowanie"
   }, {
     "path" : 1,
@@ -343,25 +357,11 @@
     "id" : 15,
     "title" : "Czy Playwright zdominuje testy automatyczne aplikacji webowych w 2024 roku?"
   }, {
-    "path" : 1,
-    "speechSlotId" : 7,
-    "description" : "Skąd wiesz czy piszesz dobry kod?! Bo jest zgodny z konwencjami? Bo statyczna analiza nie wykrywa błędów? Bo przestrzega SOLID, CUPID, DRY, KISS? Wszystkie te kryteria są niesamowicie subiektywne, bo czy zgadzamy się wszyscy czym jest pojedyncza odpowiedzialność, albo ile linii ma krótką metoda, czy dana klasa wystarczająco enkapsuluje? I tu pojawia się pytanie, czy da się obiektywnie oceniać kod? W 100% raczej nie, ale da się dużo bardziej niż do tej pory.",
-    "speakerId" : 17,
-    "id" : 16,
-    "title" : "Czysty kod - to jednak nie takie proste"
-  }, {
-    "path" : 2,
-    "speechSlotId" : 4,
-    "description" : "Badania pokazują, że nasza kraina mlekiem i miodem płynąca wcale nie jest takim Eldorado jak obiecują organizatorzy bootcampów. Wypalenie jest demokratycznie – płeć, wiek, ilość doświadczenia nie mają dla niego znaczenia (chociaż wypalamy się w inny sposób). Podczas tej prezentacji skupię się na analizie czynników związanych z pracą, które mają istotny wpływ na poziom wypalenia wśród pracowników IT. Prezentacja przedstawi konkretne zagrożenia związane z obciążeniem pracą, długimi godzinami pracy i dojazdów, jednocześnie proponując strategie i praktyki, które mogą przeciwdziałać wypaleniu i promować zdrowie psychiczne w miejscu pracy. Wsparcie teoretyczne prezentacji oparte jest na najnowszych badaniach naukowych, literaturze specjalistycznej oraz praktykach rekomendowanych przez ekspertów w dziedzinie zdrowia psychicznego. Ale podzielę się też historią swojego wypalenia i strategiami, które działają u moich podopiecznych. Ola Kunysz jest programistką, mentorką i autorką treści edukacyjnych. Z branżą IT jest związana od kilkunastu lat. Doświadczenie zdobywała w Polsce i Stanach Zjednoczonych. Pracowała w wielu międzynarodowych projektach ― od telekomunikacji, przez fin-tech, po e-commerce. W 2018 roku zmagała się z wypaleniem zawodowym, rok później założyła Szkołę Testów, a w 2021 roku opublikowała książkę Kierunek Jakość. Kiedy jest offline, jeździ na jednośladach, chodzi po górach albo ćwiczy jogę.",
-    "speakerId" : 18,
-    "id" : 17,
-    "title" : "Czy można pracować inaczej? Prosta droga branży IT do wypalenia"
-  }, {
     "path" : 3,
     "speechSlotId" : 7,
     "description" : "Aplikacje CLI (Command–line interface) są z nami od połowy lat sześćdziesiątych. Zapewne znasz ich przynajmniej kilka, a może nawet miałeś okazję z nich korzystać. Istnieje całkiem duże prawdopodobieństwo, że w najbliższym czasie będziesz zmuszony zaprzyjaźnić się z nimi w mniejszym lub większym stopniu niezależnie od Twojej woli- aktualne trendy gdy się im bliżej przyjrzeć jasno wskazują na coraz szersze i popularniejsze zastosowanie aplikacji obsługiwanych z linii komend. Wystarczy wspomnieć narzędzia dostarczone przez dostawców chmur publicznych jak Azure CLI, AWS CLI, gcloud CLI, gsutil, narzędzia do budowania aplikacji jak Quarkus CLI, Angular CLI, czy nawet takie klasyki jak git, czy docker. Trend ten trwający już kilka dobrych lat nie słabnie, wręcz przeciwnie i warto wiedzieć czy i kiedy rozważyć zbudowanie aplikacji CLI, jak taka aplikacja jest zbudowana, jak zadbać o jej jakość i jakie są dobre praktyki pozwalające na stworzenie wartościowych i dobrze wykonanych programów obsługiwanych z linii komend- zarówno od strony użyteczności jak i architektury samego rozwiązania. Na te i wiele więcej pytań odpowiem w trakcie prezentacji.",
     "speakerId" : 19,
-    "id" : 18,
+    "id" : 181,
     "title" : "Raise of CLI applications"
   }, {
     "path" : 1,
@@ -396,8 +396,8 @@
     "speechSlotId" : 9,
     "speakerId" : 24,
     "id" : 23,
-    "title" : "Jak pies z kotem, czyli Miniserwisy w podejściu Tech Agnostic, czyli ciężej się nie dało",
-    "description": "Czy w firmie produktowej, gdzie nie istnieje rola CTO, gdzie dział IT należy do produktu, a na jego szczycie stoi Head Of Product nie znający się na kwestiach technologii, czy przysłowiowy piec może porozumieć się i współpracować z kotem ? Gdzie rolę Architekta, pełni grupa specjalistów, o odmiennych poglądach, mających różne podejścia do programowania, stosujących w tym samym czasie odmienne techniki. Jak i czy można to wszystko pogodzić? Jeżeli tak, czy uda się stworzyć działający zespół oraz produkt z wdrożonymi procesami i zasadami Team Topologies. Te oraz inne zagadnienia będą poruszone podczas proponowanego wystąpienia.\n\nW trakcie prezentacji skupimy się na case study organizacji Just Join IT, w której na początku panowała teoria chaosu, gdzie zespoły oraz struktura wywracane były do góry nogami, a core systemu przepisywany był wielokrotnie w różnych technologiach, po przez stopniowe wdrażanie konceptu Team Topologies wraz z Inhouse procesami kształcenia się, aż po powstanie Gildii Architektów złożonej z grona specjalistów podejmujących strategiczne decyzje, dzięki którym możliwa jest współpraca wielu zespołów, wykorzystujących odrębne technologie i paradygmaty."
+    "title" : "Beyond Boundaries: Plusy i minusy Tech Agnostic w architekturze mikroserwisowej",
+    "description": "Czy w firmie produktowej, gdzie nie istnieje rola CTO, dział IT należy do produktu, a na jego szczycie stoi nietechniczny Head Of Product. Core systemu zbudowany z technologicznego tornado w postaci miksu Ruby, Node, .Net, jest przepisem na sukces czy srogą porażką? Czy grupka osób z odmiennych środowisk, współpracująca ze sobą zgodnie z zasadami Team Topologies i cross streamowości może pełnić rolę Architekta i skutecznie rozwiązywać strategiczne problemy? Podczas wystąpienia, postaramy odpowiedzieć na te pytania, posługując się realnymi przykładami."
   }, {
     "path" : 3,
     "speechSlotId" : 9,
