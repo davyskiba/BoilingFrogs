@@ -7,6 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.panoprogramowanie.boilingfrogs"
+        namespace "com.panoprogramowanie.boilingfrogs"
         minSdkVersion 21
         targetSdkVersion 33
         compileSdk 33
