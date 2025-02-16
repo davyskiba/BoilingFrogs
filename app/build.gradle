@@ -10,7 +10,7 @@ android {
         namespace "com.panoprogramowanie.boilingfrogs"
         minSdkVersion 21
         targetSdkVersion 33
-        compileSdk 33
+        compileSdk 34
         versionCode 14
         versionName "1.7.1"
         multiDexEnabled true
