@@ -9,7 +9,7 @@ android {
         applicationId "com.panoprogramowanie.boilingfrogs"
         namespace "com.panoprogramowanie.boilingfrogs"
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 35
         compileSdk 34
         versionCode 14
         versionName "1.7.1"
