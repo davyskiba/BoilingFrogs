@@ -7,11 +7,12 @@ android {
 
     defaultConfig {
         applicationId "com.panoprogramowanie.boilingfrogs"
+        namespace "com.panoprogramowanie.boilingfrogs"
         minSdkVersion 21
-        targetSdkVersion 33
-        compileSdk 33
-        versionCode 14
-        versionName "1.7.1"
+        targetSdkVersion 35
+        compileSdk 34
+        versionCode 15
+        versionName "1.8.0"
         multiDexEnabled true
     }
     dataBinding {
