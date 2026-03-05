@@ -11,7 +11,7 @@ android {
         applicationId "com.panoprogramowanie.boilingfrogs"
         minSdkVersion 21
         targetSdkVersion 35
-        versionCode 16
+        versionCode 17
         versionName "1.9.0"
         multiDexEnabled true
     }
